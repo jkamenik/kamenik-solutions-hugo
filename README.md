@@ -4,8 +4,18 @@ A version of the Kamenik Solutions Site in Hugo
 ## Local Edits
 
 ```bash
-hugo server -D
+npm run start
 ```
+
+This will listen for changes to CSS and to content and will run both a tailwind build and huge server.
+
+## Build
+
+```bash
+npm run build
+```
+
+This will build tailwind.css and then the hugo site.
 
 ## Create a new page
 
