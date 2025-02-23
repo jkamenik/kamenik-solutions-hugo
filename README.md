@@ -12,3 +12,8 @@ hugo server -D
 ```bash
 hugo new content content/path/title.md
 ```
+
+## Tech-Radar
+
+https://github.com/agilepartner/tech-radar-js
+https://github.com/ythirion/tech-radar-hugo

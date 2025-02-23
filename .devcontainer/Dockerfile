@@ -6,6 +6,8 @@ FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 ARG VARIANT=hugo
 # VERSION can be either 'latest' or a specific version number
 ARG VERSION=latest
+# set this to the verson of Go to install
+ARG GO_VERSION=1.24.0
 
 # Download Hugo
 RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
@@ -24,7 +26,17 @@ RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
     echo ${ARCH} && \
     wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
     tar xf ${VERSION}.tar.gz && \
+    rm ${VERSION}.tar.gz && \
     mv hugo /usr/bin/hugo
+
+# Now setup GO
+ENV GOPATH /go
+ENV PATH=$PATH:$GOPATH/bin
+RUN wget "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz" && \
+    tar -xzf "go${GO_VERSION}.linux-amd64.tar.gz" && \
+    rm "go${GO_VERSION}.linux-amd64.tar.gz"
+
+ENV PATH=$PATH:/usr/local/go/bin
 
 # Hugo dev server port
 EXPOSE 1313
