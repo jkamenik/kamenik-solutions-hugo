@@ -7,6 +7,8 @@ A version of the Kamenik Solutions Site in Hugo
 hugo server --buildDrafts --disableFastRender
 ```
 
+Open http://localhost:1313/kamenik-solutions-hugo/ in your browser
+
 This will listen for changes and rebuild the site.
 
 ## Create a new page
@@ -23,5 +25,5 @@ hugo new content content/path/title.md
 
 ## Tech-Radar
 
-https://github.com/agilepartner/tech-radar-js
-https://github.com/ythirion/tech-radar-hugo
+- https://github.com/agilepartner/tech-radar-js
+- https://github.com/ythirion/tech-radar-hugo
