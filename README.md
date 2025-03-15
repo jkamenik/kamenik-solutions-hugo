@@ -4,24 +4,22 @@ A version of the Kamenik Solutions Site in Hugo
 ## Local Edits
 
 ```bash
-npm run start
+hugo server --buildDrafts --disableFastRender
 ```
 
-This will listen for changes to CSS and to content and will run both a tailwind build and huge server.
-
-## Build
-
-```bash
-npm run build
-```
-
-This will build tailwind.css and then the hugo site.
+This will listen for changes and rebuild the site.
 
 ## Create a new page
 
 ```bash
 hugo new content content/path/title.md
 ```
+
+## Documentation
+
+- [Hugo Docs](https://gohugo.io/documentation/)
+- [Hextra Docs](https://imfing.github.io/hextra/docs/)
+  - [Hextra Example Site](https://github.com/imfing/hextra/tree/main/exampleSite)
 
 ## Tech-Radar
 

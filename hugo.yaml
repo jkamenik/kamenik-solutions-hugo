@@ -22,16 +22,22 @@ markup:
 
 menu:
   main:
-    - name: Blog
-      pageRef: /blog
-      weight: 1
     - name: Radar
       pageRef: /radar
+      weight: 1
+    - name: Resources
+      pageRef: /resource
       weight: 2
+    - name: Blog
+      pageRef: /blog
+      weight: 3
     - name: Search
       weight: 4
       params:
         type: search
+    - name: About
+      pageRef: /about
+      weight: 5
     - name: RSS
       weight: 6
       url: "index.xml"
@@ -45,10 +51,10 @@ params:
     displayLogo: true
 
     logo:
-      path: /images/icon_32.png
+      path: /images/icon_64.png
       link: /
-      width: 32
-      height: 32
+      width: 64
+      height: 64
 
   footer:
     displayCopyright: true
