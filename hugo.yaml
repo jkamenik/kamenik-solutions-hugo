@@ -1,97 +1,64 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
-title: 'My New Hugo Site'
-theme: "hugo-saasify-theme"
+title: 'Kamenik Solutions'
 
-# Required Features
-pygmentsCodeFences: true  # Enable syntax highlighting
-pygmentsUseClasses: true
-enableEmoji: true        # Enable emoji support
-enableGitInfo: true      # Enable Git info for lastmod
-
-# Required Module Configuration
+# Setup the Threme
 module:
-  hugoVersion:
-    extended: true
-    min: "0.80.0"
+  imports:
+    - path: github.com/imfing/hextra
 
-# Required Build Configuration
-build:
-  writeStats: true      # Required for TailwindCSS
-
-# Required Markup Configuration
 markup:
   highlight:
     noClasses: false
-    lineNos:  true
-    codeFences: true
   goldmark:
     renderer:
-      unsafe: true       # Allow HTML in markdown
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 2
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
 
-# Theme Parameters
-params:
-  description: "Your site description"
-  author: "Your Name"
-  logo: "/images/logo.svg"      # Path to your logo
-  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
-  # googleAnalytics: "G-XXXXXXXXXX"  # Only enabled in production
-
-  # Header Configuration
-  header:
-    background: "bg-white/80 backdrop-blur-sm"
-    border: "border-b border-gray-100"
-
-    # Header Logo
-    logo:
-      src: "/images/logo.svg"
-
-    # Header Buttons (optional)
-    buttons:
-      signIn:
-        text: "Sign in"
-        url: "/signin"
-      getStarted:
-        text: "Get Started"
-        url: "/get-started"
-
-  # Global CTA Configuration (optional)
-  cta:
-    enable: true
-    title: "Ready to Get Started?"
-    description: "Join companies using our platform"
-    primary_button:
-      text: "Get Started Free"
-      url: "/get-started"
-    secondary_button:
-      text: "Book Demo"
-      url: "/demo"
-
-  # Social Media Links (optional)
-  social:
-    linkedin: "https://linkedin.com/in/yourusername"
-    twitter: "https://twitter.com/yourusername"
-    github: "https://github.com/yourusername"
-
-# Navigation Menu
 menu:
   main:
-    - name: Features
+    - name: Radar
+      pageRef: /radar
       weight: 1
-      params:
-        has_submenu: true
-        submenu:
-          - name: Feature 1
-            url: /features/feature-1/
-          - name: Feature 2
-            url: /features/feature-2/
-    - name: Pricing
-      url: /pricing
+    - name: Resources
+      pageRef: /resource
       weight: 2
     - name: Blog
-      url: /blog
+      pageRef: /blog
       weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: About
+      pageRef: /about
+      weight: 5
+    - name: RSS
+      weight: 6
+      url: "index.xml"
+      params:
+        icon: rss
+
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: true
+
+    logo:
+      path: /images/icon_64.png
+      link: /
+      width: 64
+      height: 64
+
+  footer:
+    displayCopyright: true
+    displayPoweredBy: true
+
+  editURL:
+    enable: false
