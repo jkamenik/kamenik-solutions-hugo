@@ -51,8 +51,8 @@ params:
     displayLogo: true
 
     logo:
-      path: /images/icon_64.png
-      link: /
+      path: images/icon_64.png
+      # link: /
       width: 64
       height: 64
 
