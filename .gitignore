@@ -2,3 +2,4 @@ public
 .hugo_build.lock
 themes/hugo-saasify-theme
 node_modules
+.DS_Store
