@@ -62,3 +62,9 @@ params:
 
   editURL:
     enable: false
+
+outputs:
+  section:
+    - html
+    - csv
+    - json

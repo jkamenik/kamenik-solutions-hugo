@@ -17,6 +17,12 @@ This will listen for changes and rebuild the site.
 hugo new content content/path/title.md
 ```
 
+For Radar pages
+
+```bash
+hugo new content --kind radar radar/<type>/<name>.md
+```
+
 ## Documentation
 
 - [Hugo Docs](https://gohugo.io/documentation/)
