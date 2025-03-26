@@ -1,0 +1,15 @@
+{{- $pages := slice }}
+{{- range .RegularPagesRecursive }}
+    {{- $content := transform.HTMLUnescape .Content }}
+    {{- $p := dict "page" . "params" .Params "content" $content "content-orig" .Content }}
+    {{- $pages = $pages | append $p }}
+{{- end }}
+{{- $x := dict
+  "root" .
+  "section" .Section
+  "sections" .Sections
+  "page" .Page
+  "pages" $pages
+  "html" "<this> & that"
+}}
+{{- jsonify (dict "indent" "    " "noHTMLEscape" true) $x }}
