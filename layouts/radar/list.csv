@@ -1,1 +1,20 @@
-1,2,3
+name,ring,quadrant,status,isNew,description
+{{- $twoWeeksAgo := (math.Sub time.Now.Unix (math.Mul 2 7 24 60 60)) }}
+{{- range .RegularPagesRecursive }}
+  {{- $isNew := false }}
+  {{- if (ne nil .Params.radar.is_new) }}
+    {{- $isNew = .Params.radar.is_new }}
+  {{- else }}
+    {{- if (gt .PublishDate.Unix $twoWeeksAgo) }}
+      {{- $isNew = true }}
+    {{- end }}
+  {{- end }}
+{{ fmt.Printf
+  "%s,%s,%s,%s,%t,\"%s\""
+  .Name
+  .Params.radar.ring
+  .Params.radar.quadrant
+  .Params.radar.status
+  $isNew
+  (strings.Replace .Content "\"" "\"\"") }}
+{{- end }}

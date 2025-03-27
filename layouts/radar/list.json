@@ -1,15 +1,22 @@
+{{- $twoWeeksAgo := (math.Sub time.Now.Unix (math.Mul 2 7 24 60 60)) }}
 {{- $pages := slice }}
 {{- range .RegularPagesRecursive }}
-    {{- $content := transform.HTMLUnescape .Content }}
-    {{- $p := dict "page" . "params" .Params "content" $content "content-orig" .Content }}
-    {{- $pages = $pages | append $p }}
+  {{- $isNew := false }}
+  {{- if (ne nil .Params.radar.is_new) }}
+    {{- $isNew = .Params.radar.is_new }}
+  {{- else }}
+    {{- if (gt .PublishDate.Unix $twoWeeksAgo) }}
+      {{- $isNew = true }}
+    {{- end }}
+  {{- end }}
+  {{- $page := dict
+    "name" .Name
+    "ring" .Params.radar.ring
+    "quadrant" .Params.radar.quadrant
+    "status" .Params.radar.status
+    "isNew" $isNew
+    "description" .Content
+  }}
+  {{- $pages = $pages | append $page }}
 {{- end }}
-{{- $x := dict
-  "root" .
-  "section" .Section
-  "sections" .Sections
-  "page" .Page
-  "pages" $pages
-  "html" "<this> & that"
-}}
-{{- jsonify (dict "indent" "    " "noHTMLEscape" true) $x }}
+{{- jsonify (dict "indent" "    " "noHTMLEscape" true) $pages }}
