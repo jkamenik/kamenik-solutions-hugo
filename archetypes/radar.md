@@ -3,19 +3,24 @@ title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: {{ .Date }}
 draft: true
 
-# Tech Radar details
+params:
+  # Tech Radar details
+  radar:
+    # adopt, trial, assess, hold
+    ring: adopt
 
-# adopt, trial, assess, hold
-ring: adopt
+    # tools, tehcniques, platforms, languages & frameworks
+    quadrant: tools
 
-# tools, tehcniques, platforms, languages & frameworks
-quadrant: '{{ .File.Dir | path.Base }}'
+    # explicitly state the is_new value.  Otherwise the date is used
+    # is_new: false
 
-# First time on the board?
-isNew: false
-
-# Blib direction detail: New, Moved In, Moved Out, No Change
-status: "No Change"
+    # Blib direction detail: New, Moved In, Moved Out, No Change
+    status: "No Change"
 ---
 
-Description goes here.
+Summary goes here.
+
+<!--more-->
+
+Additional details goes here.

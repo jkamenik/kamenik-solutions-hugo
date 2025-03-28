@@ -23,3 +23,7 @@ params:
 Description goes here.
 
 "cool"
+
+<!--more-->
+
+This is the full description
