@@ -1,0 +1,29 @@
+{{- $twoWeeksAgo := (math.Sub time.Now.Unix (math.Mul 2 7 24 60 60)) }}
+{{- $pages := slice }}
+{{- range .RegularPagesRecursive }}
+  {{- $isNew := "FALSE" }}
+  {{- if (ne nil .Params.radar.is_new) }}
+    {{- if .Params.radar.is_new }}
+      {{- $isNew = "TRUE" }}
+    {{- end }}
+  {{- else }}
+    {{- if (gt .PublishDate.Unix $twoWeeksAgo) }}
+      {{- $isNew = "TRUE" }}
+    {{- end }}
+  {{- end }}
+  {{- $content := .Summary}}
+  {{- if (ne .Summary .Content) }}
+    {{- $content = (printf "%s<p><a href=%s>Read More</a></p>" .Summary .Permalink)}}
+  {{- end }}
+  {{- $page := dict
+    "name" .Name
+    "ring" .Params.radar.ring
+    "quadrant" .Params.radar.quadrant
+    "status" .Params.radar.status
+    "isNew" $isNew
+    "description" $content
+    "summary" .Summary
+  }}
+  {{- $pages = $pages | append $page }}
+{{- end }}
+{{- jsonify (dict "indent" "    " "noHTMLEscape" true) $pages }}

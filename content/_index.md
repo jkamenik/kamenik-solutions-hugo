@@ -11,11 +11,12 @@ layout: hextra-home
 
 <div class="hx-mb-12">
 {{< hextra/hero-subtitle >}}
-  Cloud DevSecOps Consulting&nbsp;<br class="sm:hx-block hx-hidden" />Take control of your infrastructure.
+  Cloud DevSecOps Consulting.
 {{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx-mb-6">
+Take control of your infrastructure:
 {{< hextra/hero-button text="Get Started" link="about" >}}
 </div>
 
