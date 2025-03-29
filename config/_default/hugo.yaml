@@ -63,9 +63,6 @@ params:
   editURL:
     enable: false
 
-  # Use though works BYOR for now
-  radarLink: "https://radar.thoughtworks.com/?documentId="
-
 outputs:
   section:
     - html
