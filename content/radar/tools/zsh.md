@@ -1,15 +1,13 @@
 ---
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-date: {{ .Date }}
-lastmod: {{ .Date }}
+title: 'Zsh'
+date: 2025-03-29T14:14:00Z
+lastmod: 2025-03-29T14:14:00Z
 draft: true
-
-{{- $quad := path.Dir .Path | path.BaseName  }}
 
 # Keywords help in classifing content
 keywords:
   - radar
-  - {{ $quad }}
+  - tools
 
 params:
   # Tech Radar details
@@ -18,7 +16,7 @@ params:
     ring: adopt
 
     # tools, tehcniques, platforms, languages & frameworks
-    quadrant: {{ $quad }}
+    quadrant: tools
 
     # explicitly state the is_new value.  Otherwise the date is used
     # is_new: false

@@ -1,0 +1,9 @@
+{{- $forceProd := .Get 0 }}
+{{- $radarLink := urls.JoinPath .Site.BaseURL "radar/index.json"}}
+{{- $fullPath := $radarLink }}
+
+{{- if (or hugo.IsProduction $forceProd )}}
+  {{- $fullPath = fmt.Printf "%s?%s" "https://radar.thoughtworks.com/" (querify "documentId" $radarLink)}}
+{{- end }}
+
+{{- $fullPath }}

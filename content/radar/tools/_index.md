@@ -2,4 +2,4 @@
 title: Radar > Tools
 ---
 
-You are in tools.
+Tools are anything that is used by a DevSecOps to accomplish their job without coding.
