@@ -1,0 +1,26 @@
+Quadrant goes here
+
+{{- $base := . }}
+{{- $content := "" }}
+
+{{- range .RegularPagesRecursive }}
+  <p>
+    <a href="{{ .RelPermalink }}">{{- .Title }}: {{- .Params.Radar.Ring }}</a>
+  </p>
+  {{- $tag := .Params.Radar.Ring }}
+  {{- $tagType := "" }}
+  {{- if eq $tag "adopt" }}
+    {{- $tagType = "green" }}
+  {{- else if eq $tag "trial" }}
+    {{- $tagType = "info" }}
+  {{- else if eq $tag "assess" }}
+    {{- $tagType = "warning" }}
+  {{- else if eq $tag "hold" }}
+    {{- $tagType = "error" }}
+  {{- end }}
+
+  {{- $content = printf "%s\n%s" $content (partial "shortcodes/card" (dict "title" .Title "subtitle" .Params.Radar.Status "link" .RelPermalink "tag" $tag "tagType" $tagType))}}
+{{- end }}
+
+{{- partial "shortcodes/cards" (dict "cols" 4 "content" ($content|safeHTML)) -}}
+

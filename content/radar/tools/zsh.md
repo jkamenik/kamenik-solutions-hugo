@@ -17,9 +17,6 @@ params:
     # tools, tehcniques, platforms, languages & frameworks
     quadrant: tools
 
-    # explicitly state the is_new value.  Otherwise the date is used
-    # is_new: false
-
     # Blib direction detail: New, Moved In, Moved Out, No Change
     status: "No Change"
 ---

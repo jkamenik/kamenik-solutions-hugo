@@ -6,14 +6,10 @@ params:
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold
-    ring: adopt
+    ring: hold
 
     # tools, tehcniques, platforms, languages & frameworks
     quadrant: tools
-    thing: 'tools'
-
-    # explicitly state the is_new value.  Otherwise the date is used
-    is_new: false
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
     status: "No Change"
