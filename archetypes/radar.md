@@ -1,5 +1,6 @@
 ---
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+{{- $title := replace .File.ContentBaseName "-" " " | title }}
+title: '{{ $title }}'
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
@@ -8,14 +9,13 @@ draft: true
 
 # Keywords help in classifing content
 keywords:
-  - radar
-  - {{ $quad }}
+  - {{ $title }}
 
 params:
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold
-    ring: adopt
+    ring: assess
 
     # tools, tehcniques, platforms, languages & frameworks
     quadrant: {{ $quad }}
