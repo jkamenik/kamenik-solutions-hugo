@@ -1,0 +1,21 @@
+{{- $status := .status -}}
+{{- $title := printf "<title>%s</title>" $status}}
+
+{{- $icon := "question-mark-circle" }}
+
+{{- if eq $status "New" }}
+  {{- $icon = "plus-circle" }}
+{{- else if eq $status "Moved In" }}
+  {{- $icon = "chevron-double-left" }}
+{{- else if eq $status "Moved Out" }}
+  {{- $icon = "chevron-double-right" }}
+{{- else if eq $status "No Change" }}
+  {{- $icon = "minus-circle" }}
+{{- end }}
+
+<!-- <span class="hx-text-[.65rem]">
+{{- (partial "shortcodes/icon.html" (dict "name" $icon)) }}
+{{ $status }}
+</span> -->
+
+{{- (partial "shortcodes/badge.html" (dict "content" $status "icon" $icon)) }}

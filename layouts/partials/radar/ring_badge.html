@@ -1,0 +1,14 @@
+{{- $ring := .ring -}}
+
+{{- $type := "" }}
+{{- if eq $ring "adopt" }}
+  {{- $type = "green" }}
+{{- else if eq $ring "trial" }}
+  {{- $type = "info" }}
+{{- else if eq $ring "assess" }}
+  {{- $type = "warning" }}
+{{- else if eq $ring "hold" }}
+  {{- $type = "error" }}
+{{- end }}
+
+{{- (partial "shortcodes/badge.html" (dict "content" $ring "type" $type)) }}
