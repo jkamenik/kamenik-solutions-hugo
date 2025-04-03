@@ -1,7 +1,20 @@
-<div class="summary">
+<div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose" style="--hextra-cards-grid-cols: 2;">
+
+<div class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden summary">
   <p>Last Modified: {{ .Lastmod.Format "2 Jan 2006" }}</p>
   <p>Ring: {{ .Params.radar.ring }}</p>
   <p>Quadrant: {{ .Params.radar.quadrant }}</p>
   <p>Status: {{ .Params.radar.status }}</p>
+</div>
+
+{{ with site.RegularPages.Related . | first 5 }}
+  <div class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hiddenrelated">
+    <p>Related content:</p>
+    {{ range . }}
+      <p><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+    {{ end }}
+  </div>
+{{ end }}
+
 </div>
 <div class="hx-mb-8"></div>
