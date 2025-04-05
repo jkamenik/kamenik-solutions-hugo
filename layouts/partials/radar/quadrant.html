@@ -1,12 +1,6 @@
-Quadrant goes here
-
-{{- $base := . }}
 {{- $content := "" }}
 
 {{- range .RegularPagesRecursive }}
-  <p>
-    <a href="{{ .RelPermalink }}">{{- .Title }}: {{- .Params.Radar.Ring }}</a>
-  </p>
   {{- $tag := .Params.Radar.Ring }}
   {{- $tagType := "" }}
   {{- if eq $tag "adopt" }}
