@@ -1,6 +1,7 @@
 ---
 title: 'Bash'
 date: 2024-03-26T00:14:12Z
+draft: true
 
 params:
   # Tech Radar details

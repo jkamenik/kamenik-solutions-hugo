@@ -25,25 +25,24 @@ menu:
     - name: Radar
       pageRef: /radar
       weight: 1
-    - name: Resources
-      pageRef: /resource
-      weight: 2
-    - name: Blog
-      pageRef: /blog
-      weight: 3
+    # - name: Resources
+    #   pageRef: /resource
+    #   weight: 2
+    # - name: Blog
+    #   pageRef: /blog
+    #   weight: 3
     - name: Search
       weight: 4
       params:
         type: search
-    - name: About
-      pageRef: /about
-      weight: 5
+    # - name: About
+    #   pageRef: /about
+    #   weight: 5
     - name: RSS
       weight: 6
-      url: "index.xml"
+      url: "/index.xml"
       params:
         icon: rss
-
 
 params:
   navbar:
@@ -62,6 +61,10 @@ params:
 
   editURL:
     enable: false
+
+  rss:
+    sections:
+      - radar
 
 outputs:
   section:

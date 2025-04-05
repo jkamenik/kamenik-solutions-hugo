@@ -1,12 +1,6 @@
-Quadrant goes here
-
-{{- $base := . }}
 {{- $content := "" }}
 
 {{- range .RegularPagesRecursive }}
-  <p>
-    <a href="{{ .RelPermalink }}">{{- .Title }}: {{- .Params.Radar.Ring }}</a>
-  </p>
   {{- $tag := .Params.Radar.Ring }}
   {{- $tagType := "" }}
   {{- if eq $tag "adopt" }}
@@ -19,7 +13,12 @@ Quadrant goes here
     {{- $tagType = "error" }}
   {{- end }}
 
-  {{- $content = printf "%s\n%s" $content (partial "shortcodes/card" (dict "title" .Title "subtitle" .Params.Radar.Status "link" .RelPermalink "tag" $tag "tagType" $tagType))}}
+  {{- $title := .Title }}
+  {{- if .Draft }}
+    {{- $title = printf "%s (draft)" .Title }}
+  {{- end }}
+
+  {{- $content = printf "%s\n%s" $content (partial "shortcodes/card" (dict "title" $title "subtitle" .Params.Radar.Status "link" .RelPermalink "tag" $tag "tagType" $tagType))}}
 {{- end }}
 
 {{- partial "shortcodes/cards" (dict "cols" 4 "content" ($content|safeHTML)) -}}

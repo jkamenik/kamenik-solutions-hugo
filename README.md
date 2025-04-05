@@ -11,6 +11,9 @@ Open http://localhost:1313/kamenik-solutions-hugo/ in your browser
 
 This will listen for changes and rebuild the site.
 
+> [!NOTE]
+> If you want to see how it render when published remove `--buildDrafts`
+
 ## Create a new page
 
 ```bash
