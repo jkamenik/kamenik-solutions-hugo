@@ -15,10 +15,12 @@ layout: hextra-home
 {{< /hextra/hero-subtitle >}}
 </div>
 
+<!--
 <div class="hx-mb-6">
 Take control of your infrastructure:
 {{< hextra/hero-button text="Get Started" link="about" >}}
 </div>
+-->
 
 <div class="hx-mt-6"></div>
 <!--
@@ -49,6 +51,7 @@ imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opaci
     subtitle="Visiual categorization of the DevSecOps ecosystem"
     link="radar"
   >}}
+  <!--
   {{< hextra/feature-card
     title="Resources"
     subtitle="Useful information about various topics"
@@ -59,4 +62,5 @@ imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opaci
     subtitle="Glimpses into the intersection of development, security, and operations"
     link="blog"
   >}}
+  -->
 {{< /hextra/feature-grid >}}
