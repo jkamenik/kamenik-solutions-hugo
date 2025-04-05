@@ -2,6 +2,7 @@
 title: 'Zsh'
 date: 2025-03-29T14:14:00Z
 lastmod: 2025-03-29T14:14:00Z
+draft: true
 
 # Keywords help in classifing content
 keywords:
