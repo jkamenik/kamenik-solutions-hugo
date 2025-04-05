@@ -1,0 +1,11 @@
+{{ with site.RegularPages.Related . | first 5 }}
+<div class="hx-mb-8"></div>
+<p>Related content:</p>
+<div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid" style="--hextra-cards-grid-cols: 3;">
+
+  {{ range . }}
+    {{ partial "shortcodes/card" (dict "title" .LinkTitle "link" .RelPermalink )}}
+  {{ end}}
+
+</div>
+{{ end }}

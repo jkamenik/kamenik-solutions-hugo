@@ -21,6 +21,6 @@ params:
     status: "New"
 ---
 
-[Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) is a testing technique that places a higher emphasis on smaller, faster, and more isolated testing (i.e., unit testing).  It is the testing equilivant of shift-left and results in better overall quality and faster shipment.  It should be a key componet of, if not your entire testing strategry.
+[Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) is a testing technique that places a higher emphasis on smaller, faster, and more isolated testing (i.e., unit testing).  It is the testing equivalent of shift-left and results in better overall quality and faster shipment.  It should be a key component of your testing strategy, if not the entire strategy.
 
 <!--more-->

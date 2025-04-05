@@ -8,9 +8,11 @@
         {{ if .Title }}<h1 class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">{{ .Title }}</h1>{{ end }}
         <div class="hx-mb-16"></div>
         {{ partial "radar/summary.html" . }}
+        <div class="hx-mt-8"></div>
         <div class="content">
           {{ .Content }}
         </div>
+        {{ partial "radar/related.html" . }}
         <div class="hx-mt-16"></div>
         {{ partial "components/comments.html" . }}
       </main>

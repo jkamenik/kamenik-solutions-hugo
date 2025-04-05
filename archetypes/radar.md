@@ -17,7 +17,7 @@ params:
     # adopt, trial, assess, hold
     ring: assess
 
-    # tools, tehcniques, platforms, languages & frameworks
+    # tools, techniques, platforms, languages & frameworks
     quadrant: {{ $quad }}
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
