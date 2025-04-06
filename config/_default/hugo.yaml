@@ -28,9 +28,9 @@ menu:
     # - name: Resources
     #   pageRef: /resource
     #   weight: 2
-    # - name: Blog
-    #   pageRef: /blog
-    #   weight: 3
+    - name: Blog
+      pageRef: /blog
+      weight: 3
     - name: Search
       weight: 4
       params:
