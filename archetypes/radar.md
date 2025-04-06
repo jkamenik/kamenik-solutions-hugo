@@ -1,8 +1,8 @@
 ---
 {{- $title := replace .File.ContentBaseName "-" " " | title }}
 title: '{{ $title }}'
-date: {{ .Date.Format "2006-01-02" }}
-lastmod: {{ .Date.Format "2006-01-02" }}
+date: {{ .Date | time.Format "2006-01-02" }}
+lastmod: {{ .Date | time.Format "2006-01-02" }}
 draft: true
 
 {{- $quad := path.Dir .Path | path.BaseName  }}
