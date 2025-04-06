@@ -1,10 +1,6 @@
-<div class="summary">
-  <p>Last Modified: {{ .Lastmod.Format "2 Jan 2006" }}</p>
-  <p>Ring: {{ .Params.radar.ring }}</p>
-  <p>Quadrant: {{ .Params.radar.quadrant }}</p>
-  <p>Status: {{ .Params.radar.status }}</p>
-  {{- if .Draft }}
-    <p>Draft</p>
-  {{- end }}
-</div>
-<div class="hx-mb-8"></div>
+{{- if .Draft }}
+  {{- (partial "shortcodes/badge.html" (dict "content" "Draft" "type" "warning" "icon" "cube-transparent" )) }}
+{{- end }}
+{{- partial "radar/status_icon.html" (dict "status" .Params.radar.status) }}
+{{- partial "radar/ring_badge.html" (dict "ring" .Params.radar.ring) -}}
+

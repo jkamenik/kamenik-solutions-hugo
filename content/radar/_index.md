@@ -4,7 +4,9 @@ title: Radar
 
 Use the side bar to review items in the Radar, or view it in the [Throughtworks layout]({{% radar_link %}}).
 
-The radar is setup in Rings and Quadrants.  The rings are.
+The radar is setup in Rings and Quadrants.  The rings are:
+
+<div class="hx-mt-8"></div>
 
 {{< hextra/feature-grid cols=2 >}}
   {{< hextra/feature-card
