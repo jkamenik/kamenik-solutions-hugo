@@ -1,6 +1,6 @@
 {{- $content := "" }}
 
-{{- range .RegularPagesRecursive }}
+{{- range (sort .RegularPagesRecursive "Title") }}
   {{- $tag := .Params.Radar.Ring }}
   {{- $tagType := "" }}
   {{- if eq $tag "adopt" }}
