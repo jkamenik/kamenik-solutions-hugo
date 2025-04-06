@@ -24,12 +24,11 @@ params:
 
 [Capistrano](https://capistranorb.com/) is a remote server automation and deployment tool written in Ruby.
 
-While this tool helped to usher in the practice of DevOps using Ruby as a DSL it was born before the time of [Declarative IaC]({{< ref "radar/techniques/declarative-iac" >}}).  And as with many [Imperative IaC]({{< ref "radar/techniques/imperative-iac" >}}) tools the IaC is error prone and becomes unmaintainable long term.  It has long since been replaced better tools and should be abandoned if at possible.
+While this tool helped to usher in the practice of DevOps using {{% wl "Ruby" %}} as a {{% wl "DSL" %}} it was born before the time of [Declarative IaC]({{< ref "radar/techniques/declarative-iac" >}}).  And as with many [Imperative IaC]({{< ref "radar/techniques/imperative-iac" >}}) tools the IaC is error prone and becomes unmaintainable long term.  It has long since been replaced better tools and should be abandoned if at possible.
 
 <!--more-->
 
-<!--
 Things to use instead:
-- [[Ansible]]
-- [[Terraform]]
-- [[Kubernetes]] -->
+- {{% wl "Ansible" %}}
+- {{% wl "Terraform" %}}
+- {{% wl Kubernetes %}}

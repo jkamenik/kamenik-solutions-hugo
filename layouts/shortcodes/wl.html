@@ -1,0 +1,18 @@
+{{- $title := .Get 0 }}
+{{- $display := .Get 1 | default "" }}
+{{- $page := "" }}
+
+{{- range .Site.RegularPages }}
+  {{- if eq (lower .Title) (lower $title) }}
+    {{- $page = .}}
+    {{- if eq $display "" }}
+      {{- $display = .LinkTitle }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- if ne $page "" }}
+  {{- printf "[%s](%s)" $display $page.RelPermalink }}
+{{- else }}
+  {{- $display | default $title }}
+{{- end }}

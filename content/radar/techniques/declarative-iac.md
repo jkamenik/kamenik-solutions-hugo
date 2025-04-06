@@ -23,7 +23,7 @@ params:
 
 Infrastructure as Code (IaC) is the idea that all infrastructure can (and should) be described as executable code.  This allows machines to continually reconcile the code against reality and eliminate drift before it becomes costly.  "Declarative" means that the IaC file has minimal logic and declares the end-state.
 
-Declarative IaC should be adopted and CDKs and other forms of Imperative IaC should be avoided.
+Declarative IaC should be adopted and {{% wl "CDKs" %}} and other forms of {{% wl "Imperative IaC" %}} should be avoided.
 
 <!--more-->
 
