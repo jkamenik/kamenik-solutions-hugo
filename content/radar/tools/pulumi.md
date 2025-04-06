@@ -1,7 +1,7 @@
 ---
 title: 'Pulumi'
-date: 2025-04-05
-lastmod: 2025-04-05
+date: 2024-04-05
+lastmod: 2025-01-05
 
 # Keywords help in classifying content
 keywords:

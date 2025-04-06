@@ -23,6 +23,6 @@ params:
     status: "Moved Out"
 ---
 
-[Docker Compose](https://docs.docker.com/compose) is a development tool for defining and running multi-container applications.  It is included in the Docker ecosystem but 99% of all container deployments are going to be Kubernetes.  Therefore, you want a tool that Kubernetes aware like Skaffold instead.
+[Docker Compose](https://docs.docker.com/compose) is a development tool for defining and running multi-container applications.  It is included in the Docker ecosystem but 99% of all container deployments are going to be Kubernetes.  Therefore, you want a tool that Kubernetes aware like {{% wl Skaffold %}} instead.
 
 <!--more-->
