@@ -18,8 +18,8 @@
     {{- $title = printf "%s (draft)" .Title }}
   {{- end }}
 
-  {{- $content = printf "%s\n%s" $content (partial "shortcodes/card" (dict "title" $title "subtitle" .Params.Radar.Status "link" .RelPermalink "tag" $tag "tagType" $tagType))}}
+  {{- $content = printf "%s\n%s" $content (partial "radar/card.html" .)}}
 {{- end }}
 
-{{- partial "shortcodes/cards" (dict "cols" 4 "content" ($content|safeHTML)) -}}
+{{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content|safeHTML)) -}}
 

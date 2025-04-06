@@ -1,9 +1,9 @@
 ---
 title: 'Test Pyramid'
-date: 2025-03-29T16:18:56Z
-lastmod: 2025-03-29T16:18:56Z
+date: 2025-03-29
+lastmod: 2025-03-29
 
-# Keywords help in classifing content
+# Keywords help in classifying content
 keywords:
   - radar
   - techniques
@@ -14,7 +14,7 @@ params:
     # adopt, trial, assess, hold
     ring: adopt
 
-    # tools, tehcniques, platforms, languages & frameworks
+    # tools, techniques, platforms, languages & frameworks
     quadrant: techniques
 
     # Blib direction detail: New, Moved In, Moved Out, No Change

@@ -1,13 +1,13 @@
 ---
 {{- $title := replace .File.ContentBaseName "-" " " | title }}
 title: '{{ $title }}'
-date: {{ .Date }}
-lastmod: {{ .Date }}
+date: {{ .Date.Format "2006-01-02" }}
+lastmod: {{ .Date.Format "2006-01-02" }}
 draft: true
 
 {{- $quad := path.Dir .Path | path.BaseName  }}
 
-# Keywords help in classifing content
+# Keywords help in classifying content
 keywords:
   - {{ $title }}
 

@@ -1,13 +1,13 @@
 ---
-title: 'Imperative Iac'
-date: 2025-01-05T00:33
-lastmod: 2025-01-05T22:30
-draft: true
+title: 'Imperative IaC'
+date: 2025-01-05
+lastmod: 2025-01-05
 
-# Keywords help in classifing content
+# Keywords help in classifying content
 keywords:
-  - Imperative
-  - Iac
+  - Imperative IaC
+  - IaC
+  - anti-pattern
 
 params:
   # Tech Radar details

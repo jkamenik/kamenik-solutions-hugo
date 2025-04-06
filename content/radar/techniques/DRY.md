@@ -1,9 +1,9 @@
 ---
 title: 'DRY'
-date: 2025-01-05T01:10:00-05:00
-lastmod: 2025-01-05T22:46:00-05:00
+date: 2025-01-05
+lastmod: 2025-01-05
 
-# Keywords help in classifing content
+# Keywords help in classifying content
 keywords:
   - DRY
   - anti-pattern
@@ -14,8 +14,8 @@ params:
     # adopt, trial, assess, hold
     ring: hold
 
-    # tools, tehcniques, platforms, languages & frameworks
-    quadrant: radartehcniques
+    # tools, techniques, platforms, languages & frameworks
+    quadrant: techniques
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
     status: "Moved Out"
