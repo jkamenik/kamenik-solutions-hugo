@@ -57,10 +57,10 @@ imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opaci
     subtitle="Useful information about various topics"
     link="docs"
   >}}
+  -->
   {{< hextra/feature-card
     title="Blog"
     subtitle="Glimpses into the intersection of development, security, and operations"
     link="blog"
   >}}
-  -->
 {{< /hextra/feature-grid >}}
