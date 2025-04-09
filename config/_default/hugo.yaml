@@ -65,6 +65,7 @@ params:
   rss:
     sections:
       - radar
+      - blog
 
 outputs:
   section:
