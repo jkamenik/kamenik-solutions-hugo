@@ -31,6 +31,8 @@ It was and is strongly recommended by tools that are in the chat space like {{% 
 
 In DevOps / DevSecOps alerting is very important.  It is the way that you know something is wrong and that your attention is actually needed.  You need to leave that space clear for only the most important alerts and thus mixing that type of alerting with co-worker chats is a bad idea.
 
-## ChatOps for Action
+## ChatOps for Actions
 
-In the world of DevOps / DevSecOps the only usefulness of a bot is to start a workflow.  First, it is inadvisable to give a chat bot access to your critical infrastructure.  This really limits what a chat bot can help you solve.  For what is left there is always a better way and thus there is no purpose for ChatOps in DevOps / DevSecOps.
+Triggering automation from a chat program seems like a boon.  Who wouldn't want to force encrypt all their drives right before they walk onto an air plane for a 5 hour trip...  Anyone in DevSecOps.
+
+Also, it is really inadvisable to give your chat software access to your critical infrastructure.  Therefore any investment made in this area will quickly fail a standard audit leaving you with no viable path.  It is better to not fall in this trap to begin with.
