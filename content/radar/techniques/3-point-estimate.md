@@ -27,7 +27,7 @@ params:
 
 The [three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation) technique is used in management and information systems applications for the construction of an approximate probability distribution representing the outcome of future events, based on very limited information.  It is very useful in estimating the scope of engineering projects as well.
 
-If your team is struggling with estimating, this might be a viable alternative to simple effort points, which are common in {{< wl Scrum >}}. By taking a range of estimates, you can avoid unnecessary debates and over-analysis that often arise during estimation. Many teams will find it easier to estimate dozens of tasks in the same time it would have taken to estimate just a few with {{< wl "planning poker" >}}.
+If your team is struggling with estimating, this might be a viable alternative to simple effort points, which are common in {{% wl Scrum %}}. By taking a range of estimates, you can avoid unnecessary debates and over-analysis that often arise during estimation. Many teams will find it easier to estimate dozens of tasks in the same time it would have taken to estimate just a few with {{% wl "planning poker" %}}.
 
 <!--more-->
 
@@ -36,7 +36,7 @@ If your team is struggling with estimating, this might be a viable alternative t
 Before we get to the math the 3-points in 3-point estimation are the following estimates.  For each task these are the values you need to track.  As developers we recommend estimating in whole number days.  However, some teams choose 1/2 days or hours, but we strongly recommend against that.
 
 - `a` - The best-case.  This is probably what an expert would say it is.  Or someone outside of eng would think it should take.
-- `m` - The likely case.  This is what you'd arrive at with {{< wl "planning poker" >}} or some other consensus estimating technique.
+- `m` - The likely case.  This is what you'd arrive at with {{% wl "planning poker" %}} or some other consensus estimating technique.
 - `b` - The worst-case.  This is the "it could possible take more then..." number.
 
 ### The Math
