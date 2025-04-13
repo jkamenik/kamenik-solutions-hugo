@@ -8,7 +8,7 @@ keywords:
   - Zanzibar
   - authorization
   - iam
-  - beyondcorp
+  - beyond-corp
   - zero-trust
   - ztna
 
