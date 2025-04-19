@@ -51,13 +51,13 @@ imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opaci
     subtitle="Visiual categorization of the DevSecOps ecosystem"
     link="radar"
   >}}
-  <!--
+
   {{< hextra/feature-card
     title="Resources"
-    subtitle="Useful information about various topics"
-    link="docs"
+    subtitle="Evergreen information about various topics"
+    link="resources"
   >}}
-  -->
+
   {{< hextra/feature-card
     title="Blog"
     subtitle="Glimpses into the intersection of development, security, and operations"

@@ -25,9 +25,9 @@ menu:
     - name: Radar
       pageRef: /radar
       weight: 1
-    # - name: Resources
-    #   pageRef: /resource
-    #   weight: 2
+    - name: Resources
+      pageRef: /resources
+      weight: 2
     - name: Blog
       pageRef: /blog
       weight: 3
@@ -67,7 +67,40 @@ params:
       - radar
       - blog
 
+  displayUpdatedDate: false
+
+  blog:
+    list:
+      displayTags: false
+
 outputs:
   section:
     - html
     - json
+
+related:
+  includeNewer: false
+  indices:
+  - applyFilter: false
+    cardinalityThreshold: 0
+    name: keywords
+    pattern: ""
+    toLower: true
+    type: basic
+    weight: 100
+  - applyFilter: false
+    cardinalityThreshold: 0
+    name: date
+    pattern: ""
+    toLower: false
+    type: basic
+    weight: 10
+  - applyFilter: false
+    cardinalityThreshold: 0
+    name: tags
+    pattern: ""
+    toLower: true
+    type: basic
+    weight: 80
+  threshold: 80
+  toLower: true

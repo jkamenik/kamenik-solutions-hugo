@@ -1,7 +1,7 @@
 ---
 title: 'Kustomize Rollout'
-date: 2025-04-09
-draft: true
+date: 2025-04-18
+lastmod: 2025-04-18
 
 # Keywords help in classifying content
 keywords:
@@ -56,14 +56,14 @@ patches:
       name: app
 ```
 
-However, things are little more annoying if you have to exclude or remote items.  There is no way in kustomize to delete entire objects so the only way to handle this in each overlay is via full object copies.  If however, you have a large discrepancy between a env or a lot of object this can be error prone.
+However, things are little more annoying if you have to exclude or remote items.  There is no way in kustomize to delete entire objects so the only way to handle this in each overlay is via full object copies.  If however, you have a large discrepancy between an env or a lot of object then this can be error prone.
 
 ## Option 2: A/B Bases
 
 > [!NOTE]
 > This style is more complicated because it prevents accidental rollouts.  It should be reserved for when the deployment maturity requires it.
 
-In this style the base has `a`, `b`, `cluster-a` and `cluster-b` bases as well as all the standard overlays.
+In this style the base has `a`, `b`, `provider-a` and `provider-b` bases as well as all the standard overlays plus a `local` overlay that cannot have provider specific objects.
 
 {{< filetree/container >}}
   {{< filetree/folder name="app" >}}
@@ -74,7 +74,7 @@ In this style the base has `a`, `b`, `cluster-a` and `cluster-b` bases as well a
         {{< filetree/file name="kustomization.yaml" >}}
         {{< filetree/file name="service.yaml" >}}
       {{< /filetree/folder >}}
-      {{< filetree/folder name="cluster-a" >}}
+      {{< filetree/folder name="provider-a" >}}
         {{< filetree/file name="backend-config.yaml" >}}
         {{< filetree/file name="cert.yaml" >}}
         {{< filetree/file name="external-secret.yaml" >}}
@@ -88,7 +88,7 @@ In this style the base has `a`, `b`, `cluster-a` and `cluster-b` bases as well a
         {{< filetree/file name="kustomization.yaml" >}}
         {{< filetree/file name="service.yaml" >}}
       {{< /filetree/folder >}}
-      {{< filetree/folder name="cluster-b" >}}
+      {{< filetree/folder name="provider-b" >}}
         {{< filetree/file name="backend-config.yaml" >}}
         {{< filetree/file name="cert.yaml" >}}
         {{< filetree/file name="external-secret.yaml" >}}
@@ -109,21 +109,24 @@ In this style the base has `a`, `b`, `cluster-a` and `cluster-b` bases as well a
 A standard rollout is as follows:
 
 1. Every overlay is pointing at `*a`
-    1. `local` and `cluster-a` directly at `a`
-    1. `dev`, `staging`, and `prod` at `cluster-a`
+    1. `local` and `provider-a` directly at `a`
+    1. `dev`, `staging`, and `prod` at `provider-a`
 1. Create / update `b` to be what is in `a`
 1. Point `local` to `b`
 1. Update `b` until it works for `local`
-1. Create / update `cluster-b` based on `cluster-a`
-    1. Make sure that `cluster-b` points to `b`
-1. Point `dev` to `cluster-b`
-1. Update `cluster-b` until it works for `dev`
+1. Create / update `provider-b` based on `provider-a`
+    1. Make sure that `provider-b` points to `b`
+1. Point `dev` to `provider-b`
+1. Update `provider-b` until it works for `dev`
 1. Roll out the changes to `staging` and `prod`
-1. (optional) Delete `a` and `cluster-a`
+1. (optional) Delete `a` and `provider-a`
+
+> [!WARNING] Blast Radius Diff
+> Because there are going to be so many file changes with every update it is useful to create a script that can diff the output of kustomize between what is currently deployed (usually the `main` branch), and what is currently on the branch.  This is the only way to get a real idea of the blast radius of the change.
 
 ## Option 3: Versioned Helm Charts
 
-The final option - which is complicated in its own right - is to produce a versioned {{< wl "helm chart" >}}.  Then use that reference and a values file in each overlay.  In this case because the helm chart is the base, no separate base is needed.
+The final option - which is complicated as it introduces a new tool - is to produce a versioned {{< wl "helm chart" >}}.  Then use that reference and a values file in each overlay.  In this case, because the helm chart is the base, no separate base is needed.
 
 {{< filetree/container >}}
   {{< filetree/folder name="app" >}}
@@ -154,12 +157,28 @@ Each `kustomizaton.yaml` would look like this:
 helmCharts:
 - name: app
   includeCRDs: false
-  values: values.yaml
+  valuesFile: values.yaml
   version: 3.1.3
   repo: https://oci.example.com/repos/app
 ```
 
 Separately you will need a repo for the helm chart with a CI pipeline that pushes a versioned OCI image to a repository.  To rollout a change you update the `version` flag and make any correction needed to the values file.
 
-> [!WARNING]
-> It is not uncommon to do local testing directly from the Helm chart and have a special dev cluster for manually testing the helm chart before it gets rolled out.
+> [!NOTE]
+> It is not uncommon to do local testing directly from the Helm chart and have a special dev cluster for manually testing the helm chart before it gets rolled out.  This means that the local vs provider specific objects has to handled by logic exposed in the `values.yaml`.
+>
+> ```yaml
+> # values.yaml
+> provider: "local" # only include the CRDs valid for local deployments
+> # or provide explitic disable flags
+> disableExternalSecrets: true
+> disableManagedCertificates: true
+>
+> # hardcoded secrets are now needed
+> secrets:
+>   someSecret:
+>     key: some-secret-value
+> ```
+
+> [!ERROR] Don't use `chartHome`
+> Kustomize does support a `chartHome` option which will use a local file path to find the helm chart.  Don't use it, as it is worst of all worlds.  You have to manage it in A/B style or you have to add the stage logic to the chart directly which means you cannot truly test it before roll out.  It will bite you.

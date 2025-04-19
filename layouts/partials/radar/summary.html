@@ -1,5 +1,5 @@
 {{- if .Draft }}
-  {{- (partial "shortcodes/badge.html" (dict "content" "Draft" "type" "warning" "icon" "cube-transparent" )) }}
+  {{- (partial "shortcodes/badge.html" (dict "content" "Draft" "type" "error" "icon" "cube-transparent" )) }}
 {{- end }}
 {{- partial "radar/status_icon.html" (dict "status" .Params.radar.status) }}
 {{- partial "radar/ring_badge.html" (dict "ring" .Params.radar.ring) -}}
