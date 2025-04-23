@@ -22,6 +22,6 @@ params:
     status: "No Change"
 ---
 
-[Tailscale](https://tailscale.com/) is a software defined VPN meant which uses {{% wl "Wireguard" %}} under the hood.  If you have a need for a traditional VPN then Tailscale might be a easier solutions.  However, in this day and age you are likely better served with a {{% wl "ZTNA" %}} solution, so we remain cautious.
+[Tailscale](https://tailscale.com/) is a software defined VPN platform which uses {{% wl "Wireguard" %}} under the hood.  If you have a need for a traditional VPN then Tailscale might be a easier solutions.  However, in this day and age you are likely better served with a {{% wl "ZTNA" %}} solution, so we remain cautious.
 
 <!--more-->

@@ -24,7 +24,7 @@ params:
 
 [Container Structure Test](https://github.com/GoogleContainerTools/container-structure-test) provides a powerful framework to validate the structure of a container image. These tests can be used to check the output of commands in an image, as well as verify metadata and contents of the filesystem.
 
-If you are building {{% wl "containers" %}} then this is a critical tool.
+If you are building {{% wl "containerization" "containers" %}} then this is a critical tool.
 
 <!--more-->
 
