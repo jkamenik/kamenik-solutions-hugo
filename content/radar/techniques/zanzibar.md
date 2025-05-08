@@ -1,7 +1,7 @@
 ---
 title: 'Zanzibar'
 date: 2023-07-23
-lastmod: 2023-07-23
+lastmod: 2025-05-07
 
 # Keywords help in classifying content
 keywords:
@@ -37,7 +37,7 @@ These tuples are stored in a database and evaluated dynamically at runtime.  The
 
 `<object>` is `<namespace>:<id>` but is basically anything that uniquely identifies something.  This might be a virtual item like a report (report:5), or an abstract thing like a group (group:reporters), Basically anything, that isn’t a user.
 
-`<user>` is a `<user id>` (e.g., 10) or an additional relation (`<object>#<relation>`), thus creating a graph.
+`<user>` is a `<user id>` (e.g., 10) or an additional relation (`<object>#<relation>`), thus creating a graph.  A user can be human id (email) + context (usually device) or a machine (service account).
 
 `<relation>` is a string identifier for the type of relationship between object and user.
 
@@ -72,7 +72,9 @@ relation {
   userset_rewrite {
     union {
       child { _this {} } # all things explicitly given editor relation
-      child { computed_userset { relation: “owner” } } # Any that was explicitly given the owner relation is also an editor
+
+      # Any that was explicitly given the owner relation is also an editor
+      child { computed_userset { relation: “owner” } }
     }
   }
 }
@@ -98,7 +100,13 @@ Use a tuple to bind a group to a relation on an object (e.g., `doc:readme#viewer
 
 Then us another tuple to bind a user to a group (e.g., `group:eng#member@11`)
 
-## New Enemy problem and Zookies
+## Google Scale
+
+Internally Google uses a system that is implied by the whitepaper.  But at their scale it would be impossible to check permissions using a vector check like explained in the paper.  Instead they are reduce all permissions to their simplist form.  Checks - for access - are executed against the flattened dataset.  This reduces the complexity of the check and also increases the speed and accuracy.
+
+The process that does this reduction works in a similar way to what is explained in the {{% wl "Prodspec and Annealing" %}} paper.
+
+### New Enemy problem and Zookies
 
 > [!NOTE]
 > This is a problem because google has to cache relations in order to meet SLAs.
