@@ -16,7 +16,7 @@ params:
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold
-    ring: trial
+    ring: assess
 
     # tools, techniques, platforms, languages & frameworks
     quadrant: techniques
