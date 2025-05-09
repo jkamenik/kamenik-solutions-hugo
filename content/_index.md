@@ -48,7 +48,7 @@ imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opaci
   >}}
   {{< hextra/feature-card
     title="Radar"
-    subtitle="Visiual categorization of the DevSecOps ecosystem"
+    subtitle="Visual categorization of the DevSecOps ecosystem"
     link="radar"
   >}}
 

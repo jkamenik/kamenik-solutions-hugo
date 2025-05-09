@@ -1,8 +1,7 @@
 ---
-title: 'YamlScript'
+title: 'YAMLScript'
 date: 2024-04-09
-lastmod: 2025-04-24
-
+lastmod: 2025-05-08
 # Keywords help in classifying content
 keywords:
   - YamlScript
@@ -70,4 +69,6 @@ defn bottles(n):
 
 `main` is the entry point and all command line arguments are split as function arguments.  Builtins like `each`, `say`, `cond` take zero or more arguments and perform work given by their object definition.  User defined functions are called using `()`.
 
-This is a functional language and thus as the program and object definitions are unordered.  For example in `cond` the "=>" string indicates the default case; it is only placed as a convention.  This also means that all conditions have to be fully evaluated before the default case can be chosen.  Not usually a issue, but something to be aware of.
+This is a functional language and thus the program and object definitions are unordered.  For example in `cond` the "=>" string indicates the default case; it is only placed last as a convention.  This also means that all conditions have to be fully evaluated before the default case can be chosen.  Not usually a issue, but something to be aware of.
+
+In `paragraph` the `|` indicates that the next block is text.  The `$` in the block is interpolation.

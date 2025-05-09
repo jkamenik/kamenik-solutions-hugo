@@ -1,7 +1,7 @@
 ---
-title: 'Json Schema'
+title: 'JSON Schema'
 date: 2025-04-24
-lastmod: 2025-04-24
+lastmod: 2025-05-08
 draft: true
 
 # Keywords help in classifying content

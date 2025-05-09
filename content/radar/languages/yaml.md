@@ -24,7 +24,7 @@ params:
 
 [YAML](https://yaml.org/) is a more human readable format which is fully API compatible with {{% wl "JSON" %}}.  It gained popularity as being the {{% wl "Declarative IaC" %}} language for things like {{% wl "Docker Compose" %}}, and {{% wl "Kubernetes" %}}.
 
-There are some syntactic sugar like anchors and aliases and deep merging of maps which makes it easier to for humans to read.  Additionally, many systems (like {{% wl "Helm" %}}) add a templating language on-top to make generating large amounts of YAML easier.  And since Yaml is a subset of {{% wl "JSON Schema" %}} that can be used to validate complex YAML.  Because of this ubiquity you should adopt it.
+There are some syntactic sugar like anchors and aliases and deep merging of maps which makes it easier to for humans to read.  Additionally, many systems (like {{% wl "Helm" %}}) add a templating language on-top to make generating large amounts of YAML easier.  And since Yaml is a subset of {{% wl "JSON" %}}, {{% wl "JSON Schema" %}} that can be used to validate complex YAML.  Because of this ubiquity you should adopt it.
 
 <!--more-->
 
