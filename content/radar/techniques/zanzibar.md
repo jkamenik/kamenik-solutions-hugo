@@ -7,6 +7,7 @@ lastmod: 2025-05-07
 keywords:
   - Zanzibar
   - authorization
+  - permissions
   - iam
   - beyond-corp
   - zero-trust
