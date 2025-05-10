@@ -1,7 +1,7 @@
 ---
 title: '3 Point Estimate'
 date: 2023-12-01
-lastmod: 2023-12-01
+lastmod: 2025-05-09
 
 # Keywords help in classifying content
 keywords:
@@ -61,7 +61,3 @@ You can then convert this into a confidence interval for the project:
 95% is usually the target.
 
 With spreadsheet this is pretty easy to do.
-
-## Scope
-
-The scope of a project is then the sums of each internal for all the tasks.  The
