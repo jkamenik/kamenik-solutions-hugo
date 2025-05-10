@@ -41,7 +41,7 @@ These tuples are stored in a database and evaluated dynamically at runtime.  The
 
 `<relation>` is a string identifier for the type of relationship between object and user.
 
-So ways relationships are mapped:
+Some ways relationships are mapped:
 
 1. User 10 is an owner of `doc:readme` - `doc:readme#owner@10`
 2. User 11 is a member of `group:eng` - `group:eng#member@11`

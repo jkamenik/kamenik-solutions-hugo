@@ -7,6 +7,7 @@ lastmod: 2025-05-09
 keywords:
   - 3 Point Estimate
   - estimate
+  - planning
   - estimating
   - scope
 
