@@ -1,5 +1,11 @@
 {{- $content := "" }}
 
+{{- $s := newScratch }}
+{{- $s.Set "adopt" slice }}
+{{- $s.Set "trial" slice }}
+{{- $s.Set "assess" slice }}
+{{- $s.Set "hold" slice }}
+
 {{- range (sort .RegularPagesRecursive "Title") }}
   {{- $tag := .Params.Radar.Ring }}
   {{- $tagType := "" }}
@@ -18,7 +24,14 @@
     {{- $title = printf "%s (draft)" .Title }}
   {{- end }}
 
-  {{- $content = printf "%s\n%s" $content (partial "radar/card.html" .)}}
+  {{- $s.Add $tag (slice .)}}
+{{- end }}
+
+{{- range (slice "adopt" "trial" "assess" "hold") }}
+  {{- $ring := . }}
+  {{- range (sort ($s.Get $ring) "Title")}}
+    {{- $content = printf "%s\n%s" $content (partial "radar/card.html" .)}}
+  {{- end }}
 {{- end }}
 
 {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content|safeHTML)) -}}

@@ -1,9 +1,10 @@
 {{- $twoWeeksAgo := (math.Sub time.Now.Unix (math.Mul 2 7 24 60 60)) }}
 {{- $pages := slice }}
-{{- range .RegularPagesRecursive }}
+{{- range (sort .RegularPagesRecursive) }}
   {{- $isNew := "FALSE" }}
   {{- if (eq .Params.radar.status "New") }}
     {{- $isNew = "TRUE"}}
+    {{/* TODO: Add a two week calculation for newness */}}
   {{- end }}
   {{- $content := .Summary}}
   {{- if (ne .Summary .Content) }}
