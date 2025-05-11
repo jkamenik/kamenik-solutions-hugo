@@ -1,11 +1,11 @@
 ---
-title: 'Yaml'
+title: 'YAML'
 date: 2025-04-09
-lastmod: 2025-04-24
+lastmod: 2025-05-10
 
 # Keywords help in classifying content
 keywords:
-  - Yaml
+  - YAML
   - Yet another markup language
   - JSON
 
