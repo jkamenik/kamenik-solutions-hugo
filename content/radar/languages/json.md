@@ -21,8 +21,8 @@ params:
     status: "No Change"
 ---
 
-Summary goes here.
+<!-- TODO: Add a Summary -->
 
 <!--more-->
 
-Additional details goes here.
+<!-- TODO: Add additional info -->

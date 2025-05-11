@@ -21,7 +21,8 @@ params:
     status: "No Change"
 ---
 
-Zero-trust Networking Architecture
+<!-- TODO: Add a Summary -->
 
 <!--more-->
 
+<!-- TODO: Add additional info -->
