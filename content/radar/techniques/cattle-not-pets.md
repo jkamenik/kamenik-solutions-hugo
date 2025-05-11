@@ -22,11 +22,9 @@ params:
     status: "No Change"
 ---
 
-This is an idea where once upon a time we treated servers like pets.  We gave them names, allowed them to become unique, and spend a lot of time caring for them individually.  This didn't scale so we increasing made the pets do more and more and it was catastrophic when they died.
+Once upon a time we treated servers like pets.  We gave them names, allowed them to become unique, and spend a lot of time caring for them individually.  This didn't scale so we increasing made the pets do more and more and it was catastrophic when they died.
 
-Cattle on the other hand are numbered - not named, are identical to each other and told what to do, and are fungible and replaced when they fail.
-
-Modern cloud based services only works and scale if you treat the underlying infrastructure as cattle.
+Cattle are numbered, identical, fungible (interchangeable and replaceable without loss of value), follow instructions, and are replaced when they fail.  This facilitates almost all modern software practices.  Things like {{% wl "containerization" "containers" %}}, {{% wl "Kubernetes" %}}, {{% wl "Software as a Service" %}}, or {{% wl Cloud %}} wouldn't exist without this technique.  Therefore it is an absolute must.
 
 <!--more-->
 
