@@ -29,10 +29,12 @@
 
 {{- range (slice "adopt" "trial" "assess" "hold") }}
   {{- $ring := . }}
+  {{- $content = "" }}
   {{- range (sort ($s.Get $ring) "Title")}}
     {{- $content = printf "%s\n%s" $content (partial "radar/card.html" .)}}
   {{- end }}
-{{- end }}
 
-{{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content|safeHTML)) -}}
+  <h2>{{- strings.Title $ring }}</h2>
+  {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content|safeHTML)) -}}
+{{- end }}
 
