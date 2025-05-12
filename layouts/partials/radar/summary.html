@@ -4,3 +4,12 @@
 {{- partial "radar/status_icon.html" (dict "status" .Params.radar.status) }}
 {{- partial "radar/ring_badge.html" (dict "ring" .Params.radar.ring) -}}
 
+{{- $page := . }}
+{{- with $date := .Date }}
+  <span class="hx-mr-1"><b> First Added:</b>{{ partial "utils/format-date" $date }}</span>
+  {{- with $mod := $page.Lastmod }}
+    {{- if (ne $date $mod) }}
+      <span class="hx-mr-1"><b> Updated:</b> {{ partial "utils/format-date" $mod }}</span>
+    {{- end }}
+  {{ end -}}
+{{ end -}}

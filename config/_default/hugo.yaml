@@ -2,6 +2,8 @@ baseURL: 'https://kameniksolutions.com'
 languageCode: 'en-us'
 title: 'Kamenik Solutions'
 
+timeZone: America/New_York
+
 # Setup the Threme
 module:
   imports:
