@@ -1,21 +1,24 @@
 ---
-title: 'OpenAPI'
-date: 2025-05-13
-lastmod: 2025-05-13
+title: 'gRPC'
+date: 2025-05-15
+lastmod: 2025-05-15
 draft: true
 
 # Keywords help in classifying content
 keywords:
-  - OpenAPI
+  - gRPC
 
 params:
+  # Alternative titles that can be used in the wl shortcode
+  # aka: []
+
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold
     ring: assess
 
     # tools, techniques, platforms, languages & frameworks
-    quadrant: techniques
+    quadrant: languages
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
     status: "No Change"
