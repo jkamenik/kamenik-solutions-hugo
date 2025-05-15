@@ -5,13 +5,22 @@
 {{- range .Site.RegularPages }}
   {{- if eq (lower .Title) (lower $title) }}
     {{- $page = .}}
-    {{- if eq $display "" }}
-      {{- $display = .LinkTitle }}
+    {{- break }}
+  {{- else }}
+    {{- $p := . }}
+    {{- range $value := .Params.aka }}
+      {{- if eq (lower $value) (lower $title) }}
+        {{- $page = $p }}
+        {{- break }}
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
 
 {{- if ne $page "" }}
+  {{- if eq $display "" }}
+    {{- $display = $title }}
+  {{- end }}
   {{- printf "[%s](%s)" $display $page.RelPermalink }}
 {{- else }}
   {{- $display | default $title }}

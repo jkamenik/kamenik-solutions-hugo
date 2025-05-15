@@ -12,6 +12,9 @@ keywords:
   - {{ $title }}
 
 params:
+  # Alternative titles that can be used in the wl shortcode
+  # aka: []
+
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold
