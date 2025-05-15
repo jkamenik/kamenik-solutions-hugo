@@ -6,7 +6,7 @@ draft: true
 
 # Keywords help in classifying content
 keywords:
-  - Json
+  - JSON
 
 params:
   # Tech Radar details

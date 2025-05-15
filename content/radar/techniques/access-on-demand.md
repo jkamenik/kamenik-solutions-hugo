@@ -4,9 +4,9 @@ date: 2025-04-05
 lastmod: 2025-05-10
 
 aliases:
-  - radar/techniques/aod
-  - radar/techniques/oda
-  - radar/techniques/on-demand-access
+  - aod
+  - oda
+  - on-demand-access
 
 # Keywords help in classifying content
 keywords:
@@ -15,6 +15,9 @@ keywords:
   - Permissions
 
 params:
+  aka:
+    - AoD
+
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold

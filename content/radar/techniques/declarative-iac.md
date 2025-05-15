@@ -9,6 +9,9 @@ keywords:
   - IaC
 
 params:
+  aka:
+    - IaC
+
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold

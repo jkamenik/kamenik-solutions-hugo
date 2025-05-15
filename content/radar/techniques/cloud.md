@@ -4,9 +4,9 @@ date: 2025-05-11
 lastmod: 2025-05-11
 
 aliases:
-  - radar/techniques/cloud-computing
-  - radar/techniques/infrastructure-as-a-service
-  - radar/techniques/platform-as-a-service
+  - /radar/techniques/cloud-computing
+  - /radar/techniques/infrastructure-as-a-service
+  - /radar/techniques/platform-as-a-service
 
 # Keywords help in classifying content
 keywords:
@@ -20,6 +20,10 @@ keywords:
   # - SaaS
 
 params:
+  aka:
+    - IaaS
+    - PaaS
+
   # Tech Radar details
   radar:
     # adopt, trial, assess, hold

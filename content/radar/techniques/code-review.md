@@ -4,8 +4,8 @@ date: 2025-04-09
 lastmod: 2025-05-11
 
 aliases:
-  - radar/techniques/merge-request
-  - radar/techniques/pull-request
+  - /radar/techniques/merge-request
+  - /radar/techniques/pull-request
 
 # Keywords help in classifying content
 keywords:
