@@ -1,12 +1,12 @@
 ---
-title: 'GraphQL'
-date: 2025-05-14
-lastmod: 2025-05-14
+title: 'Work Queues'
+date: 2025-05-20
+lastmod: 2025-05-20
 draft: true
 
 # Keywords help in classifying content
 keywords:
-  - GraphQL
+  - Work Queues
 
 params:
   # Alternative titles that can be used in the wl shortcode
@@ -18,7 +18,7 @@ params:
     ring: assess
 
     # tools, techniques, platforms, languages & frameworks
-    quadrant: languages
+    quadrant: techniques
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
     status: "No Change"

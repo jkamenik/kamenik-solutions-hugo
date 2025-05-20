@@ -1,7 +1,7 @@
 ---
 title: 'OpenAPI'
-date: 2025-05-15
-lastmod: 2025-05-15
+date: 2025-05-14
+lastmod: 2025-05-14
 draft: true
 
 # Keywords help in classifying content
@@ -21,7 +21,7 @@ params:
     quadrant: languages
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
-    status: "Moved Out"
+    status: "New"
 ---
 
 [OpenAPI](https://www.openapis.org/) is a specification and tool set to make designing and documenting APIs easier.  If you are designing a {{% wl REST %}} API then this is the way to go.  However, there are other popular API alternatives like {{% wl gRPC %}}, and {{% wl GraphQL %}}.
