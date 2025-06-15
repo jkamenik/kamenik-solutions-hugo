@@ -3,6 +3,7 @@
     "Blib",
     "lastmod",
     "Pulumi",
+    "rollouts",
     "terraformer"
   ]
 }
