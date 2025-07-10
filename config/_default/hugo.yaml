@@ -27,11 +27,11 @@ menu:
     - name: Radar
       pageRef: /radar
       weight: 1
-    - name: Resources
-      pageRef: /resources
-      weight: 2
     - name: Blog
       pageRef: /blog
+      weight: 2
+    - name: Resources
+      pageRef: /resources
       weight: 3
     - name: Search
       weight: 4
