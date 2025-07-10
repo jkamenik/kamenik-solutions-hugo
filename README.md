@@ -26,6 +26,12 @@ For Radar pages
 hugo new content --kind radar radar/<type>/<name>.md
 ```
 
+## List Draft Pages
+
+```bash
+grep draft -R content/radar| grep true | awk -F: '{print $1}' | sort -u
+```
+
 ## Documentation
 
 - [Hugo Docs](https://gohugo.io/documentation/)

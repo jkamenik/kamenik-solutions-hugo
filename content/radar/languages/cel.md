@@ -1,17 +1,17 @@
 ---
-title: 'AWS'
-date: 2025-06-14
-lastmod: 2025-07-10
+title: 'CEL'
+date: 2025-06-15
+lastmod: 2025-06-15
 draft: true
 
 # Keywords help in classifying content
 keywords:
-  - Aws
+  - CEL
+  - Protobuf
 
 params:
   # Alternative titles that can be used in the wl shortcode
-  aka:
-    - Amazon Web Services
+  # aka: []
 
   # Tech Radar details
   radar:
@@ -19,13 +19,13 @@ params:
     ring: assess
 
     # tools, techniques, platforms, languages & frameworks
-    quadrant: platforms
+    quadrant: languages
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
-    status: "Moved Out"
+    status: "No Change"
 ---
 
-Our feelings on AWS are mixed.  It is the most popular cloud platform, and has the largest market share.  As such most companies are either dedicated to AWS or {{% wl "Hybrid Cloud" %}}.
+https://github.com/google/cel-spec/blob/master/doc/intro.md
 
 <!--more-->
 
