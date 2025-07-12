@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep draft -R content/radar| grep true | awk -F: '{print $1}' | sort -u

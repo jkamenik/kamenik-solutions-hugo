@@ -1,0 +1,16 @@
+#/bin/bash
+
+TYPE=$1
+NAME=$2
+
+if ! [[ "$TYPE" == "languages" || "$TYPE" == "platforms" || "$TYPE" == "techniques" || "$TYPE" == "tools" ]]; then
+  echo "Invalid type: $TYPE"
+  exit 1
+fi
+
+if [[ -z "$NAME" ]]; then
+  echo "Name is required"
+  exit 1
+fi
+
+hugo new content --kind radar "radar/$TYPE/$NAME"

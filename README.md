@@ -17,19 +17,23 @@ This will listen for changes and rebuild the site.
 ## Create a new page
 
 ```bash
-hugo new content content/path/title.md
+hugo new content <path>/<title>.md
 ```
+
+`<path>` should be `blog`, or `resources`.
 
 For Radar pages
 
 ```bash
-hugo new content --kind radar radar/<type>/<name>.md
+bin/new_radar_page <type> <name>.md
 ```
+
+`<type>` needs to be `language`, `platform`, `technique`, or `tools`.
 
 ## List Draft Pages
 
 ```bash
-grep draft -R content/radar| grep true | awk -F: '{print $1}' | sort -u
+bin/list_drafts
 ```
 
 ## Documentation

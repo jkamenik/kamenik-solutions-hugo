@@ -1,0 +1,77 @@
+#!/bin/bash
+
+#
+# Description:
+# This script recursively finds all *.md files in a specified directory,
+# extracts the content from all `{{% wl ... %}}` shortcodes,
+# ignores the `_vendor` directory, and then prints a unique, sorted list
+# of the extracted content.
+#
+# Usage:
+#   ./list_missing_wiki_links [DIRECTORY]
+#
+# If [DIRECTORY] is not provided, it will search the current directory.
+#
+
+# --- Configuration ---
+
+# Set the directory to search. Use the first argument provided to the script ($1).
+# If no argument is provided, default to the current directory ('.').
+SEARCH_DIR="${1:-.}"
+
+# The directory name to exclude from the search.
+EXCLUDE_DIR="_vendor"
+
+# --- Pre-flight Check ---
+
+# Check if the specified directory actually exists.
+if [ ! -d "$SEARCH_DIR" ]; then
+    echo "Error: Directory '$SEARCH_DIR' not found."
+    exit 1
+fi
+
+# --- Main Logic ---
+
+echo "🔍 Searching for shortcodes in: $(cd "$SEARCH_DIR" && pwd)"
+echo "🙈 Ignoring directory: $EXCLUDE_DIR"
+echo "---"
+
+# 1. `find ... | xargs ... | sed ... | sort -u`: This pipeline finds all *.md files,
+#    extracts the content from the `wl` shortcodes, cleans it up by removing quotes
+#    and extra parameters, and creates a unique, sorted list.
+#
+# 2. `while IFS= read -r line; do ... done`: The result of the pipeline is piped into
+#    a `while` loop, which processes each unique shortcode content line by line.
+#
+# 3. Inside the loop, we check for the existence of a corresponding file.
+find "$SEARCH_DIR" -path "*/$EXCLUDE_DIR" -prune -o -name "*.md" -type f -print0 | \
+xargs -0 grep -h -oE '\{\{% wl [^%]* %\}\}' | \
+sed 's/^{{% wl[[:space:]]*//;s/[[:space:]]*%}}$//' | \
+sed 's/^"\([^"]*\)".*$/\1/' | \
+sort -u | \
+while IFS= read -r line; do
+    # If the line from the previous commands is empty, skip it.
+    if [ -z "$line" ]; then
+        continue
+    fi
+
+    # --- File Existence Check ---
+    # a. Convert the line to lowercase.
+    # b. Replace spaces with hyphens.
+    # c. Append the ".md" extension to create a filename.
+    #    Example: "12 Factor App" becomes "12-factor-app.md"
+    filename_to_check=$(echo "$line" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+    filename_to_check+=".md"
+
+    # d. Search for a file with that name within the SEARCH_DIR, while still
+    #    ignoring the EXCLUDE_DIR. We only need to know if one exists, so we
+    #    pipe to `head -n 1` to stop searching after the first match.
+    found_file=$(find "$SEARCH_DIR" -path "*/$EXCLUDE_DIR" -prune -o -name "$filename_to_check" -print | head -n 1)
+
+    # e. If the `found_file` variable is an empty string, it means `find` did not
+    #    locate a matching file. In this case, we print the original line.
+    #    If a file was found, we do nothing, effectively filtering it out.
+    if [ -z "$found_file" ]; then
+        echo "$line"
+    fi
+done
