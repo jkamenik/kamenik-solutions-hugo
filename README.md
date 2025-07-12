@@ -4,7 +4,7 @@ A version of the Kamenik Solutions Site in Hugo
 ## Local Edits
 
 ```bash
-hugo server --buildDrafts --disableFastRender
+bin/run
 ```
 
 Open http://localhost:1313/kamenik-solutions-hugo/ in your browser
@@ -32,9 +32,19 @@ bin/new_radar_page <type> <name>.md
 
 ## List Draft Pages
 
+Often it is useful to create pages that are largely empty while research is being done.  To review all the pages in draft mode, use the below.
+
 ```bash
 bin/list_drafts
 ```
+
+## Listing Missing Wiki link pages
+
+```bash
+bin/list_missing_wiki_links
+```
+
+When a page is identified as missing then create as above.
 
 ## Documentation
 
