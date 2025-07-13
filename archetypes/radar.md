@@ -24,7 +24,7 @@ params:
     quadrant: {{ $quad }}
 
     # Blib direction detail: New, Moved In, Moved Out, No Change
-    status: "No Change"
+    status: "New"
 ---
 
 <!-- TODO: Add a Summary -->
