@@ -1,12 +1,14 @@
 ---
-title: 'Go Templates'
+title: 'Go Template'
 date: 2025-04-24
 lastmod: 2025-04-24
 draft: true
 
 # Keywords help in classifying content
 keywords:
-  - Go Templates
+  - Go Template
+  - Template
+  - Templating
 
 params:
   # Tech Radar details
