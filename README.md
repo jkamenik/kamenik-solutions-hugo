@@ -46,6 +46,14 @@ bin/list_missing_wiki_links
 
 When a page is identified as missing then create as above.
 
+## Listing "New" Radar Pages
+
+The new flag is manually set, and should be switched to "No Change" the next time a non-draft update is pushed.  The below will list the files and the last modified date so you decide what to update.
+
+```bash
+bin/list_new
+```
+
 ## Documentation
 
 - [Hugo Docs](https://gohugo.io/documentation/)

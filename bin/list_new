@@ -1,0 +1,14 @@
+#!/bin/bash
+
+grep status: -R content/radar| grep New | awk -F: '{print $1}' \
+| sort -u | \
+while IFS= read -r line; do
+  # If the line from the previous commands is empty, skip it.
+  if [ -z "$line" ]; then
+      continue
+  fi
+
+  date=$(grep "lastmod" "$line" | awk '{print $2}')
+
+  echo "$line: $date"
+done
