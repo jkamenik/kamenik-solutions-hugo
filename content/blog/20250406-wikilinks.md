@@ -2,6 +2,9 @@
 title: 'Hugo Wikilinks'
 date: 2025-04-06
 
+aliases:
+- wikilinks
+
 keywords:
   - Hugo Wikilinks
   - Hugo

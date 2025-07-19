@@ -3,6 +3,9 @@ title: 'Kustomize Rollout'
 date: 2025-04-18
 lastmod: 2025-04-18
 
+aliases:
+- kustomize-rollout
+
 # Keywords help in classifying content
 keywords:
   - Kustomize Rollout

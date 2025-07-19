@@ -3,6 +3,9 @@ title: 'RAG Pipeline'
 date: 2025-05-14
 lastmod: 2025-05-14
 
+aliases:
+- rag-pipeline
+
 # Keywords help in classifying content
 keywords:
   - RAG Pipeline
