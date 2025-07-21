@@ -1,7 +1,7 @@
 ---
 title: 'Git With SVN'
-date: 2023-05-31
-lastmod: 2023-05-31
+date: 2010-12-04
+lastmod: 2010-12-04
 
 # Keywords help in classifying content
 keywords:
