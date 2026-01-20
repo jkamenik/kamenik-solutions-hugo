@@ -42,7 +42,12 @@
 	// Mount the .cursor directory
 	// Note: The .cursor directory will be created automatically if it doesn't exist
 	"mounts": [
-		"source=${localWorkspaceFolder}/.cursor,target=$/.cursor,type=bind,consistency=cached"
+		{
+			"source": "${localWorkspaceFolder}/.cursor",
+			"target": "/workspace/.cursor",
+			"type": "bind",
+			"consistency": "cached"
+		}
 	],
 	"initializeCommand": "mkdir -p ${localWorkspaceFolder}/.cursor",
 
