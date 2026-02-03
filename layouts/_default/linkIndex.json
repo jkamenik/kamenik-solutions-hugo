@@ -1,0 +1,139 @@
+{{- $pages := where site.RegularPages "Kind" "page" -}}
+{{- $pages = where $pages "Params.excludeGraph" "!=" true -}}
+
+{{- $links := slice -}}
+{{- $linksIndex := dict -}}
+{{- $backlinksIndex := dict -}}
+
+{{- range $pages -}}
+  {{- $source := .RelPermalink -}}
+  {{- $source = strings.TrimSuffix "/" $source -}}
+  {{- if eq $source "" -}}
+    {{- $source = "/" -}}
+  {{- end -}}
+
+  {{- $pageLinks := slice -}}
+
+  {{- /* Extract markdown links */ -}}
+  {{- $content := .RawContent -}}
+  {{- $linkPattern := `\[([^\]]+)\]\(([^\)]+)\)` -}}
+  {{- $matches := findRE $linkPattern $content -}}
+  {{- range $matches -}}
+    {{- /* Extract text and URL from markdown link format [text](url) */ -}}
+    {{- $parts := findRE `\[([^\]]+)\]\(([^\)]+)\)` . -}}
+    {{- if $parts -}}
+      {{- $fullMatch := index $parts 0 -}}
+      {{- $textMatch := findRE `\[([^\]]+)\]` $fullMatch -}}
+      {{- $urlMatch := findRE `\(([^\)]+)\)` $fullMatch -}}
+      {{- if and $textMatch $urlMatch -}}
+        {{- $linkText := index $textMatch 0 -}}
+        {{- $linkText = strings.TrimPrefix "[" $linkText -}}
+        {{- $linkText = strings.TrimSuffix "]" $linkText -}}
+        {{- $linkUrl := index $urlMatch 0 -}}
+        {{- $linkUrl = strings.TrimPrefix "(" $linkUrl -}}
+        {{- $linkUrl = strings.TrimSuffix ")" $linkUrl -}}
+
+        {{- /* Convert to internal link if relative */ -}}
+        {{- if and (not (hasPrefix $linkUrl "http")) (not (hasPrefix $linkUrl "#")) (not (hasPrefix $linkUrl "mailto:")) -}}
+          {{- $target := $linkUrl -}}
+          {{- if not (hasPrefix $target "/") -}}
+            {{- $target = relURL $target -}}
+          {{- end -}}
+          {{- $target = strings.TrimSuffix "/" $target -}}
+          {{- if eq $target "" -}}
+            {{- $target = "/" -}}
+          {{- end -}}
+
+          {{- /* Check if target page exists */ -}}
+          {{- $targetPage := false -}}
+          {{- range site.RegularPages -}}
+            {{- $rel := .RelPermalink -}}
+            {{- $rel = strings.TrimSuffix "/" $rel -}}
+            {{- if eq $rel "" -}}
+              {{- $rel = "/" -}}
+            {{- end -}}
+            {{- if eq $rel $target -}}
+              {{- $targetPage = . -}}
+              {{- break -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{- if $targetPage -}}
+            {{- $link := dict "source" $source "target" $target "text" $linkText -}}
+            {{- $links = $links | append $link -}}
+            {{- $pageLinks = $pageLinks | append $link -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Extract wikilink shortcodes */ -}}
+  {{- $wlPattern := `\{\{%\s*wl\s+"([^"]+)"` -}}
+  {{- $wlMatches := findRE $wlPattern $content -}}
+  {{- range $wlMatches -}}
+    {{- $wlTitle := index (findRE `"([^"]+)"` .) 0 -}}
+    {{- $wlTitle = strings.TrimPrefix `"` $wlTitle -}}
+    {{- $wlTitle = strings.TrimSuffix `"` $wlTitle -}}
+
+    {{- /* Find page by title */ -}}
+    {{- $targetPage := false -}}
+    {{- range site.RegularPages -}}
+      {{- if eq (lower .Title) (lower $wlTitle) -}}
+        {{- $targetPage = . -}}
+        {{- break -}}
+      {{- else -}}
+        {{- range $value := .Params.aka -}}
+          {{- if eq (lower $value) (lower $wlTitle) -}}
+            {{- $targetPage = . -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if $targetPage -}}
+      {{- $target := $targetPage.RelPermalink -}}
+      {{- $target = strings.TrimSuffix "/" $target -}}
+      {{- if eq $target "" -}}
+        {{- $target = "/" -}}
+      {{- end -}}
+      {{- $link := dict "source" $source "target" $target "text" $wlTitle -}}
+      {{- $links = $links | append $link -}}
+      {{- $pageLinks = $pageLinks | append $link -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Store links in index */ -}}
+  {{- if gt (len $pageLinks) 0 -}}
+    {{- $linksIndex = $linksIndex | merge (dict $source $pageLinks) -}}
+  {{- else -}}
+    {{- $linksIndex = $linksIndex | merge (dict $source (slice)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Build backlinks index */ -}}
+{{- range $links -}}
+  {{- $target := .target -}}
+  {{- $backlinks := index $backlinksIndex $target | default (slice) -}}
+  {{- $backlinks = $backlinks | append . -}}
+  {{- $backlinksIndex = $backlinksIndex | merge (dict $target $backlinks) -}}
+{{- end -}}
+
+{{- /* Ensure all pages have entries in both indices */ -}}
+{{- range $pages -}}
+  {{- $pagePath := .RelPermalink -}}
+  {{- $pagePath = strings.TrimSuffix "/" $pagePath -}}
+  {{- if eq $pagePath "" -}}
+    {{- $pagePath = "/" -}}
+  {{- end -}}
+  {{- if not (index $linksIndex $pagePath) -}}
+    {{- $linksIndex = $linksIndex | merge (dict $pagePath (slice)) -}}
+  {{- end -}}
+  {{- if not (index $backlinksIndex $pagePath) -}}
+    {{- $backlinksIndex = $backlinksIndex | merge (dict $pagePath (slice)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $output := dict "index" (dict "links" $linksIndex "backlinks" $backlinksIndex) "links" $links -}}
+{{- jsonify (dict "indent" "  " "noHTMLEscape" true) $output -}}

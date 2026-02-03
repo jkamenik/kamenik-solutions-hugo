@@ -1,0 +1,43 @@
+<script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3 class="hx-mb-4 hx-font-semibold hx-text-sm hx-tracking-tight">Page Graph</h3>
+<div id="graph-container" class="hx-mb-4"></div>
+<style>
+  :root {
+    --g-node: hsl(var(--primary-hue), 70%, 60%);
+    --g-node-active: hsl(var(--primary-hue), 100%, 50%);
+    --g-node-inactive: hsl(var(--primary-hue), 30%, 70%);
+    --g-link: hsl(var(--primary-hue), 20%, 70%);
+    --g-link-active: #5a7282;
+  }
+
+  .dark {
+    --g-node: hsl(var(--primary-hue), 50%, 50%);
+    --g-node-active: hsl(var(--primary-hue), 100%, 60%);
+    --g-node-inactive: hsl(var(--primary-hue), 20%, 40%);
+    --g-link: hsl(var(--primary-hue), 20%, 50%);
+    --g-link-active: #7a92a2;
+  }
+
+  #graph-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid hsl(var(--primary-hue), 20%, 85%);
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .dark #graph-container {
+    border-color: hsl(var(--primary-hue), 20%, 30%);
+  }
+
+  #graph-container svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+{{ $js := resources.Get "js/graph.js" | resources.Fingerprint "md5" }}
+<script src="{{ $js.Permalink }}"></script>
