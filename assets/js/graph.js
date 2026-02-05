@@ -1,13 +1,25 @@
-async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise) {
-  let {
-  depth = 3,
+async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam) {
+  const {
   enableDrag = true,
   enableLegend = false,
   enableZoom = true,
   opacityScale = 3,
   scale = 1.2,
   repelForce = 1,
-  fontSize = 0.6} = graphConfig || {};
+  fontSize = 0.6} = graphConfig || {}
+
+  // Depth: number of hops from current page (0 = current only, 1 = + direct neighbours, 2 = + 2 hops, etc.). -1 = full graph.
+  // Prefer explicit depthParam (from template) so config is never lost in serialization.
+  const depth = (() => {
+    if (depthParam !== undefined && depthParam !== null) {
+      const n = Number(depthParam)
+      if (Number.isInteger(n) && n >= -1) return n
+    }
+    const d = graphConfig?.depth
+    if (d === undefined || d === null) return 3
+    const n = Number(d)
+    return Number.isInteger(n) && n >= -1 ? n : 3
+  })()
 
   const container = document.getElementById("graph-container")
   if (!container) return;
@@ -17,7 +29,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
   // Use .pathname to remove hashes / searchParams / text fragments
   const cleanUrl = window.location.origin + window.location.pathname
 
-  const curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
+  // Index keys are paths (e.g. /radar/techniques/cloud). Derive curPage from pathname so lookups
+  // work when baseUrl doesn't match current origin (e.g. dev at localhost vs production baseURL).
+  let curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
+  if (curPage.startsWith("http:") || curPage.startsWith("https:")) {
+    curPage = window.location.pathname.replace(/\/$/, "") || "/"
+  }
+  if (curPage && !curPage.startsWith("/")) {
+    curPage = "/" + curPage
+  }
 
   const curPrefix = ((curPage || "/").replace(/\/$/, "") || "") + "/"
 
@@ -60,12 +80,12 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   const neighbours = new Set()
   const wl = [curPage || "/", "__SENTINEL"]
-  if (depth >= 0) {
-    while (depth >= 0 && wl.length > 0) {
-      // compute neighbours
+  let remainingDepth = depth
+  if (remainingDepth >= 0) {
+    while (remainingDepth >= 0 && wl.length > 0) {
       const cur = wl.shift()
       if (cur === "__SENTINEL") {
-        depth--
+        remainingDepth--
         wl.push("__SENTINEL")
       } else {
         neighbours.add(cur)

@@ -74,6 +74,7 @@
     const drawGlobal = isHome && {{.Site.Data.graphConfig.enableGlobalGraph | default false}};
     const graphConfig = drawGlobal ? {{.Site.Data.graphConfig.globalGraph | jsonify}} : {{.Site.Data.graphConfig.localGraph | jsonify}};
     const pathColors = {{.Site.Data.graphConfig.paths | default (slice) | jsonify}};
+    const graphDepth = drawGlobal ? {{ .Site.Data.graphConfig.globalGraph.depth | default -1 }} : {{ .Site.Data.graphConfig.localGraph.depth | default 2 }};
 
     const baseUrlPath = {{strings.TrimRight "/" .Site.BaseURL | jsonify}};
 
@@ -82,7 +83,8 @@
       drawGlobal,
       pathColors,
       graphConfig,
-      fetchData
+      fetchData,
+      graphDepth
     );
   };
 

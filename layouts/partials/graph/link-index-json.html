@@ -73,7 +73,7 @@
     {{- end -}}
   {{- end -}}
 
-  {{- /* Extract wikilink shortcodes */ -}}
+  {{- /* Extract wikilink shortcodes: quoted {{% wl "Title" %}} */ -}}
   {{- $wlPattern := `\{\{%\s*wl\s+"([^"]+)"` -}}
   {{- $wlMatches := findRE $wlPattern $content -}}
   {{- range $wlMatches -}}
@@ -82,6 +82,39 @@
     {{- $wlTitle = strings.TrimSuffix `"` $wlTitle -}}
 
     {{- /* Find page by title */ -}}
+    {{- $targetPage := false -}}
+    {{- range site.RegularPages -}}
+      {{- $candidatePage := . -}}
+      {{- if eq (lower .Title) (lower $wlTitle) -}}
+        {{- $targetPage = $candidatePage -}}
+        {{- break -}}
+      {{- else -}}
+        {{- range $value := .Params.aka -}}
+          {{- if eq (lower $value) (lower $wlTitle) -}}
+            {{- $targetPage = $candidatePage -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if $targetPage -}}
+      {{- $target := $targetPage.RelPermalink -}}
+      {{- $target = strings.TrimSuffix "/" $target -}}
+      {{- if eq $target "" -}}
+        {{- $target = "/" -}}
+      {{- end -}}
+      {{- $link := dict "source" $source "target" $target "text" $wlTitle -}}
+      {{- $links = $links | append $link -}}
+      {{- $pageLinks = $pageLinks | append $link -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* Unquoted {{% wl Title %}} */ -}}
+  {{- $wlPatternUnquoted := `\{\{%\s*wl\s+([^\s%]+)` -}}
+  {{- range $wlMatches := findRE $wlPatternUnquoted $content -}}
+    {{- $wlTitle := replaceRE `.*wl\s+([^\s%]+).*` "$1" . -}}
+    {{- $wlTitle = strings.TrimSpace $wlTitle -}}
+
     {{- $targetPage := false -}}
     {{- range site.RegularPages -}}
       {{- $candidatePage := . -}}
