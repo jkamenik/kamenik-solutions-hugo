@@ -7,10 +7,10 @@
 			// Example variants: hugo, hugo_extended
 			// Rebuild the container if it already exists to update.
 			"VARIANT": "hugo_extended",
-			// Update VERSION to pick a specific hugo version.
-			// Example versions: latest, 0.73.0, 0,71.1
+			// Update VERSION to pick a specific hugo version (no 'v' prefix; matches GitHub Actions).
+			// Example versions: latest, 0.155.2, 0.73.0
 			// Rebuild the container if it already exists to update.
-			"VERSION": "v0.155.2",
+			"VERSION": "0.155.2",
 			// Update NODE_VERSION to pick the Node.js version: 12, 14
 			"NODE_VERSION": "24"
 		}
