@@ -19,19 +19,24 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   const curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
 
+  const curPrefix = ((curPage || "/").replace(/\/$/, "") || "") + "/"
+
   // Normalize node id for navigation: strip erroneously captured quoted URLs and current page prefix
   const pathForHref = (id) => {
-    let path = decodeURIComponent(decodeURI(id || ""))
-    if (/["']|%22|http/i.test(path)) {
-      path = path.replace(/["'](?:https?:)?[^"']*["']/g, "").replace(/\/+/g, "/")
-      // If path starts with current page path (e.g. /radar/tools/helm/radar/languages/yaml), strip it
-      const curPrefix = (curPage || "/").replace(/\/$/, "") + "/"
-      if (path.startsWith(curPrefix)) {
-        path = path.slice(curPrefix.length)
-      }
-      // Remove duplicated path prefix (e.g. /radar/radar/ -> /radar/)
-      path = path.replace(/^(\/[^/]+\/)\1/, "$1")
+    let path = (id || "").trim()
+    try {
+      path = decodeURIComponent(decodeURI(path))
+    } catch (_) {}
+    // Strip quoted URL fragments (e.g. "http://localhost:1313") that can appear in bad link data
+    path = path.replace(/["'](?:https?:)?[^"']*["']/g, "").replace(/\/+/g, "/")
+    // Strip leading protocol+host (e.g. http:/localhost:1313 or http://localhost:1313) so we keep only the path
+    path = path.replace(/^https?:\/\/?[^/]*/, "").trim()
+    // If path is longer than current page and starts with it (e.g. /radar/tools/helm/radar/languages/yaml), strip duplicate prefix
+    if (curPrefix.length > 1 && path.length > curPrefix.length && path.startsWith(curPrefix)) {
+      path = path.slice(curPrefix.length)
     }
+    // Remove duplicated path prefix (e.g. /radar/radar/ -> /radar/)
+    path = path.replace(/^(\/[^/]+\/)\1/, "$1")
     path = path.replace(/\s+/g, "-").replace(/\/$/, "") || "/"
     return path.startsWith("/") ? path : "/" + path
   }
