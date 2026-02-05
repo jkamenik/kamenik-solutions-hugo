@@ -19,6 +19,23 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   const curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
 
+  // Normalize node id for navigation: strip erroneously captured quoted URLs and current page prefix
+  const pathForHref = (id) => {
+    let path = decodeURIComponent(decodeURI(id || ""))
+    if (/["']|%22|http/i.test(path)) {
+      path = path.replace(/["'](?:https?:)?[^"']*["']/g, "").replace(/\/+/g, "/")
+      // If path starts with current page path (e.g. /radar/tools/helm/radar/languages/yaml), strip it
+      const curPrefix = (curPage || "/").replace(/\/$/, "") + "/"
+      if (path.startsWith(curPrefix)) {
+        path = path.slice(curPrefix.length)
+      }
+      // Remove duplicated path prefix (e.g. /radar/radar/ -> /radar/)
+      path = path.replace(/^(\/[^/]+\/)\1/, "$1")
+    }
+    path = path.replace(/\s+/g, "-").replace(/\/$/, "") || "/"
+    return path.startsWith("/") ? path : "/" + path
+  }
+
   const parseIdsFromLinks = (links) => [
     ...new Set(links.flatMap((link) => [link.source, link.target])),
   ]
@@ -182,8 +199,8 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr("fill", color)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      // Regular navigation
-      window.location.href = `${baseUrl}${decodeURI(d.id).replace(/\s+/g, "-")}/`
+      const path = pathForHref(d.id)
+      window.location.href = window.location.origin + (path.startsWith("/") ? path : "/" + path) + (path === "/" ? "" : "/")
     })
     .on("mouseover", function (_, d) {
       d3.selectAll(".node").transition().duration(100).attr("fill", "var(--g-node-inactive)")
@@ -282,3 +299,5 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     labels.attr("x", (d) => d.x).attr("y", (d) => d.y)
   })
 }
+
+window.drawGraph = drawGraph
