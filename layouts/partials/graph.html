@@ -12,31 +12,38 @@
     --g-node-inactive: hsl(var(--primary-hue), 30%, 70%);
     --g-link: hsl(var(--primary-hue), 20%, 70%);
     --g-link-active: #5a7282;
+    --g-label: #374151;
+    --g-bg: #f9fafb;
+    --g-border: hsl(var(--primary-hue), 20%, 85%);
   }
 
   .dark {
-    --g-node: hsl(var(--primary-hue), 50%, 50%);
-    --g-node-active: hsl(var(--primary-hue), 100%, 60%);
-    --g-node-inactive: hsl(var(--primary-hue), 20%, 40%);
-    --g-link: hsl(var(--primary-hue), 20%, 50%);
-    --g-link-active: #7a92a2;
+    --g-node: hsl(var(--primary-hue), 55%, 55%);
+    --g-node-active: hsl(var(--primary-hue), 100%, 65%);
+    --g-node-inactive: hsl(var(--primary-hue), 25%, 35%);
+    --g-link: hsl(var(--primary-hue), 25%, 55%);
+    --g-link-active: #94a3b8;
+    --g-label: #e5e7eb;
+    --g-bg: #1f2937;
+    --g-border: hsl(var(--primary-hue), 15%, 35%);
   }
 
   #graph-container {
     width: 100%;
     height: 300px;
-    border: 1px solid hsl(var(--primary-hue), 20%, 85%);
+    background-color: var(--g-bg);
+    border: 1px solid var(--g-border);
     border-radius: 0.375rem;
     overflow: hidden;
-  }
-
-  .dark #graph-container {
-    border-color: hsl(var(--primary-hue), 20%, 30%);
   }
 
   #graph-container svg {
     width: 100%;
     height: 100%;
+  }
+
+  #graph-container text {
+    fill: var(--g-label);
   }
 </style>
 {{/* graph.js is loaded from scripts/graph.html so it runs right before the inline script that uses drawGraph */}}
