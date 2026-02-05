@@ -1,16 +1,16 @@
 # Graph configuration for page relationship visualization
-# Local Graph shows connections within a certain depth from the current page
-# Global Graph shows all connections (typically on home page)
+# Local Graph shows connections within a certain depth from the current page (always used)
+# Global Graph shows all connections (only on home page when enableGlobalGraph is true)
 
-enableGlobalGraph: true
+enableGlobalGraph: false
 
-### Local Graph ###
+### Local Graph (used on every page; centered on current page) ###
 
 localGraph:
     enableLegend: false
     enableDrag: true
     enableZoom: true
-    depth: 1 # set to -1 to show full graph
+    depth: 3 # hops from current page; set to -1 to show full graph
     scale: 1.2
     repelForce: 2
     centerForce: 1

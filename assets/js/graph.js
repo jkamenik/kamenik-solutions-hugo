@@ -1,6 +1,6 @@
 async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise) {
   let {
-  depth = -1,
+  depth = 3,
   enableDrag = true,
   enableLegend = false,
   enableZoom = true,
@@ -39,6 +39,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
   const parseIdsFromLinks = (links) => [
     ...new Set(links.flatMap((link) => [link.source, link.target])),
   ]
+
+  // Resolve node label: prefer content index title, else last path segment (humanized)
+  const labelFor = (id) => {
+    const path = (id || "").replace(/\/$/, "")
+    const title = content[id]?.title ?? content[path]?.title ?? content[path + "/"]?.title
+    if (title) return title
+    const segment = path.split("/").filter(Boolean).pop() || "Home"
+    return segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+  }
 
   // Links is mutated by d3. We want to use links later on, so we make a copy and pass that one to d3
   // Note: shallow cloning does not work because it copies over references from the original array
@@ -260,7 +269,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr("dx", 0)
     .attr("dy", (d) => nodeRadius(d) + 8 + "px")
     .attr("text-anchor", "middle")
-    .text((d) => content[d.id]?.title || d.id.replace("-", " "))
+    .text((d) => labelFor(d.id))
     .style('opacity', (opacityScale - 1) / 3.75)
     .style("pointer-events", "none")
     .style('font-size', fontSize+'em')

@@ -3,7 +3,7 @@
   integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
   crossorigin="anonymous"
 ></script>
-<h3 class="hx-mb-4 hx-font-semibold hx-text-sm hx-tracking-tight">Page Graph</h3>
+<h3 class="hx-mb-4 hx-font-semibold hx-text-sm hx-tracking-tight">{{ i18n "interactive_graph" | default "Page Graph" }}</h3>
 <div id="graph-container" class="hx-mb-4"></div>
 <style>
   :root {
@@ -39,5 +39,4 @@
     height: 100%;
   }
 </style>
-{{ $js := resources.Get "js/graph.js" | resources.Fingerprint "md5" }}
-<script src="{{ $js.Permalink }}"></script>
+{{/* graph.js is loaded from scripts/graph.html so it runs right before the inline script that uses drawGraph */}}
