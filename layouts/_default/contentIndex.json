@@ -1,0 +1,23 @@
+{{- $pages := where site.RegularPages "Kind" "page" -}}
+{{- $pages = where $pages "Params.excludeGraph" "!=" true -}}
+
+{{- $output := dict -}}
+
+{{- range $pages -}}
+  {{- $pagePath := .RelPermalink -}}
+  {{- $pagePath = strings.TrimSuffix "/" $pagePath -}}
+  {{- if eq $pagePath "" -}}
+    {{- $pagePath = "/" -}}
+  {{- end -}}
+
+  {{- $pageData := dict
+    "title" (.LinkTitle | default .Title | default .File.BaseFileName)
+    "content" (.Plain | htmlUnescape | chomp)
+    "lastmodified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "tags" .Params.tags
+  -}}
+
+  {{- $output = $output | merge (dict $pagePath $pageData) -}}
+{{- end -}}
+
+{{- jsonify (dict "indent" "  " "noHTMLEscape" true) $output -}}

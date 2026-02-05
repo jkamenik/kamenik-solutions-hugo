@@ -3,3 +3,7 @@ public
 themes/hugo-saasify-theme
 node_modules
 .DS_Store
+
+
+#Ignore cursor AI rules
+.cursor/rules/codacy.mdc

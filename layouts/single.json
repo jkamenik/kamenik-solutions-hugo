@@ -1,0 +1,6 @@
+{{- $base := .File.BaseFileName -}}
+{{- if eq $base "linkIndex" -}}
+  {{- partial "graph/link-index-json" . -}}
+{{- else if eq $base "contentIndex" -}}
+  {{- partial "graph/content-index-json" . -}}
+{{- end -}}

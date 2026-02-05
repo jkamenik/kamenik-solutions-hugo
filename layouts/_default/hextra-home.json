@@ -1,0 +1,6 @@
+{{- $home := dict
+  "title" .Title
+  "permalink" .Permalink
+  "kind" .Kind
+-}}
+{{- jsonify (dict "indent" "  ") $home -}}

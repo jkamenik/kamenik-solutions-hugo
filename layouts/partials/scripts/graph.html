@@ -1,0 +1,111 @@
+{{/* Graph initialization script - paths in data attributes to avoid quote-escaping in script */}}
+{{- $baseURL := .Site.BaseURL -}}
+{{- $pathFromBase := (urls.Parse $baseURL).Path | default "" -}}
+{{- $pathFromBase = strings.TrimSuffix "/" $pathFromBase -}}
+{{- $pathPrefix := cond (eq $pathFromBase "") "/" (printf "%s/" $pathFromBase) -}}
+{{- $linkIndexPath := printf "%slinkindex/index.json" $pathPrefix -}}
+{{- $contentIndexPath := printf "%scontentindex/index.json" $pathPrefix -}}
+<span id="graph-json-paths" data-link-index-path="{{ $linkIndexPath }}" data-content-index-path="{{ $contentIndexPath }}" style="display:none" aria-hidden="true"></span>
+{{- $graphJS := resources.Get "js/graph.js" | resources.Fingerprint "md5" -}}
+<script src="{{ $graphJS.Permalink }}"></script>
+<script>
+  const BASE_URL = {{.Site.BaseURL | jsonify}};
+  const graphPathsEl = document.getElementById("graph-json-paths");
+  const linkIndexPath = (graphPathsEl && graphPathsEl.getAttribute("data-link-index-path")) || "/linkindex/index.json";
+  const contentIndexPath = (graphPathsEl && graphPathsEl.getAttribute("data-content-index-path")) || "/contentindex/index.json";
+  const fetchData = Promise.all([
+    fetch(window.location.origin + linkIndexPath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch linkIndex.json: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => ({
+        index: data.index || {},
+        links: data.links || [],
+      }))
+      .catch(error => {
+        console.error('Error fetching linkIndex.json:', error);
+        return { index: {}, links: [] };
+      }),
+    fetch(window.location.origin + contentIndexPath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch contentIndex.json: ${response.status}`);
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.error('Error fetching contentIndex.json:', error);
+        return {};
+      }),
+  ])
+  .then(([{index, links}, content]) => ({
+    index,
+    links,
+    content: content || {},
+  }));
+
+  const renderGraph = () => {
+    const container = document.getElementById("graph-container");
+    if (!container) return;
+    if (typeof drawGraph !== "function") {
+      console.warn("Graph: drawGraph not loaded yet, retrying...");
+      return;
+    }
+
+    // Clear any existing graph
+    container.textContent = "";
+
+    // Safely parse BASE_URL - handle both absolute and relative URLs
+    let pathBase = "/";
+    try {
+      const siteBaseURL = new URL(BASE_URL, window.location.origin);
+      pathBase = siteBaseURL.pathname;
+    } catch (e) {
+      pathBase = BASE_URL.startsWith('/') ? BASE_URL : '/' + BASE_URL;
+    }
+    if (!pathBase.endsWith("/")) pathBase += "/";
+
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase === pathWindow || pathWindow === "/" || pathWindow === pathBase || pathWindow === pathBase.replace(/\/$/, "");
+
+    const drawGlobal = isHome && {{.Site.Data.graphConfig.enableGlobalGraph | default false}};
+    const graphConfig = drawGlobal ? {{.Site.Data.graphConfig.globalGraph | jsonify}} : {{.Site.Data.graphConfig.localGraph | jsonify}};
+    const pathColors = {{.Site.Data.graphConfig.paths | default (slice) | jsonify}};
+    const graphDepth = drawGlobal ? {{ .Site.Data.graphConfig.globalGraph.depth | default -1 }} : {{ .Site.Data.graphConfig.localGraph.depth | default 2 }};
+
+    const baseUrlPath = {{strings.TrimRight "/" .Site.BaseURL | jsonify}};
+
+    drawGraph(
+      baseUrlPath,
+      drawGlobal,
+      pathColors,
+      graphConfig,
+      fetchData,
+      graphDepth
+    );
+  };
+
+  const runGraphWhenReady = () => {
+    const attempt = (retries) => {
+      if (typeof drawGraph === "function") {
+        setTimeout(renderGraph, 100);
+        return;
+      }
+      if (retries <= 0) {
+        console.warn("Graph: drawGraph not available (graph.js may have failed to load).");
+        return;
+      }
+      setTimeout(() => attempt(retries - 1), 80);
+    };
+    attempt(60);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runGraphWhenReady);
+  } else {
+    runGraphWhenReady();
+  }
+</script>

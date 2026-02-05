@@ -7,12 +7,12 @@
 			// Example variants: hugo, hugo_extended
 			// Rebuild the container if it already exists to update.
 			"VARIANT": "hugo_extended",
-			// Update VERSION to pick a specific hugo version.
-			// Example versions: latest, 0.73.0, 0,71.1
+			// Update VERSION to pick a specific hugo version (no 'v' prefix; matches GitHub Actions).
+			// Example versions: latest, 0.155.2, 0.73.0
 			// Rebuild the container if it already exists to update.
-			"VERSION": "latest",
+			"VERSION": "0.155.2",
 			// Update NODE_VERSION to pick the Node.js version: 12, 14
-			"NODE_VERSION": "14"
+			"NODE_VERSION": "24"
 		}
 	},
 
@@ -38,6 +38,18 @@
 	"forwardPorts": [
 		1313
 	],
+
+	// Mount the .cursor directory
+	// Note: The .cursor directory will be created automatically if it doesn't exist
+	"mounts": [
+		{
+			"source": "${localWorkspaceFolder}/.cursor",
+			"target": "/workspace/.cursor",
+			"type": "bind",
+			"consistency": "cached"
+		}
+	],
+	"initializeCommand": "mkdir -p ${localWorkspaceFolder}/.cursor",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
