@@ -12,9 +12,8 @@ localGraph:
     enableZoom: true
     depth: 2 # hops from current page; set to -1 to show full graph
     scale: 1.2
-    repelForce: 2
-    centerForce: 1
-    linkDistance: 1
+    repelForce: 1
+    linkDistance: 1  # multiplier for link length
     fontSize: 0.6
     opacityScale: 3
 
@@ -27,8 +26,7 @@ globalGraph:
     depth: -1 # set to -1 to show full graph
     scale: 1.4
     repelForce: 1
-    centerForce: 1
-    linkDistance: 1
+    linkDistance: 1  # multiplier for link length (base 40px)
     fontSize: 0.5
     opacityScale: 3
 
