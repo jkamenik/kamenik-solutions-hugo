@@ -1,4 +1,14 @@
 async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam) {
+  // Template may embed config as JSON string (e.g. after HTML escaping); normalize to object
+  let cfg = graphConfig
+  if (typeof cfg === "string") {
+    try {
+      cfg = JSON.parse(cfg)
+    } catch (_) {
+      cfg = {}
+    }
+  }
+  cfg = cfg || {}
   const {
   enableDrag = true,
   enableLegend = false,
@@ -6,7 +16,14 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
   opacityScale = 3,
   scale = 1.2,
   repelForce = 1,
-  fontSize = 0.6} = graphConfig || {}
+  linkDistance = 1,
+  fontSize = 0.6} = cfg
+
+  // Coerce numeric options (config may have strings from serialization); fallback to safe defaults
+  const numRepel = Number(repelForce)
+  const numLinkDist = Number(linkDistance)
+  const safeRepelForce = Number.isFinite(numRepel) && numRepel > 0 ? numRepel : 1
+  const safeLinkDistance = Number.isFinite(numLinkDist) && numLinkDist > 0 ? numLinkDist : 1
 
   // Depth: number of hops from current page (0 = current only, 1 = + direct neighbours, 2 = + 2 hops, etc.). -1 = full graph.
   // Prefer explicit depthParam (from template) so config is never lost in serialization.
@@ -15,7 +32,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
       const n = Number(depthParam)
       if (Number.isInteger(n) && n >= -1) return n
     }
-    const d = graphConfig?.depth
+    const d = cfg?.depth
     if (d === undefined || d === null) return 3
     const n = Number(d)
     return Number.isInteger(n) && n >= -1 ? n : 3
@@ -103,6 +120,18 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     links: copyLinks.filter((l) => neighbours.has(l.source) && neighbours.has(l.target)),
   }
 
+  // Pin the current page node at (0,0) so the graph is centered on it; otherwise forceCenter
+  // would center the whole graph by centroid and the "current" node could be off-center.
+  const isCurrentPage = (d) => d.id === curPage || (d.id === "/" && curPage === "")
+  data.nodes.forEach((n) => {
+    if (isCurrentPage(n)) {
+      n.x = 0
+      n.y = 0
+      n.fx = 0
+      n.fy = 0
+    }
+  })
+
   const color = (d) => {
     if (d.id === curPage || (d.id === "/" && curPage === "")) {
       return "var(--g-node-active)"
@@ -155,15 +184,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   const simulation = d3
     .forceSimulation(data.nodes)
-    .force("charge", d3.forceManyBody().strength(-100 * (repelForce || 1)))
+    .force("charge", d3.forceManyBody().strength(-300 * safeRepelForce))
     .force(
       "link",
       d3
         .forceLink(data.links)
         .id((d) => d.id)
-        .distance(40),
+        .distance(40 * safeLinkDistance),
     )
-    .force("center", d3.forceCenter())
+  // No center force: current page is pinned at (0,0), so the graph is centered on it
 
   // Remove any existing SVG
   d3.select("#graph-container").selectAll("svg").remove();
