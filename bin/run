@@ -1,3 +1,36 @@
 #!/bin/bash
+# Run Hugo server with Obsidian-style [[...]] wiki links.
+# Copies content to .content-build, converts [[Foo]] / [[Foo|Bar]] to wl shortcodes, then runs Hugo.
+# Watches content/ and reruns the preprocessor when files change.
+set -e
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
 
-hugo server --buildDrafts --disableFastRender
+do_preprocess() {
+  rm -rf .content-build.new
+  cp -R content .content-build.new
+  "$ROOT/bin/wiki-preprocess" content .content-build.new
+  mkdir -p .content-build
+  rsync -a --delete .content-build.new/ .content-build/
+  rm -rf .content-build.new
+  touch "$ROOT/.wiki-preprocess-stamp"
+}
+
+do_preprocess
+
+# Background: poll content/ and rerun preprocess when anything is newer than stamp.
+# Run loop without set -e so a failed do_preprocess (e.g. Hugo holding files) doesn't kill the watcher.
+(
+  set +e
+  while true; do
+    sleep 2
+    if [ -f "$ROOT/.wiki-preprocess-stamp" ] && \
+       find content -type f -newer "$ROOT/.wiki-preprocess-stamp" 2>/dev/null | grep -q .; then
+      do_preprocess || true
+    fi
+  done
+) &
+WATCHER_PID=$!
+trap 'kill $WATCHER_PID 2>/dev/null; wait $WATCHER_PID 2>/dev/null' EXIT
+
+hugo server --contentDir .content-build --buildDrafts --disableFastRender

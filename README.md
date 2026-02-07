@@ -38,6 +38,22 @@ Often it is useful to create pages that are largely empty while research is bein
 bin/list_drafts
 ```
 
+## Wiki links (Obsidian-style)
+
+You can use Obsidian-style `[[...]]` links in content:
+
+- `[[Foo]]` → links to page titled "Foo", display text "Foo"
+- `[[Foo|Bar]]` → links to page "Foo", display text "Bar"
+
+These are converted to the existing `wl` shortcode when you run **`bin/run`** (same title/aka lookup). The run script copies `content/` to `.content-build`, runs the wiki preprocessor, then starts Hugo with that dir.
+
+To convert wiki links in place (overwrite `content/`) or from one dir to another:
+
+```bash
+bin/wiki-preprocess                    # content/ in place
+bin/wiki-preprocess content/ out/      # read content/, write to out/
+```
+
 ## Listing Missing Wiki link pages
 
 ```bash

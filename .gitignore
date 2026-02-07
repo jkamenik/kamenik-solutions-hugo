@@ -1,4 +1,6 @@
 public
+.content-build
+.wiki-preprocess-stamp
 .hugo_build.lock
 themes/hugo-saasify-theme
 node_modules

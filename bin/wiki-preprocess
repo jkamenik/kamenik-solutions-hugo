@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""
+Convert Obsidian-style wiki links to Hugo wl shortcodes in Markdown content.
+
+  [[Foo]]       -> {{% wl "Foo" %}}
+  [[Foo|Bar]]   -> {{% wl "Foo" "Bar" %}}
+
+Skips conversion inside fenced code blocks (```...```) so code examples
+and docs that show [[...]] syntax are left unchanged.
+
+Usage:
+  wiki-preprocess                    # convert content/ in place
+  wiki-preprocess content/ out/      # read from content/, write to out/
+"""
+
+import re
+import sys
+from pathlib import Path
+
+
+# Match [[target]] or [[target|label]]; target/label cannot contain ]]
+WIKI_PIPE = re.compile(r"\[\[([^\]|]+)\|([^\]]+)\]\]")  # [[Foo|Bar]] first
+WIKI_SIMPLE = re.compile(r"\[\[([^\]]+)\]\]")  # [[Foo]]
+
+
+def convert_text(text: str) -> str:
+    """Convert wiki links in text, preserving fenced code blocks."""
+    blocks = []
+    placeholder = "\x00WIKIPRE_{}\x00"
+
+    def save_block(match: re.Match) -> str:
+        i = len(blocks)
+        blocks.append(match.group(0))
+        return placeholder.format(i)
+
+    # Temporarily remove fenced code blocks (```...```)
+    protected = re.sub(r"^```[\w]*\n[\s\S]*?^```", save_block, text, flags=re.MULTILINE)
+    protected = convert_inline(protected)
+    for i, block in enumerate(blocks):
+        protected = protected.replace(placeholder.format(i), block)
+    return protected
+
+
+def convert_inline(text: str) -> str:
+    """Convert [[...]] to wl shortcodes. Do pipe form first."""
+    text = WIKI_PIPE.sub(r'{{% wl "\1" "\2" %}}', text)
+    text = WIKI_SIMPLE.sub(r'{{% wl "\1" %}}', text)
+    return text
+
+
+def process_file(src: Path, dst: Path) -> None:
+    content = src.read_text(encoding="utf-8", errors="replace")
+    converted = convert_text(content)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(converted, encoding="utf-8")
+
+
+def main() -> int:
+    if len(sys.argv) == 1:
+        content_dir = Path("content")
+        out_dir = None  # in place
+    elif len(sys.argv) == 3:
+        content_dir = Path(sys.argv[1])
+        out_dir = Path(sys.argv[2])
+    else:
+        print(__doc__.strip(), file=sys.stderr)
+        return 2
+
+    if not content_dir.is_dir():
+        print(f"Not a directory: {content_dir}", file=sys.stderr)
+        return 1
+
+    md_files = list(content_dir.rglob("*.md"))
+    for src in md_files:
+        rel = src.relative_to(content_dir)
+        dst = (out_dir / rel) if out_dir else src
+        process_file(src, dst)
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
