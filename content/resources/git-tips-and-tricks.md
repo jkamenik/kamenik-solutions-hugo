@@ -22,25 +22,27 @@ Often times a git repo needs to be brought up-to-date with the remote quickly.  
 > If you copy the below into `git-cleanup` and put it in your path, then Git will automatically consider it a subcommand.  So within a git repo just run `git cleanup main` (note the space) will move your to the `main` branch, sync it with the remote, and delete any synced branches.
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 
-branch="$1"
-if [[ -z "$1" ]]; then
-    echo "No branch supplied, too dangerious to assume"
-    exit 1
+# Unset the PAGER to prevent interactive behavior
+unset PAGER
+
+# Update main to remote, and branches that were deleted in the remote
+# NOTE: "-d" will only delete if everything is merged, which doesn't work for
+# squash commits.  so use "-D" instead
+
+git fetch -p \
+&& git checkout main \
+&& git pull \
+&& git branch -v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
+
+branch=$(git branch | grep "*" | awk '{print $2}')
+
+if [[ "$branch" != "main" ]]; then
+  echo "Left on branch $branch, manual cleanup may be required"
+  git branch
+  exit 1
 fi
-
-set -u
-git fetch -p
-git checkout "$branch"
-git pull
-
-# shellcheck disable=SC2063 # we are looking for "*"
-while IFS= read -r line; do
-    git branch -d "$line" || echo "Unable to delete '$line', ignoring"
-done < <(git branch | grep -v "^*" | awk '{print $1}' )
-# Note: the line starting "*" is the current branch, ignore it
-# try to safely delete the rest
 ```
 
 ## Find the hash of the latest commit
