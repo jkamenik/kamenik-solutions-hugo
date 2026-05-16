@@ -1,10 +1,12 @@
 ---
 title: 'Hugo Wikilinks'
 date: 2025-04-06
+lastmod: 2026-05-16
 
 aliases:
 - wikilinks
 
+# Keywords help in classifying content
 keywords:
   - Hugo Wikilinks
   - Hugo
@@ -17,7 +19,7 @@ Wikilinks are a standard of many / most wiki software.  However, Hugo does not h
 
 ## Shortcode Proof of Concept
 
-First, let's start with a shortcode that gets us most of the logic.  The being that shortcode `{ {% wl "Hugo Wikilinks" %}}` would link to this page.
+First, let's start with a shortcode that gets us most of the logic.  The idea is that shortcode `{ {% wl "Hugo Wikilinks" %}}` would link to this page.
 
 Some examples
 - `wl "Hugo Wikilinks"`: {{% wl "Hugo Wikilinks" %}}

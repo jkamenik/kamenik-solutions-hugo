@@ -1,7 +1,7 @@
 ---
 title: 'RAG Pipeline'
 date: 2025-05-14
-lastmod: 2025-05-14
+lastmod: 2026-05-16
 
 aliases:
 - rag-pipeline
@@ -9,9 +9,9 @@ aliases:
 # Keywords help in classifying content
 keywords:
   - RAG Pipeline
-  - Retreival-Augmented Generation
+  - Retrieval-Augmented Generation
   - AI
-  - Artificial Intelegence
+  - Artificial Intelligence
   - ML
   - Machine Learning
 ---
@@ -48,7 +48,7 @@ Separately the Query flow starts with the user asking a question.  The RAG syste
 
 ## RAG Service
 
-The RAG service should be a simple HTTP service that has 2 types of endpoints.  The first type will be the CRUD API for the embedding flow.  The second is the streaming API for  the query flow.
+The RAG service should be a simple HTTP service that has 2 types of endpoints.  The first type will be the CRUD API for the embedding flow.  The second is the streaming API for the query flow.
 
 ### Embedding API
 
@@ -56,10 +56,10 @@ The Embedding API should be your standard CRUD operations.  You would be well se
 
 ### Query API
 
-The Query API should "stream" the response.  There are a few ways to do this which will effect what deployment options you have.  One of the easier ways - from the server perspective - is websockets.  However, not all loadbalancers or WAFs supoport that.  Another option is a {{% wl "Cursor Keep Alive" %}}, though that comes at the disadvantage of requiring a separate DB to keep track of the cursors.
+The Query API should "stream" the response.  There are a few ways to do this which will affect what deployment options you have.  One of the easier ways - from the server perspective - is websockets.  However, not all load balancers or WAFs support that.  Another option is a {{% wl "Cursor Keep Alive" %}}, though that comes at the disadvantage of requiring a separate DB to keep track of the cursors.
 
 ### Deployment Options
 
 Your simplest option is a serverless function or container.  That service would take care of the API endpoint and then you largely just have to make sure that your code completes before the service timeouts.
 
-A {{% wl "Kubernetes" %}} Deployment is another viable option.  Expose the endpoimt via an Ingress though a high performance IngressController and you should be all set.
+A {{% wl "Kubernetes" %}} Deployment is another viable option.  Expose the endpoint via an Ingress through a high performance IngressController and you should be all set.
