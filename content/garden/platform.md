@@ -1,5 +1,5 @@
 ---
-title: 'Platform'
+title: "Platform"
 date: 2024-03-27
 lastmod: 2026-05-16
 
@@ -15,4 +15,4 @@ aliases:
   - /radar/platforms/
 ---
 
-A platform is something you build on top of. For example: [[Android]], or [[Cloud]]
+A platform is something you build on top of. For example: [[Android]] or [[Cloud]]

@@ -1,5 +1,5 @@
 ---
-title: 'Orchestrator'
+title: "Orchestrator"
 date: 2025-12-29
 lastmod: 2026-05-16
 
@@ -12,6 +12,7 @@ params:
     parent_category: platform
     subcategory_slug: orchestrator
 
+aliases:
 ---
 
 An orchestrator handles the scheduling and monitoring of processes on a host or across hosts.

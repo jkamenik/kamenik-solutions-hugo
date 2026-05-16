@@ -1,41 +1,35 @@
 ---
-title: '3 Point Estimate'
+title: "3 Point Estimate"
 date: 2023-12-01
-lastmod: 2025-05-09
+lastmod: 2026-05-16
 
-# Keywords help in classifying content
 keywords:
   - 3 Point Estimate
-  - estimate
-  - planning
-  - estimating
-  - scope
 
 params:
-  math: true
   garden:
+    kind: item
     usefulness: assess
     category: technique
     movement: "Moved In"
 
 aliases:
   - /radar/techniques/3-point-estimate
-
 ---
 
-The [three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation) technique is used in management and information systems applications for the construction of an approximate probability distribution representing the outcome of future events, based on very limited information.  It is very useful in estimating the scope of engineering projects as well.
+[3 Point Estimate](https://en.wikipedia.org/wiki/Three-point_estimation)
 
-If your team is struggling with estimating, this might be a viable alternative to simple effort points, which are common in {{% wl Scrum %}}. By taking a range of estimates, you can avoid unnecessary debates and over-analysis that often arise during estimation. Many teams will find it easier to estimate dozens of tasks in the same time it would have taken to estimate just a few with {{% wl "planning poker" %}}.
+The [three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation) technique is used in management and information systems applications for the construction of an approximate probability distribution representing the outcome of future events, based on very limited information. It is very useful in estimating the scope of engineering projects as well.
 
-<!--more-->
+If your team is struggling with estimating, this might be a viable alternative to simple effort points, which are common in [[Scrum]]. By taking a range of estimates, you can avoid unnecessary debates and over-analysis that often arise during estimation. Many teams will find it easier to estimate dozens of tasks in the same time it would have taken to estimate just a few with [[Planning Poker]].
 
 ## Estimates
 
-Before we get to the math the 3-points in 3-point estimation are the following estimates.  For each task these are the values you need to track.  As developers we recommend estimating in whole number days.  However, some teams choose 1/2 days or hours, but we strongly recommend against that.
+Before we get to the math, the 3 points in 3-point estimation are the following estimates. For each task, these are the values you need to track. As developers, we recommend estimating in whole number days. However, some teams choose 1/2 days or hours, but we strongly recommend against that.
 
-- `a` - The best-case.  This is probably what an expert would say it is.  Or someone outside of eng would think it should take.
-- `m` - The likely case.  This is what you'd arrive at with {{% wl "planning poker" %}} or some other consensus estimating technique.
-- `b` - The worst-case.  This is the "it could possible take more then..." number.
+- `a` - The best-case. This is probably what an expert would say it is. Or someone outside of eng would think it should take.
+- `m` - The likely case. This is what you'd arrive at with [[Planning Poker]] or some other consensus estimating technique.
+- `b` - The worst-case. This is the "it could possibly take more than..." number.
 
 ### The Math
 
@@ -58,4 +52,4 @@ You can then convert this into a confidence interval for the project:
 
 95% is usually the target.
 
-With spreadsheet this is pretty easy to do.
+With a spreadsheet, this is pretty easy to do.
