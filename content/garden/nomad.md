@@ -1,23 +1,24 @@
 ---
 title: 'Nomad'
 date: 2025-04-09
-lastmod: 2025-05-11
+lastmod: 2026-05-17
 
-# Keywords help in classifying content
 keywords:
   - Nomad
-  - Hashicorp
+  - HashiCorp
   - Orchestration
 
 params:
   garden:
+    kind: item
     usefulness: assess
     category: platform
     movement: "No Change"
+    subcategories:
+      - orchestrator
 
 aliases:
   - /radar/platforms/nomad
-
 ---
 
-[Hashicorp Nomad](https://www.nomadproject.io/) bills itself as an orchestration system that is easier then {{% wl "kubernetes" %}}.  While that is true there is less of a community, so your only option is Hashicorp commercial support.  It is a good platform to know, but your mileage may vary for production workloads.
+[HashiCorp Nomad](https://www.nomadproject.io/) is a {{% wl "Platform" %}} {{% wl "Orchestrator" %}} that bills itself as an orchestration system that is easier than {{% wl "Kubernetes" %}}. While that is true, there is less of a community, so your only option is HashiCorp commercial support. It is a good platform to know, but your mileage may vary for production workloads.

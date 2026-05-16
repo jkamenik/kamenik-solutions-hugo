@@ -1,0 +1,23 @@
+{{- $cat := .Params.garden.category -}}
+{{- if not $cat -}}
+  {{- $cat = .File.ContentBaseName -}}
+{{- end -}}
+
+{{- $subs := slice -}}
+{{- range (where .Site.RegularPages "Section" "garden") -}}
+  {{- $kind := .Params.garden.kind | default "item" -}}
+  {{- if and (eq $kind "subcategory") (eq .Params.garden.parent_category $cat) -}}
+    {{- $subs = $subs | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $subs) 0 -}}
+  <h2>Subcategories</h2>
+  {{- $content := "" -}}
+  {{- range (sort $subs "Title") -}}
+    {{- $content = printf "%s\n%s" $content (partial "garden/card.html" (dict "page" . "showUsefulness" false)) -}}
+  {{- end -}}
+  {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content | safeHTML)) -}}
+{{- else -}}
+  <p><em>No subcategories published for this category yet.</em></p>
+{{- end -}}

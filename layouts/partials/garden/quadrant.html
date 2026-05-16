@@ -7,6 +7,10 @@
 {{- $s.Set "hold" slice }}
 
 {{- range (sort .RegularPagesRecursive "Title") }}
+  {{- $kind := .Params.garden.kind | default "item" -}}
+  {{- if ne $kind "item" -}}
+    {{- continue -}}
+  {{- end -}}
   {{- $tag := .Params.Garden.Usefulness }}
   {{- $s.Add $tag (slice .)}}
 {{- end }}
@@ -15,7 +19,7 @@
   {{- $usefulness := . }}
   {{- $content = "" }}
   {{- range (sort ($s.Get $usefulness) "Title")}}
-    {{- $content = printf "%s\n%s" $content (partial "garden/card.html" .)}}
+    {{- $content = printf "%s\n%s" $content (partial "garden/card.html" (dict "page" .))}}
   {{- end }}
 
   <h2>{{- strings.Title $usefulness }}</h2>

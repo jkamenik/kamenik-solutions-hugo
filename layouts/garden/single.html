@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{- $kind := .Params.garden.kind | default "item" -}}
   <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
     {{ partial "sidebar.html" (dict "context" . "disableSidebar" false "displayPlaceholder" true) }}
     {{ partial "toc.html" . }}
@@ -6,14 +7,26 @@
       <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
         <br class="hx-mt-1.5 hx-text-sm" />
         {{ if .Title }}<h1 class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">{{ .Title }}</h1>{{ end }}
+        {{- if eq $kind "item" -}}
         <div class="hx-mt-4 hx-mb-16 hx-text-gray-500 hx-text-sm hx-flex hx-items-center hx-flex-wrap hx-gap-y-2">
           {{ partial "garden/summary.html" . }}
         </div>
+        {{- end -}}
         <div class="hx-mt-8"></div>
         <div class="content">
           {{ .Content }}
+          {{- if eq $kind "category" -}}
+          <div class="hx-mt-8"></div>
+          {{ partial "garden/category-subcategories.html" . }}
+          {{- else if eq $kind "subcategory" -}}
+          <div class="hx-mt-8"></div>
+          {{ partial "garden/subcategory-items.html" . }}
+          {{- end -}}
+          {{ partial "garden/taxonomy-nav.html" . }}
         </div>
-        {{ partial "garden/related.html" .}}
+        {{- if eq $kind "item" -}}
+        {{ partial "garden/related.html" . }}
+        {{- end -}}
         <div class="hx-mt-16"></div>
         {{ partial "components/comments.html" . }}
       </main>

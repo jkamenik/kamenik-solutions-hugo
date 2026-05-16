@@ -1,0 +1,6 @@
+{{- /* garden.kind: item | category | subcategory (default item) */ -}}
+{{- with .Params.garden.kind -}}
+  {{- . -}}
+{{- else -}}
+  item
+{{- end -}}

@@ -1,0 +1,41 @@
+{{- $subslug := .Params.garden.subcategory_slug -}}
+{{- if not $subslug -}}
+  {{- $subslug = .File.ContentBaseName -}}
+{{- end -}}
+
+{{- $s := newScratch -}}
+{{- $s.Set "adopt" slice -}}
+{{- $s.Set "trial" slice -}}
+{{- $s.Set "assess" slice -}}
+{{- $s.Set "hold" slice -}}
+
+{{- range (where .Site.RegularPages "Section" "garden") -}}
+  {{- $kind := .Params.garden.kind | default "item" -}}
+  {{- if ne $kind "item" -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- $subs := .Params.garden.subcategories | default slice -}}
+  {{- if in $subs $subslug -}}
+    {{- $ring := .Params.garden.usefulness | default "assess" -}}
+    {{- $s.Add $ring (slice .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $found := false -}}
+{{- range (slice "adopt" "trial" "assess" "hold") -}}
+  {{- $ring := . -}}
+  {{- $pages := $s.Get $ring -}}
+  {{- if gt (len $pages) 0 -}}
+    {{- $found = true -}}
+    {{- $content := "" -}}
+    {{- range (sort $pages "Title") -}}
+      {{- $content = printf "%s\n%s" $content (partial "garden/card.html" (dict "page" . "showUsefulness" true)) -}}
+    {{- end -}}
+    <h2>{{ strings.Title $ring }}</h2>
+    {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content | safeHTML)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $found -}}
+  <p><em>No items published for this subcategory yet.</em></p>
+{{- end -}}

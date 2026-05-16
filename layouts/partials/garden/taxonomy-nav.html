@@ -1,0 +1,58 @@
+{{- /*
+  Visible taxonomy links for garden items and subcategories.
+  Graph edges are also synthesized in graph/link-index-json.html from the same params.
+*/ -}}
+{{- $kind := .Params.garden.kind | default "item" -}}
+{{- if or (eq $kind "item") (eq $kind "subcategory") -}}
+  {{- $catBySlug := .Scratch.Get "gardenCatBySlug" -}}
+  {{- $subBySlug := .Scratch.Get "gardenSubBySlug" -}}
+  {{- if not $catBySlug -}}
+    {{- $catBySlug = dict -}}
+    {{- $subBySlug = dict -}}
+    {{- range where site.RegularPages "Section" "garden" -}}
+      {{- $k := .Params.garden.kind | default "item" -}}
+      {{- if eq $k "category" -}}
+        {{- $slug := .Params.garden.category | default .File.ContentBaseName -}}
+        {{- $catBySlug = $catBySlug | merge (dict $slug .) -}}
+      {{- else if eq $k "subcategory" -}}
+        {{- $slug := .Params.garden.subcategory_slug | default .File.ContentBaseName -}}
+        {{- $subBySlug = $subBySlug | merge (dict $slug .) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- .Scratch.Set "gardenCatBySlug" $catBySlug -}}
+    {{- .Scratch.Set "gardenSubBySlug" $subBySlug -}}
+  {{- end -}}
+
+  {{- $links := slice -}}
+  {{- if eq $kind "item" -}}
+    {{- with .Params.garden.category -}}
+      {{- with index $catBySlug . -}}
+        {{- $links = $links | append (dict "page" . "label" "Category") -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range .Params.garden.subcategories -}}
+      {{- with index $subBySlug . -}}
+        {{- $links = $links | append (dict "page" . "label" "Subcategory") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if eq $kind "subcategory" -}}
+    {{- with .Params.garden.parent_category -}}
+      {{- with index $catBySlug . -}}
+        {{- $links = $links | append (dict "page" . "label" "Category") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if gt (len $links) 0 -}}
+    <nav class="garden-taxonomy hx-mt-8 hx-pt-6 hx-border-t hx-border-gray-200 dark:hx-border-gray-700 hx-text-sm hx-text-gray-600 dark:hx-text-gray-400" aria-label="Garden taxonomy">
+      <ul class="hx-flex hx-flex-col hx-gap-4 hx-list-none hx-p-0 hx-m-0">
+        {{- range $links -}}
+          <li class="hx-flex hx-flex-col hx-gap-1 sm:hx-flex-row sm:hx-items-baseline sm:hx-gap-2">
+            <span class="hx-font-medium hx-shrink-0">{{ .label }}:</span>
+            <a href="{{ .page.RelPermalink }}" class="hx-text-primary-600 hover:hx-underline dark:hx-text-primary-400">{{ .page.Title }}</a>
+          </li>
+        {{- end -}}
+      </ul>
+    </nav>
+  {{- end -}}
+{{- end -}}

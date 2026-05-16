@@ -1,18 +1,42 @@
-{{- $tag := .Params.Garden.Usefulness }}
-{{- $tagType := "" }}
-{{- if eq $tag "adopt" }}
-  {{- $tagType = "green" }}
-{{- else if eq $tag "trial" }}
-  {{- $tagType = "info" }}
-{{- else if eq $tag "assess" }}
-  {{- $tagType = "warning" }}
-{{- else if eq $tag "hold" }}
-  {{- $tagType = "error" }}
-{{- end }}
+{{- $p := . -}}
+{{- $showUsefulness := true -}}
+{{- if not .Title -}}
+  {{- with .page -}}
+    {{- $p = . -}}
+  {{- end -}}
+  {{- if isset . "showUsefulness" -}}
+    {{- $showUsefulness = .showUsefulness -}}
+  {{- end -}}
+{{- end -}}
 
-{{- $title := .Title }}
-{{- if .Draft }}
-  {{- $title = printf "%s (draft)" .Title }}
-{{- end }}
+{{- $tag := "" -}}
+{{- $tagType := "" -}}
+{{- if $showUsefulness -}}
+  {{- $tag = $p.Params.Garden.Usefulness -}}
+  {{- if eq $tag "adopt" -}}
+    {{- $tagType = "green" -}}
+  {{- else if eq $tag "trial" -}}
+    {{- $tagType = "info" -}}
+  {{- else if eq $tag "assess" -}}
+    {{- $tagType = "warning" -}}
+  {{- else if eq $tag "hold" -}}
+    {{- $tagType = "error" -}}
+  {{- end -}}
+{{- end -}}
 
-{{- (partial "shortcodes/card" (dict "title" $title "subtitle" .Params.Garden.Movement "link" .RelPermalink "tag" $tag "tagType" $tagType))}}
+{{- $subtitle := "" -}}
+{{- $kind := $p.Params.garden.kind | default "item" -}}
+{{- if eq $kind "subcategory" -}}
+  {{- $subtitle = "Subcategory" -}}
+{{- else if eq $kind "category" -}}
+  {{- $subtitle = "Category" -}}
+{{- else -}}
+  {{- $subtitle = $p.Params.Garden.Movement -}}
+{{- end -}}
+
+{{- $title := $p.Title -}}
+{{- if $p.Draft -}}
+  {{- $title = printf "%s (draft)" $p.Title -}}
+{{- end -}}
+
+{{- (partial "shortcodes/card" (dict "title" $title "subtitle" $subtitle "link" $p.RelPermalink "tag" $tag "tagType" $tagType)) -}}
