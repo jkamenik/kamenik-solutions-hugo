@@ -1,4 +1,4 @@
-async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam) {
+async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam, scopePrefixParam) {
   // Template may embed config as JSON string (e.g. after HTML escaping); normalize to object
   let cfg = graphConfig
   if (typeof cfg === "string") {
@@ -9,6 +9,16 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     }
   }
   cfg = cfg || {}
+
+  let pathColorsArr = pathColors
+  if (typeof pathColorsArr === "string") {
+    try {
+      pathColorsArr = JSON.parse(pathColorsArr)
+    } catch (_) {
+      pathColorsArr = []
+    }
+  }
+  if (!Array.isArray(pathColorsArr)) pathColorsArr = []
   const {
   enableDrag = true,
   enableLegend = false,
@@ -43,44 +53,42 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   const { index, links, content } = await fetchDataPromise
 
-  // Use .pathname to remove hashes / searchParams / text fragments
-  const cleanUrl = window.location.origin + window.location.pathname
+  const linksIndex = index?.links ? index : index?.index || {}
+  const pageLinks = linksIndex.links || {}
+  const pageBacklinks = linksIndex.backlinks || {}
 
-  // Index keys are paths (e.g. /radar/techniques/cloud). Derive curPage from pathname so lookups
-  // work when baseUrl doesn't match current origin (e.g. dev at localhost vs production baseURL).
-  let curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
-  if (curPage.startsWith("http:") || curPage.startsWith("https:")) {
-    curPage = window.location.pathname.replace(/\/$/, "") || "/"
-  }
-  if (curPage && !curPage.startsWith("/")) {
-    curPage = "/" + curPage
-  }
-
-  const curPrefix = ((curPage || "/").replace(/\/$/, "") || "") + "/"
-
-  // Normalize node id for navigation: strip erroneously captured quoted URLs and current page prefix
-  const pathForHref = (id) => {
-    let path = (id || "").trim()
+  const normalizePagePath = (raw) => {
+    let path = (raw || "").trim()
     try {
       path = decodeURIComponent(decodeURI(path))
     } catch (_) {}
-    // Strip quoted URL fragments (e.g. "http://localhost:1313") that can appear in bad link data
     path = path.replace(/["'](?:https?:)?[^"']*["']/g, "").replace(/\/+/g, "/")
-    // Strip leading protocol+host (e.g. http:/localhost:1313 or http://localhost:1313) so we keep only the path
     path = path.replace(/^https?:\/\/?[^/]*/, "").trim()
-    // If path is longer than current page and starts with it (e.g. /radar/tools/helm/radar/languages/yaml), strip duplicate prefix
-    if (curPrefix.length > 1 && path.length > curPrefix.length && path.startsWith(curPrefix)) {
-      path = path.slice(curPrefix.length)
-    }
-    // Remove duplicated path prefix (e.g. /radar/radar/ -> /radar/)
     path = path.replace(/^(\/[^/]+\/)\1/, "$1")
     path = path.replace(/\s+/g, "-").replace(/\/$/, "") || "/"
     return path.startsWith("/") ? path : "/" + path
   }
 
+  // Always derive from pathname so link-index lookups match regardless of baseURL encoding
+  const curPage = normalizePagePath(window.location.pathname)
+
+  const lookupLinks = (store, page) =>
+    store[page] || store[page + "/"] || store[page.replace(/\/$/, "")] || []
+
+  const pageUrl = (id) => normalizePagePath(id)
+
   const parseIdsFromLinks = (links) => [
     ...new Set(links.flatMap((link) => [link.source, link.target])),
   ]
+
+  const scopePrefix = scopePrefixParam
+    ? String(scopePrefixParam).replace(/\/$/, "")
+    : null
+  const inScope = (id) => {
+    if (!scopePrefix) return true
+    const path = (id || "").replace(/\/$/, "") || "/"
+    return path === scopePrefix || path.startsWith(scopePrefix + "/")
+  }
 
   // Resolve node label: prefer content index title, else last path segment (humanized)
   const labelFor = (id) => {
@@ -105,12 +113,22 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
         remainingDepth--
         wl.push("__SENTINEL")
       } else {
-        neighbours.add(cur)
-        const outgoing = index.links[cur] || []
-        const incoming = index.backlinks[cur] || []
-        wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
+        if (inScope(cur)) neighbours.add(cur)
+        const outgoing = lookupLinks(pageLinks, cur)
+        const incoming = lookupLinks(pageBacklinks, cur)
+        wl.push(
+          ...outgoing.map((l) => l.target).filter(inScope),
+          ...incoming.map((l) => l.source).filter(inScope),
+        )
       }
     }
+  } else if (scopePrefix) {
+    parseIdsFromLinks(copyLinks)
+      .filter(inScope)
+      .forEach((id) => neighbours.add(id))
+    Object.keys(content)
+      .filter(inScope)
+      .forEach((id) => neighbours.add(id.replace(/\/$/, "") || "/"))
   } else {
     parseIdsFromLinks(copyLinks).forEach((id) => neighbours.add(id))
   }
@@ -137,7 +155,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
       return "var(--g-node-active)"
     }
 
-    for (const pathColor of pathColors) {
+    for (const pathColor of pathColorsArr) {
       const path = Object.keys(pathColor)[0]
       const colour = pathColor[path]
       if (d.id.startsWith(path)) {
@@ -211,7 +229,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr('viewBox', `${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`)
 
   if (enableLegend) {
-    const legend = [{ Current: "var(--g-node-active)" }, { Note: "var(--g-node)" }, ...pathColors]
+    const legend = [{ Current: "var(--g-node-active)" }, { Note: "var(--g-node)" }, ...pathColorsArr]
     legend.forEach((legendEntry, i) => {
       const key = Object.keys(legendEntry)[0]
       const colour = legendEntry[key]
@@ -248,8 +266,8 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   // calculate radius
   const nodeRadius = (d) => {
-    const numOut = index.links[d.id]?.length || 0
-    const numIn = index.backlinks[d.id]?.length || 0
+    const numOut = lookupLinks(pageLinks, d.id).length
+    const numIn = lookupLinks(pageBacklinks, d.id).length
     return 2 + Math.sqrt(numOut + numIn)
   }
 
@@ -262,15 +280,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr("fill", color)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      const path = pathForHref(d.id)
-      window.location.href = window.location.origin + (path.startsWith("/") ? path : "/" + path) + (path === "/" ? "" : "/")
+      const path = pageUrl(d.id)
+      window.location.href = window.location.origin + path + (path === "/" ? "" : "/")
     })
     .on("mouseover", function (_, d) {
       d3.selectAll(".node").transition().duration(100).attr("fill", "var(--g-node-inactive)")
 
       const neighbours = parseIdsFromLinks([
-        ...(index.links[d.id] || []),
-        ...(index.backlinks[d.id] || []),
+        ...lookupLinks(pageLinks, d.id),
+        ...lookupLinks(pageBacklinks, d.id),
       ])
       const neighbourNodes = d3.selectAll(".node").filter((d) => neighbours.includes(d.id))
       const currentId = d.id

@@ -10,7 +10,7 @@ localGraph:
     enableLegend: false
     enableDrag: true
     enableZoom: true
-    depth: 2 # hops from current page; set to -1 to show full graph
+    depth: 1 # hops from current page (1 = direct inbound/outbound links); set to -1 to show full graph
     scale: 1.2
     repelForce: 1
     linkDistance: 1  # multiplier for link length

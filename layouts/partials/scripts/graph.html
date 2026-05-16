@@ -71,20 +71,29 @@
     const pathWindow = window.location.pathname;
     const isHome = pathBase === pathWindow || pathWindow === "/" || pathWindow === pathBase || pathWindow === pathBase.replace(/\/$/, "");
 
+    {{- $pageGraph := .Params.graph -}}
+    {{- $pageGraphDepth := index $pageGraph "depth" -}}
+    {{- $pageGraphScope := index $pageGraph "scope" -}}
+    const hasPageGraphDepth = {{ if isset $pageGraph "depth" }}true{{ else }}false{{ end }};
     const drawGlobal = isHome && {{.Site.Data.graphConfig.enableGlobalGraph | default false}};
-    const graphConfig = drawGlobal ? {{.Site.Data.graphConfig.globalGraph | jsonify}} : {{.Site.Data.graphConfig.localGraph | jsonify}};
+    const drawFullScoped = hasPageGraphDepth && {{ $pageGraphDepth | default 0 }} === -1;
+    const graphConfig = (drawGlobal || drawFullScoped)
+      ? {{.Site.Data.graphConfig.globalGraph | jsonify}}
+      : {{.Site.Data.graphConfig.localGraph | jsonify}};
     const pathColors = {{.Site.Data.graphConfig.paths | default (slice) | jsonify}};
-    const graphDepth = drawGlobal ? {{ .Site.Data.graphConfig.globalGraph.depth | default -1 }} : {{ .Site.Data.graphConfig.localGraph.depth | default 2 }};
-
-    const baseUrlPath = {{strings.TrimRight "/" .Site.BaseURL | jsonify}};
+    const graphDepth = hasPageGraphDepth
+      ? {{ $pageGraphDepth | default 2 }}
+      : (drawGlobal ? {{ .Site.Data.graphConfig.globalGraph.depth | default -1 }} : {{ .Site.Data.graphConfig.localGraph.depth | default 2 }});
+    const graphScope = {{ if $pageGraphScope }}"{{ $pageGraphScope }}"{{ else }}null{{ end }};
 
     drawGraph(
-      baseUrlPath,
+      pathBase,
       drawGlobal,
       pathColors,
       graphConfig,
       fetchData,
-      graphDepth
+      graphDepth,
+      graphScope
     );
   };
 

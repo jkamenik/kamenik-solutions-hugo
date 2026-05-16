@@ -12,6 +12,9 @@ aliases:
   - /radar/languages
   - /radar/languages/
 toc: false
+graph:
+  scope: /garden
+  depth: -1
 ---
 
 Browse the [Tech Garden]({{% garden_link %}}) by usefulness ring below, or explore connections in the graph.
