@@ -25,8 +25,8 @@ markup:
 
 menu:
   main:
-    - name: Radar
-      pageRef: /radar
+    - name: Garden
+      pageRef: /garden
       weight: 1
     - name: Blog
       pageRef: /blog
@@ -67,7 +67,7 @@ params:
 
   rss:
     sections:
-      - radar
+      - garden
       - blog
 
   displayUpdatedDate: false

@@ -34,5 +34,5 @@ globalGraph:
 
 paths:
   - /blog: "#3b82f6"
-  - /radar: "#10b981"
+  - /garden: "#10b981"
   - /resources: "#f59e0b"

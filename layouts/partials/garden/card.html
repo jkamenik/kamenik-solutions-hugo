@@ -1,0 +1,18 @@
+{{- $tag := .Params.Garden.Usefulness }}
+{{- $tagType := "" }}
+{{- if eq $tag "adopt" }}
+  {{- $tagType = "green" }}
+{{- else if eq $tag "trial" }}
+  {{- $tagType = "info" }}
+{{- else if eq $tag "assess" }}
+  {{- $tagType = "warning" }}
+{{- else if eq $tag "hold" }}
+  {{- $tagType = "error" }}
+{{- end }}
+
+{{- $title := .Title }}
+{{- if .Draft }}
+  {{- $title = printf "%s (draft)" .Title }}
+{{- end }}
+
+{{- (partial "shortcodes/card" (dict "title" $title "subtitle" .Params.Garden.Movement "link" .RelPermalink "tag" $tag "tagType" $tagType))}}

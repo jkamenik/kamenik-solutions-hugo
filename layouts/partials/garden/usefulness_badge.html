@@ -1,0 +1,14 @@
+{{- $usefulness := .usefulness -}}
+
+{{- $type := "" }}
+{{- if eq $usefulness "adopt" }}
+  {{- $type = "green" }}
+{{- else if eq $usefulness "trial" }}
+  {{- $type = "info" }}
+{{- else if eq $usefulness "assess" }}
+  {{- $type = "warning" }}
+{{- else if eq $usefulness "hold" }}
+  {{- $type = "error" }}
+{{- end }}
+
+{{- (partial "shortcodes/badge.html" (dict "content" $usefulness "type" $type)) }}

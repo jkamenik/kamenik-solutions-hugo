@@ -1,0 +1,25 @@
+{{- $categoryToQuadrant := dict "tool" "tools" "technique" "techniques" "platform" "platforms" "language" "languages" }}
+{{- $pages := slice }}
+{{- range (sort .RegularPagesRecursive) }}
+  {{- $isNew := "FALSE" }}
+  {{- if (eq .Params.garden.movement "New") }}
+    {{- $isNew = "TRUE"}}
+  {{- end }}
+  {{- $content := .Summary}}
+  {{- if (ne .Summary .Content) }}
+    {{- $content = (printf "%s<p><a href=%s>Read More</a></p>" .Summary .Permalink)}}
+  {{- end }}
+  {{- $cat := .Params.garden.category | default "tools" }}
+  {{- $quad := index $categoryToQuadrant $cat | default $cat }}
+  {{- $page := dict
+    "name" .Name
+    "ring" .Params.garden.usefulness
+    "quadrant" $quad
+    "status" .Params.garden.movement
+    "isNew" $isNew
+    "description" $content
+    "summary" .Summary
+  }}
+  {{- $pages = $pages | append $page }}
+{{- end }}
+{{- jsonify (dict "indent" "    " "noHTMLEscape" true) $pages }}

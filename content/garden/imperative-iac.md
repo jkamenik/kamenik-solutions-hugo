@@ -1,0 +1,29 @@
+---
+title: 'Imperative IaC'
+date: 2025-01-05
+lastmod: 2025-01-05
+
+# Keywords help in classifying content
+keywords:
+  - Imperative IaC
+  - IaC
+  - anti-pattern
+
+params:
+  garden:
+    usefulness: hold
+    category: technique
+    movement: "No Change"
+
+aliases:
+  - /radar/techniques/imperative-iac
+
+---
+
+Imperative IaC is using a programming language to generate the IaC code.  This is often seen as a boon since the number one complaint about {{% wl "Declarative IaC" %}} is that it is not DRY enough.  And being able to use the suite of programming refactoring tools seems great.
+
+However, the two main goals of IaC are decreased blast radius and security over time, which imperative IaC makes impossible.  Almost all clients we have worked have regretted the choice of Imperative IaC tools like {{% wl "Pulumi" %}} and {{% wl "AWS CDK" %}}.  While imperative IaC code might be smaller, the side effects of simple changes are vastly more complicated to understand, which makes responding to change risky, and error prone.
+
+<!--more-->
+
+More often then note our first order is to us a tool like {{% wl "terraformer" "`terraformer`" %}} to generate raw IaC from the state of the cloud account and then painstakingly refactor the IaC correctly as it should have been originally.  Though use of proper {{% wl "IaC refactoring" %}} technique we arrive code that is both clean and maintainable with minimal repetition, rendering promises of Imperative IaC moot and thus we move this to hold.

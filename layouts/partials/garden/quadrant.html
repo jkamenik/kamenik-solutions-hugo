@@ -1,0 +1,23 @@
+{{- $content := "" }}
+
+{{- $s := newScratch }}
+{{- $s.Set "adopt" slice }}
+{{- $s.Set "trial" slice }}
+{{- $s.Set "assess" slice }}
+{{- $s.Set "hold" slice }}
+
+{{- range (sort .RegularPagesRecursive "Title") }}
+  {{- $tag := .Params.Garden.Usefulness }}
+  {{- $s.Add $tag (slice .)}}
+{{- end }}
+
+{{- range (slice "adopt" "trial" "assess" "hold") }}
+  {{- $usefulness := . }}
+  {{- $content = "" }}
+  {{- range (sort ($s.Get $usefulness) "Title")}}
+    {{- $content = printf "%s\n%s" $content (partial "garden/card.html" .)}}
+  {{- end }}
+
+  <h2>{{- strings.Title $usefulness }}</h2>
+  {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content|safeHTML)) -}}
+{{- end }}
