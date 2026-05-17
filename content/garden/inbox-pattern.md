@@ -1,31 +1,26 @@
 ---
-title: 'Inbox Pattern'
+title: "Inbox Pattern"
 date: 2025-05-19
-lastmod: 2025-05-19
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Inbox Pattern
-  - Outbox Pattern
-  - Pattern
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  aka:
-    - Outbox Pattern
   garden:
+    kind: item
     usefulness: adopt
     category: technique
     movement: "No Change"
 
 aliases:
   - /radar/techniques/inbox-pattern
-
 ---
 
-The [inbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) is an effective means to guarantee delivery of a work item.  You might be familiar with it from email.  It is a highly effective way to make sure that work is complete, or retried until it completes.  It is light weight and can be used effectively in much more complex systems like {{% wl "work queue" "work queues" %}}, or {{% wl "workflow" %}}.  It should be adopted before more complex designs.
+[Inbox Pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern)
 
-<!--more-->
+The [inbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) is an effective means to guarantee delivery of a work item. You might be familiar with it from email. It is a highly effective way to make sure that work is complete, or retried until it completes. It is light weight and can be used effectively in much more complex systems like [[work queue|work queues]], or [[workflow]]. It should be adopted before more complex designs.
 
 ```mermaid
 sequenceDiagram

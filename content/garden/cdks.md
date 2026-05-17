@@ -1,27 +1,23 @@
 ---
-title: 'CDKs'
+title: "CDKs"
 date: 2025-04-10
-lastmod: 2025-04-10
-draft: true
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - CDKs
-  - Cloud Development Kits
 
 params:
   garden:
+    kind: item
     usefulness: hold
     category: tool
     movement: "No Change"
 
 aliases:
   - /radar/tools/cdks
-
 ---
 
-<!-- TODO: Add a Summary -->
+[CDKs](https://aws.amazon.com/cdk/)
 
-<!--more-->
-
-<!-- TODO: Add additional info -->
+Cloud Development Kits ([AWS CDK](https://aws.amazon.com/cdk/) and similar) generate infrastructure from general-purpose programming languages. They are a form of [[Imperative IaC]]: convenient for prototypes, but they obscure blast radius and often lead to regret at scale. We rate CDKs **hold** for the same reasons as [[Pulumi]]—prefer [[Declarative IaC]] with [[Terraform]] when your team can use it.

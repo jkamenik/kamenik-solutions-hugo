@@ -1,28 +1,30 @@
 ---
-title: 'Rest'
-date: 2025-05-15
-lastmod: 2025-05-15
-draft: true
+title: "Representational State Transfer (REST)"
+date: 2025-12-11
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
-  - Rest
+  - Representational State Transfer (REST)
+  - RESTful
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
-    usefulness: assess
+    kind: item
+    usefulness: adopt
     category: technique
     movement: "No Change"
+    subcategories:
+      - api
 
 aliases:
   - /radar/techniques/rest
-
 ---
 
-<!-- TODO: Add a Summary -->
+[Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
-<!--more-->
+## Blurb
 
-<!-- TODO: Add additional info -->
+REST defines a set of constraints for how the architecture of a distributed, [Internet](https://en.wikipedia.org/wiki/Internet "Internet")-scale [hypermedia](https://en.wikipedia.org/wiki/Hypermedia "Hypermedia") system, such as the Web, should behave
+
+## Summary

@@ -1,28 +1,31 @@
 ---
-title: 'gRPC'
-date: 2025-05-14
-lastmod: 2025-05-14
-draft: true
+title: "gRPC"
+date: 2025-12-21
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - gRPC
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
+    kind: item
     usefulness: assess
-    category: language
+    category: technique
     movement: "No Change"
+    subcategories:
+      - api
 
 aliases:
-  - /radar/languages/grpc
-
+  - /radar/techniques/grpc
 ---
 
-<!-- TODO: Add a Summary -->
+[gRPC](https://grpc.io/)
 
-<!--more-->
+## Blurb
 
-<!-- TODO: Add additional info -->
+A high performance, open source universal RPC framework
+
+## Summary
+
+gRPC suffers the same issue as general RPC. That is it is a fundamentally flawed approach to cross computer service communication. However, there are some [[IPC]] use cases where it makes sense; like [[Terraform|terraform's]] provider.

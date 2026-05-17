@@ -1,28 +1,21 @@
 ---
-title: 'Workflow'
+title: "Workflow"
 date: 2025-05-20
-lastmod: 2025-05-20
-draft: true
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Workflow
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
+    kind: item
     usefulness: assess
     category: technique
     movement: "No Change"
 
 aliases:
   - /radar/techniques/workflow
-
 ---
 
-<!-- TODO: Add a Summary -->
-
-<!--more-->
-
-<!-- TODO: Add additional info -->
+[Workflow](https://en.wikipedia.org/wiki/Workflow) is the orchestration of multi-step business or technical processes—often with state, retries, timeouts, and human approvals. In software it maps to engines such as [[Dagu]] or to staged [[CI-CD Tools]] pipelines. Model workflows explicitly when coordination across services or teams is the bottleneck.

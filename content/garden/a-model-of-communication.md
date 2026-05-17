@@ -1,7 +1,8 @@
 ---
 title: "A Model of Communication"
 date: 2024-10-01
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - A Model of Communication

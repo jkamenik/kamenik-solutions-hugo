@@ -1,32 +1,37 @@
 ---
-title: 'Container Structure Test'
-date: 2024-04-25
-lastmod: 2025-01-05
+title: "Container Structure Test"
+date: 2023-03-03
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Container Structure Test
-  - testing
 
 params:
   garden:
+    kind: item
     usefulness: adopt
-    category: tool
+    category: code
     movement: "No Change"
+    subcategories:
+      - language
 
 aliases:
-  - /radar/tools/container-structure-test
-  - /radar/languages/container-structure-test
-
 ---
 
 [Container Structure Test](https://github.com/GoogleContainerTools/container-structure-test) provides a powerful framework to validate the structure of a container image. These tests can be used to check the output of commands in an image, as well as verify metadata and contents of the filesystem.
 
-Your code has unit tests, right?  So should your container.  At a minimum you should have existence tests for the important files, like libraries that are needed, and even the main binary itself.  You should have tests that important labels like the commit hash are there, any ports that opened by default and default ENVs exist.
+If you are building [[containerization|containers]] then this is a critical tool.
 
-You can even do things like run your binary to make sure it produces expected behaviors.  Since in this day and age Containers are a must, so too is this tool.
+Tests are defined in a YAML file and then run via
 
-<!--more-->
+```bash
+container-structure-test test --image <image> --config <testfile>
+```
 
-> [!WARNING] Smoke Tests
-> The goal with this tool is the basic smoke test and some very light usability testing.  This is not an integration test suite.  You really are just trying to make sure the container will at least run.
+There are three types of tests that can be performed:
+
+1. Command Tests - Execute a command and check its output
+2. File existence tests - Check a file is or is not present
+3. File content tests - Check a file has or does not have certain content
+4. Metadata test - Check that the metadata of the container is correct

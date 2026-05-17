@@ -1,7 +1,8 @@
 ---
 title: "Platform"
 date: 2024-03-27
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - Platform

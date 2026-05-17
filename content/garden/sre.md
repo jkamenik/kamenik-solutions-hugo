@@ -1,27 +1,26 @@
 ---
-title: 'SRE'
+title: "SRE"
 date: 2025-05-11
-lastmod: 2025-05-11
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - SRE
-  - DevOps
 
 params:
   garden:
+    kind: item
     usefulness: assess
     category: technique
     movement: "No Change"
 
 aliases:
   - /radar/techniques/sre
-
 ---
 
-Site Reliability Engineer (SRE) is a very specific implementation of {{% wl DevOps %}} that Google uses. However, outside of Google, DevOps usually have a broader mandate. You have to decide if a narrowly focused SRE role is right for you.
+[SRE](https://sre.google/)
 
-<!--more-->
+Site Reliability Engineer (SRE) is a very specific implementation of [[DevOps]] that Google uses. However, outside of Google, DevOps usually have a broader mandate. You have to decide if a narrowly focused SRE role is right for you.
 
 ## Reference
 

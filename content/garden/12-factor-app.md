@@ -1,7 +1,8 @@
 ---
 title: "12 Factor App"
 date: 2023-07-23
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - 12 Factor App

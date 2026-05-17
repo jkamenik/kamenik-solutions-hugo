@@ -1,32 +1,25 @@
 ---
-title: 'Hybrid Cloud'
+title: "Hybrid Cloud"
 date: 2025-07-10
-lastmod: 2025-07-10
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Hybrid Cloud
-  - AWS
-  - GCP
-  - Azure
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
+    kind: item
     usefulness: adopt
     category: technique
     movement: "Moved In"
 
 aliases:
   - /radar/techniques/hybrid-cloud
-
 ---
 
-We are big fans of Hybrid Cloud, if and only if you do it correctly. The worst thing you can do is flop back and forth between similar services across clouds (also known as {{% wl "Cloud Lift and Shift" %}}). However, if you utilize the best of each cloud's offering and allow your developers to choose the ideal environment for their needs, then Hybrid Cloud can be a multiplier.
+[Hybrid Cloud](https://en.wikipedia.org/wiki/Cloud_computing#Hybrid_cloud)
 
-It is important that you bridge your Cloud accounts securely either via {{% wl "SDWAN" %}}, {{% wl "VPN Gateway" %}}, or {{% wl "Beyond Corp" %}}.
+We are big fans of Hybrid Cloud, if and only if you do it correctly. The worst thing you can do is flop back and forth between similar services across clouds (also known as [[Cloud Lift and Shift]]). However, if you utilize the best of each cloud's offering and allow your developers to choose the ideal environment for their needs, then Hybrid Cloud can be a multiplier.
 
-<!--more-->
-
-<!-- TODO: Add additional info -->
+It is important that you bridge your cloud accounts securely either via [[SDWAN]], [[VPN Gateway]], or [[Beyond Corp]].

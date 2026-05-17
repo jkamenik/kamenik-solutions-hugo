@@ -1,39 +1,19 @@
 ---
-title: 'Cloud'
-date: 2025-05-11
-lastmod: 2025-05-11
+title: "Cloud"
+date: 2026-01-10
+lastmod: 2026-05-17
+draft: false
 
-
-# Keywords help in classifying content
 keywords:
   - Cloud
-  - Cloud Computing
-  - IaaS
-  - Infrastructure as a Service
-  - Platform as a Service
-  - PaaS
-  # - Software as a Service
-  # - SaaS
 
 params:
-  aka:
-    - IaaS
-    - PaaS
   garden:
-    usefulness: adopt
-    category: technique
-    movement: "No Change"
+    kind: subcategory
+    parent_category: platform
+    subcategory_slug: cloud
 
 aliases:
-  - /radar/techniques/cloud-computing
-  - /radar/techniques/infrastructure-as-a-service
-  - /radar/techniques/platform-as-a-service
-  - /radar/techniques/cloud
-
 ---
 
-At its most basic, "Cloud" just means someone else's computer. More importantly, it refers to shared infrastructure that is managed and configured programmatically. This infrastructure can be used as a base for customers to build on. It is also known as Infrastructure as a Service (IaaS) or Platform as a Service (PaaS).
-
-Historically, {{% wl "AWS" %}} was the first true cloud provider. Amazon sought to offset the operational costs of infrastructure that was heavily utilized during Black Friday and the lead-up to Christmas but remained largely idle at other times. Their revolutionary approach eliminated the need to consider physical hardware, replacing it with configurable options.
-
-Many years on and all the major cloud offerings have the same set of base offerings, like object storage, network attached storage, VMs.  Then on top of that they also have ubiquitous managed offerings like {{% wl "Postgres" %}}, {{% wl "Kubernetes" %}}, and {{% wl "Serverless" %}}.  Specifics are different, but the concepts are all the same.  And for this reason, if you are a modern DevOps then you must the cloud concepts.
+Cloud really means someone else's computer. In essence you are using the infrastructure that another company manages for you. However, unlike a traditional managed datacenter they instead give you access to a virtual layer which hides the physical hardware details.

@@ -1,29 +1,35 @@
 ---
-title: 'Terraform'
-date: 2024-04-05
-lastmod: 2025-01-05
+title: "Terraform"
+date: 2023-12-01
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Terraform
-  - Declarative IaC
-  - IaC
 
 params:
   garden:
-    usefulness: trial
-    category: tool
-    movement: "Moved Out"
+    kind: item
+    category: technique
 
 aliases:
-  - /radar/tools/terraform
-
+  - /radar/techniques/terraform
 ---
 
-[Terraform](https://www.terraform.io/) has been the defacto standard for {{% wl "Declarative IaC" "IaC" %}}.  However, it was knocked out of its "Adopt" classification in the Tech Radar due to the commercial license change.  This means that it has become too cost-prohibitive for some companies, which have invested in other solutions.
+Quadrant:: [[Tool]]
+Ring:: #adopt
+URL:: https://www.terraform.io/
+Category::
+Related:: [[Pulumi]]
 
-At the time of this writing {{% wl "OpenTofu" %}} -- an open-source fork of Terraform created before the license change to maintain a free and community-driven alternative -- is a compelling option.  However, it will diverge eventually; making choice confounding.  If you can use Terraform, do so.  Otherwise, there are plenty of good alternatives.
+## Blurb
 
-<!--more-->
+Automate infrastructure on any cloud with Terraform.
 
-A later announcement by IBM on the purchase of Hashicorp made the license change understandable.  IBM does have a long history of supporting the open source community, but they are a commercial entity. Therefore, we remain cautious about Terraform's future as the de facto standard.
+## Summary
+
+This is the de facto DevOps tool for managing infrastructure. It does so via [[IaC]] files
+
+## Details
+
+`What else is important to know?`

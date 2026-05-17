@@ -1,7 +1,8 @@
 ---
 title: "Agent Skills - Sources"
 date: 2026-05-06
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - Agent Skills - Sources
@@ -23,6 +24,8 @@ aliases:
 A living research document tracking good sources of [[Agent Skills Framework|agent skills]] to draw from. Covers [[Claude Code]], [[Gemini CLI]], and cross-ecosystem skill/prompt repositories.
 
 > **Maintenance:** Review quarterly. Update "last checked" dates when vetting a source. Remove dead or low-quality links.
+
+## Blurb
 
 > The SKILL.md format is an open standard for teaching thinking AI models specific, repeatable skills. A growing ecosystem of community repositories, marketplaces, and cross-agent collections makes skills portable across Claude Code, Gemini CLI, Cursor, Codex, and others.
 

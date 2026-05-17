@@ -1,28 +1,22 @@
 ---
-title: 'Work Queues'
+title: "Work Queues"
 date: 2025-05-20
-lastmod: 2025-05-20
-draft: true
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Work Queues
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
+    kind: item
     usefulness: assess
     category: technique
     movement: "No Change"
 
 aliases:
   - /radar/techniques/work-queue
-
+  - /radar/techniques/work-queue
 ---
 
-<!-- TODO: Add a Summary -->
-
-<!--more-->
-
-<!-- TODO: Add additional info -->
+[Work queues](https://en.wikipedia.org/wiki/Message_queue) decouple producers and consumers so tasks can be processed asynchronously, retried, and scaled independently. They pair well with the [[Inbox Pattern]] when you need at-least-once delivery without building a full workflow engine. Adopt a mature broker (or managed queue) before inventing your own persistence layer.

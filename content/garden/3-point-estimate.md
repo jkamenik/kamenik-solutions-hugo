@@ -1,7 +1,8 @@
 ---
 title: "3 Point Estimate"
 date: 2023-12-01
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - 3 Point Estimate

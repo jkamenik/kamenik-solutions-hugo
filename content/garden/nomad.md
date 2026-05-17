@@ -1,7 +1,8 @@
 ---
 title: "Nomad"
 date: 2025-04-09
-lastmod: 2026-05-16
+lastmod: 2026-05-17
+draft: false
 
 keywords:
   - Nomad

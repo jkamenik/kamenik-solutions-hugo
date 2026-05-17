@@ -1,31 +1,27 @@
 ---
-title: 'Pulumi'
+title: "Pulumi"
 date: 2024-04-05
-lastmod: 2025-01-05
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Pulumi
-  - Imperative IaC
-  - IaC
 
 params:
   garden:
+    kind: item
     usefulness: assess
     category: tool
     movement: "No Change"
 
 aliases:
   - /radar/tools/pulumi
-
 ---
 
 [Pulumi](https://www.pulumi.com/) generates IaC based a programming language of your choice.
 
-As with many [Imperative IaC]({{< ref "imperative-iac" >}}) it suffers from serious drawbacks.  However, for quick-hack lab environments - where the maintainer has little operational experience - it proves a compelling approach.
+As with many [[Imperative IaC]] it suffers from serious drawbacks. However, for quick-hack lab environments - where the maintainer has little operational experience - it proves a compelling approach.
 
-While many similar tool are "hold" we leave this "assess" because pulumi uses terraform providers under the hood meaning that the actual actions taken and state maintained is that of Terraform.  So this isn't the worst stepping stone in the world of IaC.
+While many similar tools are "hold" we leave this "assess" because Pulumi uses Terraform providers under the hood meaning that the actual actions taken and state maintained is that of Terraform. So this isn't the worst stepping stone in the world of IaC.
 
-<!--more-->
-
-If you are in a company that cannot or will not use Terraform and you have a mature enough team to actively avoid the pitfalls of Imperative IaC then this is a very competent solution.  Otherwise steer clear because you are going to end up in a worst place than just building by hand.
+If you are in a company that cannot or will not use Terraform and you have a mature enough team to actively avoid the pitfalls of Imperative IaC then this is a very competent solution. Otherwise steer clear because you are going to end up in a worst place than just building by hand.

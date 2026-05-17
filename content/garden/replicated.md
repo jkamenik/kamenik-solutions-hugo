@@ -1,25 +1,36 @@
 ---
-title: 'Replicated'
-date: 2025-05-19
-lastmod: 2025-05-19
+title: "Replicated"
+date: 2023-07-23
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Replicated
-  - Kubernetes
-  - air-gapped
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
-    usefulness: hold
-    category: platform
-    movement: "No Change"
+    kind: item
+    category: technique
 
 aliases:
-  - /radar/platforms/replicated
-
+  - /radar/techniques/replicated
 ---
 
-[Replicated](https://www.replicated.com/) is an air-gapped {{% wl "Kubernetes" %}} installer.  If you live in that space then this is basically your only commercial option.  However, you aren't doing yourself any favors choosing Kubernetes.  Therefore, for the majority of users, this option should be avoided.
+Quadrant:: [[Platform|Platform]]
+Ring:: #hold
+URL:: https://www.replicated.com/
+Related:: [[Kubernetes]]
+
+## Blurb
+
+Distribute Apps to Customers as K8s.
+
+## Summary
+
+Provides a license service and proxy in front of the OSS items kURL, and KOTs. However, those OSS are still pretty immature often leading to breaking changes and the Replicated commercial costs does not reduce these issues or reduce effort on their customers.
+
+Best to review kURL and KOTs vs Rancher and determine what your direct customers would be able handle, and implement your own solution on top.
+
+Most customers are not going to be able to take Replicated and manage it as well the underlying product. So in the end it does more harm then good.
+
+## Details

@@ -1,28 +1,33 @@
 ---
-title: 'GraphQL'
-date: 2025-05-14
-lastmod: 2025-05-14
-draft: true
+title: "GraphQL"
+date: 2025-12-11
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - GraphQL
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
   garden:
-    usefulness: assess
-    category: language
-    movement: "No Change"
+    kind: item
+    usefulness: hold
+    category: technique
+    movement: "New"
+    subcategories:
+      - api
 
 aliases:
-  - /radar/languages/graphql
-
+  - /radar/techniques/graphql
 ---
 
-<!-- TODO: Add a Summary -->
+[GraphQL](https://graphql.org/)
 
-<!--more-->
+## Blurb
 
-<!-- TODO: Add additional info -->
+The query language for modern APIs.
+
+## Summary
+
+Published by Facebook in 2015, it solves a problem that is unique to them that really only existed for a short period of time. Namely, requests were coming in so fast that it was wasting a lot of bandwidth, since not all clients needed the same information.
+
+[[OpenAPI]] is a much lighter weight solution, which solves far more use-cases, until you really do hit the hyper-scale of Facebook. Until you do it is best if you avoid GraphQL.

@@ -1,26 +1,34 @@
 ---
-title: 'ShiftLeft'
-date: 2025-05-11
-lastmod: 2025-05-11
-draft: true
+title: "Shift Left"
+date: 2023-12-01
+lastmod: 2026-05-17
+draft: false
 
-# Keywords help in classifying content
 keywords:
   - Shift Left
 
 params:
   garden:
-    usefulness: assess
+    kind: item
+    usefulness: adopt
     category: technique
     movement: "No Change"
 
 aliases:
   - /radar/techniques/shiftleft
-
+  - /radar/techniques/shiftleft
 ---
 
-Summary goes here.
+Quadrant:: [[Technique]]
+Ring:: #adopt 
+URL::
+Category::
+Related:: [[Terraform]], [[Pulumi]]
 
-<!--more-->
+## Blurb
 
-Additional details goes here.
+Shift left is **the practice of moving testing, quality, and performance evaluation early in the development process, often before any code is written**
+
+## Summary
+
+The idea is that if you can write it as code then you can move testing to it and things move from Pets to Cattle.
