@@ -11,8 +11,11 @@
   {{- if ne $kind "item" -}}
     {{- continue -}}
   {{- end -}}
-  {{- $tag := .Params.Garden.Usefulness }}
-  {{- $s.Add $tag (slice .)}}
+  {{- $tag := .Params.garden.usefulness -}}
+  {{- if not (in (slice "adopt" "trial" "assess" "hold") $tag) -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- $s.Add $tag (slice .) -}}
 {{- end }}
 
 {{- range (slice "adopt" "trial" "assess" "hold") }}
