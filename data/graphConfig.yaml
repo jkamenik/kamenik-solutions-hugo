@@ -30,6 +30,19 @@ globalGraph:
     fontSize: 0.5
     opacityScale: 3
 
+### Scoped full graph (section pages with graph.depth: -1 and graph.scope, e.g. /garden) ###
+
+scopedGraph:
+    enableLegend: false
+    enableDrag: true
+    enableZoom: true
+    scale: 0.75 # zoom out to fit many nodes in the main content area
+    repelForce: 3
+    linkDistance: 2.5 # multiplier for link length (base 40px)
+    fontSize: 0.38
+    opacityScale: 1.25 # faint labels until zoomed in
+    collidePadding: 5 # extra space around nodes (reduces overlap)
+
 ### For all graphs ###
 
 paths:

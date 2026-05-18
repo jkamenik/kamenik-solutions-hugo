@@ -71,15 +71,24 @@
     const pathWindow = window.location.pathname;
     const isHome = pathBase === pathWindow || pathWindow === "/" || pathWindow === pathBase || pathWindow === pathBase.replace(/\/$/, "");
 
-    {{- $pageGraph := .Params.graph -}}
+    {{- $pageGraph := .Params.graph | default dict -}}
     {{- $pageGraphDepth := index $pageGraph "depth" -}}
     {{- $pageGraphScope := index $pageGraph "scope" -}}
-    const hasPageGraphDepth = {{ if isset $pageGraph "depth" }}true{{ else }}false{{ end }};
+    {{- $hasPageGraphDepth := isset $pageGraph "depth" -}}
+    {{- $drawFullScoped := and $hasPageGraphDepth (eq (int ($pageGraphDepth | default 0)) -1) -}}
+    {{- $drawGlobal := and .IsHome (.Site.Data.graphConfig.enableGlobalGraph | default false) -}}
+    {{- $baseGraphConfig := cond $drawGlobal (.Site.Data.graphConfig.globalGraph) (cond $drawFullScoped (.Site.Data.graphConfig.scopedGraph | default .Site.Data.graphConfig.globalGraph) .Site.Data.graphConfig.localGraph) -}}
+    {{- $graphOverrides := dict -}}
+    {{- range $k, $v := $pageGraph -}}
+      {{- if and (ne $k "depth") (ne $k "scope") -}}
+        {{- $graphOverrides = merge $graphOverrides (dict $k $v) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $mergedGraphConfig := merge ($baseGraphConfig | default dict) $graphOverrides -}}
+    const hasPageGraphDepth = {{ $hasPageGraphDepth }};
     const drawGlobal = isHome && {{.Site.Data.graphConfig.enableGlobalGraph | default false}};
-    const drawFullScoped = hasPageGraphDepth && {{ $pageGraphDepth | default 0 }} === -1;
-    const graphConfig = (drawGlobal || drawFullScoped)
-      ? {{.Site.Data.graphConfig.globalGraph | jsonify}}
-      : {{.Site.Data.graphConfig.localGraph | jsonify}};
+    const drawFullScoped = hasPageGraphDepth && {{ int ($pageGraphDepth | default 0) }} === -1;
+    const graphConfig = {{ $mergedGraphConfig | jsonify }};
     const pathColors = {{.Site.Data.graphConfig.paths | default (slice) | jsonify}};
     const graphDepth = hasPageGraphDepth
       ? {{ $pageGraphDepth | default 2 }}
