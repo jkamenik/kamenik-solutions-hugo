@@ -1,7 +1,7 @@
 ---
 title: 'Kustomize Rollout'
 date: 2025-04-18
-lastmod: 2025-04-18
+lastmod: 2026-05-16
 
 aliases:
 - kustomize-rollout
@@ -14,7 +14,7 @@ keywords:
   - ab style
 ---
 
-{{< wl Kustomize >}} is a tool built into `kubectl` which helps in the management of YAML.  It does a lot of things, but one of the major ones is having overlays per deployment.  It is not uncommon to have a single base and a rollout per deployments.  However, this can cause issue when you need to fix your base, as it will happily update all your overlaid environments en mass; which is less then ideal.  Here is how I have fixed that for my deployments.
+{{< wl Kustomize >}} is a tool built into `kubectl` which helps in the management of YAML.  It does a lot of things, but one of the major ones is having overlays per deployment.  It is not uncommon to have a single base and a rollout per deployment.  However, this can cause issues when you need to fix your base, as it will happily update all your overlaid environments en masse; which is less than ideal.  Here is how I have fixed that for my deployments.
 
 <!--more-->
 
@@ -59,7 +59,7 @@ patches:
       name: app
 ```
 
-However, things are little more annoying if you have to exclude or remote items.  There is no way in kustomize to delete entire objects so the only way to handle this in each overlay is via full object copies.  If however, you have a large discrepancy between an env or a lot of object then this can be error prone.
+However, things are a little more annoying if you have to exclude or remove items.  There is no way in kustomize to delete entire objects so the only way to handle this in each overlay is via full object copies.  If however, you have a large discrepancy between an env or a lot of objects then this can be error prone.
 
 ## Option 2: A/B Bases
 
@@ -154,7 +154,7 @@ The final option - which is complicated as it introduces a new tool - is to prod
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
-Each `kustomizaton.yaml` would look like this:
+Each `kustomization.yaml` would look like this:
 
 ```yaml
 helmCharts:
@@ -173,7 +173,7 @@ Separately you will need a repo for the helm chart with a CI pipeline that pushe
 > ```yaml
 > # values.yaml
 > provider: "local" # only include the CRDs valid for local deployments
-> # or provide explitic disable flags
+> # or provide explicit disable flags
 > disableExternalSecrets: true
 > disableManagedCertificates: true
 >

@@ -1,7 +1,7 @@
 ---
 title: 'Blast Radius - Critical Context'
 date: 2025-06-15
-lastmod: 2025-06-15
+lastmod: 2026-05-16
 
 params:
   math: true
@@ -17,7 +17,7 @@ keywords:
 
 Context is everything, and understanding Blast Radius is crucial for providing the necessary context when assessing risk as a DevSecOps professional.
 
-Blast Radius - simply put - is how much of the infrastructure is touched when a change is made.  The higher the blast radius the higher the risk.  And in the world of IaC that usually means it is caused by a change in IaC code.  So it would be natural to assume that a large change in blast radius would be caused by a large change in IaC, but that is often not the case.  There is only an indirect relationship between IaC lines changes and infrastructure changes.
+Blast Radius - simply put - is how much of the infrastructure is touched when a change is made.  The higher the blast radius the higher the risk.  And in the world of IaC that usually means it is caused by a change in IaC code.  So it would be natural to assume that a large change in blast radius would be caused by a large change in IaC, but that is often not the case.  There is only an indirect relationship between changes to IaC lines and infrastructure changes.
 
 But how do you protect yourself?
 
@@ -42,11 +42,11 @@ Add up all the changes and that represents the risk of the change.  This can the
 
 The following items are harder to know because sometimes the IaC won't know.  But if you can track them, you should.
 
-1. `+7` for any case where the IaC change would not be respected.  That is, the IaC is changed, but it won't effect the underlying infrastructure.
-    1. If this doesn't result in an error then the IaC tool then it is a really high risk because you'll assume everything is ok, but it very much isn't.
+1. `+7` for any case where the IaC change would not be respected.  That is, the IaC is changed, but it won't affect the underlying infrastructure.
+    1. If the IaC tool doesn't error, that is a high risk because you'll assume everything is ok, but it very much isn't.
     2. S3 bucket encryption is an example of this.  If the flag is enabled only new files are encrypted.  Older files remain unencrypted without any way to know.
 2. `+9` if the change would cause loss of data
-    1. This usually is only discovered during that oh-shit moment when everything fails and you have to trigger {{% wl "Disaster Recovery" %}}.  Once this type of change is known it should be documented as the kind of change that shouldn't be made.  {{% wl "Policy-as-Code" %}} tools are good for preventing this.
+    1. This usually is only discovered during that failure moment when everything fails and you have to trigger {{% wl "Disaster Recovery" %}}.  Once this type of change is known it should be documented as the kind of change that shouldn't be made.  {{% wl "Policy-as-Code" %}} tools are good for preventing this.
     2. At the time of this writing, {{% wl "AWS" %}} EFS encryption is an example.  It would happily remove all existing files when this flag is changed.
 
 ## Blast Radius KPI
@@ -58,7 +58,7 @@ The following are the KPIs you need to track and publish:
     1. Each line changed, added, or deleted counts as `+1`.
 3. Resources Under Management (RUM) - This is a count of the number of objects described by the IaC at the time it is applied.  Since IaC often has means to reduce code duplication (like modules) this should be based on fully expanded resources, not just what is in the IaC files.
 4. IaC Code Efficiency ($\frac{IaC\ resources}{1K\ line\ of\ code}$) - The number of resources should be at the plan or apply stage. The lines of code should be measured based on the workspace.  It is measuring how effective you are at using coding techniques to manage your IaC resources.
-5. Change Risk (min, max, mean, median, & mode of $\frac{Blast\ Radius}{IaC\ Changes}$) - This tells you how much of your infrastructure is changing per change in IaC.  High numbers indicate that relative small changes in actual code cause high changes in infrastructure.
+5. Change Risk (min, max, mean, median, & mode of $\frac{Blast\ Radius}{IaC\ Changes}$) - This tells you how much of your infrastructure is changing per change in IaC.  High numbers indicate that relatively small changes in actual code cause large changes in infrastructure.
 
 You need to balance IaC Code Efficiency and Change Risk to maximize your operational speed.
 
@@ -98,11 +98,11 @@ While this gives you the benefit of being able to independently test the artifac
 
 ### Branches and/or Tags
 
-Sort of a lazy man's versioned artifacts is using branches or tags.  Code can be merged between branches as needed to rollout changes, but you do not have to do things like setting up new repos, CI pipelines, or Artifact Repos.  Folks also generally know how to merge between branches better then they understand how to release artifacts.  Therefore it is a smaller conceptual load and easier to pick up.
+Sort of a lazy man's versioned artifacts is using branches or tags.  Code can be merged between branches as needed to rollout changes, but you do not have to do things like setting up new repos, CI pipelines, or Artifact Repos.  Folks also generally know how to merge between branches better than they understand how to release artifacts.  Therefore it is a smaller conceptual load and easier to pick up.
 
 However, there are some major downsides:
 
 1. Merging is manual so forgetting to merge changes across branches will be common.
 2. There is no relationship between branches, thus it won't be clear what or how changes can and should be made, or where things are deployed.
-3. It would be entirely possible to have changes not flow though a standardized process.
+3. It would be entirely possible to have changes not flow through a standardized process.
 4. Environments will tend to drift both making future merging difficult.

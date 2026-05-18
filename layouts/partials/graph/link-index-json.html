@@ -5,6 +5,20 @@
 {{- $linksIndex := dict -}}
 {{- $backlinksIndex := dict -}}
 
+{{- /* Garden taxonomy: slug → category/subcategory page */ -}}
+{{- $gardenCatBySlug := dict -}}
+{{- $gardenSubBySlug := dict -}}
+{{- range where site.RegularPages "Section" "garden" -}}
+  {{- $gKind := .Params.garden.kind | default "item" -}}
+  {{- if eq $gKind "category" -}}
+    {{- $slug := .Params.garden.category | default .File.ContentBaseName -}}
+    {{- $gardenCatBySlug = $gardenCatBySlug | merge (dict $slug .) -}}
+  {{- else if eq $gKind "subcategory" -}}
+    {{- $slug := .Params.garden.subcategory_slug | default .File.ContentBaseName -}}
+    {{- $gardenSubBySlug = $gardenSubBySlug | merge (dict $slug .) -}}
+  {{- end -}}
+{{- end -}}
+
 {{- range $pages -}}
   {{- $source := .RelPermalink -}}
   {{- $source = strings.TrimSuffix "/" $source -}}
@@ -138,6 +152,46 @@
         {{- $target = "/" -}}
       {{- end -}}
       {{- $link := dict "source" $source "target" $target "text" $wlTitle -}}
+      {{- $links = $links | append $link -}}
+      {{- $pageLinks = $pageLinks | append $link -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Garden taxonomy edges from frontmatter (items → category/subcategories; subcategories → category) */ -}}
+  {{- $gKind := .Params.garden.kind | default "item" -}}
+  {{- $taxTargets := slice -}}
+  {{- if eq $gKind "item" -}}
+    {{- with .Params.garden.category -}}
+      {{- with index $gardenCatBySlug . -}}
+        {{- $taxTargets = $taxTargets | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range .Params.garden.subcategories -}}
+      {{- with index $gardenSubBySlug . -}}
+        {{- $taxTargets = $taxTargets | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if eq $gKind "subcategory" -}}
+    {{- with .Params.garden.parent_category -}}
+      {{- with index $gardenCatBySlug . -}}
+        {{- $taxTargets = $taxTargets | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $taxTargets -}}
+    {{- $target := .RelPermalink -}}
+    {{- $target = strings.TrimSuffix "/" $target -}}
+    {{- if eq $target "" -}}
+      {{- $target = "/" -}}
+    {{- end -}}
+    {{- $dup := false -}}
+    {{- range $pageLinks -}}
+      {{- if eq .target $target -}}
+        {{- $dup = true -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $dup -}}
+      {{- $link := dict "source" $source "target" $target "text" .Title -}}
       {{- $links = $links | append $link -}}
       {{- $pageLinks = $pageLinks | append $link -}}
     {{- end -}}
