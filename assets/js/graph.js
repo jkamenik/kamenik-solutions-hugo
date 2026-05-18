@@ -1,3 +1,29 @@
+function normalizeGraphConfig(raw) {
+  const keyMap = {
+    enabledrag: "enableDrag",
+    enablelegend: "enableLegend",
+    enablezoom: "enableZoom",
+    opacityscale: "opacityScale",
+    repelforce: "repelForce",
+    linkdistance: "linkDistance",
+    fontsize: "fontSize",
+    collidepadding: "collidePadding",
+    link_distance: "linkDistance",
+    show_legend: "enableLegend",
+  }
+  const out = {}
+  for (const [k, v] of Object.entries(raw || {})) {
+    const mapped = keyMap[k] || keyMap[k.toLowerCase()] || k
+    if (out[mapped] === undefined) out[mapped] = v
+  }
+  if (out.charge_strength != null && out.repelForce == null) {
+    const charge = Number(out.charge_strength)
+    if (Number.isFinite(charge)) out.repelForce = Math.abs(charge) / 300
+  }
+  delete out.charge_strength
+  return out
+}
+
 async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam, scopePrefixParam) {
   // Template may embed config as JSON string (e.g. after HTML escaping); normalize to object
   let cfg = graphConfig
@@ -8,7 +34,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
       cfg = {}
     }
   }
-  cfg = cfg || {}
+  cfg = normalizeGraphConfig(cfg || {})
 
   let pathColorsArr = pathColors
   if (typeof pathColorsArr === "string") {
@@ -27,13 +53,16 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
   scale = 1.2,
   repelForce = 1,
   linkDistance = 1,
-  fontSize = 0.6} = cfg
+  fontSize = 0.6,
+  collidePadding = 0} = cfg
 
   // Coerce numeric options (config may have strings from serialization); fallback to safe defaults
   const numRepel = Number(repelForce)
   const numLinkDist = Number(linkDistance)
   const safeRepelForce = Number.isFinite(numRepel) && numRepel > 0 ? numRepel : 1
   const safeLinkDistance = Number.isFinite(numLinkDist) && numLinkDist > 0 ? numLinkDist : 1
+  const numCollide = Number(collidePadding)
+  const safeCollidePadding = Number.isFinite(numCollide) && numCollide > 0 ? numCollide : 0
 
   // Depth: number of hops from current page (0 = current only, 1 = + direct neighbours, 2 = + 2 hops, etc.). -1 = full graph.
   // Prefer explicit depthParam (from template) so config is never lost in serialization.
@@ -138,6 +167,12 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     links: copyLinks.filter((l) => neighbours.has(l.source) && neighbours.has(l.target)),
   }
 
+  const nodeRadius = (d) => {
+    const numOut = lookupLinks(pageLinks, d.id).length
+    const numIn = lookupLinks(pageBacklinks, d.id).length
+    return 2 + Math.sqrt(numOut + numIn)
+  }
+
   // Pin the current page node at (0,0) so the graph is centered on it; otherwise forceCenter
   // would center the whole graph by centroid and the "current" node could be off-center.
   const isCurrentPage = (d) => d.id === curPage || (d.id === "/" && curPage === "")
@@ -210,6 +245,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
         .id((d) => d.id)
         .distance(40 * safeLinkDistance),
     )
+  if (safeCollidePadding > 0) {
+    simulation.force(
+      "collide",
+      d3.forceCollide().radius((d) => nodeRadius(d) + safeCollidePadding),
+    )
+  }
+  if (data.nodes.length > 40) {
+    simulation.velocityDecay(0.35).alphaDecay(0.015)
+  }
   // No center force: current page is pinned at (0,0), so the graph is centered on it
 
   // Remove any existing SVG
@@ -263,13 +307,6 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
 
   // svg groups
   const graphNode = svg.append("g").selectAll("g").data(data.nodes).enter().append("g")
-
-  // calculate radius
-  const nodeRadius = (d) => {
-    const numOut = lookupLinks(pageLinks, d.id).length
-    const numIn = lookupLinks(pageBacklinks, d.id).length
-    return 2 + Math.sqrt(numOut + numIn)
-  }
 
   // draw individual nodes
   const node = graphNode

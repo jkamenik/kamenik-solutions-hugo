@@ -15,6 +15,12 @@ toc: false
 graph:
   scope: /garden
   depth: -1
+  scale: 0.75 # zoom out to fit many nodes in the main content area
+  repelForce: .2
+  linkDistance: 1 # multiplier for link length (base 40px)
+  fontSize: 0.38
+  opacityScale: 10 # faint labels until zoomed in
+  collidePadding: 2
 ---
 
 Browse the [Tech Garden]({{% garden_link %}}) by usefulness ring below, or explore connections in the graph.
