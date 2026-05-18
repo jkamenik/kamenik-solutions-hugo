@@ -14,10 +14,10 @@ params:
     category: code
     movement: "No Change"
     subcategories:
-      - framework
       - game-engine
 
 aliases:
+  - /radar/code/ebitengine
 ---
 
 [Ebitengine](https://ebitengine.org/) (pronounced "eh-bee-ten-gin"; formerly **Ebiten**) is an open-source 2D [[game engine]] for [[GoLang]]. It targets desktop and mobile from a single Go codebase with a small API surface. We rate it **assess**: strong fit if you already standardize on Go and need a lightweight 2D stack, but it is a niche choice compared to Unity, Godot, or web-first engines.
@@ -33,7 +33,7 @@ Ebitengine wraps rendering, input, and audio for 2D games without pulling in a h
 ## Details
 
 - **Platforms:** Windows, macOS, Linux, browsers (via WebAssembly), iOS, Android, Nintendo Switch (with license).
-- **Model:** immediate-mode 2D drawing; no built-in scene editor—games are code-first.
+- **Model:** immediate-mode 2D drawing; no built-in scene editor, games are code-first.
 - **Strengths:** simple API, pure Go workflow, cross-compile story, active maintainer (Hajime Hoshi).
 - **Limits:** 2D only; not the right default for 3D, AAA tooling, or teams without Go experience.
 - **When to trial:** prototypes, tools, or indie 2D titles where Go is already the org language.
