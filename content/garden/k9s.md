@@ -1,7 +1,7 @@
 ---
 title: "K9s"
 date: 2025-05-19
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

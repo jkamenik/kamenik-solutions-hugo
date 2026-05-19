@@ -1,7 +1,7 @@
 ---
 title: "JSON Schema"
 date: 2025-04-24
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,6 +17,7 @@ params:
       - language
 
 aliases:
+  - /radar/code/json-schema
 ---
 
 [JSON Schema](https://json-schema.org/)
@@ -29,4 +30,4 @@ JSON Schema is the standard vocabulary for describing and validating the structu
 
 ## Summary
 
-JSON Schema is effectively required knowledge in any DevSecOps or API-first context — [[OpenAPI]] 3.x uses it natively, Kubernetes uses it for CRD validation, and most linting/validation tools in the CI pipeline speak it. The spec is stable (Draft 2020-12) and tooling support is broad across all major languages. Adopt without reservation anywhere you need to validate or document a JSON structure.
+JSON Schema is effectively required knowledge in any DevSecOps or API-first context , [[OpenAPI]] 3.x uses it natively, Kubernetes uses it for CRD validation, and most linting/validation tools in the CI pipeline speak it. The spec is stable (Draft 2020-12) and tooling support is broad across all major languages. Adopt without reservation anywhere you need to validate or document a JSON structure.

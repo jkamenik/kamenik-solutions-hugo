@@ -1,7 +1,7 @@
 ---
 title: "Inbox Pattern"
 date: 2025-05-19
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -24,24 +24,24 @@ The [inbox pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern) is a
 
 ```mermaid
 sequenceDiagram
-  actor User
+ actor User
 
-  box Service
-    participant API
-    participant TaskExecutor
-  end
+ box Service
+ participant API
+ participant TaskExecutor
+ end
 
-  participant DB as Database
+ participant DB as Database
 
-  User ->> API: request
-  API ->> DB: insert job
-  API ->> User: accepted
+ User ->> API: request
+ API ->> DB: insert job
+ API ->> User: accepted
 
-  loop
-    DB -->> TaskExecutor: get job
-    TaskExecutor ->> TaskExecutor: do work
-    TaskExecutor ->> DB: record results
-  end
+ loop
+ DB -->> TaskExecutor: get job
+ TaskExecutor ->> TaskExecutor: do work
+ TaskExecutor ->> DB: record results
+ end
 ```
 
 Effectively, the service serializes enough information into the database to perform the work, along with job details such as the date and completion status. If the TaskExecutor might fail before completing a long-running job, use a `reworkAfter` timestamp instead of a simple boolean status. When the TaskExecutor picks up a job, set the `reworkAfter` timestamp to the current time plus twice the maximum allowable time. Any job with a null or expired `reworkAfter` timestamp can be reprocessed. Continue processing all jobs until completion, repeating as necessary.

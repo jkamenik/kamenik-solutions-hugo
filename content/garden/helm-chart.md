@@ -1,7 +1,7 @@
 ---
 title: "Helm Chart"
 date: 2025-07-13
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -14,9 +14,21 @@ params:
     category: code
     movement: "New"
     subcategories:
-      - language
+      - 
+      - 
+      - l
+      - a
+      - n
+      - g
+      - u
+      - a
+      - g
+      - e
+      - 
+      - 
 
 aliases:
+  - /radar/code/helm-chart
 ---
 
 [Helm Chart](https://helm.sh/docs/topics/charts/)

@@ -1,7 +1,7 @@
 ---
 title: "Ruby on Rails"
 date: 2023-07-23
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,6 +17,7 @@ params:
       - framework
 
 aliases:
+  - /radar/code/ruby-on-rails
 ---
 
 [Ruby on Rails](https://rubyonrails.org/) is a full-stack web framework built on [[Ruby]] that popularized convention-over-configuration, ActiveRecord as an [[ORM]], and [[MVC]] for server-rendered apps. It made CRUD and early SaaS prototypes fast in the 2000s, but we rate it **hold** for new work: scaling and team velocity usually require peeling off the framework's opinions long before the product is mature.
@@ -27,7 +28,7 @@ aliases:
 
 ## Summary
 
-Rails proved that productive frameworks could ship real products quickly—scaffolding, migrations, and a cohesive standard library lowered the bar for web startups. That same cohesion becomes a liability when you need independent scaling of read/write paths, strict performance budgets, or polyglot services. Teams often discover too late that the fastest path forward is a partial strangler off Rails rather than incremental tuning inside it.
+Rails proved that productive frameworks could ship real products quickly, scaffolding, migrations, and a cohesive standard library lowered the bar for web startups. That same cohesion becomes a liability when you need independent scaling of read/write paths, strict performance budgets, or polyglot services. Teams often discover too late that the fastest path forward is a partial strangler off Rails rather than incremental tuning inside it.
 
 ## Details
 

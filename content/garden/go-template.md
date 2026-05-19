@@ -1,7 +1,7 @@
 ---
 title: "Go Template"
 date: 2025-04-24
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -14,9 +14,21 @@ params:
     category: code
     movement: "No Change"
     subcategories:
-      - language
+      - 
+      - 
+      - l
+      - a
+      - n
+      - g
+      - u
+      - a
+      - g
+      - e
+      - 
+      - 
 
 aliases:
+  - /radar/code/go-template
 ---
 
 [Go Template](https://pkg.go.dev/text/template)
@@ -33,14 +45,14 @@ The main object (`$`) and all functions have to be registered directly in the [[
 
 ```go
 import (
-  "github.com/Masterminds/sprig/v3"
-  "html/template"
+ "github.com/Masterminds/sprig/v3"
+ "html/template"
 )
 
 // This example illustrates that the FuncMap *must* be set before the
 // templates themselves are loaded.
 tpl := template.Must(
-  template.New("base").Funcs(sprig.FuncMap()).ParseGlob("*.html")
+ template.New("base").Funcs(sprig.FuncMap()).ParseGlob("*.html")
 )
 ```
 

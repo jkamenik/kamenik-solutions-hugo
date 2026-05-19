@@ -1,7 +1,7 @@
 ---
 title: "tree-sitter"
 date: 2026-04-15
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,9 +17,10 @@ params:
       - library
 
 aliases:
+  - /radar/code/tree-sitter
 ---
 
-[Tree-sitter](https://tree-sitter.github.io/tree-sitter/) is an incremental parser generator and runtime that produces concrete syntax trees and updates them efficiently as source changes. We rate it **assess**: the default foundation when you are building editor features, multi-language tooling, or analyzers—but most product teams should consume it indirectly (via an editor or analyzer) rather than embed parsers themselves.
+[Tree-sitter](https://tree-sitter.github.io/tree-sitter/) is an incremental parser generator and runtime that produces concrete syntax trees and updates them efficiently as source changes. We rate it **assess**: the default foundation when you are building editor features, multi-language tooling, or analyzers, but most product teams should consume it indirectly (via an editor or analyzer) rather than embed parsers themselves.
 
 ## Blurb
 
@@ -36,6 +37,6 @@ When requirements grow into cross-node semantic graphs (data flow, control flow,
 - **Strengths:** incremental updates, robust parsing of incomplete code, broad grammar catalog, bindings for Rust/C/Node/Wasm/Python/Go and more.
 - **Workflow:** define or reuse a grammar → generate parser → run queries (pattern match on syntax nodes) in your tool.
 - **Typical uses:** editor syntax highlighting, code outline/folding, lightweight lint rules, test runners that need structure-aware selection.
-- **Heavier uses:** static analysis pipelines—often paired with [[tree-sitter-graph]] (CodeQL-style stacks).
-- **Category:** [[Code]] / [[Library]]—a dependency you link, not a standalone service.
+- **Heavier uses:** static analysis pipelines, often paired with [[tree-sitter-graph]] (CodeQL-style stacks).
+- **Category:** [[Code]] / [[Library]], a dependency you link, not a standalone service.
 - **Pair with:** [[tree-sitter-graph]] when CST queries are not enough; contrast language-specific compiler APIs when you only target one language.

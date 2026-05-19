@@ -1,7 +1,7 @@
 ---
 title: "tree-sitter-graph"
 date: 2026-04-15
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,9 +17,10 @@ params:
       - library
 
 aliases:
+  - /radar/code/tree-sitter-graph
 ---
 
-[tree-sitter-graph](https://github.com/tree-sitter/tree-sitter-graph) is a Rust library and CLI that layers a **graph DSL** on top of [[tree-sitter]] parse trees—turning syntax nodes into arbitrary graphs with nodes, edges, and attributes. We rate it **assess**: essential when you are building static-analysis or IDE pipelines that need custom semantic graphs (GitHub uses it in the CodeQL stack), but overkill if you only need parsing or simple AST walks.
+[tree-sitter-graph](https://github.com/tree-sitter/tree-sitter-graph) is a Rust library and CLI that layers a **graph DSL** on top of [[tree-sitter]] parse trees, turning syntax nodes into arbitrary graphs with nodes, edges, and attributes. We rate it **assess**: essential when you are building static-analysis or IDE pipelines that need custom semantic graphs (GitHub uses it in the CodeQL stack), but overkill if you only need parsing or simple AST walks.
 
 ## Blurb
 
@@ -27,7 +28,7 @@ aliases:
 
 ## Summary
 
-[[tree-sitter]] gives you fast, incremental concrete syntax trees; tree-sitter-graph adds **stanzas**—tree-sitter query patterns plus statements that emit graph nodes, link edges, and attach attributes. That separation lets tools map many languages through shared grammar work while encoding language-specific semantics in the graph rules (control flow, data flow, name resolution, etc.).
+[[tree-sitter]] gives you fast, incremental concrete syntax trees; tree-sitter-graph adds **stanzas**, tree-sitter query patterns plus statements that emit graph nodes, link edges, and attach attributes. That separation lets tools map many languages through shared grammar work while encoding language-specific semantics in the graph rules (control flow, data flow, name resolution, etc.).
 
 Typical consumers are security analyzers, linters with cross-file models, and language tooling that outgrows ad hoc AST visitors. You need comfort with tree-sitter queries and the graph DSL before committing; most application teams should depend on a finished analyzer rather than embed this directly.
 

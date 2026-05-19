@@ -1,7 +1,7 @@
 ---
 title: "Representational State Transfer (REST)"
 date: 2025-12-11
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
