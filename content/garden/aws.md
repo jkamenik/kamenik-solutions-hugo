@@ -1,7 +1,7 @@
 ---
 title: "AWS"
 date: 2024-10-01
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -20,6 +20,26 @@ aliases:
   - /radar/platforms/aws
 ---
 
-[AWS](https://aws.amazon.com/)
+[Amazon Web Services](https://aws.amazon.com/) was the first hyperscale **[[Cloud]]** and still has the broadest catalog, but we rate it **hold** for new work: insecure-by-default patterns, opaque “managed” shared-responsibility gaps, and a sprawl of services that encourage operational debt. Prefer **[[Google Cloud Platform]]** (adopt as multi-cloud spearhead) or **[[Azure]]** (assess, with eyes open) when a comparable capability exists; use **[[Hybrid Cloud]]** to place each workload on the best cloud, not lift-and-shift clones.
 
-AWS was the “first” [[Cloud]], and there are literally hundreds of AWS offerings. However, it is insecure by default and most of its “managed” offerings have a hidden shared-responsibility model that means they are a lot less managed than the cost would indicate. If there is a similar offering at [[Azure]] or [[GCP]] then it is very likely to be the better offering. Therefore we recommend you avoid AWS if at all possible.
+## Blurb
+
+> AWS is the world’s most comprehensive and broadly adopted cloud.
+
+## Summary
+
+**Why hold:** IAM/console complexity, historical foot-guns (public S3, over-broad roles), and services marketed as fully managed that still leave patching, scaling, and security on your team. Total cost often surprises once egress, support, and “almost managed” add-ons stack up.
+
+**When AWS anyway:** existing estate, partner/marketplace requirements, a service with no peer (rare and shrinking), or regulated footprints already certified on AWS. In those cases, contain blast radius, **[[Terraform]]**, guardrails, **[[DevSecOps]]** gates, and avoid pet clusters on **[[AWS EKS]]** (also **hold**; prefer **[[Google GKE]]** for greenfield K8s).
+
+**Garden pattern:** do not default new products to AWS; map each capability to GCP/Azure first. If you must stay, treat AWS as legacy platform to strangle over time, not the greenfield standard.
+
+## Details
+
+| Topic | Notes |
+|-------|--------|
+| **Strengths** | Mature marketplace, global regions, hiring pool familiarity |
+| **Weaknesses** | Default-deny is opt-in discipline; service matrix overwhelming |
+| **K8s** | See **[[AWS EKS]]**; use only when tied to AWS |
+| **Secrets** | Secrets Manager is fine when already on AWS; still design rotation and IAM boundaries |
+| **Exit** | Data egress and proprietary APIs are the real lock-in; design portable interfaces |

@@ -1,7 +1,7 @@
 ---
 title: "Python"
 date: 2025-12-08
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -28,7 +28,7 @@ aliases:
 
 ## Summary
 
-Python grew out of academia and scripting culture: batteries-included stdlib, readable syntax, and a huge PyPI ecosystem made it the default glue for DevOps ([[Ansible]] controllers), scientific computing (NumPy, pandas), and ML tooling. That ubiquity is both strength and trap—teams often reach for Python because a library exists, then inherit GIL limits, packaging drift, and runtime cost at scale.
+Python grew out of academia and scripting culture: batteries-included stdlib, readable syntax, and a huge PyPI ecosystem made it the default glue for DevOps ([[Ansible]] controllers), scientific computing (NumPy, pandas), and ML tooling. That ubiquity is both strength and trap, teams often reach for Python because a library exists, then inherit GIL limits, packaging drift, and runtime cost at scale.
 
 Treat Python as a **toolchain language**: adopt it where the framework or community is Python-first; for new backend services, compare [[GoLang]] (ops and concurrency), [[Ruby]] (legacy web), or typed stacks before defaulting to Python for convenience alone.
 

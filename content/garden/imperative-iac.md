@@ -1,7 +1,7 @@
 ---
 title: "Imperative IaC"
 date: 2025-01-05
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

@@ -1,7 +1,7 @@
 ---
 title: "EditorConfig"
 date: 2024-10-01
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

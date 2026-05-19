@@ -1,7 +1,7 @@
 ---
 title: "JSON"
 date: 2025-04-24
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,6 +17,7 @@ params:
       - language
 
 aliases:
+  - /radar/code/json
 ---
 
 [JSON](https://www.json.org/)
@@ -29,4 +30,4 @@ JSON is the de facto standard for data interchange on the web and in configurati
 
 ## Summary
 
-JSON is universally supported — every language has a parser, every HTTP client speaks it, and every developer knows it. The only reasons to consider alternatives are size/performance ([[Protobuf]], [[MessagePack]]) or richer type systems ([[JSON Schema]] for validation). Adopt without hesitation for any API or config surface.
+JSON is universally supported , every language has a parser, every HTTP client speaks it, and every developer knows it. The only reasons to consider alternatives are size/performance ([[Protobuf]], [[MessagePack]]) or richer type systems ([[JSON Schema]] for validation). Adopt without hesitation for any API or config surface.

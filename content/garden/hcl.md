@@ -1,7 +1,7 @@
 ---
 title: "HCL"
 date: 2026-01-07
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -17,11 +17,12 @@ params:
       - language
 
 aliases:
+  - /radar/code/hcl
 ---
 
 [HCL](https://github.com/hashicorp/hcl)
 
-HashiCorp Configuration Language (HCL) is a human-readable DSL for structured configuration. It is the native language of [[Terraform]], and also used by [[Packer]], [[Nomad]], [[Vault]], and historically [[Vagrant]]. HCL predates [[YAML]]'s dominance in [[Declarative IaC]] and remains the right choice when you are committed to the Terraform or OpenTofu toolchain—not as a general-purpose alternative to YAML for [[Kubernetes]] manifests or [[Docker Compose]].
+HashiCorp Configuration Language (HCL) is a human-readable DSL for structured configuration. It is the native language of [[Terraform]], and also used by [[Packer]], [[Nomad]], [[Vault]], and historically [[Vagrant]]. HCL predates [[YAML]]'s dominance in [[Declarative IaC]] and remains the right choice when you are committed to the Terraform or OpenTofu toolchain; not as a general-purpose alternative to YAML for [[Kubernetes]] manifests or [[Docker Compose]].
 
 Rated **trial**: still the practical default inside HashiCorp-style IaC, but the 2023 BSL license change and growth of YAML-first and CDK-style tools ([[Pulumi]]) mean you should confirm ecosystem fit before new platform bets, not adopt HCL in isolation.
 
@@ -31,7 +32,7 @@ Rated **trial**: still the practical default inside HashiCorp-style IaC, but the
 
 ## Summary
 
-HCL grew out of a practical constraint: when [[HashiCorp]] moved its tools to [[GoLang]], embedding Go as an end-user DSL was awkward, so they built a small declarative language tuned for blocks, attributes, and references—patterns that map cleanly to infrastructure resources. It is intentionally not Turing-complete in the same way as a general programming language; expressions and functions exist, but the model stays declarative, which keeps diffs reviewable and state plans predictable.
+HCL grew out of a practical constraint: when [[HashiCorp]] moved its tools to [[GoLang]], embedding Go as an end-user DSL was awkward, so they built a small declarative language tuned for blocks, attributes, and references, patterns that map cleanly to infrastructure resources. It is intentionally not Turing-complete in the same way as a general programming language; expressions and functions exist, but the model stays declarative, which keeps diffs reviewable and state plans predictable.
 
 For greenfield work outside Terraform/OpenTofu, [[YAML]] (plus optional templating via [[Helm]] or [[YAMLScript]]) or imperative/semantic IaC via [[Pulumi]] often wins on hiring surface area and license clarity. Inside an existing Terraform or OpenTofu estate, learning HCL is non-optional.
 

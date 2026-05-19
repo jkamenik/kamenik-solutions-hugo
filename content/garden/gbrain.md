@@ -1,7 +1,7 @@
 ---
 title: "gbrain"
 date: 2026-05-06
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -23,11 +23,11 @@ aliases:
   - /radar/techniques/gbrain
 ---
 
-[gbrain](https://github.com/garrytan/gbrain) is Garry Tan's opinionated pattern for an LLM-maintained personal knowledge base. We rate it **trial**: the *ideas* are worth stealing—especially **two-layer pages** and **MECE directory resolvers**—but the full package is prescriptive (agent-maintains-everything, enrichment on every signal). Cherry-pick patterns and adapt them to your vault and workflows; do not treat gbrain as a religion.
+[gbrain](https://github.com/garrytan/gbrain) is Garry Tan's opinionated pattern for an LLM-maintained personal knowledge base. We rate it **trial**: the *ideas* are worth stealing (especially **two-layer pages** and **MECE directory resolvers**) but the full package is prescriptive (agent-maintains-everything, enrichment on every signal). Cherry-pick patterns and adapt them to your vault and workflows; do not treat gbrain as a religion.
 
 ## Blurb
 
-> A personal intelligence system where your AI agent builds and maintains an interlinked wiki of everything you know — people, companies, deals, projects, meetings, ideas — as structured, cross-referenced markdown files. The agent writes and maintains all of it. You direct, curate, and think.
+> A personal intelligence system where your AI agent builds and maintains an interlinked wiki of everything you know (people, companies, deals, projects, meetings, ideas) as structured, cross-referenced markdown files. The agent writes and maintains all of it. You direct, curate, and think.
 
 ## Summary
 
@@ -41,11 +41,11 @@ aliases:
 
 ### Two-layer pages (compiled truth + timeline)
 
-Above `---`: current synthesis—rewrite when facts change. Below `---`: append-only edit log (`**YYYY-MM-DD** | Author — …`). Subject-matter history belongs above the line; the timeline records *document* changes only.
+Above `---`: current synthesis (rewrite when facts change. Below `---`: append-only edit log (`**YYYY-MM-DD** | Author) …`). Subject-matter history belongs above the line; the timeline records *document* changes only.
 
 ### MECE directories (light touch)
 
-Resolvers in zone `README.md` files help agents and humans file consistently. MECE applies to *directories*, not reality—use cross-links when entities span domains.
+Resolvers in zone `README.md` files help agents and humans file consistently. MECE applies to *directories*, not reality. Use cross-links when entities span domains.
 
 ### Enrichment on every signal (optional)
 
@@ -56,7 +56,7 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 ```markdown
 # Entity Name
 
-> Executive summary — current state in one paragraph.
+> Executive summary , current state in one paragraph.
 
 ## State
 - **Key field:** value

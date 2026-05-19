@@ -1,7 +1,7 @@
 ---
 title: "Replicated"
 date: 2023-07-23
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -10,10 +10,11 @@ keywords:
 params:
   garden:
     kind: item
-    category: technique
+    usefulness: assess
+    category: tool
+    movement: "No Change"
 
 aliases:
-  - /radar/techniques/replicated
 ---
 
 Quadrant:: [[Platform|Platform]]

@@ -1,7 +1,7 @@
 ---
 title: "Agent Skills - Sources"
 date: 2026-05-06
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -39,7 +39,7 @@ A living research document tracking good sources of [[Agent Skills Framework|age
 
 ## Curated "Awesome" Lists
 
-Aggregator repos and sites — good for broad discovery.
+Aggregator repos and sites , good for broad discovery.
 
 | Source | Notes | Last Checked |
 |--------|-------|--------------|
@@ -50,7 +50,7 @@ Aggregator repos and sites — good for broad discovery.
 
 ## Individual Collections
 
-Maintained by practitioners — often higher signal-to-noise than aggregators.
+Maintained by practitioners , often higher signal-to-noise than aggregators.
 
 | Source | URL | Notes | Last Checked |
 |--------|-----|-------|--------------|
@@ -81,12 +81,12 @@ MCP servers extend *what tools Claude can call*; skills extend *how Claude reaso
 
 ## Cross-Ecosystem Inspiration
 
-Not SKILL.md format, but good sources for *ideas* — patterns that adapt directly.
+Not SKILL.md format, but good sources for *ideas* , patterns that adapt directly.
 
 | Source | Notes |
 |--------|-------|
 | Cursor rules repos (`awesome-cursorrules`) | `.cursorrules` files are functionally similar to SKILL.md; large existing corpus |
-| GitHub Copilot custom instructions | Per-repo instructions that shape behavior — same pattern, different runtime |
+| GitHub Copilot custom instructions | Per-repo instructions that shape behavior , same pattern, different runtime |
 | ChatGPT custom instructions / GPT Actions | Prompt patterns for persona, workflow, and tool-use |
 | OpenAI Codex CLI plugins | SKILL.md format is cross-compatible; Codex skills often translate directly |
 
@@ -101,11 +101,11 @@ Not SKILL.md format, but good sources for *ideas* — patterns that adapt direct
 
 When vetting a new source:
 
-1. **Format compliance** — Is it SKILL.md format, or requires adaptation?
-2. **Cross-agent portability** — Works only in Claude Code, or also Gemini CLI / Cursor / Hermes?
-3. **Maintenance signal** — Last commit date, open issues, star trajectory.
-4. **Domain fit** — DevSecOps, PKM, automation — relevant to [[Kamenik Solutions]] or personal use?
-5. **Quality bar** — Are skills self-contained with a clear trigger description in frontmatter?
+1. **Format compliance**; Is it SKILL.md format, or requires adaptation?
+2. **Cross-agent portability**; Works only in Claude Code, or also Gemini CLI / Cursor / Hermes?
+3. **Maintenance signal**; Last commit date, open issues, star trajectory.
+4. **Domain fit** (DevSecOps, PKM, automation) relevant to [[Kamenik Solutions]] or personal use?
+5. **Quality bar**; Are skills self-contained with a clear trigger description in frontmatter?
 
 ## Open Threads
 
@@ -113,8 +113,8 @@ When vetting a new source:
 
 ## See Also
 
-- [[Agent Skills]] — framework overview
-- [[gbrain]] — two-layer page convention used by this document
-- [[hermes-agent]] — local agent runtime
+- [[Agent Skills]], framework overview
+- [[gbrain]], two-layer page convention used by this document
+- [[hermes-agent]], local agent runtime
 - [[Claude Code]]
 - [[Gemini CLI]]

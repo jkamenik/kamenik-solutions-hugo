@@ -1,7 +1,7 @@
 ---
 title: "gRPC"
 date: 2025-12-21
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

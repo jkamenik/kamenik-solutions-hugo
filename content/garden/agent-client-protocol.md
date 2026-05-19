@@ -1,7 +1,7 @@
 ---
 title: "Agent Client Protocol"
 date: 2026-04-20
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

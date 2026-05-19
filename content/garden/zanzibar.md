@@ -1,7 +1,7 @@
 ---
 title: "Zanzibar"
 date: 2023-07-23
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -15,7 +15,6 @@ params:
     movement: "No Change"
 
 aliases:
-  - /radar/techniques/zanzibar
   - /radar/techniques/zanzibar
 ---
 
@@ -41,7 +40,7 @@ Some ways relationships are mapped:
 2. User 11 is a member of `group:eng` - `group:eng#member@11`
 3. Members of `group:eng` are viewers of `doc:readme` - `doc:readme#viewer@group:eng#member`
 4. `doc:readme` is in a `folder:A` - `doc:readme#parent@folder:A#…`
-   1. `#…` is self-referential relationship. Basically it is a means to draw a graph between two objects instead between an object and a user.
+ 1. `#…` is self-referential relationship. Basically it is a means to draw a graph between two objects instead between an object and a user.
 
 ## Eval
 
@@ -62,15 +61,15 @@ Let's say you want to add a relationship "editor". You previously had "owner" an
 
 ```plain
 relation {
-  name: "editor",
-  userset_rewrite {
-    union {
-      child { _this {} } # all things explicitly given editor relation
+ name: "editor",
+ userset_rewrite {
+ union {
+ child { _this {} } # all things explicitly given editor relation
 
-      # Any that was explicitly given the owner relation is also an editor
-      child { computed_userset { relation: "owner" } }
-    }
-  }
+ # Any that was explicitly given the owner relation is also an editor
+ child { computed_userset { relation: "owner" } }
+ }
+ }
 }
 ```
 
@@ -128,9 +127,9 @@ With Zookies:
 2. Kara removes Lex's access to plan A (Plan A now has Zookie T2)
 3. Kara adds secret information to plan A
 4. Lex reads plan A
-   1. Check sees cache has Zookie T1, but document has Zookie T2
-   2. Cache is expunged
-   3. Full path is recalculated
+ 1. Check sees cache has Zookie T1, but document has Zookie T2
+ 2. Cache is expunged
+ 3. Full path is recalculated
 5. Lex is denied access
 
 ## Reference

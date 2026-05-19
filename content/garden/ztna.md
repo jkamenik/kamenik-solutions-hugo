@@ -1,7 +1,7 @@
 ---
 title: "ZTNA"
 date: 2025-04-23
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -15,7 +15,6 @@ params:
     movement: "No Change"
 
 aliases:
-  - /radar/techniques/ztna
   - /radar/techniques/ztna
 ---
 

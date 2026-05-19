@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Ready"
 date: 2023-07-23
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:

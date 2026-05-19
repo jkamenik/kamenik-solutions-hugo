@@ -1,7 +1,7 @@
 ---
 title: "YAMLScript"
 date: 2024-04-09
-lastmod: 2026-05-17
+lastmod: 2026-05-18
 draft: false
 
 keywords:
@@ -14,9 +14,21 @@ params:
     category: code
     movement: "No Change"
     subcategories:
-      - language
+      - 
+      - 
+      - l
+      - a
+      - n
+      - g
+      - u
+      - a
+      - g
+      - e
+      - 
+      - 
 
 aliases:
+  - /radar/code/yamlscript
 ---
 
 [YAMLScript](https://github.com/yaml/yamlscript) (YS) is valid YAML, however, it is not API compatible with YAML. Therefore, even if `example.ys` can be read by a YAML interpreter the output would not contain the same objects as the parsed YS. Currently no main stream programs use it, but we are optimistic that it might eventual replace [[Go Templates]] for things like [[Helm]]. But until that happens you have to assess if it suits your needs.
@@ -45,23 +57,23 @@ example: 43
 # Print the verses to "99 Bottles of Beer"
 #
 # usage:
-#   ys 99-bottles.ys [<count>]
+# ys 99-bottles.ys [<count>]
 
 defn main(number=99):
-  each [n (number .. 1)]:
-    say: paragraph(n)
+ each [n (number .. 1)]:
+ say: paragraph(n)
 
 defn paragraph(num): |
-  $bottles(num) of beer on the wall,
-  $bottles(num) of beer.
-  Take one down, pass it around.
-  $bottles(num - 1) of beer on the wall.
+ $bottles(num) of beer on the wall,
+ $bottles(num) of beer.
+ Take one down, pass it around.
+ $bottles(num - 1) of beer on the wall.
 
 defn bottles(n):
-  cond:
-    n == 0 : 'No more bottles'
-    n == 1 : '1 bottle'
-    =>     : "$n bottles"
+ cond:
+ n == 0 : 'No more bottles'
+ n == 1 : '1 bottle'
+ =>  : "$n bottles"
 ```
 
 `main` is the entry point and all command line arguments are split as function arguments. Builtins like `each`, `say`, `cond` take zero or more arguments and perform work given by their object definition. User defined functions are called using `()`.
