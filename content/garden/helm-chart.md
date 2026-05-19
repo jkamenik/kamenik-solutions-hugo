@@ -14,18 +14,7 @@ params:
     category: code
     movement: "New"
     subcategories:
-      - 
-      - 
-      - l
-      - a
-      - n
-      - g
-      - u
-      - a
-      - g
-      - e
-      - 
-      - 
+      - language
 
 aliases:
   - /radar/code/helm-chart

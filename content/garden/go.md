@@ -15,18 +15,7 @@ params:
     category: code
     movement: "No Change"
     subcategories:
-      - 
-      - 
-      - l
-      - a
-      - n
-      - g
-      - u
-      - a
-      - g
-      - e
-      - 
-      - 
+      - language
 
 aliases:
   - /radar/languages/go

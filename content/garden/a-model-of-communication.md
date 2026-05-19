@@ -14,23 +14,7 @@ params:
     category: technique
     movement: "No Change"
     subcategories:
-      - 
-      - 
-      - s
-      - p
-      - e
-      - c
-      - i
-      - f
-      - i
-      - c
-      - a
-      - t
-      - i
-      - o
-      - n
-      - 
-      - 
+      - specification
 
 aliases:
   - /radar/techniques/a-model-of-communication

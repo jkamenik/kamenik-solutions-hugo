@@ -167,8 +167,10 @@
       {{- end -}}
     {{- end -}}
     {{- range .Params.garden.subcategories -}}
-      {{- with index $gardenSubBySlug . -}}
-        {{- $taxTargets = $taxTargets | append . -}}
+      {{- if . -}}
+        {{- with index $gardenSubBySlug . -}}
+          {{- $taxTargets = $taxTargets | append . -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- else if eq $gKind "subcategory" -}}

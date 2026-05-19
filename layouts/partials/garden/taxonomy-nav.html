@@ -31,8 +31,10 @@
       {{- end -}}
     {{- end -}}
     {{- range .Params.garden.subcategories -}}
-      {{- with index $subBySlug . -}}
-        {{- $links = $links | append (dict "page" . "label" "Subcategory") -}}
+      {{- if . -}}
+        {{- with index $subBySlug . -}}
+          {{- $links = $links | append (dict "page" . "label" "Subcategory") -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- else if eq $kind "subcategory" -}}
