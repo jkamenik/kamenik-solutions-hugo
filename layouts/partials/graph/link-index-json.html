@@ -157,6 +157,74 @@
     {{- end -}}
   {{- end -}}
 
+  {{- /* Obsidian-style [[Title]] and [[Title|Label]] (best-effort; may include examples in code fences) */ -}}
+  {{- $wikiPipePattern := `\[\[([^\]|]+)\|([^\]]+)\]\]` -}}
+  {{- $wikiSimplePattern := `\[\[([^\]|]+)\]\]` -}}
+  {{- range findRESubmatch $wikiPipePattern $content -}}
+    {{- $wlTitle := trim (index . 1) " " -}}
+    {{- $targetPage := false -}}
+    {{- range site.RegularPages -}}
+      {{- $candidatePage := . -}}
+      {{- if eq (lower .Title) (lower $wlTitle) -}}
+        {{- $targetPage = $candidatePage -}}
+        {{- break -}}
+      {{- else -}}
+        {{- range $value := .Params.aka -}}
+          {{- if eq (lower $value) (lower $wlTitle) -}}
+            {{- $targetPage = $candidatePage -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $targetPage -}}
+      {{- $target := $targetPage.RelPermalink -}}
+      {{- $target = strings.TrimSuffix "/" $target -}}
+      {{- if eq $target "" -}}{{- $target = "/" -}}{{- end -}}
+      {{- $dup := false -}}
+      {{- range $pageLinks -}}
+        {{- if eq .target $target -}}{{- $dup = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $dup -}}
+        {{- $link := dict "source" $source "target" $target "text" $wlTitle -}}
+        {{- $links = $links | append $link -}}
+        {{- $pageLinks = $pageLinks | append $link -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range findRESubmatch $wikiSimplePattern $content -}}
+    {{- $wlTitle := trim (index . 1) " " -}}
+    {{- $targetPage := false -}}
+    {{- range site.RegularPages -}}
+      {{- $candidatePage := . -}}
+      {{- if eq (lower .Title) (lower $wlTitle) -}}
+        {{- $targetPage = $candidatePage -}}
+        {{- break -}}
+      {{- else -}}
+        {{- range $value := .Params.aka -}}
+          {{- if eq (lower $value) (lower $wlTitle) -}}
+            {{- $targetPage = $candidatePage -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $targetPage -}}
+      {{- $target := $targetPage.RelPermalink -}}
+      {{- $target = strings.TrimSuffix "/" $target -}}
+      {{- if eq $target "" -}}{{- $target = "/" -}}{{- end -}}
+      {{- $dup := false -}}
+      {{- range $pageLinks -}}
+        {{- if eq .target $target -}}{{- $dup = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $dup -}}
+        {{- $link := dict "source" $source "target" $target "text" $wlTitle -}}
+        {{- $links = $links | append $link -}}
+        {{- $pageLinks = $pageLinks | append $link -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- /* Garden taxonomy edges from frontmatter (items → category/subcategories; subcategories → category) */ -}}
   {{- $gKind := .Params.garden.kind | default "item" -}}
   {{- $taxTargets := slice -}}
@@ -177,6 +245,13 @@
     {{- with .Params.garden.parent_category -}}
       {{- with index $gardenCatBySlug . -}}
         {{- $taxTargets = $taxTargets | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if eq $gKind "category" -}}
+    {{- $catSlug := .Params.garden.category | default .File.ContentBaseName -}}
+    {{- range $_, $subPage := $gardenSubBySlug -}}
+      {{- if eq $subPage.Params.garden.parent_category $catSlug -}}
+        {{- $taxTargets = $taxTargets | append $subPage -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -207,12 +282,15 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* Build backlinks index */ -}}
+{{- /* Build backlinks index (where per target avoids Hugo dict merge bug in range) */ -}}
+{{- $linkTargets := slice -}}
 {{- range $links -}}
-  {{- $target := .target -}}
-  {{- $backlinks := index $backlinksIndex $target | default (slice) -}}
-  {{- $backlinks = $backlinks | append . -}}
-  {{- $backlinksIndex = $backlinksIndex | merge (dict $target $backlinks) -}}
+  {{- if not (in $linkTargets .target) -}}
+    {{- $linkTargets = $linkTargets | append .target -}}
+  {{- end -}}
+{{- end -}}
+{{- range $linkTargets -}}
+  {{- $backlinksIndex = $backlinksIndex | merge (dict . (where $links "target" .)) -}}
 {{- end -}}
 
 {{- /* Ensure all pages have entries in both indices */ -}}

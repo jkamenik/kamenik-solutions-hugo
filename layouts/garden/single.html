@@ -14,7 +14,7 @@
         {{- end -}}
         <div class="hx-mt-8"></div>
         <div class="content">
-          {{ .Content }}
+          {{ partial "content-rendered.html" . }}
           {{- if eq $kind "category" -}}
           <div class="hx-mt-8"></div>
           {{ partial "garden/category-subcategories.html" . }}

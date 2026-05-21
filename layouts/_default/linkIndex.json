@@ -112,12 +112,15 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* Build backlinks index */ -}}
+{{- /* Build backlinks index (where per target avoids Hugo dict merge bug in range) */ -}}
+{{- $linkTargets := slice -}}
 {{- range $links -}}
-  {{- $target := .target -}}
-  {{- $backlinks := index $backlinksIndex $target | default (slice) -}}
-  {{- $backlinks = $backlinks | append . -}}
-  {{- $backlinksIndex = $backlinksIndex | merge (dict $target $backlinks) -}}
+  {{- if not (in $linkTargets .target) -}}
+    {{- $linkTargets = $linkTargets | append .target -}}
+  {{- end -}}
+{{- end -}}
+{{- range $linkTargets -}}
+  {{- $backlinksIndex = $backlinksIndex | merge (dict . (where $links "target" .)) -}}
 {{- end -}}
 
 {{- /* Ensure all pages have entries in both indices */ -}}

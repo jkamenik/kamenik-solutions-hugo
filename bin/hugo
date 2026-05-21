@@ -1,0 +1,10 @@
+#!/bin/bash
+# Run Hugo after syncing wiki links into .content-build (optional; site also renders [[...]] via layouts).
+set -e
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+mkdir -p .content-build
+bin/wiki-preprocess content .content-build
+
+exec hugo "$@" --contentDir .content-build

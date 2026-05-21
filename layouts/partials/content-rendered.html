@@ -1,0 +1,20 @@
+{{- /*
+  Renders page body with Obsidian [[wikilinks]] converted to wl shortcodes at build time.
+  Skips conversion inside fenced code blocks (``` ... ```).
+  Uses .Content when no wikilinks are present.
+*/ -}}
+{{- $page := . -}}
+{{- if not (findRE `\[\[[^\]]+\]\]` $page.RawContent) -}}
+  {{- $page.Content -}}
+{{- else -}}
+  {{- $out := "" -}}
+  {{- range $i, $part := split $page.RawContent "```" -}}
+    {{- if gt $i 0 -}}{{- $out = printf "%s%s" $out "```" -}}{{- end -}}
+    {{- if eq (mod $i 2) 0 -}}
+      {{- $part = replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` `{{% wl "$1" "$2" %}}` $part -}}
+      {{- $part = replaceRE `\[\[([^\]|]+)\]\]` `{{% wl "$1" %}}` $part -}}
+    {{- end -}}
+    {{- $out = printf "%s%s" $out $part -}}
+  {{- end -}}
+  {{- $page.RenderString $out -}}
+{{- end -}}

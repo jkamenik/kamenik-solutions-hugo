@@ -36,7 +36,7 @@
           {{- end -}}
         </div>
         <div class="content">
-          {{ .Content }}
+          {{ partial "content-rendered.html" . }}
         </div>
         {{- partial "components/last-updated.html" . -}}
         {{- if (site.Params.blog.article.displayPagination | default true) -}}
