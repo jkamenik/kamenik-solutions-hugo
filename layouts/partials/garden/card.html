@@ -1,11 +1,15 @@
 {{- $p := . -}}
 {{- $showUsefulness := true -}}
+{{- $customSubtitle := "" -}}
 {{- if not .Title -}}
   {{- with .page -}}
     {{- $p = . -}}
   {{- end -}}
   {{- if isset . "showUsefulness" -}}
     {{- $showUsefulness = .showUsefulness -}}
+  {{- end -}}
+  {{- if isset . "subtitle" -}}
+    {{- $customSubtitle = .subtitle -}}
   {{- end -}}
 {{- end -}}
 
@@ -24,14 +28,16 @@
   {{- end -}}
 {{- end -}}
 
-{{- $subtitle := "" -}}
+{{- $subtitle := $customSubtitle -}}
 {{- $kind := $p.Params.garden.kind | default "item" -}}
-{{- if eq $kind "subcategory" -}}
-  {{- $subtitle = "Subcategory" -}}
-{{- else if eq $kind "category" -}}
-  {{- $subtitle = "Category" -}}
-{{- else -}}
-  {{- $subtitle = $p.Params.garden.movement -}}
+{{- if not $subtitle -}}
+  {{- if eq $kind "subcategory" -}}
+    {{- $subtitle = "Subcategory" -}}
+  {{- else if eq $kind "category" -}}
+    {{- $subtitle = "Category" -}}
+  {{- else -}}
+    {{- $subtitle = $p.Params.garden.movement -}}
+  {{- end -}}
 {{- end -}}
 
 {{- $title := $p.Title -}}

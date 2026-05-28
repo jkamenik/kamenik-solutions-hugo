@@ -33,7 +33,7 @@ globalGraph:
 ### Scoped full graph (section pages with graph.depth: -1 and graph.scope, e.g. /garden) ###
 
 scopedGraph:
-    enableLegend: false
+    enableLegend: true
     enableDrag: true
     enableZoom: true
     scale: 0.75 # zoom out to fit many nodes in the main content area
@@ -49,3 +49,10 @@ paths:
   - /blog: "#3b82f6"
   - /garden: "#10b981"
   - /resources: "#f59e0b"
+
+# Garden item node colors (matches usefulness badges: green / info / warning / error)
+usefulness:
+  adopt: "#16a34a"
+  trial: "#2563eb"
+  assess: "#ca8a04"
+  hold: "#dc2626"

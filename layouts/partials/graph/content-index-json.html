@@ -16,6 +16,13 @@
     "lastmodified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
     "tags" .Params.tags
   -}}
+  {{- if eq .Section "garden" -}}
+    {{- $gardenMeta := dict "kind" (.Params.garden.kind | default "item") -}}
+    {{- with .Params.garden.usefulness -}}
+      {{- $gardenMeta = merge $gardenMeta (dict "usefulness" .) -}}
+    {{- end -}}
+    {{- $pageData = merge $pageData (dict "garden" $gardenMeta) -}}
+  {{- end -}}
 
   {{- $output = $output | merge (dict $pagePath $pageData) -}}
 {{- end -}}

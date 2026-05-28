@@ -7,7 +7,7 @@
 {{- $contentIndexPath := printf "%scontentindex/index.json" $pathPrefix -}}
 <span id="graph-json-paths" data-link-index-path="{{ $linkIndexPath }}" data-content-index-path="{{ $contentIndexPath }}" style="display:none" aria-hidden="true"></span>
 {{- $graphJS := resources.Get "js/graph.js" | resources.Fingerprint "md5" -}}
-<script src="{{ $graphJS.Permalink }}"></script>
+<script src="{{ $graphJS.RelPermalink }}"></script>
 <script>
   const BASE_URL = {{.Site.BaseURL | jsonify}};
   const graphPathsEl = document.getElementById("graph-json-paths");
@@ -47,7 +47,7 @@
     content: content || {},
   }));
 
-  const renderGraph = () => {
+  const renderGraph = async () => {
     const container = document.getElementById("graph-container");
     if (!container) return;
     if (typeof drawGraph !== "function") {
@@ -90,20 +90,26 @@
     const drawFullScoped = hasPageGraphDepth && {{ int ($pageGraphDepth | default 0) }} === -1;
     const graphConfig = {{ $mergedGraphConfig | jsonify }};
     const pathColors = {{.Site.Data.graphConfig.paths | default (slice) | jsonify}};
+    const usefulnessColors = {{.Site.Data.graphConfig.usefulness | default dict | jsonify}};
     const graphDepth = hasPageGraphDepth
       ? {{ $pageGraphDepth | default 2 }}
       : (drawGlobal ? {{ .Site.Data.graphConfig.globalGraph.depth | default -1 }} : {{ .Site.Data.graphConfig.localGraph.depth | default 2 }});
     const graphScope = {{ if $pageGraphScope }}"{{ $pageGraphScope }}"{{ else }}null{{ end }};
 
-    drawGraph(
-      pathBase,
-      drawGlobal,
-      pathColors,
-      graphConfig,
-      fetchData,
-      graphDepth,
-      graphScope
-    );
+    try {
+      await drawGraph(
+        pathBase,
+        drawGlobal,
+        pathColors,
+        graphConfig,
+        fetchData,
+        graphDepth,
+        graphScope,
+        usefulnessColors
+      );
+    } catch (err) {
+      console.error("Graph: render failed", err);
+    }
   };
 
   const runGraphWhenReady = () => {

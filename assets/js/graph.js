@@ -24,7 +24,16 @@ function normalizeGraphConfig(raw) {
   return out
 }
 
-async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataPromise, depthParam, scopePrefixParam) {
+async function drawGraph(
+  baseUrl,
+  isHome,
+  pathColors,
+  graphConfig,
+  fetchDataPromise,
+  depthParam,
+  scopePrefixParam,
+  usefulnessColorsParam,
+) {
   // Template may embed config as JSON string (e.g. after HTML escaping); normalize to object
   let cfg = graphConfig
   if (typeof cfg === "string") {
@@ -45,6 +54,20 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     }
   }
   if (!Array.isArray(pathColorsArr)) pathColorsArr = []
+
+  let usefulnessColorsMap = usefulnessColorsParam
+  if (typeof usefulnessColorsMap === "string") {
+    try {
+      usefulnessColorsMap = JSON.parse(usefulnessColorsMap)
+    } catch (_) {
+      usefulnessColorsMap = {}
+    }
+  }
+  if (!usefulnessColorsMap || typeof usefulnessColorsMap !== "object") {
+    usefulnessColorsMap = {}
+  }
+  const usefulnessOrder = ["adopt", "trial", "assess", "hold"]
+
   const {
   enableDrag = true,
   enableLegend = false,
@@ -119,6 +142,21 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     return path === scopePrefix || path.startsWith(scopePrefix + "/")
   }
 
+  const pageMeta = (id) => {
+    const path = (id || "").replace(/\/$/, "") || "/"
+    return content[id] ?? content[path] ?? content[path + "/"]
+  }
+
+  const usefulnessFor = (id) => {
+    const usefulness = pageMeta(id)?.garden?.usefulness
+    return typeof usefulness === "string" ? usefulness : null
+  }
+
+  const usefulnessColor = (id) => {
+    const tag = usefulnessFor(id)
+    return tag ? usefulnessColorsMap[tag] : null
+  }
+
   // Resolve node label: prefer content index title, else last path segment (humanized)
   const labelFor = (id) => {
     const path = (id || "").replace(/\/$/, "")
@@ -186,7 +224,10 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
   })
 
   const color = (d) => {
-    if (d.id === curPage || (d.id === "/" && curPage === "")) {
+    const byUsefulness = usefulnessColor(d.id)
+    if (byUsefulness) return byUsefulness
+
+    if (isCurrentPage(d)) {
       return "var(--g-node-active)"
     }
 
@@ -273,7 +314,13 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr('viewBox', `${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`)
 
   if (enableLegend) {
-    const legend = [{ Current: "var(--g-node-active)" }, { Note: "var(--g-node)" }, ...pathColorsArr]
+    const usefulnessLegend = usefulnessOrder
+      .filter((tag) => usefulnessColorsMap[tag])
+      .map((tag) => ({ [tag]: usefulnessColorsMap[tag] }))
+    const legend =
+      usefulnessLegend.length > 0
+        ? usefulnessLegend
+        : [{ Current: "var(--g-node-active)" }, { Note: "var(--g-node)" }, ...pathColorsArr]
     legend.forEach((legendEntry, i) => {
       const key = Object.keys(legendEntry)[0]
       const colour = legendEntry[key]
@@ -287,7 +334,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
         .append("text")
         .attr("x", -width / 2 + 40)
         .attr("y", height / 2 - 30 * (i + 1))
-        .text(key)
+        .text(key.charAt(0).toUpperCase() + key.slice(1))
         .style("font-size", "15px")
         .attr("alignment-baseline", "middle")
     })
@@ -315,6 +362,8 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig, fetchDataProm
     .attr("id", (d) => d.id)
     .attr("r", nodeRadius)
     .attr("fill", color)
+    .attr("stroke", (d) => (isCurrentPage(d) && usefulnessFor(d.id) ? "var(--g-label)" : "none"))
+    .attr("stroke-width", (d) => (isCurrentPage(d) && usefulnessFor(d.id) ? 2 : 0))
     .style("cursor", "pointer")
     .on("click", (_, d) => {
       const path = pageUrl(d.id)
