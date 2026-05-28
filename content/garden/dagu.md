@@ -39,5 +39,3 @@ Dagu positions itself as a simpler, self-contained alternative to heavier orches
 - **Low ops overhead**; runs on a single VM or container without Kubernetes
 
 Best suited for teams running DevSecOps pipelines, data engineering tasks, or automation workflows at modest scale who want Airflow-style DAG semantics without the infrastructure burden.
-
-## History

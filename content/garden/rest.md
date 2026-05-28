@@ -26,5 +26,3 @@ aliases:
 ## Blurb
 
 REST defines a set of constraints for how the architecture of a distributed, [Internet](https://en.wikipedia.org/wiki/Internet "Internet")-scale [hypermedia](https://en.wikipedia.org/wiki/Hypermedia "Hypermedia") system, such as the Web, should behave
-
-## Summary

@@ -33,5 +33,3 @@ Provides a license service and proxy in front of the OSS items kURL, and KOTs. H
 Best to review kURL and KOTs vs Rancher and determine what your direct customers would be able handle, and implement your own solution on top.
 
 Most customers are not going to be able to take Replicated and manage it as well the underlying product. So in the end it does more harm then good.
-
-## Details

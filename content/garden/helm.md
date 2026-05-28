@@ -26,7 +26,3 @@ Related:: [[Kubernetes]]
 ## Blurb
 
 The package manager for Kubernetes.
-
-## Summary
-
-## Details
