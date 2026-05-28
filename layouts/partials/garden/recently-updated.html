@@ -1,0 +1,19 @@
+{{- $items := slice -}}
+{{- range .RegularPagesRecursive -}}
+  {{- $kind := .Params.garden.kind | default "item" -}}
+  {{- if ne $kind "item" -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- $items = $items | append . -}}
+{{- end -}}
+
+{{- $recent := first 6 (sort $items "Lastmod" "desc") -}}
+{{- if gt (len $recent) 0 -}}
+  {{- $content := "" -}}
+  {{- range $recent -}}
+    {{- $subtitle := partial "utils/format-date" .Lastmod -}}
+    {{- $content = printf "%s\n%s" $content (partial "garden/card.html" (dict "page" . "subtitle" $subtitle)) -}}
+  {{- end -}}
+  <h2>Recently Updated</h2>
+  {{- partial "shortcodes/cards" (dict "cols" 2 "content" ($content | safeHTML)) -}}
+{{- end -}}
