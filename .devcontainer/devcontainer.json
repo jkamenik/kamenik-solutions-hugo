@@ -34,6 +34,11 @@
 		}
 	},
 
+	// Publish port for devcontainer CLI (Docker -p). VS Code/Cursor use forwardPorts below.
+	"appPort": [
+		1313
+	],
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		1313

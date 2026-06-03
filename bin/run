@@ -33,4 +33,4 @@ do_preprocess
 WATCHER_PID=$!
 trap 'kill $WATCHER_PID 2>/dev/null; wait $WATCHER_PID 2>/dev/null' EXIT
 
-hugo server --contentDir .content-build --buildDrafts --disableFastRender
+hugo server --bind 0.0.0.0 --contentDir .content-build --buildDrafts --disableFastRender
