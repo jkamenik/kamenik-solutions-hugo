@@ -3,15 +3,14 @@ title: "Agent Skills Framework"
 date: 2026-04-20
 lastmod: 2026-06-05
 
-aka:
-  - Agent Skills
-
 keywords:
   - Agent Skills Framework
   - Agent Skills
   - SKILL.md
 
 params:
+  aliases:
+    - Agent Skills
   garden:
     kind: item
     usefulness: assess
