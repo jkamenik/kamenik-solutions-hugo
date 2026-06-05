@@ -9,7 +9,7 @@ keywords:
   - {{ $title }}
 
 params:
-  aka: []
+  aliases: []
   garden:
     usefulness: assess
     category: tool

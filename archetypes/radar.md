@@ -12,8 +12,8 @@ keywords:
   - {{ $title }}
 
 params:
-  # Alternative titles that can be used in the wl shortcode
-  # aka: []
+  # Alternative titles for the wl shortcode (params.aliases)
+  # aliases: []
 
   # Tech Radar details
   radar:

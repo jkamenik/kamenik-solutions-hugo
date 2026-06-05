@@ -3,16 +3,21 @@
 {{- $page := "" }}
 
 {{- range .Site.RegularPages }}
+  {{- $matches := false }}
   {{- if eq (lower .Title) (lower $title) }}
-    {{- $page = .}}
-    {{- break }}
+    {{- $matches = true }}
   {{- else }}
-    {{- $p := . }}
-    {{- range $value := .Params.aka }}
-      {{- if eq (lower $value) (lower $title) }}
-        {{- $page = $p }}
-        {{- break }}
+    {{- range .Params.aliases }}
+      {{- if eq (lower .) (lower $title) }}
+        {{- $matches = true }}
       {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- if $matches }}
+    {{- if eq $page "" }}
+      {{- $page = . }}
+    {{- else if and (eq .Section "garden") (ne $page.Section "garden") }}
+      {{- $page = . }}
     {{- end }}
   {{- end }}
 {{- end }}

@@ -83,7 +83,7 @@
         {{- $targetPage = . -}}
         {{- break -}}
       {{- else -}}
-        {{- range $value := .Params.aka -}}
+        {{- range $value := .Params.aliases -}}
           {{- if eq (lower $value) (lower $wlTitle) -}}
             {{- $targetPage = . -}}
             {{- break -}}
