@@ -1,0 +1,33 @@
+#!/bin/bash
+# Build and run the .devcontainer image on the host, then execute bin/run inside it.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+# Keep in sync with .devcontainer/devcontainer.json build.args
+readonly VARIANT=hugo_extended
+readonly VERSION=0.155.2
+readonly NODE_VERSION=24
+
+readonly IMAGE_NAME="${IMAGE_NAME:-kamenik-solutions-hugo-devcontainer}"
+readonly DOCKERFILE="$ROOT/.devcontainer/Dockerfile"
+readonly BUILD_CONTEXT="$ROOT/.devcontainer"
+
+docker build \
+	-f "$DOCKERFILE" \
+	--build-arg "VARIANT=${VARIANT}" \
+	--build-arg "VERSION=${VERSION}" \
+	--build-arg "NODE_VERSION=${NODE_VERSION}" \
+	-t "$IMAGE_NAME" \
+	"$BUILD_CONTEXT"
+
+run_args=(--rm -p 1313:1313 -w /workspace --user node)
+run_args+=(-v "$ROOT:/workspace:cached")
+run_args+=(-v "$ROOT/.cursor:/workspace/.cursor:cached")
+
+if [[ -t 0 ]]; then
+	run_args+=(-it)
+fi
+
+exec docker run "${run_args[@]}" "$IMAGE_NAME" bin/run
