@@ -13,9 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "Moved In"
-
-aliases:
-  - /radar/techniques/3-point-estimate
 ---
 
 [3 Point Estimate](https://en.wikipedia.org/wiki/Three-point_estimation)

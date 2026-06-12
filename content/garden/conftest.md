@@ -1,7 +1,7 @@
 ---
 title: "Conftest"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/conftest
 ---
@@ -48,8 +47,6 @@ aliases:
 | **Terraform** | Test planned JSON (`terraform show -json`) or static `.tf` per your pipeline |
 | **Helm** | Render chart then test output, or test templates with care |
 | **Learning curve** | Rego is the cost; invest once for cross-surface rules |
-
-**Garden pattern:** start with a small deny-list (no `latest` tags, required labels, disallowed ports); expand with **[[Policy as Code]]** maturity. For K8s-only simple rules, compare **[[CEL]]** before adding OPA operational surface.
 
 **References**
 

@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - diagramming
-
 aliases:
   - /radar/tools/asciiflow
 ---

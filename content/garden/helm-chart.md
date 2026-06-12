@@ -15,9 +15,6 @@ params:
     movement: "New"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/helm-chart
 ---
 
 [Helm Chart](https://helm.sh/docs/topics/charts/)

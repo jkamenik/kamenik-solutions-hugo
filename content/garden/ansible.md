@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - provisioner
-
-aliases:
-  - /radar/tools/ansible
 ---
 
 [Ansible](https://www.ansible.com/) is agentless **[[second touch provisioning]]**: YAML playbooks drive modules over SSH from a control node (Python on the controller; remotes need only SSH and a working shell). We **adopt** it as the default when you must configure existing hosts, but treat ongoing Ansible runs as a **last resort** next to immutable images, **[[Declarative IaC]]**, and **[[GitOps]]**, because mutable SSH-managed state drifts no matter how good the tool is.

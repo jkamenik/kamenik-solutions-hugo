@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/policy-as-code
 ---
 
 [Policy as Code](https://www.openpolicyagent.org/)

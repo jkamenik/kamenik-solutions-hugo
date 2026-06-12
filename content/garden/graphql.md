@@ -15,9 +15,6 @@ params:
     movement: "New"
     subcategories:
       - api
-
-aliases:
-  - /radar/techniques/graphql
 ---
 
 [GraphQL](https://graphql.org/)

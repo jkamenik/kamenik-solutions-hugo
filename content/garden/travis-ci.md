@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - ci-cd-tools
-
 aliases:
   - /radar/tools/travis-ci
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Continuous Deployment"
 date: 2026-01-13
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/continuous-deployment
 ---
@@ -55,8 +54,6 @@ aliases:
 | **Quality bar** | CI + staging must be trusted; flaky tests block all progress |
 | **Compliance** | May still need audit trails and approval *policies* even if deploy is automatic |
 | **Canary/blue-green** | Optional layers on top; not a substitute for flags and rollback |
-
-**Garden pattern:** **adopt** **[[Continuous Delivery]]**; **trial/assess** continuous deployment per product after flags + observability + rollback drills. Pair with **[[CI-CD Tools]]** and **[[GitOps]]** rather than imperative deploy scripts.
 
 **References**
 

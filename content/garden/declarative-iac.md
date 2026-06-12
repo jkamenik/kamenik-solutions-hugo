@@ -1,7 +1,7 @@
 ---
 title: "Declarative IaC"
 date: 2025-01-05
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/declarative-iac
 ---
@@ -57,8 +56,6 @@ aliases:
 | **State** | Remote state (Terraform) or etcd (K8s); back up and lock |
 | **Secrets** | Never in Git; use secret managers and external data sources |
 | **Legacy import** | `terraformer` and similar can bootstrap; then refactor into modules |
-
-**Garden pattern:** **adopt** **[[Declarative IaC]]** everywhere you operate cloud/K8s; see **[[Declarative Programming]]** for the wider paradigm and **[[Imperative IaC]]** for what we avoid.
 
 **References**
 

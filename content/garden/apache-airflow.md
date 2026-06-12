@@ -1,7 +1,7 @@
 ---
 title: "Apache Airflow"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - Airflow
 
 params:
+  aliases:
+    - Airflow
   garden:
     kind: item
     usefulness: assess
@@ -16,7 +18,6 @@ params:
     movement: "New"
     subcategories:
       - orchestrator
-
 aliases:
   - /radar/tools/apache-airflow
 ---
@@ -57,8 +58,6 @@ aliases:
 | **Secrets** | Connections/variables in metadata DB; integrate Vault/cloud secret managers |
 | **Testing** | Unit-test DAG structure; use staging env for integration |
 | **Security** | Lock down web UI, RBAC, and who can trigger DAGs |
-
-**Garden pattern:** **assess** for data/ETL estates; do not default new org-wide automation on Airflow if **[[Argo Workflows]]** or **[[Dagu]]** fits. Cross-link from **[[Dagu]]** and **[[Argo Workflows]]** when comparing orchestrators.
 
 **References**
 

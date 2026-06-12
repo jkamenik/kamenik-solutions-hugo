@@ -1,7 +1,7 @@
 ---
 title: "Cloud Lift and Shift"
 date: 2025-07-10
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - lift-and-shift
 
 params:
+  aliases:
+    - lift and shift
+    - lift-and-shift
   garden:
     kind: item
     usefulness: hold
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/cloud-lift-and-shift
 ---

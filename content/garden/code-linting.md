@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/code-linting
 ---

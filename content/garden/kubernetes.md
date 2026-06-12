@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes"
 date: 2025-12-08
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - k8s
 
 params:
+  aliases:
+    - k8s
   garden:
     kind: item
     usefulness: adopt
@@ -16,9 +18,6 @@ params:
     movement: "No Change"
     subcategories:
       - orchestrator
-
-aliases:
-  - /radar/platforms/kubernetes
 ---
 
 [Kubernetes](https://kubernetes.io/)

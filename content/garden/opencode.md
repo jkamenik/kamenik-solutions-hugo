@@ -1,7 +1,7 @@
 ---
 title: "OpenCode"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - opencode-ai
 
 params:
+  aliases:
+    - opencode-ai
   garden:
     kind: item
     usefulness: trial
@@ -16,9 +18,6 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
-
-aliases:
-  - /radar/tools/opencode
 ---
 
 [OpenCode](https://opencode.ai) is an open-source AI coding agent (terminal TUI, desktop app, and IDE extension) that connects to 75+ LLM providers (Claude, GPT, Gemini, local models, GitHub Copilot, ChatGPT accounts) with LSP-aware context and multi-session parallelism. We rate it **trial** under [[AI Agent]]: strong when you want vendor-neutral agents and privacy-sensitive workflows; we usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and vendor-specific CLIs ([[Claude Code]], [[Codex]], [[Gemini]]) when billing is already tied to one stack.

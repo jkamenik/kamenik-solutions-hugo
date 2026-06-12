@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/incident-management
 ---
 
 [Incident Management](https://en.wikipedia.org/wiki/Incident_management)

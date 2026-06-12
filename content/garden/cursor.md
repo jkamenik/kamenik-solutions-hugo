@@ -1,7 +1,7 @@
 ---
 title: "Cursor"
 date: 2026-05-17
-lastmod: 2026-05-21
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - Cursor IDE
 
 params:
+  aliases:
+    - Cursor IDE
   garden:
     kind: item
     usefulness: adopt
@@ -16,9 +18,6 @@ params:
     movement: "New"
     subcategories:
       - ide
-
-aliases:
-  - /radar/tools/cursor
 ---
 
 [Cursor](https://cursor.com) is a VS Code–based IDE with built-in AI: Tab completion, inline edit (Cmd+K), agent panel, and cloud agents, on a paid Cursor subscription with access to many frontier models (Composer, Claude, GPT, Gemini, Grok, and more). Built by [[Anysphere]]. We **adopt** it under [[IDE]] as our default editor stack: one simple ecosystem for multi-model coding when paired with [[cursor-agent]] for terminal and CI workflows.

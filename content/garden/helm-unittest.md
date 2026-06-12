@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - test-framework
-
-aliases:
-  - /radar/code/helm-unittest
 ---
 
 [Helm unittest](https://github.com/helm-unittest/helm-unittest) is a Helm plugin that unit-tests [[Helm Chart]] templates with YAML-defined suites instead of spinning up a cluster. It renders charts with `helm template`, then asserts on manifests (values, snapshots, document counts, and custom matchers). If you maintain charts in [[Kubernetes]], adopt this alongside [[Unit Testing]] for application code, it catches template regressions before CI deploys.

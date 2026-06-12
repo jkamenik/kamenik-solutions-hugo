@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - framework
-
-aliases:
-  - /radar/code/ruby-on-rails
 ---
 
 [Ruby on Rails](https://rubyonrails.org/) is a full-stack web framework built on [[Ruby]] that popularized convention-over-configuration, ActiveRecord as an [[ORM]], and [[MVC]] for server-rendered apps. It made CRUD and early SaaS prototypes fast in the 2000s, but we rate it **hold** for new work: scaling and team velocity usually require peeling off the framework's opinions long before the product is mature.

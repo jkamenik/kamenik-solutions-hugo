@@ -15,9 +15,6 @@ params:
     movement: "New"
     subcategories:
       - orchestrator
-
-aliases:
-  - /radar/platforms/dagu
 ---
 
 [Dagu](https://github.com/dagucloud/dagu)

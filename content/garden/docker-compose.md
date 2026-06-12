@@ -1,7 +1,7 @@
 ---
 title: "Docker Compose"
 date: 2024-04-25
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - docker-compose
 
 params:
+  aliases:
+    - compose
+    - docker-compose
   garden:
     kind: item
     usefulness: hold
     category: tool
     movement: "Moved Out"
-
 aliases:
   - /radar/tools/docker-compose
 ---
@@ -54,8 +56,6 @@ aliases:
 | **Secrets** | Use env files gitignored; not for prod secret stores |
 | **Parity** | Do not assume Compose service DNS equals K8s Service names |
 | **Engine** | Runs on **[[Docker]]** / **[[Rancher Desktop]]** / Podman compose support |
-
-**Garden pattern:** **hold** as a strategic choice (moved out for prod); allow Compose only where **[[Docker]]** note says: local stacks, not the deployment model.
 
 **References**
 

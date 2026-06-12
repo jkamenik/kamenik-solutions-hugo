@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/scrum
 ---
 
 [Scrum](https://www.scrum.org/resources/what-scrum-module) is one of the more popular [[Agile Software Development]] techniques. Interestingly enough it is just [[Waterfall]] rebranded. It is one of the few that you can purchase training and certification for, which should be your clue that Scrum really isn't agile in the strictest sense. However, in comparison to other techniques like [[Six Sigma]] it is much lighter weight. There are some good points which you should try in whatever development process you use.

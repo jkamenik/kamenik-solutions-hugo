@@ -1,7 +1,7 @@
 ---
 title: "Software as a Service"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,12 +9,13 @@ keywords:
   - SaaS
 
 params:
+  aliases:
+    - SaaS
   garden:
     kind: item
     usefulness: assess
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/saas
 ---

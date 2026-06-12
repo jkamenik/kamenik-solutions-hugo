@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "Moved In"
-
-aliases:
-  - /radar/techniques/hybrid-cloud
 ---
 
 [Hybrid Cloud](https://en.wikipedia.org/wiki/Cloud_computing#Hybrid_cloud)

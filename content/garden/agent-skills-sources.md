@@ -1,7 +1,7 @@
 ---
 title: "Agent Skills - Sources"
 date: 2026-05-06
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -12,13 +12,10 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "New"
+    movement: "No Change"
     subcategories:
       - ai-techniques
       - claude-code
-
-aliases:
-  - /radar/techniques/agent-skills-sources
 ---
 
 A living research document tracking good sources of [[Agent Skills Framework|agent skills]] to draw from. Covers [[Claude Code]], [[Gemini CLI]], and cross-ecosystem skill/prompt repositories.
@@ -52,12 +49,13 @@ Aggregator repos and sites , good for broad discovery.
 
 Maintained by practitioners , often higher signal-to-noise than aggregators.
 
-| Source | URL | Notes | Last Checked |
-|--------|-----|-------|--------------|
-| wshobson/commands | https://github.com/wshobson/commands | Production-ready slash commands; good engineering workflow patterns | 2026-05-06 |
-| glebis/claude-skills | https://github.com/glebis/claude-skills | Personal collection; broad use-cases | 2026-05-06 |
-| alirezarezvani/claude-skills | https://github.com/alirezarezvani/claude-skills | 232+ skills across Claude Code, Codex, Gemini CLI, Cursor | 2026-05-06 |
-| garrytan/gstack | https://github.com/garrytan/gstack | [[gbrain]] author's exact Claude Code setup; 23 opinionated tools spanning CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA roles | 2026-05-06 |
+| Source                       | URL                                             | Notes                                                                                                                                              | Last Checked |
+| ---------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| wshobson/commands            | https://github.com/wshobson/commands            | Production-ready slash commands; good engineering workflow patterns                                                                                | 2026-05-06   |
+| glebis/claude-skills         | https://github.com/glebis/claude-skills         | Personal collection; broad use-cases                                                                                                               | 2026-05-06   |
+| alirezarezvani/claude-skills | https://github.com/alirezarezvani/claude-skills | 232+ skills across Claude Code, Codex, Gemini CLI, Cursor                                                                                          | 2026-05-06   |
+| garrytan/gstack              | https://github.com/garrytan/gstack              | [[gbrain]] author's exact Claude Code setup; 23 opinionated tools spanning CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA roles | 2026-05-06   |
+| mattpocock/skills            | https://github.com/mattpocock/skills            | Matt Pocock collection; **`grill-me`** stress-tests plans via one-question interviews.                                                             | 2026-06-04   |
 
 ## Marketplaces & Directories
 
@@ -104,17 +102,13 @@ When vetting a new source:
 1. **Format compliance**; Is it SKILL.md format, or requires adaptation?
 2. **Cross-agent portability**; Works only in Claude Code, or also Gemini CLI / Cursor / Hermes?
 3. **Maintenance signal**; Last commit date, open issues, star trajectory.
-4. **Domain fit** (DevSecOps, PKM, automation) relevant to [[Kamenik Solutions]] or personal use?
+4. **Domain fit** (DevSecOps, PKM, automation) relevant to consulting work or personal use?
 5. **Quality bar**; Are skills self-contained with a clear trigger description in frontmatter?
-
-## Open Threads
-
-- Survey `hesreallyhim/awesome-claude-code` for DevSecOps and PKM-relevant skills to import
 
 ## See Also
 
-- [[Agent Skills]], framework overview
+- [[Agent Skills Framework]], framework overview
 - [[gbrain]], two-layer page convention used by this document
 - [[hermes-agent]], local agent runtime
 - [[Claude Code]]
-- [[Gemini CLI]]
+- [[Gemini|Gemini CLI]]

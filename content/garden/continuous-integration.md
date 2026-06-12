@@ -1,7 +1,7 @@
 ---
 title: "Continuous Integration"
 date: 2026-01-07
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/continuous-integration
 ---
@@ -63,8 +62,6 @@ aliases:
 | **Flakes** | Quarantine or fix; do not mute checks |
 | **Monorepo** | Path filters so unrelated packages do not block the world |
 | **Forks** | `pull_request` vs `pull_request_target` carefully; least privilege for untrusted code |
-
-**Garden pattern:** **adopt** CI everywhere; **adopt** CD next; **assess** continuous deployment per SaaS product. Pair CI with **[[Pull Request]]** discipline and **[[Code Linting]]** required checks.
 
 **References**
 

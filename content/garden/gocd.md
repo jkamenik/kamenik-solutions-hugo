@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - ci-cd-tools
-
 aliases:
   - /radar/platforms/gocd
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Dev Container"
 date: 2025-04-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,14 +10,14 @@ keywords:
   - Development Containers
 
 params:
+  aliases:
+    - devcontainer
+    - Development Containers
   garden:
     kind: item
     usefulness: adopt
     category: code
     movement: "No Change"
-
-aliases:
-  - /radar/code/dev-container
 ---
 
 [Development Containers](https://containers.dev/) (`devcontainer.json` + image) define a **reproducible dev environment** in OCI: toolchain, extensions, and settings live in the repo instead of on each laptop. We **adopt** them for team projects so dev, **[[Continuous Integration]]**, and onboarding share the same container definition.
@@ -58,8 +58,6 @@ aliases:
 | **CI** | Build/test inside the same Dockerfile in **[[GitHub Actions]]** |
 | **Agents** | **[[Cursor]]** / **[[cursor-agent]]** run inside the container when the editor attaches |
 | **IaC link** | Treat the dev image like **[[Declarative IaC]]** for the toolchain |
-
-**Garden pattern:** **adopt** dev containers for multi-developer repos; pair with **[[IDE]]** editors that support the spec and **[[Containerization]]** for how images are built and scanned.
 
 **References**
 

@@ -1,7 +1,7 @@
 ---
 title: "Cursor Keep Alive"
 date: 2025-05-13
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,6 +10,9 @@ keywords:
   - resumable stream cursor
 
 params:
+  aliases:
+    - cursor polling
+    - resumable stream cursor
   garden:
     kind: item
     usefulness: assess
@@ -17,7 +20,6 @@ params:
     movement: "No Change"
     subcategories:
       - api
-
 aliases:
   - /radar/techniques/cursor-keep-alive
 ---
@@ -64,8 +66,6 @@ aliases:
 | **Security** | Opaque, unguessable IDs; no cross-tenant cursor reuse |
 
 **Origin in our writing:** described for RAG query APIs in [RAG Pipeline](resources/blog/20250514-rag-pipeline.md) (embedding CRUD vs streaming query split).
-
-**Garden pattern:** **assess** for constrained HTTP edges; **adopt** straightforward streaming (WebSocket/SSE) when infrastructure permits.
 
 **References**
 

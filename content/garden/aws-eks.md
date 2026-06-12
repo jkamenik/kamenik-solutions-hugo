@@ -16,7 +16,6 @@ params:
     subcategories:
       - cloud
       - orchestrator
-
 aliases:
   - /radar/platforms/aws-eks
 ---

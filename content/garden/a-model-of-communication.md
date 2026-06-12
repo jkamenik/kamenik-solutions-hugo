@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - specification
-
 aliases:
   - /radar/techniques/a-model-of-communication
 ---

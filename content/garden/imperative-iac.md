@@ -13,9 +13,6 @@ params:
     usefulness: hold
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/imperative-iac
 ---
 
 [Imperative IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)

@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - identity-provider
-
 aliases:
   - /radar/platforms/auth0
 ---

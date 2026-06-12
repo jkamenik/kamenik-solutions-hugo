@@ -1,7 +1,7 @@
 ---
 title: "Feature Flags"
 date: 2026-05-05
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - feature switches
 
 params:
+  aliases:
+    - feature toggles
+    - feature switches
   garden:
     kind: item
     usefulness: trial
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/feature-flags
 ---
@@ -68,8 +70,6 @@ aliases:
 | **Testing** | CI matrix: flag on/off; avoid tests that only pass one state |
 | **Security** | Admin flags are authorization; audit changes like **[[RBAC]]** |
 | **Observability** | Log evaluation or exposure events for experiment analysis |
-
-**Garden pattern:** **trial** when **[[Software as a Service]]** + **[[Continuous Deployment]]**; **assess** for internal tools until CD maturity is proven. Pair with metrics and rollback, not as a substitute for tests.
 
 **Not the same as:** **[[Policy as Code]]** (infra compliance); **[[GitOps]]** sync (delivery mechanism); environment-specific config files without runtime evaluation.
 

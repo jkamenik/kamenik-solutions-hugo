@@ -1,16 +1,18 @@
 ---
 title: "Draw.io"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - Draw.io
   - diagrams.net
   - drawio
-  - draw.io
 
 params:
+  aliases:
+    - diagrams.net
+    - drawio
   garden:
     kind: item
     usefulness: trial
@@ -18,7 +20,6 @@ params:
     movement: "No Change"
     subcategories:
       - diagramming
-
 aliases:
   - /radar/tools/draw-io
 ---
@@ -59,8 +60,6 @@ aliases:
 | **Integrations** | Google Drive, OneDrive, GitHub; pick one backing store per team to avoid link rot |
 | **Security** | Self-host or use desktop app if diagrams are sensitive; default web app is third-party hosted |
 | **Graduate from** | **[[AsciiFlow]]** (**hold**) for anything you will maintain |
-
-**Garden pattern:** **trial** alongside **[[Mermaid]]** adopt: default to Mermaid in git-backed docs; open Draw.io when layout or icons justify the tradeoff. See **[[Diagramming]]** for the full matrix.
 
 **References**
 

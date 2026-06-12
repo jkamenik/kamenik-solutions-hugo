@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - library
-
-aliases:
-  - /radar/code/tree-sitter-graph
 ---
 
 [tree-sitter-graph](https://github.com/tree-sitter/tree-sitter-graph) is a Rust library and CLI that layers a **graph DSL** on top of [[tree-sitter]] parse trees, turning syntax nodes into arbitrary graphs with nodes, edges, and attributes. We rate it **assess**: essential when you are building static-analysis or IDE pipelines that need custom semantic graphs (GitHub uses it in the CodeQL stack), but overkill if you only need parsing or simple AST walks.

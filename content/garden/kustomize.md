@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: tool
     movement: "No Change"
-
-aliases:
-  - /radar/tools/kustomize
 ---
 
 [Kustomize](https://kustomize.io/)

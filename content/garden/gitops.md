@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/gitops
 ---
 
 [GitOps](https://www.gitops.tech/)

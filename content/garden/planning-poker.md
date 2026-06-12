@@ -13,9 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/planning-poker
 ---
 
 [Planning Poker](https://en.wikipedia.org/wiki/Planning_poker)

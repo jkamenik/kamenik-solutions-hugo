@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/json-schema
 ---
 
 [JSON Schema](https://json-schema.org/)

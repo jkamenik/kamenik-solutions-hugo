@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - code
-
 aliases:
   - /radar/tools/tailwind-css
 ---

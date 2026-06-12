@@ -1,7 +1,7 @@
 ---
 title: "Codex"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,6 +10,9 @@ keywords:
   - Codex CLI
 
 params:
+  aliases:
+    - OpenAI Codex
+    - Codex CLI
   garden:
     kind: item
     usefulness: trial
@@ -17,9 +20,6 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
-
-aliases:
-  - /radar/tools/codex
 ---
 
 [Codex](https://developers.openai.com/codex/cli) is OpenAI's agentic coding agent (terminal CLI (Rust), IDE integrations, and cloud tasks) built to read repos, edit files, run commands, and use MCP tools under approval policies. We rate it **trial**: credible alternative to [[Claude Code]] when you are on ChatGPT Plus/Pro/Business plans and want OpenAI models; [[Claude Code]] is also **trial** here (we usually default to [[Cursor]] + [[cursor-agent]] for daily IDE work).
@@ -30,7 +30,7 @@ aliases:
 
 ## Summary
 
-Codex runs an agent loop scoped to your codebase: sandboxed execution, configurable approval modes, subagents for parallel work, and support for the [[Agent Skills]] `SKILL.md` format (skills from [[Agent Skills - Sources]] often port with minimal changes). It is **not** the legacy GPT-3 "Codex" completion API, that model family is historical; this note is the 2025+ **product** (`openai/codex` on GitHub).
+Codex runs an agent loop scoped to your codebase: sandboxed execution, configurable approval modes, subagents for parallel work, and support for the [[Agent Skills Framework]] `SKILL.md` format (skills from [[Agent Skills - Sources]] often port with minimal changes). It is **not** the legacy GPT-3 "Codex" completion API, that model family is historical; this note is the 2025+ **product** (`openai/codex` on GitHub).
 
 Use for interactive coding, reviews, and refactors inside a repo. Like [[Claude Code]], it is a bounded [[AI Agent]] workspace tool; not an always-on messaging bot ([[OpenClaw]], [[hermes-agent|Hermes]] are **hold** for that pattern).
 

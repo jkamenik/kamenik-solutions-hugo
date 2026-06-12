@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/go-template
 ---
 
 [Go Template](https://pkg.go.dev/text/template)

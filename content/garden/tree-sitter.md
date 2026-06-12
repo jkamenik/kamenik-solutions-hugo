@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - library
-
-aliases:
-  - /radar/code/tree-sitter
 ---
 
 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) is an incremental parser generator and runtime that produces concrete syntax trees and updates them efficiently as source changes. We rate it **assess**: the default foundation when you are building editor features, multi-language tooling, or analyzers, but most product teams should consume it indirectly (via an editor or analyzer) rather than embed parsers themselves.

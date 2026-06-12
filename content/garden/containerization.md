@@ -1,7 +1,7 @@
 ---
 title: "Containerization"
 date: 2025-04-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - OCI containers
 
 params:
+  aliases:
+    - containers
+    - OCI containers
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/containerization
 ---
@@ -54,8 +56,6 @@ Containerization packages an application and its dependencies into an immutable 
 | **Config** | Inject at runtime (env, mounts, secrets stores), not bake secrets into layers |
 | **Security** | Non-root users, minimal base images, scan in CI |
 | **Lift-and-shift** | Containerizing a VM monolith helps packaging; still refactor for **[[Cattle Not Pets]]** |
-
-**Garden pattern:** every service repo produces an OCI image in **[[GitHub Actions]]** (or CI), passes **[[Container Structure Test]]**, then deploys via **[[ArgoCD]]** or your CD path.
 
 **References**
 

@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/devsecops
 ---
 
 [DevSecOps](https://www.devsecops.org/) can be thought of as [[DevOps]] with a security focus at every step. However, a better way to think about it is to treat security as a blameless iterative process.

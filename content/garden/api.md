@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: technique
     subcategory_slug: api
-
-aliases:
 ---
 
 Under [[Technique]], **API** covers how systems expose and consume programmatic interfaces, contracts for moving data and invoking behavior across process and network boundaries.

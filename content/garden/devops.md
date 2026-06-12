@@ -1,7 +1,7 @@
 ---
 title: "DevOps"
 date: 2024-04-09
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,12 +9,13 @@ keywords:
   - Dev Ops
 
 params:
+  aliases:
+    - Dev Ops
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/devops
 ---
@@ -58,8 +59,6 @@ aliases:
 | **Legacy** | Automate incrementally; do not wait for perfect greenfield |
 | **Metrics** | Lead time, deploy frequency, MTTR, change failure rate (DORA) |
 | **On-call** | Dev participates in production feedback loops |
-
-**Garden pattern:** **adopt** DevOps as the umbrella; **adopt** CI/CD/GitOps/declarative infra underneath; **trial** **[[DevSecOps]]** when security needs a named program beyond shift-left gates.
 
 **References**
 

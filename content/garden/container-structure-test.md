@@ -1,7 +1,7 @@
 ---
 title: "Container Structure Test"
 date: 2023-03-03
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - test-framework
-
-aliases:
-  - /radar/code/container-structure-test
 ---
 
 [Container Structure Test](https://github.com/GoogleContainerTools/container-structure-test) (Google Container Tools) validates **built container images** before push or deploy: command output, filesystem paths, file contents, and image metadata. We **adopt** it under **[[Code]]** / **[[Test Framework]]** for any pipeline that produces **[[Containerization]]** artifacts, run after `docker build` (or equivalent) in **[[GitHub Actions]]** or CI.
@@ -57,8 +54,6 @@ container-structure-test test --image <image> --config <testfile>
 | **CI** | Fail the job on any test failure; pin the CST binary version |
 | **Speed** | Faster than booting a cluster; slower than pure unit tests |
 | **Scope** | Image contract only, not runtime policy or network behavior |
-
-**Garden pattern:** add CST to the image build job immediately after build and before registry push. Keep tests focused (required binaries, config files, non-root user) so flakes stay rare.
 
 **References**
 

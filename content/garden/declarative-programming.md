@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/declarative-programming
 ---
 
 [Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) describes *what* outcome you want, not the step-by-step procedure to get there. We **adopt** it in DevSecOps: runtimes and controllers reconcile desired state (config, policy, infrastructure, queries) instead of replaying fragile instruction scripts, especially where drift and blast radius matter.

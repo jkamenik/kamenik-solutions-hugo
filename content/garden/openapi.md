@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/openapi
 ---
 
 [OpenAPI](https://www.openapis.org/) is a specification and tool set to make designing and documenting APIs easier. If you are designing a [[REST]] API then this is the way to go. However, there are other popular API alternatives like [[gRPC]], and [[GraphQL]].

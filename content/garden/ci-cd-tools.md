@@ -1,7 +1,7 @@
 ---
 title: "CI-CD Tools"
 date: 2024-10-01
-lastmod: 2026-05-21
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,13 @@ keywords:
   - CI-CD
 
 params:
+  aliases:
+    - CI/CD
+    - CI-CD
   garden:
     kind: subcategory
     parent_category: tool
     subcategory_slug: ci-cd-tools
-
-aliases:
 ---
 
 Under [[Tool]], **CI-CD Tools** groups products that run or orchestrate build, test, and deploy pipelines. The label **CI/CD** is overloaded: in practice it spans three **technique** notes we keep separate from this subcategory:

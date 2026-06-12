@@ -1,7 +1,7 @@
 ---
 title: "Docker Swarm"
 date: 2024-04-09
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: hold
     category: platform
     movement: "Moved Out"
-
 aliases:
   - /radar/platforms/docker-swarm
 ---
@@ -49,8 +48,6 @@ aliases:
 | **Engine** | Swarm mode ships in the open-source engine docs; production support is vendor-specific |
 | **Migration** | Map Services to Deployments; replace overlay secrets with cluster secret stores |
 | **Local dev** | Do not use Swarm on laptops; use Compose locally and K8s (kind/minikube) for cluster parity |
-
-**Garden pattern:** **hold** + **Moved Out** aligns with **[[Docker Compose]]** (no Compose-in-prod-on-Swarm) and **[[Docker]]** (hold vendor stack for new mandates). Net-new orchestration is **[[Kubernetes]]**.
 
 **References**
 

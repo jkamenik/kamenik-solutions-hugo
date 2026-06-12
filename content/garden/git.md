@@ -1,7 +1,7 @@
 ---
 title: "Git"
 date: 2023-07-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/git
 ---
@@ -66,8 +65,6 @@ aliases:
 **Team practices:** trunk-based or short-lived branches; **[[Pull Request]]** as the review gate; protected `main`; no force-push to shared branches without agreement. For infrastructure and config, treat the repo as source of truth (**[[GitOps]]**).
 
 **Not the same as:** **[[GitHub]]** / **[[GitLab]]** (hosting + collaboration); **[[GitOps]]** (delivery pattern); **[[git lfs]]** (large file extension).
-
-**Garden pattern:** **adopt** Git for all new code; default hosting is org **[[GitHub]]** unless a customer mandates **[[GitLab]]**.
 
 **References**
 

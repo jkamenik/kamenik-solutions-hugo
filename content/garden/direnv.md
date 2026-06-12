@@ -1,11 +1,10 @@
 ---
 title: "direnv"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
-  - direnv
   - direnv
 
 params:
@@ -16,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - environment-managers
-
 aliases:
   - /radar/tools/direnv
 ---
@@ -57,8 +55,6 @@ aliases:
 | **CI** | Do not rely on direnv in **[[GitHub Actions]]**; set env in workflow explicitly |
 | **Secrets** | `.envrc` can reference `.env`; never commit secrets |
 | **Pairing** | Fits **[[Environment Managers]]** bucket alongside version managers, not a replacement |
-
-**Garden pattern:** **assess** for host-native development; **adopt** **[[Dev Container]]** first for team parity, then add direnv where shell workflows remain.
 
 **References**
 

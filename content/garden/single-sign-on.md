@@ -1,22 +1,21 @@
 ---
 title: "Single Sign-on"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - Single Sign-on
-  - Single sign-on
   - SSO
-  - Single Sign-On
 
 params:
+  aliases:
+    - SSO
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "New"
-
 aliases:
   - /radar/techniques/single-sign-on
 ---
@@ -64,8 +63,6 @@ aliases:
 | **SCIM** | Optional next step for directory sync (not required for basic SSO) |
 | **Testing** | Staging IdP connection per customer; document clock skew and cert expiry |
 | **Break-glass** | Local emergency accounts outside SSO, vaulted and audited |
-
-**Garden pattern:** **adopt** SSO on every customer-facing SaaS before enterprise sales; **assess** which IdP product fits. Do not build custom password stores for B2B if SSO is on the roadmap.
 
 **References**
 

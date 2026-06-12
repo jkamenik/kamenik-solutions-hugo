@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: tool
     movement: "No Change"
-
-aliases:
-  - /radar/tools/skaffold
 ---
 
 [Skaffold](https://skaffold.dev/) reports itself as "Fast. Repeatable. Simple." And it is. Skaffold is to Kubernetes what [[Docker Compose]] is to [[Docker]]. However, it provides build, load, watch, rebuild loop directly on K8s clusters. This makes Skaffold an indispensable developer tool for any [[Shift Left]] org using [[Kubernetes]].

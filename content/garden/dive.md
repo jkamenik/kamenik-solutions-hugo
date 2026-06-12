@@ -1,12 +1,11 @@
 ---
 title: "Dive"
 date: 2023-07-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - Dive
-  - dive
 
 params:
   garden:
@@ -14,7 +13,6 @@ params:
     usefulness: trial
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/dive
 ---
@@ -57,8 +55,6 @@ Works with the `docker` CLI; often used with **[[Docker]]** / **[[Rancher Deskto
 | **Multi-stage** | Dive shines when comparing builder vs runtime stages |
 | **Security** | Layer exploration is not vulnerability scanning |
 | **Complements** | **[[Container Structure Test]]** asserts image contract; Dive explores *why* the image is large |
-
-**Garden pattern:** **trial** on repos you build; **adopt** CST in CI for every image you ship.
 
 **References**
 

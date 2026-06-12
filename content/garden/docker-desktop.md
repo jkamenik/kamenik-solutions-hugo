@@ -1,7 +1,7 @@
 ---
 title: "Docker Desktop"
 date: 2025-04-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - Docker Desktop for Windows
 
 params:
+  aliases:
+    - Docker Desktop for Mac
+    - Docker Desktop for Windows
   garden:
     kind: item
     usefulness: hold
     category: platform
     movement: "Moved Out"
-
 aliases:
   - /radar/platforms/docker-desktop
 ---
@@ -51,8 +53,6 @@ aliases:
 | **WSL2 / macOS VM** | Desktop wraps a Linux VM; know where disk and CPU go |
 | **Extensions** | Optional; treat as supply-chain risk in regulated environments |
 | **CI** | Do not require Desktop in pipelines; use rootless builders in **[[GitHub Actions]]** |
-
-**Garden pattern:** **hold** for net-new org mandates; **assess** **[[Rancher Desktop]]** on the next laptop refresh. See **[[Docker]]** for CLI vs engine vs Desktop separation.
 
 **References**
 

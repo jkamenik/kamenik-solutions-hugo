@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery"
 date: 2026-01-13
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/continuous-delivery
 ---
@@ -55,8 +54,6 @@ aliases:
 | **Gates** | Manual approval, change windows, or policy checks on promote |
 | **Config** | Environment-specific values outside the image (12-factor) |
 | **Rollback** | Redeploy previous artifact tag; keep N-1 ready |
-
-**Garden pattern:** **adopt** CD everywhere; **assess** auto-deploy per product. Pair with **[[Pull Request]]** required checks and **[[CI-CD Tools]]** in the garden.
 
 **References**
 

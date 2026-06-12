@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - specification
-
 aliases:
   - /radar/techniques/sarif
 ---

@@ -13,7 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "New"
-
 aliases:
   - /radar/techniques/dotfiles-in-version-control
 ---

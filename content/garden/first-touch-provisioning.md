@@ -1,21 +1,21 @@
 ---
 title: "First Touch Provisioning"
 date: 2026-01-10
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - First Touch Provisioning
-  - first touch provisioning
   - first-touch provisioning
 
 params:
+  aliases:
+    - first-touch provisioning
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/first-touch-provisioning
 ---
@@ -67,8 +67,6 @@ aliases:
 | **Modules** | Reusable VPC/cluster modules; watch blast radius (**[[DRY]]** discipline) |
 | **Policy** | **[[Policy as Code]]** on plans before apply |
 | **Provisioner anti-pattern** | Terraform `remote-exec` / heavy `local-exec` blurs touches; keep first touch declarative |
-
-**Garden pattern:** **adopt** first touch as code for every **[[Cloud]]** estate; **assess** second touch only where immutable/git-native paths are not ready. See **[[Provisioner]]** for how tools map to each phase.
 
 **References**
 

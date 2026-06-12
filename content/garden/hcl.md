@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/hcl
 ---
 
 [HCL](https://github.com/hashicorp/hcl)

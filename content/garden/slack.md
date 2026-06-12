@@ -13,7 +13,6 @@ params:
     usefulness: trial
     category: platform
     movement: "New"
-
 aliases:
   - /radar/platforms/slack
 ---

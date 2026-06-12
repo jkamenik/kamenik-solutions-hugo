@@ -13,9 +13,6 @@ params:
     usefulness: assess
     category: tool
     movement: "New"
-
-aliases:
-  - /radar/tools/cue
 ---
 
 [CUE](https://cuelang.org) is a schema validating tool that also does code expansion / generation. It is a different take on [[Policy as Code]] and is made to provide generic guardrails in its own language format which can be translated into other ecosystem compliant formats like [[JSON Schema]], [[Protobuf]], or [[OpenAPI]].

@@ -1,7 +1,7 @@
 ---
 title: "AI Agent"
 date: 2026-04-20
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -12,11 +12,9 @@ params:
     kind: subcategory
     parent_category: tool
     subcategory_slug: ai-agent
-
-aliases:
 ---
 
-Under [[Tool]], **AI Agent** covers runnable agent **tools**, services that run an agent loop (observe context → plan → call tools → persist state) rather than one-shot chat completions. You install or self-host them and build workflows on top, often via [[Agent Skills]] and protocols like [[Agent Client Protocol]].
+Under [[Tool]], **AI Agent** covers runnable agent **tools**, services that run an agent loop (observe context → plan → call tools → persist state) rather than one-shot chat completions. You install or self-host them and build workflows on top, often via [[Agent Skills Framework]] and protocols like [[Agent Client Protocol]].
 
 **In this subcategory:** repo-bounded coding agents such as [[cursor-agent]], [[Claude Code]], [[Codex]], [[Gemini]], and [[OpenCode]] (terminal/IDE surfaces are how you run them; the product is the agent loop, not the editor distribution). **Not here:** raw model runtimes like [[Ollama]] ([[Platform]]); editor shells without an agent runtime under [[IDE]]; broad [[Artificial Intelligence & Machine Learning]] techniques.
 

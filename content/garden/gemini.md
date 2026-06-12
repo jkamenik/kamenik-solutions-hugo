@@ -1,7 +1,7 @@
 ---
 title: "Gemini"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,6 +10,9 @@ keywords:
   - Google Gemini CLI
 
 params:
+  aliases:
+    - Gemini CLI
+    - Google Gemini CLI
   garden:
     kind: item
     usefulness: trial
@@ -17,12 +20,9 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
-
-aliases:
-  - /radar/tools/gemini
 ---
 
-[Gemini CLI](https://developers.google.com/gemini-code-assist/docs/gemini-cli) is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models. We rate it **trial** under [[AI Agent]]: a solid choice on Google accounts or Gemini API when you want Google's stack and [[Agent Skills]] portability; we usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and [[Claude Code]] / [[Codex]] for other vendor stacks.
+[Gemini CLI](https://developers.google.com/gemini-code-assist/docs/gemini-cli) is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models. We rate it **trial** under [[AI Agent]]: a solid choice on Google accounts or Gemini API when you want Google's stack and [[Agent Skills Framework]] portability; we usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and [[Claude Code]] / [[Codex]] for other vendor stacks.
 
 ## Blurb
 
@@ -41,6 +41,6 @@ Compare [[Claude Code]] (Anthropic) and [[Codex]] (OpenAI) for the same agent-lo
 - **Install:** `npm install -g @google/gemini-cli`, Homebrew (`brew install gemini-cli`), or `npx` from GitHub; Node.js 20+.
 - **Auth:** Google account (free tier quotas) or Gemini API key for pay-as-you-go.
 - **Models:** Gemini 2.5 Pro and successors; very large context windows per Google docs.
-- **Skills:** SKILL.md / [[Agent Skills]] ecosystem, see [[Agent Skills - Sources]] for cross-agent collections.
+- **Skills:** SKILL.md / [[Agent Skills Framework]] ecosystem, see [[Agent Skills - Sources]] for cross-agent collections.
 - **Fit:** [[Tool]] / [[AI Agent]], agent-loop coding tool (also branded Gemini Code Assist in IDE surfaces).
 - **Contrast:** [[Cursor]] + [[cursor-agent]] for default IDE workflow; [[Claude Code]] / [[Codex]] on other vendors.

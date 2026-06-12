@@ -13,9 +13,6 @@ params:
     usefulness: hold
     category: platform
     movement: "No Change"
-
-aliases:
-  - /radar/platforms/jenkins-x
 ---
 
 [Jenkins X](https://jenkins-x.io/)

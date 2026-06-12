@@ -13,7 +13,6 @@ params:
     usefulness: hold
     category: platform
     movement: "No Change"
-
 aliases:
   - /radar/platforms/clutch
 ---

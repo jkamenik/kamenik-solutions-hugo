@@ -1,7 +1,7 @@
 ---
 title: "GoLang"
 date: 2026-01-07
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - Go
 
 params:
+  aliases:
+    - Go
   garden:
     kind: item
     usefulness: adopt
@@ -16,7 +18,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
 aliases:
   - /radar/languages/go
 ---

@@ -13,7 +13,6 @@ params:
     usefulness: hold
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/chatops
 ---

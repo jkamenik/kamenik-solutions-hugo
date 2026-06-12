@@ -1,7 +1,7 @@
 ---
 title: "Docker"
 date: 2023-03-03
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - Moby
 
 params:
+  aliases:
+    - docker CLI
+    - Moby
   garden:
     kind: item
     usefulness: hold
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/docker
 ---
@@ -52,8 +54,6 @@ aliases:
 | **Compose** | Fine for local stacks; not a prod orchestrator (**[[Kubernetes]]**) |
 | **CI** | `docker build` or `buildx`; pin BuildKit; scan images in pipeline |
 | **Security** | Do not mount `/var/run/docker.sock` into untrusted CI without isolation |
-
-**Garden pattern:** **adopt** containers; **hold** betting the estate on Docker Desktop; use portable OCI tooling and document engine choice in README.
 
 **References**
 

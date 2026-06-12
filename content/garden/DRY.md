@@ -1,7 +1,7 @@
 ---
 title: "DRY"
 date: 2025-01-05
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,12 +9,13 @@ keywords:
   - Don't Repeat Yourself
 
 params:
+  aliases:
+    - Don't Repeat Yourself
   garden:
     kind: item
     usefulness: hold
     category: technique
     movement: "Moved Out"
-
 aliases:
   - /radar/techniques/dry
 ---
@@ -59,8 +60,6 @@ aliases:
 **IaC-specific:** minimizing blast radius beats minimizing bytes. Explicit duplication in two stacks is often **safer** than a shared module that forces unrelated environments to upgrade together.
 
 **When repetition is OK:** similar HCL for dev and prod with intentional differences; two resources that look alike but have different owners or compliance tags; bootstrap code you expect to delete.
-
-**Garden pattern:** **hold** DRY as a default team slogan; **Moved Out** from treating it as a top-level principle. Prefer **[[Declarative IaC]]** composition tools over imperative generators justified only by DRY.
 
 **References**
 

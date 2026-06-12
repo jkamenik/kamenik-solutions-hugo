@@ -13,9 +13,6 @@ params:
     usefulness: assess
     category: tool
     movement: "No Change"
-
-aliases:
-  - /radar/tools/pulumi
 ---
 
 [Pulumi](https://www.pulumi.com/) generates IaC based a programming language of your choice.

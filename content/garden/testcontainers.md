@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - test-framework
-
-aliases:
-  - /radar/code/testcontainers
 ---
 
 [Testcontainers](https://testcontainers.com/) is a family of libraries that start real service dependencies (databases, brokers, etc.) in [[Docker]] containers during automated tests, then tear them down. [Docker](https://www.docker.com/) acquired AtomicJar (the company behind Testcontainers) in 2023; the project remains open source with modules for Java, Go, Python, .NET, and others. We rate it **assess**: powerful for integration tests that need fidelity beyond mocks, but it adds Docker-in-CI requirements and runtime cost compared to [[Unit Testing]] alone.

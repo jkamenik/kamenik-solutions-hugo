@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/cel
 ---
 
 [CEL](https://github.com/google/cel-spec)

@@ -1,7 +1,7 @@
 ---
 title: "dbt-core"
 date: 2026-01-14
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - dbt Core
 
 params:
+  aliases:
+    - dbt
+    - dbt Core
   garden:
     kind: item
     usefulness: trial
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/dbt-core
 ---
@@ -97,8 +99,6 @@ When a table is owned elsewhere but dbt should merge new rows:
 ```
 
 See [Incremental models](https://docs.getdbt.com/docs/build/incremental-models).
-
-**Garden pattern:** **trial** dbt for warehouse transforms; orchestrate schedules with **[[Apache Airflow]]** (**assess**) or **[[Argo Workflows]]** (**trial**) when the DAG spans more than dbt.
 
 **References**
 

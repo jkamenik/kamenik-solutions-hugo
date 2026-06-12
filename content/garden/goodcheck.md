@@ -1,7 +1,7 @@
 ---
 title: "goodcheck"
 date: 2026-05-27
-lastmod: 2026-05-27
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -15,12 +15,11 @@ params:
     movement: "No Change"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/goodcheck
 ---
 
-[goodcheck](https://sider.github.io/goodcheck/) is a pattern-based code checker from Sider (formerly SideCI). You write rules in YAML to flag risky or discouraged code patterns in **[[Pull Request]]**s and local runs. The GitHub repo is gone and the vendor is defunct. We rate it **hold**: useful ideas, but not a living project to adopt for new work.
+[goodcheck](https://sider.github.io/goodcheck/) is a pattern-based code checker from Sider (formerly SideCI). You write rules in YAML to flag risky or discouraged code patterns in [[Pull Request]]s and local runs. The GitHub repo is gone and the vendor is defunct. We rate it **hold**: useful ideas, but not a living project to adopt for new work.
 
 ## Status
 

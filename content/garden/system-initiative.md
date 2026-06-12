@@ -13,9 +13,6 @@ params:
     usefulness: hold
     category: platform
     movement: "Moved Out"
-
-aliases:
-  - /radar/platforms/system-initiative
 ---
 
 [System Initiative](https://www.systeminit.com/) is a visual DevOps tool. Think wysiwyg [[terraform]].

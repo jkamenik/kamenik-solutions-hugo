@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: platform
     subcategory_slug: cloud
-
-aliases:
 ---
 
 Under **[[Platform]]**, **Cloud** groups hyperscale public clouds and their managed primitives: someone else's computers, exposed through APIs and consoles so you rent capacity instead of racking hardware. The provider runs regions, physical security, and base virtualization; you own identity, configuration, data classification, and most "managed" service hardening under shared responsibility.

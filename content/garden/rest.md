@@ -1,7 +1,7 @@
 ---
 title: "Representational State Transfer (REST)"
 date: 2025-12-11
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - RESTful
 
 params:
+  aliases:
+    - RESTful
   garden:
     kind: item
     usefulness: adopt
@@ -16,9 +18,6 @@ params:
     movement: "No Change"
     subcategories:
       - api
-
-aliases:
-  - /radar/techniques/rest
 ---
 
 [Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)

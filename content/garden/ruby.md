@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
 aliases:
   - /radar/languages/ruby
 ---

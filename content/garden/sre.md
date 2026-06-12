@@ -13,9 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/sre
 ---
 
 [SRE](https://sre.google/)

@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "New"
-
 aliases:
   - /radar/techniques/go-script
 ---

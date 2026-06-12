@@ -13,7 +13,6 @@ params:
     usefulness: assess
     category: tool
     movement: "New"
-
 aliases:
   - /radar/tools/shell-operator
 ---

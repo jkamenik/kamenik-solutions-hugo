@@ -1,7 +1,7 @@
 ---
 title: "Single Responsibility Principle"
 date: 2025-05-13
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,14 +9,13 @@ keywords:
   - SRP
 
 params:
+  aliases:
+    - SRP
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/single-responsibility-principle
 ---
 
 [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)

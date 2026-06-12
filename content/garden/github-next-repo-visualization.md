@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - diagramming
-
 aliases:
   - /radar/tools/github-next-repo-visualization
 ---

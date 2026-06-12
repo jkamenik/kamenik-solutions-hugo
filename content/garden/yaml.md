@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/yaml
 ---
 
 [YAML](https://yaml.org/) is a more human readable format which is fully API compatible with [[JSON]]. It gained popularity as being the [[Declarative IaC]] language for things like [[Docker Compose]], and [[Kubernetes]].

@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: platform
     movement: "New"
-
-aliases:
-  - /radar/platforms/ollama
 ---
 
 [Ollama](https://ollama.com/) is a local runtime for pulling, serving, and chatting with open-weight LLMs on your machine (macOS, Linux, Windows). We rate it **trial**: the default way to run models locally for development, [[AI Agent]] backends, and privacy-sensitive experiments, pair it with agents like [[hermes-agent|Hermes]] or any OpenAI-compatible client, but expect throughput limits vs cloud APIs for heavy automation.

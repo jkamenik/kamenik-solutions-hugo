@@ -1,12 +1,12 @@
 ---
 title: "Agent Skills Framework"
 date: 2026-04-20
-lastmod: 2026-06-05
+lastmod: 2026-06-12
+draft: false
 
 keywords:
   - Agent Skills Framework
   - Agent Skills
-  - SKILL.md
 
 params:
   aliases:
@@ -18,12 +18,11 @@ params:
     movement: "No Change"
     subcategories:
       - ai-techniques
-
 aliases:
-  - /garden/agent-skills/
-  - /radar/techniques/agent-skills
   - /radar/techniques/agent-skills-framework
 ---
+
+[Agent Skills Framework](https://agentskills.io/specification)
 
 The [Agent Skills](https://agentskills.io/specification) format packages repeatable agent know-how as a folder with a required `SKILL.md` (YAML frontmatter plus markdown instructions). We **assess** it: portable across [[Claude Code]], [[Gemini]], [[Cursor]], [[Codex]], and other runtimes, but tool-specific extensions and discovery quality still vary. Use it when you want skills you can carry between agents. Pair with [[Agent Skills - Sources]] for vetted repos.
 
@@ -56,11 +55,11 @@ description: "What it does and when to use it (trigger keywords live here)."
 
 ### Skill types (informal)
 
-| Type | Purpose | Example |
-|------|---------|---------|
-| Capability | Teach a concrete tool or API | `apple-reminders`, `proofread` |
-| Behavioral | Layer policy on other skills | `reminders-gtd`, `proofread-blog` |
-| Domain | Your outcome-specific workflow | `morning-briefing`, `company-research` |
+| Type       | Purpose                        | Example                                |
+| ---------- | ------------------------------ | -------------------------------------- |
+| Capability | Teach a concrete tool or API   | `apple-reminders`, `proofread`         |
+| Behavioral | Layer policy on other skills   | `reminders-gtd`, `proofread-blog`      |
+| Domain     | Your outcome-specific workflow | `morning-briefing`, `company-research` |
 
 ### Runtimes in the garden
 

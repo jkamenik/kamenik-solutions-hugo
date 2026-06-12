@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/12-factor-app
 ---
 
 [12 Factor App](https://12factor.net/)

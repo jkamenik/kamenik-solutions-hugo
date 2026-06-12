@@ -1,7 +1,7 @@
 ---
 title: "Cline"
 date: 2026-05-21
-lastmod: 2026-05-21
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -9,6 +9,8 @@ keywords:
   - Cline.bot
 
 params:
+  aliases:
+    - Cline.bot
   garden:
     kind: item
     usefulness: assess
@@ -16,9 +18,6 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
-
-aliases:
-  - /radar/tools/cline
 ---
 
 [Cline](https://cline.bot) is an open-source (Apache 2.0) AI coding agent with one runtime across VS Code (and VS Code–compatible editors including [[Cursor]] and Windsurf), a CLI (`npm i -g cline`), JetBrains (early access), and an embeddable SDK. It supports Plan-and-Act workflows, multi-file edits with checkpoints, terminal execution, MCP, `.clinerules`, and bring-your-own-model across major providers and local inference. We rate it **assess** under [[AI Agent]]: mature open-source option in the same lane as [[OpenCode]] and [[Kilo.ai]], but not our default stack ([[Cursor]] + [[cursor-agent]] for daily work).

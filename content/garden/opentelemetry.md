@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - library
-
-aliases:
-  - /radar/code/opentelemetry
 ---
 
 [OpenTelemetry](https://opentelemetry.io/) (OTel) is the CNCF-standard way to collect **traces**, **metrics**, and **logs** with vendor-neutral APIs and SDKs. Instrument once, export to your backend of choice (Prometheus, Jaeger, vendor SaaS, etc.) instead of locking into a proprietary agent. For new services and platforms we treat OTel as the default observability foundation, it is what makes [[Incident Management]] detection and [[Up-time Monitoring]] actually work in modern, ephemeral infrastructure.

@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Ready"
 date: 2023-07-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,12 +10,14 @@ keywords:
   - enterprise-ready
 
 params:
+  aliases:
+    - EnterpriseReady
+    - enterprise-ready
   garden:
     kind: item
     usefulness: trial
     category: technique
     movement: "Moved In"
-
 aliases:
   - /radar/techniques/enterprise-ready
 ---
@@ -63,8 +65,6 @@ aliases:
 | **Questionnaires** | Map each ER section to evidence (architecture diagram, policies, screenshots) |
 | **Product vs platform** | Some items are in-app features; others are how *you* run **[[Software as a Service]]** |
 | **Podcast / tear-downs** | Use HubSpot/Slack/Google examples as design references, not copy-paste specs |
-
-**Garden pattern:** **trial** the framework when **[[Software as a Service]]** goes enterprise; **adopt** the underlying techniques (**[[Single Sign-on]]**, **[[SLAs]]**, **[[RBAC]]**) as separate garden items mature.
 
 **References**
 

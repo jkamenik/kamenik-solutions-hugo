@@ -13,7 +13,6 @@ params:
     usefulness: assess
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/boundary-hashicorp
 ---

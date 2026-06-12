@@ -1,7 +1,7 @@
 ---
 title: "SLAs"
 date: 2026-05-17
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -11,12 +11,15 @@ keywords:
   - Service Level Agreements
 
 params:
+  aliases:
+    - SLA
+    - Service Level Agreement
+    - Service Level Agreements
   garden:
     kind: item
     usefulness: adopt
     category: technique
     movement: "New"
-
 aliases:
   - /radar/techniques/slas
 ---
@@ -65,8 +68,6 @@ aliases:
 | **Credits** | Tie remedies to repeatable formulas; legal review |
 | **Internal SLO** | Set SLO stricter than SLA so you miss the customer line rarely |
 | **Incidents** | Postmortems when SLO burn rate spikes; feed back to architecture |
-
-**Garden pattern:** **adopt** published SLAs (or clear "best effort" docs) for any paid multi-tenant product; pair with on-call, status pages, and deployment policies that respect error budgets.
 
 **References**
 

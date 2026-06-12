@@ -1,15 +1,16 @@
 ---
 title: "Earlybird"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - Earlybird
-  - EarlyBird
   - go-earlybird
 
 params:
+  aliases:
+    - go-earlybird
   garden:
     kind: item
     usefulness: assess
@@ -17,7 +18,6 @@ params:
     movement: "No Change"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/earlybird
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Codacy"
 date: 2023-07-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/codacy
 ---
@@ -49,8 +48,6 @@ aliases:
 | **Coverage** | Test coverage tracking; useful for trends, not a substitute for good tests |
 | **Config** | `.codacy.yml` / UI policies; align with team **[[Code Linting]]** standards |
 | **Cost** | Per-seat SaaS; compare TCO vs OSS linters in **[[GitHub Actions]]** |
-
-**Garden pattern:** default local/CI lint (**adopt** **[[Code Linting]]** + Super-Linter in Actions). Pilot Codacy when visibility across dozens of services justifies another vendor.
 
 **References**
 

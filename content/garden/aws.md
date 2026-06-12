@@ -1,7 +1,7 @@
 ---
 title: "AWS"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -15,7 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - cloud
-
 aliases:
   - /radar/platforms/aws
 ---
@@ -31,8 +30,6 @@ aliases:
 **Why hold:** IAM/console complexity, historical foot-guns (public S3, over-broad roles), and services marketed as fully managed that still leave patching, scaling, and security on your team. Total cost often surprises once egress, support, and “almost managed” add-ons stack up.
 
 **When AWS anyway:** existing estate, partner/marketplace requirements, a service with no peer (rare and shrinking), or regulated footprints already certified on AWS. In those cases, contain blast radius, **[[Terraform]]**, guardrails, **[[DevSecOps]]** gates, and avoid pet clusters on **[[AWS EKS]]** (also **hold**; prefer **[[Google GKE]]** for greenfield K8s).
-
-**Garden pattern:** do not default new products to AWS; map each capability to GCP/Azure first. If you must stay, treat AWS as legacy platform to strangle over time, not the greenfield standard.
 
 ## Details
 

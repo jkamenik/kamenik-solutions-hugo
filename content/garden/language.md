@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: code
     subcategory_slug: language
-
-aliases:
 ---
 
 Under [[Code]], **Language** covers notations and domain-specific languages used to describe configuration, schemas, contracts, and structured data; not every general-purpose programming language. Examples include [[YAML]], [[JSON]], [[HCL]], [[CEL]], [[OpenAPI]], and [[Protobuf]]. These artifacts are usually consumed by tools and runtimes rather than compiled alone like [[GoLang]] or [[Ruby]].

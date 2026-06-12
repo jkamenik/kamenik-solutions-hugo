@@ -1,7 +1,7 @@
 ---
 title: "GitLab"
 date: 2025-12-02
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: trial
     category: platform
     movement: "No Change"
-
 aliases:
   - /radar/platforms/gitlab
 ---
@@ -63,8 +62,6 @@ aliases:
 | **[[GitHub Actions]]** | GitLab CI |
 | GitHub Packages | GitLab registry |
 | Dependabot | Dependency scanning / Renovate-style bots |
-
-**Garden pattern:** **trial** — choose GitLab only with a documented reason (customer, compliance, existing estate); otherwise **adopt** **[[GitHub]]** for new repos.
 
 **References**
 

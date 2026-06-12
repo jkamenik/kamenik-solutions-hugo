@@ -1,7 +1,7 @@
 ---
 title: "Git Worktree"
 date: 2026-05-28
-lastmod: 2026-05-28
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,11 +13,8 @@ params:
     usefulness: trial
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/git-worktree
-  - /radar/techniques/git-work-trees
-  - /garden/git-work-trees/
 ---
 
 [Git Worktree](https://git-scm.com/docs/git-worktree)

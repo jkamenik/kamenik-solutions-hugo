@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: platform
     subcategory_slug: orchestrator
-
-aliases:
 ---
 
 An orchestrator handles the scheduling and monitoring of processes on a host or across hosts.

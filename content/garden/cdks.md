@@ -13,9 +13,6 @@ params:
     usefulness: hold
     category: tool
     movement: "No Change"
-
-aliases:
-  - /radar/tools/cdks
 ---
 
 [CDKs](https://aws.amazon.com/cdk/)

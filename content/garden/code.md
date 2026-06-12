@@ -11,8 +11,6 @@ params:
   garden:
     kind: category
     category: code
-
-aliases:
 ---
 
 **Code** is the garden quadrant for **dependencies and notations in the repo**: languages and DSLs, libraries, frameworks, and test harnesses you import or reference. It is not where we classify things you **operate** (**[[Tool]]**: IDEs, CI runners, scanners) or **deploy on** (**[[Platform]]**: clouds, orchestrators), nor **how you work** (**[[Technique]]**: patterns, practices, delivery methods).

@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - containerization
-
 aliases:
   - /radar/tools/dumb-init-for-containers
 ---

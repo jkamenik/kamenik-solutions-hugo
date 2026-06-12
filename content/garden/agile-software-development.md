@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: technique
     subcategory_slug: agile-software-development
-
-aliases:
 ---
 
 [Agile Software Development](https://agilemanifesto.org/)

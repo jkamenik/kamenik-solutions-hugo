@@ -11,7 +11,6 @@ params:
   garden:
     kind: category
     category: platform
-
 aliases:
   - /radar/platforms/
 ---

@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/jq
 ---

@@ -15,7 +15,6 @@ params:
     movement: "Moved Out"
     subcategories:
       - cloud
-
 aliases:
   - /radar/platforms/azure
 ---

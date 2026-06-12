@@ -13,9 +13,6 @@ params:
     usefulness: trial
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/access-on-demand
 ---
 
 [Access on Demand](https://en.wikipedia.org/wiki/Just-in-time_access)

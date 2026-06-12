@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: code
     subcategory_slug: library
-
-aliases:
 ---
 
 Under [[Code]], **Library** covers reusable packages you import into an application (logging, parsing, clients, utilities) not a full runtime stack. A library gives you an API; it does not own your process lifecycle, routing, or project layout the way a [[Framework]] does.

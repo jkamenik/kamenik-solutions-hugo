@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - language
-
-aliases:
-  - /radar/code/yamlscript
 ---
 
 [YAMLScript](https://github.com/yaml/yamlscript) (YS) is valid YAML, however, it is not API compatible with YAML. Therefore, even if `example.ys` can be read by a YAML interpreter the output would not contain the same objects as the parsed YS. Currently no main stream programs use it, but we are optimistic that it might eventual replace [[Go Templates]] for things like [[Helm]]. But until that happens you have to assess if it suits your needs.

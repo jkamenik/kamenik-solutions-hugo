@@ -15,7 +15,6 @@ params:
     movement: "Moved Out"
     subcategories:
       - ci-cd-tools
-
 aliases:
   - /radar/platforms/cloudbees
 ---

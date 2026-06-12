@@ -15,9 +15,6 @@ params:
     movement: "No Change"
     subcategories:
       - api
-
-aliases:
-  - /radar/techniques/grpc
 ---
 
 [gRPC](https://grpc.io/)

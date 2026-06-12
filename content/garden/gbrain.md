@@ -1,15 +1,16 @@
 ---
 title: "gbrain"
 date: 2026-05-06
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - gbrain
-  - GBrain
   - Garry Tan Brain
 
 params:
+  aliases:
+    - Garry Tan Brain
   garden:
     kind: item
     usefulness: trial
@@ -18,9 +19,6 @@ params:
     subcategories:
       - ai-techniques
       - pkm
-
-aliases:
-  - /radar/techniques/gbrain
 ---
 
 [gbrain](https://github.com/garrytan/gbrain) is Garry Tan's opinionated pattern for an LLM-maintained personal knowledge base. We rate it **trial**: the *ideas* are worth stealing (especially **two-layer pages** and **MECE directory resolvers**) but the full package is prescriptive (agent-maintains-everything, enrichment on every signal). Cherry-pick patterns and adapt them to your vault and workflows; do not treat gbrain as a religion.
@@ -35,7 +33,7 @@ aliases:
 
 **Take with skepticism:** blanket "enrichment fires on every signal," full automation of maintenance, and any rule that does not match how *you* file work (e.g. this vault uses [[PARA]] zones plus garden notes, not a single gbrain tree).
 
-**This vault:** we **adopt** the two-layer pattern for research and garden notes ([[Agent Skills]], tech-garden items); we **assess** a root `RESOLVER.md` and always-on enrichment pipelines before copying them wholesale.
+**This vault:** we **adopt** the two-layer pattern for research and garden notes ([[Agent Skills Framework]], tech-garden items); we **assess** a root `RESOLVER.md` and always-on enrichment pipelines before copying them wholesale.
 
 ## Portable patterns (not dogma)
 

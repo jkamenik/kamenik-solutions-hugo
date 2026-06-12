@@ -13,7 +13,6 @@ params:
     usefulness: assess
     category: technique
     movement: "No Change"
-
 aliases:
   - /radar/techniques/zanzibar
 ---

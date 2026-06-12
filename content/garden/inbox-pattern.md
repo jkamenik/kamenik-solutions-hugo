@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/inbox-pattern
 ---
 
 [Inbox Pattern](https://en.wikipedia.org/wiki/Inbox_and_outbox_pattern)

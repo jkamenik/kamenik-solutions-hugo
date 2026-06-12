@@ -12,8 +12,6 @@ params:
     kind: subcategory
     parent_category: code
     subcategory_slug: test-framework
-
-aliases:
 ---
 
 Under [[Code]], **Test Framework** covers libraries and tools whose primary job is to **author, organize, and run automated tests**, runners, assertion libraries, mocks, and chart/template testers. This is not [[Unit Testing]] or [[Integration Testing]] themselves (those are [[Technique]] notes); it is the concrete software you pick to implement them.

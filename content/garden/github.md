@@ -1,7 +1,7 @@
 ---
 title: "GitHub"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: platform
     movement: "No Change"
-
 aliases:
   - /radar/platforms/github
 ---
@@ -56,8 +55,6 @@ aliases:
 - Document exceptions when a repo must live elsewhere (customer fork, mirror, legacy host)
 
 **Enterprise / compliance:** GitHub Enterprise Cloud or Server when SSO, audit log retention, or data residency requires it; align with customer identity (SAML/OIDC) and IP allow lists as needed.
-
-**Garden pattern:** **adopt** GitHub for new work; **[[GitLab]]** only by explicit requirement; keep **[[git]]** skills portable between hosts.
 
 **References**
 

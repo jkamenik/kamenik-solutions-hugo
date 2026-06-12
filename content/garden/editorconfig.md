@@ -1,7 +1,7 @@
 ---
 title: "EditorConfig"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -13,7 +13,6 @@ params:
     usefulness: adopt
     category: tool
     movement: "No Change"
-
 aliases:
   - /radar/tools/editorconfig
 ---
@@ -77,8 +76,6 @@ insert_final_newline = true
 **CI:** optional `editorconfig-checker` in **[[GitHub Actions]]** if editors without plugins are common; most teams rely on linters plus local plugins.
 
 **Not the same as:** `.gitattributes` (Git checkout normalization); Prettier config; **[[Policy as Code]]**.
-
-**Garden pattern:** **adopt** `.editorconfig` on every new service repo before adding language linters. Listed under **[[Code Linting]]** editor baseline row.
 
 **References**
 

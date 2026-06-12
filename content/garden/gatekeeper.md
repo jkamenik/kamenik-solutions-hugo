@@ -1,15 +1,16 @@
 ---
 title: "Gatekeeper"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
   - Gatekeeper
   - OPA Gatekeeper
-  - gatekeeper
 
 params:
+  aliases:
+    - OPA Gatekeeper
   garden:
     kind: item
     usefulness: assess
@@ -17,7 +18,6 @@ params:
     movement: "No Change"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/gatekeeper
 ---
@@ -73,8 +73,6 @@ aliases:
 | **GitOps** | Constraints in Git; **[[ArgoCD]]** syncs like app manifests |
 | **Performance** | Watch webhook timeouts; scope constraints to needed namespaces |
 | **Mutation** | Higher blast radius than validate-only; test in dry-run/audit first |
-
-**Garden pattern:** **adopt** **[[Policy as Code]]** as a technique; **trial** **[[Conftest]]** in CI; **assess** Gatekeeper when cluster admission must enforce the same Rego family. Compare **[[CEL]]** before committing to OPA operations.
 
 **References**
 

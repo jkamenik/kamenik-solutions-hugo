@@ -13,9 +13,6 @@ params:
     usefulness: adopt
     category: technique
     movement: "No Change"
-
-aliases:
-  - /radar/techniques/cattle-not-pets
 ---
 
 [Cattle Not Pets](https://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/)

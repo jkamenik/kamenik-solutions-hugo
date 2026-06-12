@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - code-scanner
-
 aliases:
   - /radar/tools/kubescape
 ---

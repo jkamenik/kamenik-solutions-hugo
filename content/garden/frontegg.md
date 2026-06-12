@@ -15,7 +15,6 @@ params:
     movement: "New"
     subcategories:
       - identity-provider
-
 aliases:
   - /radar/platforms/frontegg
 ---

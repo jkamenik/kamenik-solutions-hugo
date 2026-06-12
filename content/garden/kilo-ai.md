@@ -1,7 +1,7 @@
 ---
 title: "Kilo.ai"
 date: 2026-05-21
-lastmod: 2026-05-21
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -10,6 +10,9 @@ keywords:
   - KiloCode
 
 params:
+  aliases:
+    - Kilo Code
+    - KiloCode
   garden:
     kind: item
     usefulness: assess
@@ -17,9 +20,6 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
-
-aliases:
-  - /radar/tools/kilo-ai
 ---
 
 [Kilo.ai](https://kilo.ai) (Kilo Code) is an open-source (Apache 2.0) AI coding agent for VS Code, JetBrains, CLI, and cloud surfaces, with specialized modes (Code, Architect, Debug, Ask, Custom), multi-model support (500+ via Kilo Gateway or BYOK), MCP, and cloud agents. We rate it **assess** under [[AI Agent]]: a credible open-source alternative in the same lane as [[OpenCode]] and IDE-bound agents, but not yet our default stack ([[Cursor]] + [[cursor-agent]] for daily work).
