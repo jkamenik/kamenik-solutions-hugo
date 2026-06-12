@@ -20,6 +20,8 @@ params:
     movement: "No Change"
 ---
 
+[Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+
 A [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (PR) proposes merging a branch into a shared mainline. **[[GitHub]]** calls it a pull request; **[[GitLab]]** calls it a merge request (MR). We **adopt** PRs as the front door to **[[Continuous Integration]]**: humans do **[[Code Review]]** while machines report lint, test, and scan status on the same change.
 
 Even solo developers should open a PR against `main`. Automated gates catch issues that local habit misses.

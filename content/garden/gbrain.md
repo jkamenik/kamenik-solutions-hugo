@@ -64,3 +64,17 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 
 ## See Also
 - [[Linked page]]
+---
+
+## Timeline
+
+- **2026-06-12** | Kai — Re-synced to Hugo (Garden Notes vault-only)
+- **2026-06-12** | Kai — Proofread fixes: dash normalization (SOUL)
+- **YYYY-MM-DD** | Author , What changed in this document.
+```
+
+## See Also
+
+- [[Agent Skills Framework]], skills that pair with agent-maintained vaults
+- [[PKM]], broader personal knowledge management context
+- [[PARA]], zone-based filing we already use

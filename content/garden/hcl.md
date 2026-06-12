@@ -1,7 +1,7 @@
 ---
 title: "HCL"
 date: 2026-01-07
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -29,7 +29,7 @@ Rated **trial**: still the practical default inside HashiCorp-style IaC, but the
 
 ## Summary
 
-HCL grew out of a practical constraint: when [[HashiCorp]] moved its tools to [[GoLang]], embedding Go as an end-user DSL was awkward, so they built a small declarative language tuned for blocks, attributes, and references, patterns that map cleanly to infrastructure resources. It is intentionally not Turing-complete in the same way as a general programming language; expressions and functions exist, but the model stays declarative, which keeps diffs reviewable and state plans predictable.
+HCL grew out of a practical constraint: when [[HashiCorp]] moved its tools to [[GoLang]], embedding Go as an end-user DSL was awkward. They built a small declarative language tuned for blocks, attributes, and references. Those patterns map cleanly to infrastructure resources. It is intentionally not Turing-complete in the same way as a general programming language; expressions and functions exist, but the model stays declarative, which keeps diffs reviewable and state plans predictable.
 
 For greenfield work outside Terraform/OpenTofu, [[YAML]] (plus optional templating via [[Helm]] or [[YAMLScript]]) or imperative/semantic IaC via [[Pulumi]] often wins on hiring surface area and license clarity. Inside an existing Terraform or OpenTofu estate, learning HCL is non-optional.
 

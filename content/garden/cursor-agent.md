@@ -22,7 +22,7 @@ params:
       - ai-agent
 ---
 
-[cursor-agent](https://cursor.com/cli) is Cursor's terminal agent, TUI/CLI for running the same Cursor Agent in your shell, scripts, GitHub Actions, and headless automations, with frontier models and MCP. We **adopt** it under [[AI Agent]] as our default bounded coding agent alongside the [[Cursor]] editor: one vendor for interactive IDE work and terminal/CI agents, with skills and rules wired through `.cursor/` and this vault's research conventions (`agent: cursor-agent` in frontmatter).
+[cursor-agent](https://cursor.com/cli) is Cursor's terminal agent, TUI/CLI for running the same Cursor Agent in your shell, scripts, GitHub Actions, and headless automations, with frontier models and MCP. We **adopt** it under [[AI Agent]] as our default bounded coding agent alongside the [[Cursor]] editor: one vendor for interactive IDE work and terminal/CI agents. Skills and rules wire through `.cursor/` and this vault's research conventions (`agent: cursor-agent` in frontmatter).
 
 ## Blurb
 

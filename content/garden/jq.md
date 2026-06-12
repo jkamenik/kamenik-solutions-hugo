@@ -1,7 +1,7 @@
 ---
 title: "jq"
 date: 2023-07-23
-lastmod: 2026-05-21
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -17,11 +17,11 @@ aliases:
   - /radar/tools/jq
 ---
 
-[jq](https://jqlang.org/) is a lightweight command-line JSON processor — the default tool for slicing, filtering, mapping, and transforming JSON in shell pipelines, CI, and ad hoc debugging. We **adopt** it under [[Tool]] wherever JSON appears at the CLI; pair with [[yq]] when the source format is YAML (or use `yq` to emit JSON and pipe into `jq`).
+[jq](https://jqlang.org/) is a lightweight command-line JSON processor: the default tool for slicing, filtering, mapping, and transforming JSON in shell pipelines, CI, and ad hoc debugging. We **adopt** it under [[Tool]] wherever JSON appears at the CLI; pair with [[yq]] when the source format is YAML (or use `yq` to emit JSON and pipe into `jq`).
 
 ## Blurb
 
-> jq is like `sed` for JSON data — you can use it to slice and filter and map and transform structured data with the same ease that `sed`, `awk`, `grep` and friends let you play with text.
+> jq is like `sed` for JSON data: you can use it to slice and filter and map and transform structured data with the same ease that `sed`, `awk`, `grep` and friends let you play with text.
 
 ## Summary
 
@@ -35,5 +35,5 @@ Use in one-liners (`curl … | jq '.items[]'`), policy checks (parse `terraform 
 - **Docs:** [tutorial](https://jqlang.org/tutorial/), [manual](https://jqlang.org/manual/).
 - **License:** MIT (upstream).
 - **CI / ops:** pipe API and tool JSON output through `jq` for assertions and field extraction; combine with `curl`, `gh api`, `kubectl … -o json`.
-- **Fit:** [[Tool]] — CLI JSON query/processor.
+- **Fit:** [[Tool]]: CLI JSON query/processor.
 - **Contrast:** [[yq]] for YAML-first workflows; language-native JSON APIs when a shell one-liner is not enough.

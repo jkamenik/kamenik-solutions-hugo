@@ -29,9 +29,9 @@ aliases:
 
 **What it does:** reads `.envrc` in the project root (bash-like DSL), exports vars for that directory tree, reverts when you leave. Common patterns:
 
-- `dotenv` / `dotenv_if_exists` — load `.env` (keep `.env` gitignored, commit `.envrc`)
-- `layout python`, `layout go` — wire language version managers
-- `use nix`, `use flake` — enter Nix dev shells on `cd`
+- `dotenv` / `dotenv_if_exists`: load `.env` (keep `.env` gitignored, commit `.envrc`)
+- `layout python`, `layout go`: wire language version managers
+- `use nix`, `use flake`: enter Nix dev shells on `cd`
 
 **When to assess / adopt locally:**
 

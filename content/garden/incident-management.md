@@ -1,7 +1,7 @@
 ---
 title: "Incident Management"
 date: 2025-06-14
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -33,4 +33,4 @@ A mature incident management practice includes:
 
 ## Summary
 
-Every team shipping to production should adopt incident management, even if lightly. Start with severity definitions (P1–P3), an on-call schedule, and a postmortem template. The investment pays back immediately the first time a P1 hits and everyone knows their role. Tools like PagerDuty, Opsgenie, or even a simple Slack workflow can carry you a long way. The process matters more than the tooling.
+Every team shipping to production should adopt incident management, even if lightly. Start with severity definitions (P1-P3), an on-call schedule, and a postmortem template. The investment pays back immediately the first time a P1 hits and everyone knows their role. Tools like PagerDuty, Opsgenie, or even a simple Slack workflow can carry you a long way. The process matters more than the tooling.

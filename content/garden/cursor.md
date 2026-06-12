@@ -20,7 +20,7 @@ params:
       - ide
 ---
 
-[Cursor](https://cursor.com) is a VS Code–based IDE with built-in AI: Tab completion, inline edit (Cmd+K), agent panel, and cloud agents, on a paid Cursor subscription with access to many frontier models (Composer, Claude, GPT, Gemini, Grok, and more). Built by [[Anysphere]]. We **adopt** it under [[IDE]] as our default editor stack: one simple ecosystem for multi-model coding when paired with [[cursor-agent]] for terminal and CI workflows.
+[Cursor](https://cursor.com) is a VS Code-based IDE with built-in AI: Tab completion, inline edit (Cmd+K), agent panel, and cloud agents. A paid Cursor subscription includes access to many frontier models (Composer, Claude, GPT, Gemini, Grok, and more). Built by [[Anysphere]]. We **adopt** it under [[IDE]] as our default editor stack. It is one ecosystem for multi-model coding when paired with [[cursor-agent]] for terminal and CI workflows.
 
 ## Blurb
 
@@ -30,7 +30,7 @@ params:
 
 Cursor forks the VS Code experience and layers codebase indexing, model picker, rules, and `.cursor/skills/` on top. You can dial autonomy from Tab suggestions through targeted edits to full agent runs in the editor or via [[cursor-agent]] in the shell.
 
-Choose Cursor when you want a single vendor for GUI + CLI agents, bring-your-own-model flexibility within their catalog, and VS Code–compatible extensions without juggling separate CLIs per provider. It is an **editor platform** under [[IDE]], the agent runtime in the terminal is [[cursor-agent]] under [[AI Agent]].
+Choose Cursor when you want a single vendor for GUI + CLI agents. You get bring-your-own-model flexibility within their catalog and VS Code-compatible extensions without juggling separate CLIs per provider. It is an **editor platform** under [[IDE]]. The agent runtime in the terminal is [[cursor-agent]] under [[AI Agent]].
 
 ## Details
 

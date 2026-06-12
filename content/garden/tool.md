@@ -1,18 +1,18 @@
 ---
-title: 'Tools'
+title: "Tool"
 date: 2024-03-27
-lastmod: 2026-05-16
+lastmod: 2026-06-12
+draft: false
 
 keywords:
-  - Tools
+  - Tool
 
 params:
   garden:
     kind: category
     category: tool
-
 aliases:
   - /radar/tools/
 ---
 
-A tool is something that helps during the development process. It could be something like an IDE, or a provisioner.
+**Tool** is the garden quadrant for **products you operate during delivery**: editors, CI runners, scanners, observability platforms, and agent tools. These are systems you run or subscribe to, not repo dependencies (**[[Code]]**), runtime estates (**[[Platform]]**), or work patterns (**[[Technique]]**).

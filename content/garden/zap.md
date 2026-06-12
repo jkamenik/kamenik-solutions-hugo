@@ -20,7 +20,7 @@ params:
       - library
 ---
 
-[Zap](https://github.com/uber-go/zap) (Uber) is a structured, leveled logging library for [[GoLang]]; not to be confused with the [[Zed Attack Proxy (Zap)]] security scanner. We rate it **trial** for new Go services: it remains a high-performance default when you want JSON logs and explicit fields, though Go 1.21+ `log/slog` in the standard library is now the first choice to evaluate before adding a third-party logger.
+[Zap](https://github.com/uber-go/zap) (Uber) is a structured, leveled logging library for [[GoLang]]; not to be confused with the [[Zed Attack Proxy (Zap)]] security scanner. We rate it **trial** for new Go services: it remains a high-performance default when you want JSON logs and explicit fields. Go 1.21+ `log/slog` in the standard library is now the first choice to evaluate before adding a third-party logger.
 
 ## Blurb
 

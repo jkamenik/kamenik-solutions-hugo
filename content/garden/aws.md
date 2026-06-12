@@ -19,7 +19,7 @@ aliases:
   - /radar/platforms/aws
 ---
 
-[Amazon Web Services](https://aws.amazon.com/) was the first hyperscale **[[Cloud]]** and still has the broadest catalog, but we rate it **hold** for new work: insecure-by-default patterns, opaque “managed” shared-responsibility gaps, and a sprawl of services that encourage operational debt. Prefer **[[Google Cloud Platform]]** (adopt as multi-cloud spearhead) or **[[Azure]]** (assess, with eyes open) when a comparable capability exists; use **[[Hybrid Cloud]]** to place each workload on the best cloud, not lift-and-shift clones.
+[Amazon Web Services](https://aws.amazon.com/) was the first hyperscale **[[Cloud]]** and still has the broadest catalog. We rate it **hold** for new work: insecure-by-default patterns, opaque “managed” shared-responsibility gaps, and a sprawl of services that encourage operational debt. Prefer **[[Google Cloud Platform]]** (adopt as multi-cloud spearhead) or **[[Azure]]** (assess, with eyes open) when a comparable capability exists. Use **[[Hybrid Cloud]]** to place each workload on the best cloud, not lift-and-shift clones.
 
 ## Blurb
 

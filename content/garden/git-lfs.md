@@ -1,7 +1,7 @@
 ---
 title: "git lfs"
 date: 2023-07-23
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -17,7 +17,7 @@ aliases:
   - /radar/tools/git-lfs
 ---
 
-[Git LFS](https://git-lfs.com/) is an open-source **[[git]]** extension that stores large blobs (binaries, media, datasets) outside the object database and keeps lightweight pointer files in history. We **adopt** it whenever checked-in assets would bloat clones or make `git log` unusable—typical on **[[GitHub]]** or **[[GitLab]]** repos with images, models, or build artifacts that must stay versioned.
+[Git LFS](https://git-lfs.com/) is an open-source **[[git]]** extension that stores large blobs (binaries, media, datasets) outside the object database and keeps lightweight pointer files in history. We **adopt** it whenever checked-in assets would bloat clones or make `git log` unusable, typical on **[[GitHub]]** or **[[GitLab]]** repos with images, models, or build artifacts that must stay versioned.
 
 ## Blurb
 
@@ -29,7 +29,7 @@ aliases:
 
 **What LFS does:** On `commit`, matching paths are uploaded to LFS storage and replaced in the tree with small pointer files. On `checkout`, hooks swap pointers back to real files. Server-side, LFS stores file contents separately from the Git packfiles.
 
-**When to use:** repos with PSDs, videos, ML weights, firmware images, or other binaries you need in VCS—not in object storage alone.
+**When to use:** repos with PSDs, videos, ML weights, firmware images, or other binaries you need in VCS, not in object storage alone.
 
 **When to skip:** generated artifacts that should never be committed; assets better served from a registry or CDN; repos where `git lfs` is not enabled on the host (fix hosting first).
 

@@ -1,7 +1,7 @@
 ---
 title: "A Model of Communication"
 date: 2024-10-01
-lastmod: 2026-05-19
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -19,7 +19,7 @@ aliases:
   - /radar/techniques/a-model-of-communication
 ---
 
-[A Model of Communication](https://campus-adr.net/ODRModule/a_model_of_communication.html) is a framework for matching communication medium to message so noise in the channel does not swamp intent. We **assess** it under **[[Specification]]** as a reference model for when async, sync, rich, or lean channels fit—not as a product to deploy.
+[A Model of Communication](https://campus-adr.net/ODRModule/a_model_of_communication.html) is a framework for matching communication medium to message so noise in the channel does not swamp intent. We **assess** it under **[[Specification]]** as a reference model for when async, sync, rich, or lean channels fit, not as a product to deploy.
 
 ## Blurb
 

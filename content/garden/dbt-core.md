@@ -73,14 +73,14 @@ The **project** is the unit of work. It **must** include `dbt_project.yml` (mode
 
 ### CLI reference (common)
 
-- `build` — run DAG in order (models, tests, seeds, snapshots as configured)
-- `run` — execute models only
-- `test` — run tests (usually after `run`)
-- `compile` — render SQL without executing
-- `deps` — install package dependencies
-- `debug` — connection and profile diagnostics
-- `freshness` — source freshness checks
-- `snapshot` / `seed` — run those node types
+- `build`: run DAG in order (models, tests, seeds, snapshots as configured)
+- `run`: execute models only
+- `test`: run tests (usually after `run`)
+- `compile`: render SQL without executing
+- `deps`: install package dependencies
+- `debug`: connection and profile diagnostics
+- `freshness`: source freshness checks
+- `snapshot` / `seed`: run those node types
 
 ### Incremental models on existing tables
 

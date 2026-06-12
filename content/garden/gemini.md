@@ -22,7 +22,7 @@ params:
       - ai-agent
 ---
 
-[Gemini CLI](https://developers.google.com/gemini-code-assist/docs/gemini-cli) is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models. We rate it **trial** under [[AI Agent]]: a solid choice on Google accounts or Gemini API when you want Google's stack and [[Agent Skills Framework]] portability; we usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and [[Claude Code]] / [[Codex]] for other vendor stacks.
+[Gemini CLI](https://developers.google.com/gemini-code-assist/docs/gemini-cli) is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models. We rate it **trial** under [[AI Agent]]: a solid choice on Google accounts or Gemini API when you want Google's stack and [[Agent Skills Framework]] portability. We usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and [[Claude Code]] / [[Codex]] for other vendor stacks.
 
 ## Blurb
 

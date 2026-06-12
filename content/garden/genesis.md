@@ -22,7 +22,7 @@ aliases:
   - /radar/tools/genesis
 ---
 
-[Genesis](https://github.com/xeeva/Genesis) is a **[[Claude Code]]** meta-project: you run Genesis inside Claude, describe a new app (stack + name), and it scaffolds a sibling repo with `CLAUDE.md`, `.claude/agents/`, `.claude/skills/`, hooks, `.mcp.json`, memory seeds, and starter code. We rate it **assess**: worth a pilot when bootstrapping greenfield Claude-native repos; this vault already hand-rolls the same **[[Agent Skills Framework]]** patterns.
+[Genesis](https://github.com/xeeva/Genesis) is a **[[Claude Code]]** meta-project: you run Genesis inside Claude, describe a new app (stack + name), and it scaffolds a sibling repo. The scaffold includes `CLAUDE.md`, `.claude/agents/`, `.claude/skills/`, hooks, `.mcp.json`, memory seeds, and starter code. We rate it **assess**: worth a pilot when bootstrapping greenfield Claude-native repos; this vault already hand-rolls the same **[[Agent Skills Framework]]** patterns.
 
 ## Blurb
 

@@ -17,7 +17,7 @@ params:
       - ai-agent
 ---
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's agentic coding assistant (terminal CLI, VS Code extension, and desktop surfaces) that reads your repo, edits files, runs commands, and follows project rules. We rate it **trial** under [[AI Agent]]: a strong bounded coding agent and the best fit when you live in the Anthropic stack and [[Agent Skills Framework]]; for day-to-day interactive work we usually reach for [[Cursor]] and the [[cursor-agent]] CLI instead (editor + agent in one place).
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's agentic coding assistant (terminal CLI, VS Code extension, and desktop surfaces) that reads your repo, edits files, runs commands, and follows project rules. We rate it **trial** under [[AI Agent]]: a strong bounded coding agent and the best fit when you live in the Anthropic stack and [[Agent Skills Framework]]. For day-to-day interactive work we usually reach for [[Cursor]] and the [[cursor-agent]] CLI instead (editor + agent in one place).
 
 ## Blurb
 

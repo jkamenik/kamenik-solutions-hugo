@@ -20,6 +20,8 @@ params:
     movement: "New"
     subcategories:
       - ai-agent
+aliases:
+  - /garden/openai
 ---
 
 [Codex](https://developers.openai.com/codex/cli) is OpenAI's agentic coding agent (terminal CLI (Rust), IDE integrations, and cloud tasks) built to read repos, edit files, run commands, and use MCP tools under approval policies. We rate it **trial**: credible alternative to [[Claude Code]] when you are on ChatGPT Plus/Pro/Business plans and want OpenAI models; [[Claude Code]] is also **trial** here (we usually default to [[Cursor]] + [[cursor-agent]] for daily IDE work).

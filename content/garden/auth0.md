@@ -1,7 +1,7 @@
 ---
 title: "Auth0"
 date: 2024-10-01
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -31,9 +31,9 @@ aliases:
 
 **When to assess:** greenfield SaaS needing orgs/tenants, social and enterprise connections (SAML/OIDC), machine-to-machine APIs, and customizable login UX without building auth from scratch.
 
-**When to look elsewhere:** single-tenant apps with simple needs (framework auth or cloud IdP may suffice); strict data residency or air-gap (self-hosted **Keycloak**-class options); deep B2B2B product-led onboarding layers (compare **[[FrontEgg]]** and similar “user management” platforms).
+**When to look elsewhere:** single-tenant apps with simple needs (framework auth or cloud IdP may suffice). Consider strict data residency or air-gap (self-hosted **Keycloak**-class options). Compare **[[FrontEgg]]** and similar platforms for deep B2B2B product-led onboarding layers.
 
-**Ops & security:** treat Auth0 as critical infrastructure; enable MFA for admins, lock down Management API tokens, use **[[DevSecOps]]** review on Rules/Actions code, and pair workforce access patterns with **[[Access on Demand]]** where production elevation matters. **[[Boundary (Hashicorp)]]** and other tools can consume OIDC from Auth0 for human access to infra.
+**Ops & security:** treat Auth0 as critical infrastructure. Enable MFA for admins and lock down Management API tokens. Use **[[DevSecOps]]** review on Rules/Actions code. Pair workforce access patterns with **[[Access on Demand]]** where production elevation matters. **[[Boundary (Hashicorp)]]** and other tools can consume OIDC from Auth0 for human access to infra.
 
 ## Details
 

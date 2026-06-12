@@ -28,7 +28,7 @@ params:
 
 ## Summary
 
-**What it is:** an open spec (not a single product). The IDE or host attaches to a container built from your repo's `.devcontainer/devcontainer.json` (and Dockerfile or prebuilt image). Born in VS Code; **[[Cursor]]** and other VS Code–compatible editors support the same flow.
+**What it is:** an open spec (not a single product). The IDE or host attaches to a container built from your repo's `.devcontainer/devcontainer.json` (and Dockerfile or prebuilt image). Born in VS Code; **[[Cursor]]** and other VS Code-compatible editors support the same flow.
 
 **Why adopt:**
 
@@ -41,8 +41,8 @@ params:
 
 **Repo artifacts:**
 
-- `.devcontainer/devcontainer.json` — features, mounts, ports, post-create commands
-- `Dockerfile` or `image:` — how the environment is built
+- `.devcontainer/devcontainer.json`: features, mounts, ports, post-create commands
+- `Dockerfile` or `image:`: how the environment is built
 - Optional **dev container features** (composable apt/npm layers)
 
 **Local runtime:** needs a container engine. Prefer **[[Rancher Desktop]]** (**assess**) or Podman; **[[Docker]]** Desktop is **hold** for licensing but still common. See **[[Containerization]]** for the wider OCI stance.

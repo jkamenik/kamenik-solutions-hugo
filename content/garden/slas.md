@@ -30,7 +30,7 @@ aliases:
 
 ## Blurb
 
-> A service-level agreement (SLA) defines the level of service expected by a customer from a supplier, laying out the metrics by which that service is measured and the remedies or penalties, if any, should the agreed-on service levels not be achieved.
+> A service-level agreement (SLA) defines the level of service expected by a customer from a supplier. It lays out the metrics by which that service is measured and the remedies or penalties, if any, should the agreed-on service levels not be achieved.
 
 ## Summary
 

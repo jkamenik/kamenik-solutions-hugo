@@ -1,7 +1,7 @@
 ---
 title: "Jenkins"
 date: 2024-04-06
-lastmod: 2026-05-18
+lastmod: 2026-06-12
 draft: false
 
 keywords:
@@ -24,6 +24,6 @@ Jenkins is the OSS version of Hudson and Hudson was originally designed to build
 
 If you must use Jenkins then you MUST treat it as a Pet / Snowflake and manually manage it. I cannot tell you the number of Jenkins instances that either die on reboot, die on upgrade, or fail in a disaster recovery (DR) situation. By the time the issue is identified it is often easier to rebuild the entire pipeline using an appropriate tool than trying to make Jenkins work again.
 
-Additionally, absolutely DO NOT use the internal sensitive information store. First, it isn't actually secure, and is easily reversed. Second, the information there cannot be properly managed, tokens cannot be rotated, etc... Finally, the ID of the sensitive info is tied to machine ID. So if the machine fails and you need to restore to a different machine then none of the ID will match and all the pipelines will have to be rebuilt by hand even if the pipeline was defined by [[Declarative IaC]].
+Additionally, absolutely DO NOT use the internal sensitive information store. First, it isn't actually secure, and is easily reversed. Second, the information there cannot be properly managed, tokens cannot be rotated, etc... Finally, the ID of the sensitive info is tied to machine ID. If the machine fails and you need to restore to a different machine then none of the ID will match. All the pipelines will have to be rebuilt by hand even if the pipeline was defined by [[Declarative IaC]].
 
 Instead, consider using dedicated secret management tools such as [[HashiCorp Vault]], [[AWS]] Secrets Manager, or [[Azure]] Key Vault. These tools provide robust security features, including encryption, access control, and automated secret rotation, which are essential for managing sensitive information in CI/CD pipelines.

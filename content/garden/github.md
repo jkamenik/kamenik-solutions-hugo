@@ -17,7 +17,7 @@ aliases:
   - /radar/platforms/github
 ---
 
-[GitHub](https://github.com/) is the default **[[Platform]]** for hosting **[[git]]** repos, collaboration, and the surrounding delivery toolchain. We **adopt** it as org-standard forge unless a customer or compliance boundary requires **[[GitLab]]**—then mirror the same practices (**[[Pull Request]]**, protected `main`, **[[GitHub Actions]]** or equivalent CI, **[[GitOps]]** from the default branch).
+[GitHub](https://github.com/) is the default **[[Platform]]** for hosting **[[git]]** repos, collaboration, and the surrounding delivery toolchain. We **adopt** it as org-standard forge unless a customer or compliance boundary requires **[[GitLab]]**, then mirror the same practices (**[[Pull Request]]**, protected `main`, **[[GitHub Actions]]** or equivalent CI, **[[GitOps]]** from the default branch).
 
 ## Blurb
 
@@ -25,7 +25,7 @@ aliases:
 
 ## Summary
 
-**What it is:** SaaS (or **GitHub Enterprise**) for Git remotes, issues, discussions, releases, and integrations—plus first-party products (Actions, Packages, Codespaces, Advanced Security) on top of the same repo graph.
+**What it is:** SaaS (or **GitHub Enterprise**) for Git remotes, issues, discussions, releases, and integrations, plus first-party products (Actions, Packages, Codespaces, Advanced Security) on top of the same repo graph.
 
 **Why adopt:** largest ecosystem (marketplace actions, OIDC to cloud, Dependabot, branch protection APIs); default for OSS and most vendors; **[[GitHub Actions]]** and **[[Policy as Code]]** / scanner apps assume GitHub as the control plane.
 
@@ -43,7 +43,7 @@ aliases:
 | Review & merge | **[[Pull Request]]**, required reviewers, CODEOWNERS |
 | CI/CD | **[[GitHub Actions]]** (`.github/workflows/`) |
 | Large files | **[[git lfs]]** (hosting quotas apply) |
-| Delivery pattern | **[[GitOps]]**—repo as truth; Actions build, cluster tools sync |
+| Delivery pattern | **[[GitOps]]**, repo as truth; Actions build, cluster tools sync |
 | Security | Dependabot, secret scanning, branch protection; pair with **[[Shift Left]]** / **[[DevSecOps]]** checks |
 
 **Org practices we expect:**

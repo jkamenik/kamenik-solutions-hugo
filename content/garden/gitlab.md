@@ -21,7 +21,7 @@ aliases:
 
 ## Blurb
 
-> Your intelligent orchestration platform for DevSecOps — from planning to source code management to CI/CD, everything you need to build and ship software faster in one platform.
+> Your intelligent orchestration platform for DevSecOps: from planning to source code management to CI/CD, everything you need to build and ship software faster in one platform.
 
 ## Summary
 
@@ -52,7 +52,7 @@ aliases:
 - Mirror GitHub norms: no direct pushes to `main`; required pipeline success; CODEOWNERS / approval rules
 - Prefer CI/CD variables and OIDC/job tokens over long-lived deploy keys where available
 - Use merge request templates and security scan results in the MR, not email-only review
-- Keep **[[git]]** workflows portable—branch naming, conventional commits, and **[[GitOps]]** repos work the same; only the forge and CI YAML differ
+- Keep **[[git]]** workflows portable, branch naming, conventional commits, and **[[GitOps]]** repos work the same; only the forge and CI YAML differ
 
 **GitLab vs GitHub (quick map):**
 
