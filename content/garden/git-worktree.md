@@ -1,7 +1,7 @@
 ---
 title: "Git Worktree"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -52,22 +52,6 @@ Git worktrees let one **[[git]]** repository hold several checked-out branches a
 
 **Rules of thumb:** One branch per worktree at a time (Git blocks duplicate checkouts). Run `add` from the main repo; put sibling paths outside the main tree (`../feature-x`) to avoid nested folders. Remove linked trees when done so `.git/worktrees` stays tidy.
 
-## Personal Experience
-
-The reason this is a trial vs adopt is because it works different than normal `git` clone. IDEs can get confused, and they don't always play nice with [[Dev Container|devcontainers]], so your mileage may vary.
-
-Our main usage is when we have to work on multiple branches at the same time (for example: `main`, `staging`, `prod`). In this case we structure things in a very specific way:
-
-1. Create a directory to contain the worktrees
-    1. `mkdir <repo name>`
-    2. `cd <repo name>`
-2. Clone the main worktree
-    1. `git clone <repo url> main`
-3. Create all other worktrees as siblings
-    1. `cd main`
-    2. `git worktree add ../staging staging`
-    3. `git worktree add ../prod prod`
-4. Use the correct directory / worktree for your work
 
 ## Details
 

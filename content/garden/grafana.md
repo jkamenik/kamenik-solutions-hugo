@@ -1,7 +1,7 @@
 ---
 title: "Grafana"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** Primary need is governed warehouse BI with semantic layers and self-serve SQL for business users. Prefer **[[Metabase]]**, **[[Apache Superset]]**, or **[[Redash]]** for analyst-centric SQL dashboards. Pair Grafana with those tools rather than stretching it into full BI.
 
 **Key features:** Panel plugins and templated variables, unified alerting, role-based access, correlations across signals, optional Grafana Cloud or enterprise extensions.
+
 
 ## Details
 

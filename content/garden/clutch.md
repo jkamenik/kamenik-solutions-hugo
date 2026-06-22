@@ -1,7 +1,7 @@
 ---
 title: "Clutch"
 date: 2026-05-27
-lastmod: 2026-05-27
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** net-new deployments; teams expecting upstream fixes, security patches, or community support. Fork only if you can own long-term maintenance.
 
 **Upstream:** [github.com/lyft/clutch](https://github.com/lyft/clutch) (archived, read-only).
+
 
 ## Details
 

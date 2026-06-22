@@ -1,7 +1,7 @@
 ---
 title: "usql"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** deep admin features tied to one vendor (e.g. `\copy` parity gaps); GUI-first analysts; teams standardized on a single cloud console.
 
 **Covers:** relational engines (Postgres, MySQL, SQL Server, SQLite, Oracle) plus Cassandra, ClickHouse, MongoDB, Redis, and more (see upstream database support table).
+
 
 ## Details
 

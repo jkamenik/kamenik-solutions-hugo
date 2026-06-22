@@ -1,7 +1,7 @@
 ---
 title: "Ansible"
 date: 2024-10-01
-lastmod: 2026-06-12
+lastmod: 2026-06-18
 draft: false
 
 keywords:
@@ -25,7 +25,9 @@ params:
 
 ## Summary
 
-**When to use:** bootstrap or repair VMs, brownfield servers, lab machines, or one-time migrations where you cannot yet replace pets with cattle. **When to avoid:** day-two loop for production fleets; prefer golden AMIs/images, **[[Terraform]]** / cloud APIs for first touch, **[[Kubernetes]]** / **[[Dev Container]]** for runtime shape, and git-reconciled desired state.
+**When to use:** bootstrap or repair VMs, brownfield servers, lab machines, or one-time migrations where you cannot yet replace pets with cattle.
+
+**When to avoid:** day-two loop for production fleets. Prefer golden AMIs/images, **[[Terraform]]** / cloud APIs for first touch, **[[Kubernetes]]** / **[[Dev Container]]** for runtime shape, and git-reconciled desired state.
 
 Compared to **[[Salt Stack]]** (hold) and legacy **[[Capistrano]]** (hold), Ansible wins on simplicity: no agent daemon, inventory + playbooks in git, dry-run via `ansible-playbook --check`. Controller needs SSH access (keys, ideally passwordless `sudo` on targets).
 

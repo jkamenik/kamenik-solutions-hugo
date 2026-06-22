@@ -1,7 +1,7 @@
 ---
 title: "gbrain"
 date: 2026-05-06
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -68,6 +68,8 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 
 ## Timeline
 
+- **2026-06-22** | Kai — Re-synced to Hugo (Garden Notes vault-only)
+- **2026-06-12** | Kai — Re-synced to Hugo (Garden Notes vault-only)
 - **2026-06-12** | Kai — Re-synced to Hugo (Garden Notes vault-only)
 - **2026-06-12** | Kai — Proofread fixes: dash normalization (SOUL)
 - **YYYY-MM-DD** | Author , What changed in this document.

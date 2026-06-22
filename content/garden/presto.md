@@ -1,7 +1,7 @@
 ---
 title: "Presto"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -30,6 +30,7 @@ params:
 **When to skip:** Greenfield federated SQL. Start with **[[Trino]]** or warehouse-native engines (**[[BigQuery]]**, **[[Snowflake]]**).
 
 **Key features:** Connector plugin model, interactive queries, integration with **[[Apache Superset]]** and **[[Metabase]]**.
+
 
 ## Details
 

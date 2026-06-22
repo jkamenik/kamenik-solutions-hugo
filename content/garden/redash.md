@@ -1,7 +1,7 @@
 ---
 title: "Redash"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** metrics already live in Grafana with datasources wired; need governed semantic layers or ML features; SaaS-only BI mandate.
 
 **Key features:** schema browser, query snippets, visualization types, alerts on query results, API access.
+
 
 ## Details
 

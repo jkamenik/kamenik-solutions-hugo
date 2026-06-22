@@ -1,7 +1,7 @@
 ---
 title: "Semgrep"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **Open vs commercial:** Community Edition (CE) CLI covers single-file and single-function analysis. Pro Engine and the AppSec Platform add cross-function and cross-file taint, AI triage, autofix PRs, and supply-chain reachability. Semgrep tightened CE limits in late 2024, which spurred the **[[OpenGrep]]** fork.
 
 **Pairs with:** **[[SARIF]]** output for unified dashboards; **[[GitHub Actions]]** or any CI; **[[Shift Left]]** required checks before merge.
+
 
 ## Details
 

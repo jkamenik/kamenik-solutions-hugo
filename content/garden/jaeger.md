@@ -1,7 +1,7 @@
 ---
 title: "Jaeger"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Grafana-all-in-one stack already standardized on Tempo. SaaS trace analytics (**[[Honeycomb]]**, **[[Datadog]]**).
 
 **Key features:** Service dependency graphs, adaptive sampling, OTLP ingest, operator deployment on **[[Kubernetes]]**.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Playwright"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,9 +35,6 @@ aliases:
 
 **Key capabilities:** locators, network mocking, auth state reuse, visual comparisons, component testing (experimental), Docker images for CI.
 
-## Personal Experience
-
-We also use Playwright for [[AI Agent]] automation when something more than `curl` is needed.  This is especially useful when handling automation on sites that are javascript rendered, which more and more are.
 
 ## Details
 

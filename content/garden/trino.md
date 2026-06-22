@@ -1,7 +1,7 @@
 ---
 title: "Trino"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -30,6 +30,7 @@ params:
 **When to skip:** Simple single-warehouse BI. Ops team cannot run another stateful cluster.
 
 **Key features:** Fault-tolerant execution, dynamic filtering, role-based access via connectors, Kubernetes Helm charts.
+
 
 ## Details
 

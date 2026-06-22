@@ -1,7 +1,7 @@
 ---
 title: "Prometheus"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Long-term log archival (use **[[Loki]]** or **[[Elasticsearch]]**). Vendor SaaS mandate (**[[Datadog]]**).
 
 **Key features:** Service discovery, recording rules, Alertmanager routing, remote write/read integrations.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Splunk"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Startup-scale cost and ops overhead. Prefer OTel collectors feeding **[[OpenTelemetry]]**-friendly backends.
 
 **Key features:** SPL, apps marketplace, HEC ingest, role-based knowledge objects, ITSI and ES modules (commercial).
+
 
 ## Details
 

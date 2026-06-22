@@ -1,7 +1,7 @@
 ---
 title: "Kuberhealthy"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** external SaaS synthetics already cover user journeys; tiny clusters where CronJob scripts are enough; rewrite churn on `main` is a concern (upstream notes active rewrite).
 
 **Built-in checks:** daemonset deployment, DNS, storage, and other registry entries documented upstream; write checks in any language as container images.
+
 
 ## Details
 

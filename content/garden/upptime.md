@@ -1,7 +1,7 @@
 ---
 title: "Upptime"
 date: 2023-07-23
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Private endpoints, complex auth flows, multi-region SLO tracking, or on-call paging. Prefer **[[Grafana]]** Cloud, Prometheus blackbox exporters, or vendor synthetics for production SRE workflows.
 
 **Key features:** Scheduled pings, response-time graphs in the repo, automatic issues on downtime, and GitHub Pages status UI.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Steampipe"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -30,6 +30,7 @@ params:
 **When to skip:** Need persistent graph API and packaged posture product (**[[CloudGraph]]**, **[[Kubescape]]**). No SQL-friendly operators.
 
 **Key features:** `steampipe query`, mods pack, dashboard snapshots, CI-friendly JSON output.
+
 
 ## Details
 

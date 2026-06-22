@@ -1,7 +1,7 @@
 ---
 title: "Integration Testing"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -30,6 +30,7 @@ params:
 **When to skip:** Pure logic with no IO (keep **[[Unit Testing]]**). Full production E2E suites that belong in staged environments only.
 
 **Practices:** Prefer **[[TestContainer]]** or ephemeral dependencies over shared staging DBs; keep tests deterministic; tag slow suites separately in CI.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "BigQuery"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** Primary OLTP (use **[[Postgres]]**). Multi-cloud strategy that forbids GCP-only warehouses. Small datasets where Postgres replicas plus **[[Grafana]]** or **[[Metabase]]** suffice.
 
 **Key features:** Serverless scaling, nested and repeated fields, sharing and authorized views, scheduled queries, cost controls via quotas and reservations.
+
 
 ## Details
 

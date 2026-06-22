@@ -1,7 +1,7 @@
 ---
 title: "Bun"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -27,11 +27,17 @@ aliases:
 
 **What it is:** Bun ships one executable built with Zig on JavaScriptCore. It implements many Node and Web APIs natively. TypeScript and JSX run without extra config. Built-in SQLite, Redis, and PostgreSQL clients reduce dependency sprawl for common backends.
 
-**When to use:** New services where cold start and install speed matter. Scripts and CLIs that benefit from fast launch. Teams tired of juggling separate bundler, test, and package-manager tools. Drop-in trials on existing **[[Node.js]]** repos via `bun install` or `bun test`.
+**When to use:**
+
+- New services where cold start and install speed matter
+- Scripts and CLIs that benefit from fast launch
+- Teams tired of juggling separate bundler, test, and package-manager tools
+- Drop-in trials on existing **[[Node.js]]** repos via `bun install` or `bun test`
 
 **When to skip:** Production stacks that depend on niche native addons untested on Bun. Org policy that mandates Node LTS only. Workloads where **[[Node.js]]** maturity and OpenJS governance outweigh raw speed.
 
 **Incremental path:** Keep Node in CI while developers use Bun locally. Validate native modules and edge-case APIs before cutting over the runtime in production.
+
 
 ## Details
 

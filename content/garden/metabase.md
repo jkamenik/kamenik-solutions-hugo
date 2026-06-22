@@ -1,7 +1,7 @@
 ---
 title: "Metabase"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -36,6 +36,7 @@ aliases:
 **Hold (OSS):** Existing self-hosted Metabase is acceptable. New open source rollouts should default to Grafana unless requirements are explicitly warehouse-centric BI that Grafana cannot cover.
 
 **Key features:** No-code questions, drill-through, collections and permissions, optional AI assistant (Metabot), Docker or JAR deploy in minutes.
+
 
 ## Details
 

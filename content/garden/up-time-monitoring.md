@@ -1,7 +1,7 @@
 ---
 title: "Up-time Monitoring"
 date: 2024-10-01
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ Up-time monitoring measures whether a system is reachable and behaving acceptabl
 **When to skip:** Batch-only internal jobs with no user-facing window (monitor job success instead).
 
 **Practices:** Define SLOs on user journeys; avoid host-only ping alerts in cloud-native estates; page on burn rate, not single blips.
+
 
 ## Details
 

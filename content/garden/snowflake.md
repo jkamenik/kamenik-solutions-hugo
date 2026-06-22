@@ -1,7 +1,7 @@
 ---
 title: "Snowflake"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -30,6 +30,7 @@ params:
 **When to skip:** GCP-only strategy (**[[BigQuery]]**). Small datasets on **[[Postgres]]** replicas.
 
 **Key features:** Time travel, clones, streams/tasks, marketplace listings, native **[[Apache Superset]]** / **[[Metabase]]** connectors.
+
 
 ## Details
 

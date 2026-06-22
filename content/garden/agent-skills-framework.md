@@ -1,7 +1,7 @@
 ---
 title: "Agent Skills Framework"
 date: 2026-04-20
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -41,6 +41,7 @@ The [Agent Skills](https://agentskills.io/specification) format packages repeata
 **Layout:** `skills/<skill-name>/SKILL.md` plus optional `scripts/`, `references/`, `assets/`. The `description` field is the primary trigger signal. Keep the body under ~500 lines. Push detail into reference files.
 
 **In this vault:** `agent-skills/skills/` mirrors the pattern. [[gbrain]] two-layer pages and identity files in `AGENTS.md` / `CLAUDE.md` sit alongside skills.
+
 
 ## Details
 

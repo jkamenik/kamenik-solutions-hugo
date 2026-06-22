@@ -1,7 +1,7 @@
 ---
 title: "PM2"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -27,11 +27,16 @@ aliases:
 
 **What it is:** PM2 daemonizes Node.js and Bun apps, restarts them on crash, and exposes CLI and ecosystem-file config for multiple apps and environments. Cluster mode forks workers across CPU cores and load-balances HTTP, TCP, and UDP traffic. `pm2-runtime` is the container-friendly entrypoint that runs in the foreground.
 
-**When to use:** One or a few Node services on a Linux VM or VPS. You need zero-downtime reloads, log aggregation under `~/.pm2/logs`, and `pm2 startup` integration with systemd or init. You want a simple deploy path before adopting full **[[DevOps]]** orchestration.
+**When to use:**
+
+- One or a few Node services on a Linux VM or VPS
+- Zero-downtime reloads, log aggregation under `~/.pm2/logs`, and `pm2 startup` integration with systemd or init
+- A simple deploy path before adopting full **[[DevOps]]** orchestration
 
 **When to skip:** Workloads already packaged in **[[Docker]]** with a proper init or orchestrated by **[[Kubernetes]]**. Teams standardized on systemd unit files only. Polyglot fleets where a Node-specific manager adds little value.
 
 **Ecosystem file:** `ecosystem.config.js` (or JSON/YAML) declares app names, scripts, env vars, cluster settings, and deploy targets in one place.
+
 
 ## Details
 

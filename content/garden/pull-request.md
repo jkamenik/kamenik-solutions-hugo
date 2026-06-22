@@ -1,7 +1,7 @@
 ---
 title: "Pull Request"
 date: 2026-05-05
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -48,6 +48,7 @@ Even solo developers should open a PR against `main`. Automated gates catch issu
 **Pairs with:** protected default branch; required status checks; **[[Shift Left]]** (find defects before production); **[[DevSecOps]]** (security findings are PR backlog, not a separate audit).
 
 **Not the same as:** **[[Code Review]]** (the human practice); **[[Continuous Integration]]** (the verify-on-merge discipline). The PR is where both meet.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Backstage"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** single [[monorepo]] with no discovery problem; no staff to operate and upgrade the portal; SaaS [[IDP]] (Port, Cortex) fits procurement better.
 
 **catalog-info.yaml:** each service repo carries metadata (owner, lifecycle, links to docs and CI) at repo root or path configured in the catalog importer.
+
 
 ## Details
 

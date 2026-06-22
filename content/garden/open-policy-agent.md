@@ -1,7 +1,7 @@
 ---
 title: "Open Policy Agent"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ params:
 **When to skip:** Trivial one-off checks better served by **[[CEL]]** native validation or linters without Rego ops.
 
 **Key features:** `opa test`, bundle signing, decision logs, WASM compilation for embedded checks.
+
 
 ## Details
 

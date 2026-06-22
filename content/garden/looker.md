@@ -1,7 +1,7 @@
 ---
 title: "Looker"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Multi-cloud OSS BI mandate or small teams without LookML maintainers.
 
 **Key features:** LookML git workflow, row-level access in models, scheduled deliveries, embed and API surfaces.
+
 
 ## Details
 

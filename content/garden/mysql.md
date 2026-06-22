@@ -1,7 +1,7 @@
 ---
 title: "MySQL"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** Greenfield OLTP or new microservices (use **[[Postgres]]**). Warehouse-scale analytics on GCP (**[[BigQuery]]**). Choosing MySQL only because it was the default a decade ago.
 
 **Hold rationale:** **[[Postgres]]** matches or exceeds MySQL on features, extensions, and licensing clarity for new work. Existing MySQL remains supported; plan moves when touch cost is low.
+
 
 ## Details
 

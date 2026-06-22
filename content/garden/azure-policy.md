@@ -1,7 +1,7 @@
 ---
 title: "Azure Policy"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -48,6 +48,7 @@ Evaluation can lag minutes. Pilot Audit before wide Deny, especially when **[[Az
 - Sub-minute deny at the API edge (Policy evaluation can lag)
 
 **Pairs with:** **[[Policy as Code]]** and IaC gates on PRs. Policy for in-subscription and org-wide assignment. **[[DevSecOps]]** for pipeline plus cloud governance.
+
 
 ## Details
 

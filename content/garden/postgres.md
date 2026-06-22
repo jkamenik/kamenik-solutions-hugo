@@ -1,7 +1,7 @@
 ---
 title: "Postgres"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ aliases:
 **When to skip:** Petabyte-scale warehouse analytics where a columnar EDW (**[[BigQuery]]**) is already standard. Document-only workloads with no relational joins (**[[NoSQL]]** patterns). Legacy **[[MySQL]]** apps you are not migrating yet.
 
 **Key features:** MVCC, robust indexing, foreign data wrappers, row-level security, mature backup and HA patterns.
+
 
 ## Details
 

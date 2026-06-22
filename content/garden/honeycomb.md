@@ -1,7 +1,7 @@
 ---
 title: "Honeycomb"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Small teams with simple RED metrics needs. Cost-sensitive estates without event-volume discipline.
 
 **Key features:** BubbleUp diffs, Service Level Objectives, OpenTelemetry ingest, boards (dashboard-like views).
+
 
 ## Details
 

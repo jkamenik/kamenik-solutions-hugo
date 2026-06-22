@@ -1,7 +1,7 @@
 ---
 title: "Loki"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Full-text SIEM requirements (**[[Splunk]]**, **[[Elasticsearch]]**). Teams without label discipline on logs.
 
 **Key features:** LogQL, multi-tenancy, boltdb/TSDB schema evolution, Grafana correlations with metrics and traces.
+
 
 ## Details
 

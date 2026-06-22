@@ -1,7 +1,7 @@
 ---
 title: "Lightdash"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** No dbt discipline in the warehouse. Prefer **[[Redash]]** for ad hoc SQL only.
 
 **Key features:** dbt-native metrics, Git-backed definitions, Slack/email alerts on charts, optional Lightdash Cloud.
+
 
 ## Details
 

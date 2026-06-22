@@ -1,7 +1,7 @@
 ---
 title: "conda"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Standard web services on **[[Python]]** with wheels available on PyPI.
 
 **Key features:** `conda create`, exportable env files, mamba faster solver (community).
+
 
 ## Details
 

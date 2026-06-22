@@ -1,7 +1,7 @@
 ---
 title: "ZoomEye"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -27,11 +27,17 @@ aliases:
 
 **What it is:** Continuous Internet scanner plus search UI, API, and official Python SDK (`ZoomEye-python`). Supports host (`v4`/`v6`) and web search modes, dork-style filters, facets, and exports.
 
-**When to use:** Fill gaps that Western indexes miss in Chinese or Asian IP space. Compare results across engines after M&A or cloud expansion into APAC. Integrate via API or CLI in authorized pipelines. Pair with tools like Nuclei that support ZoomEye as an uncover engine.
+**When to use:**
+
+- Fill gaps that Western indexes miss in Chinese or Asian IP space
+- Compare results across engines after M&A or cloud expansion into APAC
+- Integrate via API or CLI in authorized pipelines
+- Pair with tools like Nuclei that support ZoomEye as an uncover engine
 
 **When to skip:** Teams that have already standardized on one Western index. Investigations where query logging under Chinese jurisdiction is unacceptable OPSEC. Needs already covered entirely by **[[Shodan]]** without APAC-specific gaps. Orgs that forbid third-party recon data.
 
 **API:** freemium web tier with tight daily search limits on free accounts. Paid plans and API keys unlock programmatic search, larger page sizes, and automation.
+
 
 ## Details
 

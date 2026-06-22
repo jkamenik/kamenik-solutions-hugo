@@ -1,7 +1,7 @@
 ---
 title: "AWS Config"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -47,6 +47,7 @@ Prefer **[[Cloud Custodian]]** or **[[Policy as Code]]** when you need one polic
 - Greenfield where **[[AWS]]** is **hold** and another cloud is viable
 
 **Pairs with:** **[[Policy as Code]]** on PRs. Config for post-deploy drift and inventory. **[[DevSecOps]]** to gate merges while Config watches live accounts.
+
 
 ## Details
 

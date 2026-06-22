@@ -1,7 +1,7 @@
 ---
 title: "asdf"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Greenfield laptops where **[[mise]]** performance and UX win evals.
 
 **Key features:** `.tool-versions`, plugin add/update, legacy breadth of plugins.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Nagios"
 date: 2023-07-23
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Any greenfield monitoring project. Plugin sprawl, config drift, and host-centric alerting do not scale cleanly for ephemeral cloud workloads.
 
 **Key features:** Flexible plugins, escalation chains, downtime scheduling, and a large community check library.
+
 
 ## Details
 

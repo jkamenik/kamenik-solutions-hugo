@@ -1,7 +1,7 @@
 ---
 title: "LibreNMS"
 date: 2024-10-01
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Greenfield monitoring where apps and infra share one observability plane. Prefer Prometheus node/snmp exporters plus **[[Grafana]]**, or cloud-native network telemetry when available.
 
 **Key features:** Auto-discovery, alerting rules, API, billing reports, and distributed pollers for large networks.
+
 
 ## Details
 

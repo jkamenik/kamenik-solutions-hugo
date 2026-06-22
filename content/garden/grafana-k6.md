@@ -1,7 +1,7 @@
 ---
 title: "Grafana k6"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ params:
 **When to skip:** Cluster health checks better owned by **[[Kuberhealthy]]** custom resources alone.
 
 **Key features:** Scenarios and executors, browser module, k6 Cloud, Grafana Cloud k6, operator for **[[Kubernetes]]**.
+
 
 ## Details
 

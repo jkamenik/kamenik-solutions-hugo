@@ -1,7 +1,7 @@
 ---
 title: "Censys"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** Purely internal apps with no Internet footprint. Orgs that forbid third-party recon data. Teams that have already standardized on one index and want to avoid duplicate alerts. Needs that require active authenticated testing instead of passive lookup.
 
 **API:** platform and search APIs support automation, collections, and integrations. Pricing is enterprise-oriented compared with hobby-tier **[[Shodan]]** memberships.
+
 
 ## Details
 

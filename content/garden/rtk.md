@@ -1,7 +1,7 @@
 ---
 title: "RTK"
 date: 2026-05-27
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -33,6 +33,7 @@ aliases:
 RTK sits between your agent and the shell. A PreToolUse-style hook rewrites commands like `git status` to `rtk git status` before execution; the model sees a compact summary instead of verbose boilerplate, progress bars, and repeated lines. Upstream reports ~89% average noise reduction across 2,900+ real commands (e.g. `cargo test` ~92%, `git status` ~81%, `find` ~78%).
 
 Use when long agent sessions burn context on test runners, git diffs, linters, and container/k8s CLI output. `rtk init -g` wires [[Claude Code]] and Copilot; `rtk init -g --agent cursor` targets [[Cursor]]. `rtk gain` tracks per-command savings. Built-in agent tools (Read, Grep, Glob in Claude Code) bypass the hook unless you use shell equivalents or explicit `rtk read` / `rtk grep` calls.
+
 
 ## Details
 

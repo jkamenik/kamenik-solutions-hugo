@@ -1,7 +1,7 @@
 ---
 title: "TypeScript"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -36,6 +36,7 @@ aliases:
 **Before you commit:** map transitive **[[npm]]** dependencies, lockfile policy, and audit cadence. TypeScript does not remove supply-chain risk; it often expands it via tooling packages. Benchmark hot paths on **[[Node.js]]** or **[[Bun]]**, not just compile-time ergonomics.
 
 **Output:** always JavaScript. Pick a target (`ES2022`, etc.) and module format (ESM vs CommonJS) to match your **[[Node.js]]** or bundler pipeline.
+
 
 ## Details
 

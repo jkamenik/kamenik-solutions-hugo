@@ -1,7 +1,7 @@
 ---
 title: "Cloud Custodian"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** small single-account shops covered by native Config or Policy; teams already committed to OPA/Rego (**[[Conftest]]**, Gatekeeper) for the same rules; no ops capacity to tune false positives.
 
 **Pairs with:** **[[Terraform]]** provisioning plus Custodian enforcement in live accounts; **[[Shift Left]]** IaC scans on PRs, Custodian on deployed resources.
+
 
 ## Details
 

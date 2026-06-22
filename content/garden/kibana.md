@@ -1,7 +1,7 @@
 ---
 title: "Kibana"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** New stacks without Elastic lock-in. Prefer **[[Grafana]]** plus Prometheus, Loki, or vendor-neutral stores.
 
 **Key features:** Lens visualizations, saved objects, role-based spaces, alerting tied to Elastic indices.
+
 
 ## Details
 

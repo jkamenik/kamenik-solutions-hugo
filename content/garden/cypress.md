@@ -1,7 +1,7 @@
 ---
 title: "Cypress"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** greenfield web E2E (use **[[Playwright]]**); need first-class Firefox/WebKit in one project; multi-tab or multi-origin flows that fight Cypress' in-browser architecture.
 
 **Key capabilities:** automatic waiting, screenshot/video capture, `cy.intercept` network control, component testing for React/Vue/Angular, GitHub Action and **[[GitHub Actions]]** CI recipes.
+
 
 ## Details
 

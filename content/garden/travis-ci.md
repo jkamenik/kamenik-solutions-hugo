@@ -1,7 +1,7 @@
 ---
 title: "Travis CI"
 date: 2026-05-27
-lastmod: 2026-05-27
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** new repositories; need OIDC to cloud deploys, reusable workflows, org-wide templates, or monorepo path filters (**[[GitHub Actions]]** and GitLab CI cover this better).
 
 **Not the same as:** **[[GitHub Actions]]** (native GitHub workflows); **[[Jenkins]]** (self-hosted pet server, **hold**). Travis is hosted SaaS with YAML in-repo.
+
 
 ## Details
 

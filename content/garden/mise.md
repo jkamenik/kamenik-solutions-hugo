@@ -1,7 +1,7 @@
 ---
 title: "mise"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Team already standardized on **[[Dev Container]]** only.
 
 **Key features:** `mise install`, global and local config, CI-friendly, compatible with asdf plugin ecosystem patterns.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "OpenGrep"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -25,7 +25,11 @@ params:
 
 ## Summary
 
-**When to use:** you already run Semgrep rules and want CE-era engine features without a login; you need cross-function taint, restored SARIF fingerprints, or native Windows support in OSS; you prefer a multi-vendor consortium over a single vendor's open-core split.
+**When to use:**
+
+- You already run Semgrep rules and want CE-era engine features without a login
+- You need cross-function taint, restored SARIF fingerprints, or native Windows support in OSS
+- You prefer a multi-vendor consortium over a single vendor's open-core split
 
 **When to skip:** you want managed triage, SCA reachability, secrets validation, or AI autofix (stay on Semgrep AppSec Platform); you need the widest rule registry and vendor support today (**[[Semgrep]]** still leads mindshare).
 
@@ -34,6 +38,7 @@ params:
 **Fork context:** branched from Semgrep v1.100.0 (December 2024). Backers include Aikido, Endor Labs, Jit, Orca Security, and others. Goal is a foundation-governed engine with pro-only CE gaps reopened (cross-function analysis, extended languages, fingerprint metadata).
 
 **Pairs with:** existing Semgrep CI configs (often drop-in); **[[GitHub Actions]]**; **[[Shift Left]]** gates on **[[Pull Request]]**s.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "nvm"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ params:
 **When to skip:** Need fast switching or Windows-first ergonomics (**[[fnm]]**). Multiple runtimes beyond Node.
 
 **Key features:** `.nvmrc`, LTS aliases, npm global packages per Node version.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "go-version"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** pure string equality is enough; you already depend on a larger framework that ships its own semver helper; non-SemVer version schemes (date-based, custom).
 
 **Typical call sites:** Terraform providers, Helm-related tooling, internal release automation written in Go.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Power BI"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Multi-cloud OSS mandate. Engineer-centric SQL BI (**[[Redash]]**, **[[Apache Superset]]**).
 
 **Key features:** DAX semantic models, incremental refresh, row-level security, Microsoft Graph and Teams integration.
+
 
 ## Details
 

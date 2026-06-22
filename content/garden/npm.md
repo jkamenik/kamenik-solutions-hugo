@@ -1,7 +1,7 @@
 ---
 title: "npm"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -29,9 +29,15 @@ aliases:
 
 **When to use (adopt within the stack):** Existing **[[TypeScript]]** or **[[JavaScript]]** repos on **[[Node.js]]**. Publishing reusable modules after dependency review. CI that runs `npm ci` from a committed lockfile with **[[Shift Left]]** audits.
 
-**When to skip:** Greenfield projects that have not yet justified the JS/TS ecosystem. Latency or footprint-sensitive services where even a slim lockfile is too much. Teams on pnpm, Yarn, or **[[Bun]]** install that dropped the npm CLI. Air-gapped flows that require a private registry only.
+**When to skip:**
+
+- Greenfield projects that have not yet justified the JS/TS ecosystem
+- Latency or footprint-sensitive services where even a slim lockfile is too much
+- Teams on pnpm, Yarn, or **[[Bun]]** install that dropped the npm CLI
+- Air-gapped flows that require a private registry only
 
 **Security:** treat the public registry as a supply-chain surface. Run `npm audit`, pin transitive deps, and gate new packages in **[[DevSecOps]]** review. npm solves dependency resolution; it does not remove registry attack risk.
+
 
 ## Details
 

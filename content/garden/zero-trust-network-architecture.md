@@ -1,7 +1,7 @@
 ---
 title: "Zero Trust Network Architecture"
 date: 2024-10-01
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -43,6 +43,7 @@ params:
 **How we apply it:** treat **[[ZTNA]]** as the default remote-access pattern. Pair **[[Access on Demand]]** for production and break-glass paths. Use **[[Tailscale]]** or similar L3 VPN only when an app truly needs network adjacency, not as the org-wide front door.
 
 **Not the same as:** **[[ZTNA]]** (product and broker pattern) or a single vendor SKU. This note is the **reference architecture** under **[[Specification]]**.
+
 
 ## Details
 

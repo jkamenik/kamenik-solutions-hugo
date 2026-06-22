@@ -1,7 +1,7 @@
 ---
 title: "InfluxDB"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Standard Kubernetes app metrics without legacy Influx investment.
 
 **Key features:** Buckets and retention, downsampling, InfluxDB Cloud Serverless, Telegraf plugin ecosystem.
+
 
 ## Details
 

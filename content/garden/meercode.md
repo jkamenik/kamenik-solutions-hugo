@@ -1,7 +1,7 @@
 ---
 title: "Meercode"
 date: 2026-05-27
-lastmod: 2026-05-27
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** any net-new adoption. Use vendor dashboards (**[[GitHub Actions]]** workflow views, **[[GitLab]]** pipeline boards) or a small internal status board instead.
 
 **Status:** Service appears defunct. meercode.io shows a domain parking page. The [meercodeio](https://github.com/meercodeio) GitHub org last updated public repos in early 2021.
+
 
 ## Details
 

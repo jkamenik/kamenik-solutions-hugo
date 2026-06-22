@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Greenfield LGTM stack without Elastic licensing. Small teams avoiding JVM cluster ops.
 
 **Key features:** Index lifecycle management, ingest pipelines, cross-cluster search, Elastic Cloud managed option.
+
 
 ## Details
 

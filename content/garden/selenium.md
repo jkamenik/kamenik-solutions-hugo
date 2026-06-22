@@ -1,7 +1,7 @@
 ---
 title: "Selenium"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,9 +35,6 @@ aliases:
 
 **Key capabilities:** cross-browser WebDriver sessions, Grid scaling, language-agnostic API, wide CI cookbook coverage.
 
-## Personal Experience
-
-Selenium was our long time default for testing web pages.  But it was always a lot of work to set up and maintain.  So when an easier to use alternative [[Playwright]] came along we switched and never looked back.
 
 ## Details
 

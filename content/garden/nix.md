@@ -1,7 +1,7 @@
 ---
 title: "Nix"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -35,6 +35,7 @@ params:
 **When to skip:** Short onboarding windows. Prefer **[[Dev Container]]** or **[[mise]]** for simpler pins.
 
 **Key features:** Binary cache, dev shell hooks, `use flake` in **[[direnv]]**, cross-platform Nix installer.
+
 
 ## Details
 

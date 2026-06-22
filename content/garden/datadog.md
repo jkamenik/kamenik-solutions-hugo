@@ -1,7 +1,7 @@
 ---
 title: "Datadog"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Strict data-sovereignty or multi-cloud neutrality goals. Prefer **[[OpenTelemetry]]** export to self-hosted **[[Grafana]]**.
 
 **Key features:** Unified host and container maps, APM service maps, log patterns, monitors, SLO tracking, marketplace integrations.
+
 
 ## Details
 

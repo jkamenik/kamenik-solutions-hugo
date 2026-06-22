@@ -1,7 +1,7 @@
 ---
 title: "Preset"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Strict data residency that forbids third-party BI SaaS. Self-host **[[Apache Superset]]** or assess **[[Lightdash]]** with **[[dbt-core]]** instead.
 
 **Key features:** Managed Superset, API access, role-based workspaces, changelog parity with upstream Apache releases.
+
 
 ## Details
 

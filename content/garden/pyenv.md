@@ -1,7 +1,7 @@
 ---
 title: "pyenv"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** **[[Dev Container]]** defines Python for the team. Use **[[mise]]** when Node and Terraform share the same repo pins.
 
 **Key features:** `pyenv install`, global/local version files, plugin ecosystem.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "Node.js"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** CPU-bound numeric work on a single thread without worker offload. Stacks that forbid JavaScript on the server entirely. Workloads better served by a compiled runtime when npm breadth is not the deciding factor.
 
 **Runtime model:** JavaScript runs on one main thread per process. Async work delegates to the thread pool and OS. Scale out with cluster mode, **[[PM2]]**, or containers rather than expecting threads inside one process.
+
 
 ## Details
 

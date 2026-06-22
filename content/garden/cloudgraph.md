@@ -1,7 +1,7 @@
 ---
 title: "CloudGraph"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** need continuous agentless SaaS CNAPP with ticketing workflows; org standardized on **[[Kubescape]]** or a vendor CSPM; GraphQL ops overhead is unwanted.
 
 **Key features:** CIS benchmark packs, historical snapshots, validated queries, enhanced AWS billing and CloudWatch fields (per upstream docs).
+
 
 ## Details
 

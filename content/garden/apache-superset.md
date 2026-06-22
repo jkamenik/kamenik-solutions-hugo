@@ -1,7 +1,7 @@
 ---
 title: "Apache Superset"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** Small teams that want the fastest path to shareable SQL dashboards (**[[Redash]]** or **[[Metabase]]**). Primary workload is time-series monitoring and alerting (**[[Grafana]]**). Ops overhead of Redis, metadata DB, and workers is not justified for a handful of charts.
 
 **Key features:** Explore and SQL Lab, semantic layer for dimensions and metrics, async queries, caching layer, OAuth and RBAC, cloud-native [[Helm]] charts.
+
 
 ## Details
 

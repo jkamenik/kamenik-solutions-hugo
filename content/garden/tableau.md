@@ -1,7 +1,7 @@
 ---
 title: "Tableau"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Engineer-first SQL dashboards (**[[Redash]]**). Cloud-native OSS stack (**[[Grafana]]** + warehouse BI).
 
 **Key features:** Visual prep, ask Data, row-level security in Server/Cloud, Salesforce integrations.
+
 
 ## Details
 

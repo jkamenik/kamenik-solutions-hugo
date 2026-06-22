@@ -1,7 +1,7 @@
 ---
 title: "NoSQL"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ NoSQL ("Not Only SQL") names data stores that model and scale outside classic re
 **When to skip:** Most business apps with joins, transactions, and reporting on a stable schema (**[[Postgres]]**). Analytics warehouses (**[[BigQuery]]**) when SQL over huge columnar data is the real need, not document flexibility.
 
 **Key tradeoffs:** Eventual consistency models, operator skill split, and operational sprawl when every service picks a different engine.
+
 
 ## Details
 

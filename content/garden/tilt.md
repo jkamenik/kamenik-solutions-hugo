@@ -1,7 +1,7 @@
 ---
 title: "Tilt"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** single-service apps with plain `docker compose`; team standardized on Skaffold or cloud dev environments only; no Kubernetes in the inner loop.
 
 **Key features:** live update (sync files into running containers), resource grouping, log aggregation in the Tilt UI, extensions ecosystem.
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "rbenv"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Team uses **[[Dev Container]]** or **[[mise]]** for all language pins.
 
 **Key features:** Shim dispatch, `rbenv local/global`, plugin ecosystem.
+
 
 ## Details
 

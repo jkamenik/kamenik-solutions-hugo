@@ -1,7 +1,7 @@
 ---
 title: "fnm"
 date: 2026-06-12
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** Already standardized on **[[mise]]** / **[[asdf]]** for all runtimes.
 
 **Key features:** Multi-platform, `.node-version`, fish/zsh/bash support, `--use-on-cd` hook.
+
 
 ## Details
 

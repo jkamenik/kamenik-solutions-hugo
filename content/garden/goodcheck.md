@@ -1,7 +1,7 @@
 ---
 title: "goodcheck"
 date: 2026-05-27
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -38,6 +38,7 @@ aliases:
 **Still available (frozen):** Ruby gem `goodcheck` 3.1.0 on RubyGems (last release 2021-07-15). Docs at [sider.github.io/goodcheck](https://sider.github.io/goodcheck/). Docker image `sider/goodcheck` appears removed from Docker Hub.
 
 **Alternatives:** Semgrep, custom grep/regex CI steps, **[[Conftest]]** / OPA for policy on IaC (not a drop-in for app-source YAML rules).
+
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: "JavaScript"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -34,6 +34,7 @@ aliases:
 **When to skip:** New application code where **[[TypeScript]]** is viable. Large teams without static types. Backend services where **[[GoLang]]** or another language fits better than the JS toolchain.
 
 **Not the same as:** **[[Node.js]]** or **[[Bun]]** (runtimes), **[[npm]]** (package manager), or **[[JSON]]** (data format).
+
 
 ## Details
 

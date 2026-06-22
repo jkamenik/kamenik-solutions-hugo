@@ -1,7 +1,7 @@
 ---
 title: "npx"
 date: 2026-05-28
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ aliases:
 **When to skip:** Running unpinned remote packages in production or privileged environments. Teams not yet committed to the JS/TS stack. Flows where **[[Bun]]** `bunx` or committed `package.json` scripts are enough.
 
 **Security:** `npx some-tool` can pull and execute code from the registry on demand. Treat that like running untrusted software. Prefer `npm exec --package=foo@1.2.3 -- foo` with a pinned version, or depend on the package in `package.json` and use `npm run`.
+
 
 ## Details
 

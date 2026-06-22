@@ -1,7 +1,7 @@
 ---
 title: "Zabbix"
 date: 2023-07-23
-lastmod: 2026-06-12
+lastmod: 2026-06-22
 draft: false
 
 keywords:
@@ -32,6 +32,7 @@ params:
 **When to skip:** New SaaS or Kubernetes platforms where hosts are fungible and service-level signals matter more than per-host ping checks. Prefer **[[Grafana]]** with Prometheus, Loki, or cloud APIs, instrumented via **[[OpenTelemetry]]**.
 
 **Key features:** Triggers and escalations, discovery, maps, SLA reporting, distributed proxies, and a large template library.
+
 
 ## Details
 
