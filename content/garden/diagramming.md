@@ -1,18 +1,16 @@
 ---
-title: "Diagramming"
-date: 2026-01-08
-lastmod: 2026-06-12
+title: Diagramming
+date: '2026-01-08'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Diagramming
-  - diagrams
-  - diagram tools
-
+- Diagramming
+- diagrams
+- diagram tools
 params:
   aliases:
-    - diagrams
-    - diagram tools
+  - diagrams
+  - diagram tools
   garden:
     kind: subcategory
     parent_category: tool

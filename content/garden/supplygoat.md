@@ -1,25 +1,23 @@
 ---
-title: "SupplyGoat"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: SupplyGoat
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - SupplyGoat
-
+- SupplyGoat
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[SupplyGoat](https://github.com/bridgecrewio/supplygoat) is Bridgecrew's "Vulnerable by Design" supply chain training repository. It bundles intentionally weak dependencies, container images, and deploy artifacts across several ecosystems. We **trial** it to calibrate **[[Checkov]]** SCA scans and **[[Shift Left]]** pipeline gates on packages and images. Never deploy it to production environments or beside sensitive workloads.
+[SupplyGoat](https://github.com/bridgecrewio/supplygoat). We **trial** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> "Vulnerable by Design" supply chain is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
+> &quot;Vulnerable by Design&quot; supply chain is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments. - bridgecre...
 
 ## Summary
 
@@ -30,7 +28,6 @@ SupplyGoat extends Bridgecrew's Goat family beyond pure **[[IaC]]** templates (*
 **When to skip:** you need a full interactive vulnerable web app (use **[[Juice Shop]]**); you only scan Terraform or K8s YAML (use IaC goats); the upstream repo stays too sparse for your exercise without custom additions.
 
 **Repo surfaces:** `package.json` / lockfiles, `requirements.txt`, `Dockerfile`, `main.tf`, `deployment-kind.yaml`, `eks.yaml`, and multi-language samples under `package-files/`.
-
 
 ## Details
 
@@ -51,7 +48,6 @@ SupplyGoat extends Bridgecrew's Goat family beyond pure **[[IaC]]** templates (*
 - Tear down any **[[Kubernetes]]** or cloud resources when the exercise ends.
 
 ### Scan-First Lab Sketch
-
 ```bash
 git clone https://github.com/bridgecrewio/supplygoat.git
 cd supplygoat

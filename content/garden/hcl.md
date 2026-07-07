@@ -1,31 +1,25 @@
 ---
-title: "HCL"
-date: 2026-01-07
-lastmod: 2026-06-12
+title: HCL
+date: '2026-01-07'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - HCL
-
+- HCL
 params:
   garden:
     kind: item
     usefulness: trial
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 ---
 
-[HCL](https://github.com/hashicorp/hcl)
-
-HashiCorp Configuration Language (HCL) is a human-readable DSL for structured configuration. It is the native language of [[Terraform]], and also used by [[Packer]], [[Nomad]], [[Vault]], and historically [[Vagrant]]. HCL predates [[YAML]]'s dominance in [[Declarative IaC]] and remains the right choice when you are committed to the Terraform or OpenTofu toolchain; not as a general-purpose alternative to YAML for [[Kubernetes]] manifests or [[Docker Compose]].
-
-Rated **trial**: still the practical default inside HashiCorp-style IaC, but the 2023 BSL license change and growth of YAML-first and CDK-style tools ([[Pulumi]]) mean you should confirm ecosystem fit before new platform bets, not adopt HCL in isolation.
+[HCL](https://github.com/hashicorp/hcl). We **trial** it under **[[Code]]** in the garden.
 
 ## Blurb
 
-> HCL (HashiCorp Configuration Language) is a configuration language built by HashiCorp. HCL is designed to be both human- and machine-friendly, for use with command-line tools, but specifically targeted towards DevOps tools, servers, and configuration files.
+> HCL is the HashiCorp configuration language. Contribute to hashicorp/hcl development by creating an account on GitHub.
 
 ## Summary
 

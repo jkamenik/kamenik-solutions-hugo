@@ -1,7 +1,7 @@
 ---
 title: CodexBar
 date: '2026-06-28'
-lastmod: '2026-06-30'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - CodexBar
@@ -10,16 +10,16 @@ params:
     kind: item
     usefulness: adopt
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - ai-agent
 ---
 
-[CodexBar](https://github.com/steipete/CodexBar) is a macOS menu-bar app and CLI that surfaces AI coding-provider usage windows, credit balances, reset countdowns, and local token-cost estimates across Codex, Claude, Cursor, Gemini, and many other providers. We **adopt** it for day-to-day token budgeting and model-switch decisions. Pair with agent workflows where subscription limits and per-model cost vary.
+[CodexBar](https://github.com/steipete/CodexBar). Is a macOS menu-bar app and CLI that surfaces AI coding-provider usage windows, credit balances, reset countdowns, and local token-cost estimates across Codex, Claude, Cursor, Gemini, and many other providers.
 
 ## Blurb
 
-> Tiny macOS 14+ menu bar app that keeps AI coding-provider limits visible and shows when each window resets. Plan around resets, credits, spend, and cost scans. Privacy-first: reuses existing provider sessions so no passwords are stored.
+> Show usage stats for OpenAI Codex and Claude Code, without having to login. - steipete/CodexBar
 
 ## Summary
 

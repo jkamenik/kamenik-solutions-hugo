@@ -1,32 +1,24 @@
 ---
-title: "Five Whys"
-date: 2026-06-22
-lastmod: 2026-06-22
+title: Five Whys
+date: '2026-06-22'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Five Whys
-  - 5 Whys
-  - Five Whys Root Cause Analysis
-
+- Five Whys
+- 5 Whys
+- Five Whys Root Cause Analysis
 params:
   aliases:
-    - 5 Whys
-    - Five Whys Root Cause Analysis
+  - 5 Whys
+  - Five Whys Root Cause Analysis
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[Five Whys](https://en.wikipedia.org/wiki/Five_whys)
-
-The [Five Whys](https://en.wikipedia.org/wiki/Five_whys) technique asks "why?" repeatedly to trace a problem from its visible symptom to a fixable root cause. We **assess** it because it is fast and widely used in postmortems, but real failures branch and shallow answers produce useless action items. It belongs under **[[Technique]]** alongside **[[Incident Management]]** and **[[SRE]]** learning loops. Treat "five" as a depth heuristic per branch, not a literal question count.
-
-## Blurb
-
-> By repeating why five times, the nature of the problem as well as its solution becomes clear. (Taiichi Ohno)
+[Five Whys](https://en.wikipedia.org/wiki/Five_whys). The [Five Whys](https://en.wikipedia.org/wiki/Five_whys) technique asks "why?" repeatedly to trace a problem from its visible symptom to a fixable root cause.
 
 ## Summary
 
@@ -42,7 +34,6 @@ Five Whys looks simple on paper. In practice each answer can fork into multiple 
 **Facilitation rule:** Tell the group the first three "why" answers must be specific and actionable. Weak early layers poison every branch below them.
 
 **Sibling technique:** **[[First Principles]]** is the forward-looking design counterpart. Use it when choosing architecture, not when tracing an incident backward.
-
 
 ## Details
 

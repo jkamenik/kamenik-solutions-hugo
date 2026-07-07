@@ -1,29 +1,23 @@
 ---
-title: "Conftest"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Conftest
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Conftest
-
+- Conftest
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/conftest
+- /radar/tools/conftest
 ---
 
-[Conftest](https://www.conftest.dev) is a CLI that runs [Open Policy Agent](https://www.openpolicyagent.org/) (Rego) policies against structured config on disk: Terraform plans, Kubernetes manifests, Helm charts, Tekton, Dockerfile, and more. We **trial** it under **[[Code Scanner]]** as the default way to implement **[[Policy as Code]]** in CI before deploy; **[[Policy as Code]]** itself is **adopt** as a **[[Technique]]**.
-
-## Blurb
-
-> Conftest helps you write tests against structured configuration data. Using Conftest you can write tests for your Kubernetes configuration, Tekton pipeline definitions, Terraform code, Serverless configs or any other config files.
+[Conftest](https://www.conftest.dev). Is a CLI that runs [Open Policy Agent](https://www.openpolicyagent.org/) (Rego) policies against structured config on disk: Terraform plans, Kubernetes manifests, Helm charts, Tekton, Dockerfile, and more.
 
 ## Summary
 

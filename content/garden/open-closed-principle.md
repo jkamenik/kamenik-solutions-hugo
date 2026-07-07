@@ -1,7 +1,7 @@
 ---
 title: Open-Closed Principle
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Open-Closed Principle
@@ -17,18 +17,12 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: New
+    movement: No Change
     subcategories:
     - software-architecture
 ---
 
-[Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
-
-The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) (OCP) says software entities should be open for extension but closed for modification. We **adopt** it when new behavior arrives often but existing code is stable and well tested. Add extension points (interfaces, plugins, strategy objects) instead of editing core logic each time. It is the **O** in **[[SOLID Principles]]**.
-
-## Blurb
-
-> Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+[Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 

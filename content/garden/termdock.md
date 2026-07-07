@@ -1,7 +1,7 @@
 ---
 title: Termdock
 date: '2026-07-01'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Termdock
@@ -10,16 +10,16 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - ide
 ---
 
-[Termdock](https://www.termdock.com/en) is a terminal-centric AI development environment for macOS and Windows. It unifies multi-project workspaces, split terminals, Tree-sitter code search, and AI CLI tooling in one local-first desktop app. We **assess** it because the public download is still marked coming soon and we have not run it against our repos. It sits under [[IDE]] as a [[Warp Terminal]]-class alternative when you want project-aware terminals instead of a VS Code fork like [[Cursor]].
+[Termdock](https://www.termdock.com/en). Is a terminal-centric AI development environment for macOS and Windows.
 
 ## Blurb
 
-> Ten terminals is not a workflow.
+> The only terminal supporting drag-drop to curl, ffmpeg, git + 10+ workspaces with independent Git status. Built-in Monaco Editor, Git Blame, AST analysis. Works offline.
 
 ## Summary
 

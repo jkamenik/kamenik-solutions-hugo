@@ -1,23 +1,21 @@
 ---
-title: "Ebitengine"
-date: 2023-11-29
-lastmod: 2026-05-18
+title: Ebitengine
+date: '2023-11-29'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Ebitengine
-
+- Ebitengine
 params:
   garden:
     kind: item
     usefulness: assess
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - game-engine
+    - game-engine
 ---
 
-[Ebitengine](https://ebitengine.org/) (pronounced "eh-bee-ten-gin"; formerly **Ebiten**) is an open-source 2D [[game engine]] for [[GoLang]]. It targets desktop and mobile from a single Go codebase with a small API surface. We rate it **assess**: strong fit if you already standardize on Go and need a lightweight 2D stack, but it is a niche choice compared to Unity, Godot, or web-first engines.
+[Ebitengine](https://ebitengine.org/). (pronounced "eh-bee-ten-gin"; formerly **Ebiten**) is an open-source 2D [[game engine]] for [[GoLang]].
 
 ## Blurb
 

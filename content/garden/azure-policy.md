@@ -1,29 +1,21 @@
 ---
-title: "Azure Policy"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Azure Policy
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Azure Policy
-
+- Azure Policy
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/azure-policy
+- /radar/tools/azure-policy
 ---
 
-[Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/) is Microsoft's service for enforcing and assessing resource compliance at management group, subscription, or resource group scope.
-
-We **assess** it under **[[Tool]]** for estates that already run **[[Azure]]**.
-
-It provides deny, audit, and remediation effects plus regulatory initiatives without **[[Cloud Custodian]]**.
-
-Evaluation can lag minutes. Pilot Audit before wide Deny, especially when **[[Azure]]** is **hold** for greenfield.
+[Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/). Is Microsoft's service for enforcing and assessing resource compliance at management group, subscription, or resource group scope.
 
 ## Blurb
 
@@ -48,7 +40,6 @@ Evaluation can lag minutes. Pilot Audit before wide Deny, especially when **[[Az
 - Sub-minute deny at the API edge (Policy evaluation can lag)
 
 **Pairs with:** **[[Policy as Code]]** and IaC gates on PRs. Policy for in-subscription and org-wide assignment. **[[DevSecOps]]** for pipeline plus cloud governance.
-
 
 ## Details
 

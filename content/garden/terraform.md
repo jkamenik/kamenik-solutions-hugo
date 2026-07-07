@@ -1,34 +1,30 @@
 ---
-title: "Terraform"
-date: 2023-12-01
-lastmod: 2026-05-18
+title: Terraform
+date: '2023-12-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Terraform
-
+- Terraform
 params:
   garden:
     kind: item
-    usefulness: assess
+    usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 ---
 
-Quadrant:: [[Tool]]
+[Terraform](https://www.terraform.io/). Quadrant:: [[Tool]]
 Ring:: #adopt
 URL:: https://www.terraform.io/
 Category::
-Related:: [[Pulumi]]
+Related:: [[Pulumi]] We **adopt** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-Automate infrastructure on any cloud with Terraform.
+> Explore Terraform product documentation, tutorials, and examples.
 
 ## Summary
 
-This is the de facto DevOps tool for managing infrastructure. It does so via [[IaC]] files
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-## Details
-
-`What else is important to know?`
+**When to skip:** When a simpler alternative already covers the need.

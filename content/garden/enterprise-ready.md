@@ -1,32 +1,26 @@
 ---
-title: "Enterprise Ready"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: Enterprise Ready
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Enterprise Ready
-  - EnterpriseReady
-  - enterprise-ready
-
+- Enterprise Ready
+- EnterpriseReady
+- enterprise-ready
 params:
   aliases:
-    - EnterpriseReady
-    - enterprise-ready
+  - EnterpriseReady
+  - enterprise-ready
   garden:
     kind: item
     usefulness: trial
     category: technique
-    movement: "Moved In"
+    movement: Moved In
 aliases:
-  - /radar/techniques/enterprise-ready
+- /radar/techniques/enterprise-ready
 ---
 
-[EnterpriseReady](https://www.enterpriseready.io/) is a **feature guide and checklist** (from Replicated's study of leading B2B SaaS) for what procurement and security teams expect before they buy. We rate it **trial** with **Moved In**: use it as a **product roadmap lens** when moving upmarket, not as a substitute for **[[12 Factor App]]** engineering discipline or **[[DevSecOps]]** execution.
-
-## Blurb
-
-> Created to help people build software for the enterprise, based on a study of the 50 leading SaaS applications.
+[Enterprise Ready](https://www.enterpriseready.io/). Is a **feature guide and checklist** (from Replicated's study of leading B2B SaaS) for what procurement and security teams expect before they buy.
 
 ## Summary
 

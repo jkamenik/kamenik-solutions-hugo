@@ -1,26 +1,26 @@
 ---
-title: "Helm"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: Helm
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Helm
-
+- Helm
 params:
   garden:
     kind: item
-    usefulness: assess
+    usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 ---
 
-Quadrant:: [[Tool|Tool]]
+[Helm](https://helm.sh/). Quadrant:: [[Tool|Tool]]
 Ring:: #adopt
 URL:: https://helm.sh/
 Category:: #category/devops/provisioner
-Related:: [[Kubernetes]]
+Related:: [[Kubernetes]] We **adopt** it under **[[Tool]]** in the garden.
 
-## Blurb
+## Summary
 
-The package manager for Kubernetes.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

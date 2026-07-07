@@ -1,27 +1,21 @@
 ---
-title: "MySQL"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: MySQL
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - MySQL
-
+- MySQL
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/mysql
+- /radar/tools/mysql
 ---
 
-[MySQL](https://www.mysql.com/) is the world's most popular open source relational database, now led by Oracle. It powers countless LAMP-era apps and managed offerings (RDS, Cloud SQL MySQL). We **hold** it: do not start new relational projects on MySQL when **[[Postgres]]** (adopt) is an option.
-
-## Blurb
-
-> MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications.
+[MySQL](https://www.mysql.com/). Is the world's most popular open source relational database, now led by Oracle.
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** Greenfield OLTP or new microservices (use **[[Postgres]]**). Warehouse-scale analytics on GCP (**[[BigQuery]]**). Choosing MySQL only because it was the default a decade ago.
 
 **Hold rationale:** **[[Postgres]]** matches or exceeds MySQL on features, extensions, and licensing clarity for new work. Existing MySQL remains supported; plan moves when touch cost is low.
-
 
 ## Details
 

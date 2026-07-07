@@ -1,29 +1,23 @@
 ---
-title: "Cypress"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Cypress
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Cypress
-
+- Cypress
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - test-framework
+    - test-framework
 aliases:
-  - /radar/tools/cypress
+- /radar/tools/cypress
 ---
 
-[Cypress](https://www.cypress.io/) is a JavaScript end-to-end and component testing framework that runs tests inside the browser with a dedicated runner UI, time-travel debugging, and network stubbing. We **hold** it for new browser E2E work because **[[Playwright]]** is our **adopt** default. Existing Cypress suites are fine to maintain until a migration pays off.
-
-## Blurb
-
-> Fast, easy and reliable testing for anything that runs in a browser.
+[Cypress](https://www.cypress.io/). Is a JavaScript end-to-end and component testing framework that runs tests inside the browser with a dedicated runner UI, time-travel debugging, and network stubbing.
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** greenfield web E2E (use **[[Playwright]]**); need first-class Firefox/WebKit in one project; multi-tab or multi-origin flows that fight Cypress' in-browser architecture.
 
 **Key capabilities:** automatic waiting, screenshot/video capture, `cy.intercept` network control, component testing for React/Vue/Angular, GitHub Action and **[[GitHub Actions]]** CI recipes.
-
 
 ## Details
 

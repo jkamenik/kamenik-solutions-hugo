@@ -1,29 +1,25 @@
 ---
-title: "go script"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: go script
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - go script
-
+- go script
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/techniques/go-script
+- /radar/techniques/go-script
 ---
 
-[go script](https://www.thoughtworks.com/insights/blog/praise-go-script-part-i)
-
-The **go script** pattern (often `./go` at repo root) is a small **[[GoLang]]** program that replaces Make for project tasks: build, test, lint, and release with one cross-platform entrypoint. We **adopt** it for repos where Make is painful on Windows and shell scripts sprawl across OSes.
+[go script](https://www.thoughtworks.com/insights/blog/praise-go-script-part-i). The **go script** pattern (often `./go` at repo root) is a small **[[GoLang]]** program that replaces Make for project tasks: build, test, lint, and release with one cross-platform entrypoint.
 
 ## Blurb
 
-> A single Go file at the root of your repository can act as a portable task runner with typed logic, subcommands, and access to the full Go standard library.
+> My step-dad is a cabinet-maker by trade. We chat about his work from time to time. I've often been struck by the similarities between building furniture and building software. Take tooling for example. Choosing high quality tools and learning how to use them correctly is of course a very important part of woodworking.
 
 ## Summary
 

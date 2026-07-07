@@ -1,7 +1,7 @@
 ---
 title: Reuse-Release Equivalence Principle
 date: '2026-06-25'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Reuse-Release Equivalence Principle
@@ -20,27 +20,15 @@ params:
     - software-architecture
 ---
 
-[Reuse-Release Equivalence Principle](https://en.wikipedia.org/wiki/Reuse/release_equivalence_principle)
-
-The [Reuse-Release Equivalence Principle](https://en.wikipedia.org/wiki/Reuse/release_equivalence_principle) (REP) says the unit of reuse is the unit of release. Anything consumers reuse must ship with version numbers, changelogs, and release discipline. We **adopt** it when shared libraries or internal packages are copied ad hoc instead of versioned artifacts. REP only works when releases are versioned and the artifact is one cohesive group. It pairs with **[[Common Closure Principle]]** and **[[Common Reuse Principle]]** as one of three component cohesion rules.
-
-## Blurb
-
-> The granule of reuse is the granule of release.
+[Reuse-Release Equivalence Principle](https://en.wikipedia.org/wiki/Reuse/release_equivalence_principle). The [Reuse-Release Equivalence Principle](https://en.wikipedia.org/wiki/Reuse/release_equivalence_principle) (REP) says the unit of reuse is the unit of release.
 
 ## Summary
 
-**What it is:** A cohesion rule for components (packages, modules, libraries). Classes grouped for reuse must release together under a shared version line. Everything in the release artifact should belong to one cohesive group. Reusers can pin a version, read release notes, and upgrade on their schedule.
+**Garden stance:** We **adopt** Reuse-Release Equivalence Principle for our estate.
 
-**Why it matters:** Informal reuse (copy-paste, path imports, floating HEAD) hides breaking changes. Teams cannot coordinate upgrades or roll back when a shared module shifts without notice. Without version numbers and a release process, REP is only a label.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Source:** Martin states the rule in *Clean Architecture* as "the granule of reuse is the granule of release."
-
-**When to use:** Internal platform libraries, shared SDKs, and monorepo packages other teams depend on. Apply when more than one consumer needs predictable versioning and release communication.
-
-**When to pull back:** Single-app prototypes with one deployable and no external consumers. Do not add release overhead before a module has a second consumer.
-
-**Relation to siblings:** **[[Common Closure Principle]]** groups by shared change. **[[Common Reuse Principle]]** groups by shared use. REP adds release engineering: the bundle you import is the bundle you version.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

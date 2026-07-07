@@ -1,27 +1,21 @@
 ---
-title: "Dotfiles in Version Control"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Dotfiles in Version Control
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Dotfiles in Version Control
-
+- Dotfiles in Version Control
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/techniques/dotfiles-in-version-control
+- /radar/techniques/dotfiles-in-version-control
 ---
 
-Version-controlled dotfiles are shell, editor, and tool configs kept in a **[[git]]** repo so a machine can be rebuilt from a known baseline. We **assess** the practice: high value for solo reproducibility, but team standardization and secret hygiene need clear rules before **adopt**.
-
-## Blurb
-
-> Dotfiles are plain-text configuration files for Unix tools, typically stored in a home directory and named with a leading dot.
+Version-controlled dotfiles are shell, editor, and tool configs kept in a **[[git]]** repo so a machine can be rebuilt from a known baseline. We **assess** it under **[[Technique]]** in the garden.
 
 ## Summary
 

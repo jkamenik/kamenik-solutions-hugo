@@ -1,29 +1,23 @@
 ---
-title: "Cloud Custodian"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Cloud Custodian
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Cloud Custodian
-
+- Cloud Custodian
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/cloud-custodian
+- /radar/tools/cloud-custodian
 ---
 
-[Cloud Custodian](https://cloudcustodian.io/) (c7n) is an open source rules engine for AWS, Azure, and GCP. YAML policies filter cloud resources and run actions (tag, notify, stop, delete) on a schedule or in response to events. We **assess** it for org-wide **[[Policy as Code]]** and cost or security guardrails when native cloud policy tools are not enough.
-
-## Blurb
-
-> Cloud Custodian, also known as c7n, is a rules engine for managing public cloud accounts and resources.
+[Cloud Custodian](https://cloudcustodian.io/). We **assess** it under **[[Tool]]** in the garden.
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** small single-account shops covered by native Config or Policy; teams already committed to OPA/Rego (**[[Conftest]]**, Gatekeeper) for the same rules; no ops capacity to tune false positives.
 
 **Pairs with:** **[[Terraform]]** provisioning plus Custodian enforcement in live accounts; **[[Shift Left]]** IaC scans on PRs, Custodian on deployed resources.
-
 
 ## Details
 

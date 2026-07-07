@@ -1,32 +1,24 @@
 ---
-title: "Software as a Service"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Software as a Service
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Software as a Service
-  - SaaS
-
+- Software as a Service
+- SaaS
 params:
   aliases:
-    - SaaS
+  - SaaS
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/saas
+- /radar/techniques/saas
 ---
 
-[Software as a Service](https://en.wikipedia.org/wiki/Software_as_a_service)
-
-**Software as a Service (SaaS)** means the vendor runs the software; customers use it over the network on a subscription or consumption model. We rate the **delivery model** **assess**: powerful for product velocity and ops efficiency, but not every problem should be SaaS, security boundary, tenancy, compliance, and customer data residency must drive the decision.
-
-## Blurb
-
-> Software as a service is a software licensing and delivery model in which software is licensed on a subscription basis and is centrally hosted.
+[Software as a Service](https://en.wikipedia.org/wiki/Software_as_a_service). **Software as a Service (SaaS)** means the vendor runs the software; customers use it over the network on a subscription or consumption model.
 
 ## Summary
 

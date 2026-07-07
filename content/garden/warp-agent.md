@@ -1,7 +1,7 @@
 ---
 title: Warp Agent
 date: '2026-06-30'
-lastmod: '2026-06-30'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Warp Agent
@@ -10,16 +10,12 @@ params:
     kind: item
     usefulness: trial
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - ai-agent
 ---
 
-[Warp Agent](https://www.warp.dev/agents/warp-agent) is Warp's built-in multi-model coding agent. It runs inside [[Warp Terminal]] and on [[Oz]] with shared context, permission controls, and orchestration. We rate it **trial** under [[AI Agent]]: a capable bounded agent, but not our default. Interactive and headless work still favors [[cursor-agent]] with [[Cursor]] unless you are standardizing on the Warp stack.
-
-## Blurb
-
-> Code with a state of the art agent harness with multi-agent orchestration, model routing, access to all the best models, codebase indexing, and granular permission controls.
+[Warp Agent](https://www.warp.dev/agents/warp-agent). Is Warp's built-in multi-model coding agent.
 
 ## Summary
 

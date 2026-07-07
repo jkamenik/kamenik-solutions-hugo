@@ -1,30 +1,22 @@
 ---
-title: "Daybreak"
-date: 2026-05-26
-lastmod: 2026-06-12
+title: Daybreak
+date: '2026-05-26'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Daybreak
-
+- Daybreak
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
-      - ai-agent
+    - code-scanner
+    - ai-agent
 ---
 
-[Daybreak](https://openai.com/daybreak/) is OpenAI's frontier-AI offering for cyber defenders: secure code review, vulnerability triage, threat modeling, patch generation and validation, dependency risk analysis, and remediation guidance. Delivery runs through OpenAI models and [[Codex]] as an agentic harness (including **Codex Security**).
-
-We rate it **assess** under **[[Code Scanner]]** and **[[AI Agent]]**. It is a credible direction for **[[Shift Left]]** / **[[DevSecOps]]**. Enterprise access tiers (Trusted Access for Cyber, GPT-5.5-Cyber) and safeguards are still rolling out. Compare in-repo **[[Conftest]]** / **[[Policy as Code]]** and org-wide **[[Codacy]]** before committing.
-
-## Blurb
-
-> Frontier AI for cyber defenders.
+[Daybreak](https://openai.com/daybreak/). Is OpenAI's frontier-AI offering for cyber defenders: secure code review, vulnerability triage, threat modeling, patch generation and validation, dependency risk analysis, and remediation guidance.
 
 ## Summary
 

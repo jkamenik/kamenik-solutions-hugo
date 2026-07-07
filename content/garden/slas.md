@@ -1,36 +1,28 @@
 ---
-title: "SLAs"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: SLAs
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - SLAs
+- SLAs
+- SLA
+- Service Level Agreement
+- Service Level Agreements
+params:
+  aliases:
   - SLA
   - Service Level Agreement
   - Service Level Agreements
-
-params:
-  aliases:
-    - SLA
-    - Service Level Agreement
-    - Service Level Agreements
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/techniques/slas
+- /radar/techniques/slas
 ---
 
-[SLAs](https://en.wikipedia.org/wiki/Service-level_agreement)
-
-**Service level agreements (SLAs)** are measurable commitments between a provider and a customer: availability, response time, support windows, and remedies when targets are missed. We **adopt** defining SLAs (and the **SLO/SLI** machinery behind them) for **[[Software as a Service]]** and managed platforms so sales, engineering, and ops share the same numbers.
-
-## Blurb
-
-> A service-level agreement (SLA) defines the level of service expected by a customer from a supplier. It lays out the metrics by which that service is measured and the remedies or penalties, if any, should the agreed-on service levels not be achieved.
+[SLAs](https://en.wikipedia.org/wiki/Service-level_agreement) **Service level agreements (SLAs)** are measurable commitments between a provider and a customer: availability, response time, support windows, and remedies when targets are missed. We **adopt** defining SLAs (and the **SLO/SLI** machinery behind them) for **[[Software as a Service]]** and managed platforms so sales, engineering, and ops share the same numbers.
 
 ## Summary
 

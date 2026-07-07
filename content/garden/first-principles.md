@@ -1,32 +1,26 @@
 ---
-title: "First Principles"
-date: 2026-06-22
-lastmod: 2026-06-22
+title: First Principles
+date: '2026-06-22'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - First Principles
-  - First Principles Thinking
-  - Reasoning from First Principles
-
+- First Principles
+- First Principles Thinking
+- Reasoning from First Principles
 params:
   aliases:
-    - First Principles Thinking
-    - Reasoning from First Principles
+  - First Principles Thinking
+  - Reasoning from First Principles
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - software-architecture
+    - software-architecture
 ---
 
-[First principles](https://en.wikipedia.org/wiki/First_principle) thinking breaks a problem into truths you cannot deduce further, then rebuilds a solution from those foundations. We **adopt** it for **[[Software Architecture]]** and design review when inherited patterns no longer match constraints. It is the forward-looking counterpart to **[[Five Whys]]** in blameless postmortems. Still **assess** each decision before applying the method by rote outside design work.
-
-## Blurb
-
-> A first principle is a basic proposition or assumption that cannot be deduced from any other proposition or assumption.
+[First Principles](https://en.wikipedia.org/wiki/First_principle). Thinking breaks a problem into truths you cannot deduce further, then rebuilds a solution from those foundations.
 
 ## Summary
 
@@ -41,7 +35,6 @@ Use first principles when a design copies industry defaults ("always microservic
 **Assumptions section:** Add an explicit **Assumptions** block to design docs. Use it to open review conversation. If reviewers debate an assumption, it is not a first principle yet. Deconstruct until the team agrees on bedrock constraints, then rewrite the design if needed.
 
 **Sibling techniques:** **[[Five Whys]]** and **[[Fishbone diagram]]** trace failures backward in postmortems. First principles trace forward when you still control the shape.
-
 
 ## Details
 

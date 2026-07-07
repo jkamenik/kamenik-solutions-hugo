@@ -1,27 +1,25 @@
 ---
-title: "Slack"
-date: 2026-05-17
-lastmod: 2026-05-21
+title: Slack
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Slack
-
+- Slack
 params:
   garden:
     kind: item
     usefulness: trial
     category: platform
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/platforms/slack
+- /radar/platforms/slack
 ---
 
-[Slack](https://slack.com/) is a team messaging and collaboration platform (channels, DMs, search, apps). We rate it **trial**: fine as the default human coordination layer when the org already pays for it; do not let Slack become your control plane for production.
+[Slack](https://slack.com/). Is a team messaging and collaboration platform (channels, DMs, search, apps).
 
 ## Blurb
 
-> Slack is your productivity platform.
+> Boost productivity and save time with Slack‌ - ‌the AI work platform for managing projects, automating workflows, and connecting teams securely. Start working smarter today.
 
 ## Summary
 

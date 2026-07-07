@@ -1,25 +1,23 @@
 ---
-title: "Steampipe"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Steampipe
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Steampipe
-
+- Steampipe
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[Steampipe](https://steampipe.io/) is an open source engine that queries cloud APIs and SaaS services with SQL via plugins. It builds live inventories and compliance checks without maintaining custom scrapers. We **assess** it next to **[[CloudGraph]]** for multi-cloud visibility and ad hoc CSPM-style questions.
+[Steampipe](https://steampipe.io/). Is an open source engine that queries cloud APIs and SaaS services with SQL via plugins.
 
 ## Blurb
 
-> Steampipe is the zero-ETL way to query APIs with SQL.
+> Instantly query your cloud, code, logs & more with SQL. Build on thousands of open-source benchmarks & dashboards for security & insights.
 
 ## Summary
 
@@ -30,7 +28,6 @@ params:
 **When to skip:** Need persistent graph API and packaged posture product (**[[CloudGraph]]**, **[[Kubescape]]**). No SQL-friendly operators.
 
 **Key features:** `steampipe query`, mods pack, dashboard snapshots, CI-friendly JSON output.
-
 
 ## Details
 

@@ -1,27 +1,25 @@
 ---
-title: "Zabbix"
-date: 2023-07-23
-lastmod: 2026-06-22
+title: Zabbix
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Zabbix
-
+- Zabbix
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Zabbix](https://www.zabbix.com/) is an enterprise-class open source monitoring platform for hosts, networks, applications, and services. It polls agents and traps events, then surfaces alerts and dashboards from a web UI. We **hold** it for greenfield work: **[[OpenTelemetry]]** plus **[[Grafana]]** fit cloud-native, service-centric estates better than host-first monitoring.
+[Zabbix](https://www.zabbix.com/). Is an enterprise-class open source monitoring platform for hosts, networks, applications, and services.
 
 ## Blurb
 
-> Zabbix is an enterprise-class open source distributed monitoring solution.
+> Zabbix is an enterprise-class, open-source monitoring solution that makes network and application monitoring simple.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** New SaaS or Kubernetes platforms where hosts are fungible and service-level signals matter more than per-host ping checks. Prefer **[[Grafana]]** with Prometheus, Loki, or cloud APIs, instrumented via **[[OpenTelemetry]]**.
 
 **Key features:** Triggers and escalations, discovery, maps, SLA reporting, distributed proxies, and a large template library.
-
 
 ## Details
 

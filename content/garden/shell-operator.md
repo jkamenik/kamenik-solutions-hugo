@@ -1,27 +1,25 @@
 ---
-title: "Shell Operator"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Shell Operator
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Shell Operator
-
+- Shell Operator
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/shell-operator
+- /radar/tools/shell-operator
 ---
 
-[Shell Operator](https://github.com/flant/shell-operator) is a **[[Kubernetes]]** operator framework that runs shell or bash hooks when cluster objects change. It watches CRDs or built-in resources and executes scripts you package in the image. We **assess** it for quick glue automation before committing to a full Go operator.
+[Shell Operator](https://github.com/flant/shell-operator) is a tool we **assess** in the garden.
 
 ## Blurb
 
-> Shell-operator is a tool for running event-driven scripts in a Kubernetes cluster.
+> Shell-operator is a tool for running event-driven scripts in a Kubernetes cluster - flant/shell-operator
 
 ## Summary
 

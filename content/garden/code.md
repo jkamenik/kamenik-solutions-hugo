@@ -1,12 +1,10 @@
 ---
-title: "Code"
-date: 2024-03-27
-lastmod: 2026-06-12
+title: Code
+date: '2024-03-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Code
-
+- Code
 params:
   garden:
     kind: category

@@ -1,27 +1,25 @@
 ---
-title: "Prometheus"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Prometheus
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Prometheus
-
+- Prometheus
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Prometheus](https://prometheus.io/) is the CNCF metrics database and scraper ecosystem for time-series monitoring and alerting. It pulls metrics from exporters and supports PromQL queries consumed by **[[Grafana]]** and alertmanager. We **trial** it as the default metrics backend with OTel or native instrumentation.
+[Prometheus](https://prometheus.io/). Is the CNCF metrics database and scraper ecosystem for time-series monitoring and alerting.
 
 ## Blurb
 
-> Prometheus is an open-source systems monitoring and alerting toolkit.
+> An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Long-term log archival (use **[[Loki]]** or **[[Elasticsearch]]**). Vendor SaaS mandate (**[[Datadog]]**).
 
 **Key features:** Service discovery, recording rules, Alertmanager routing, remote write/read integrations.
-
 
 ## Details
 

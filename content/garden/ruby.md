@@ -1,29 +1,23 @@
 ---
-title: "Ruby"
-date: 2025-12-08
-lastmod: 2026-05-18
+title: Ruby
+date: '2025-12-08'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Ruby
-
+- Ruby
 params:
   garden:
     kind: item
     usefulness: hold
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 aliases:
-  - /radar/languages/ruby
+- /radar/languages/ruby
 ---
 
-[Ruby](https://www.ruby-lang.org/en/) is a dynamic, expressive language optimized for developer ergonomics and metaprogramming. We rate it **hold** for new work: it remains viable for maintaining existing codebases (especially [[Ruby on Rails]]), but hiring depth, runtime performance, and ecosystem momentum outside that niche favor other stacks for greenfield systems.
-
-## Blurb
-
-> Ruby is a language of careful balance. Its creator, Yukihiro "Matz" Matsumoto, blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
+[Ruby](https://www.ruby-lang.org/en/). Is a dynamic, expressive language optimized for developer ergonomics and metaprogramming.
 
 ## Summary
 

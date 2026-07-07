@@ -1,34 +1,32 @@
 ---
-title: "Bitbucket Pipelines"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Bitbucket Pipelines
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Bitbucket Pipelines
-
+- Bitbucket Pipelines
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/bitbucket-pipelines
+- /radar/platforms/bitbucket-pipelines
 ---
 
-[Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines) is Atlassian's hosted CI service for Bitbucket Cloud repos. YAML-defined steps run in Docker images on Atlassian infrastructure. We **assess** it when the org is already on Bitbucket; default path for new work remains **[[GitHub Actions]]** unless licensing or data residency forces Bitbucket.
+[Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines). Is Atlassian's hosted CI service for Bitbucket Cloud repos.
 
 ## Blurb
 
-> Bitbucket Pipelines brings continuous integration and delivery to Bitbucket Cloud, powered by Docker.
+> Bitbucket Pipelines brings continuous delivery to Bitbucket Cloud, empowering teams with full branching to deployment visibility and faster feedback loops
 
 ## Summary
 
-**Model:** `bitbucket-pipelines.yml` in the repo defines pipelines, branches, and deployment steps. Runners are managed; you bring container images and secrets via Bitbucket variables.
+**Garden stance:** We **assess** Bitbucket Pipelines for our estate.
 
-**When to use:** product code lives in Bitbucket Cloud; Jira/Confluence integration matters; you need Atlassian's compliance story without self-hosting Jenkins.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to skip:** greenfield repos on **[[GitHub]]** / **[[GitLab]]**; heavy custom runner fleets (compare self-hosted Actions or GitLab runners); teams standardized on **[[GitOps]]** tooling that assumes GitHub.
+**When to skip:** When a simpler alternative already covers the need.

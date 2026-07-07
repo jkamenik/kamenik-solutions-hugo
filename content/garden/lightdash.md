@@ -1,27 +1,25 @@
 ---
-title: "Lightdash"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Lightdash
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Lightdash
-
+- Lightdash
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 ---
 
-[Lightdash](https://www.lightdash.com/) is an open source BI layer that turns **[[dbt-core]]** models into explorable metrics and dashboards. It reads dbt metadata instead of reinventing a semantic layer in the UI. We **assess** it when dbt is already the analytics engineering source of truth.
+[Lightdash](https://www.lightdash.com/). Is an open source BI layer that turns **[[dbt-core]]** models into explorable metrics and dashboards.
 
 ## Blurb
 
-> Lightdash is the open source BI tool that connects to your dbt project. Define metrics once in dbt, explore them in Lightdash.
+> Lightdash is the AI-first, open-source BI platform for modern data teams. Connect to dbt, define metrics once, and get instant, trustworthy insights.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** No dbt discipline in the warehouse. Prefer **[[Redash]]** for ad hoc SQL only.
 
 **Key features:** dbt-native metrics, Git-backed definitions, Slack/email alerts on charts, optional Lightdash Cloud.
-
 
 ## Details
 

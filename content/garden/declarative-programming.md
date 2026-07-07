@@ -1,25 +1,19 @@
 ---
-title: "Declarative Programming"
-date: 2026-04-16
-lastmod: 2026-05-18
+title: Declarative Programming
+date: '2026-04-16'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Declarative Programming
-
+- Declarative Programming
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) describes *what* outcome you want, not the step-by-step procedure to get there. We **adopt** it in DevSecOps: runtimes and controllers reconcile desired state (config, policy, infrastructure, queries) instead of replaying fragile instruction scripts, especially where drift and blast radius matter.
-
-## Blurb
-
-> In computer science, declarative programming is a programming paradigm that expresses the logic of a computation without describing its control flow.
+[Declarative Programming](https://en.wikipedia.org/wiki/Declarative_programming). Describes *what* outcome you want, not the step-by-step procedure to get there.
 
 ## Summary
 

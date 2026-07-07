@@ -1,7 +1,7 @@
 ---
 title: Common Closure Principle
 date: '2026-06-24'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Common Closure Principle
@@ -18,29 +18,13 @@ params:
     - software-architecture
 ---
 
-[Common Closure Principle](https://en.wikipedia.org/wiki/Common_closure_principle)
-
-The [Common Closure Principle](https://en.wikipedia.org/wiki/Common_closure_principle) (CCP) groups classes into the same component when they change for the same reasons and at the same times. We **adopt** it at package, module, and service boundaries where deploy units should match change drivers. It is the component-level counterpart to **[[Single Responsibility Principle]]**. Keep unrelated change axes in separate deployables so a tweak in billing does not force a release of search.
-
-## Blurb
-
-> Gather into components those classes that are likely to change for the same reasons and at the same times. Separate into different components those classes that change at different times and for different reasons.
+[Common Closure Principle](https://en.wikipedia.org/wiki/Common_closure_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A cohesion rule for components (packages, modules, libraries, microservices). Everything in one deploy unit should share a change lifecycle. If two classes rarely change together, they should not live in the same component.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** Violations inflate release blast radius. A one-line fix in shared utilities rebuilds and redeploys unrelated services. Teams wait on each other because unrelated concerns share a version line.
-
-**When to use:** Monorepo package splits, library boundaries, and microservice cuts. Apply when you can name distinct stakeholders or business reasons that drive change (billing vs catalog vs auth).
-
-**When to pull back:** Early prototypes and single-team apps where one deployable is fine. Do not split packages before you see divergent change rates in practice.
-
-**Relation to SRP:** **[[Single Responsibility Principle]]** applies at class and function granularity. CCP applies the same idea one level up: one reason to change per component, not only per class. A component with multiple change drivers violates CCP the way a god class violates SRP.
-
-**Relation to OCP:** **[[Open-Closed Principle]]** says modules should be open for extension but closed to unrelated modification. CCP keeps unrelated change axes in separate components so a billing tweak does not force a search release.
-
-**Source:** Martin states the rule in *Clean Architecture* as "gather into components those classes that change for the same reason."
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

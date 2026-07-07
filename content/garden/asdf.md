@@ -1,27 +1,25 @@
 ---
-title: "asdf"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: asdf
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - asdf
-
+- asdf
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[asdf](https://asdf-vm.com/) is a plugin-based version manager for multiple languages and CLIs via a single `.tool-versions` file. We **assess** it on estates with existing asdf plugins; new polyglot setups may prefer **[[mise]]**.
+[asdf](https://asdf-vm.com/) is a tool we **assess** in the garden.
 
 ## Blurb
 
-> asdf is a CLI tool that can manage multiple language runtime versions on a per-project basis.
+> Manage multiple runtime versions with a single CLI tool
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Greenfield laptops where **[[mise]]** performance and UX win evals.
 
 **Key features:** `.tool-versions`, plugin add/update, legacy breadth of plugins.
-
 
 ## Details
 

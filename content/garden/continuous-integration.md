@@ -1,27 +1,21 @@
 ---
-title: "Continuous Integration"
-date: 2026-01-07
-lastmod: 2026-06-12
+title: Continuous Integration
+date: '2026-01-07'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Continuous Integration
-
+- Continuous Integration
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/continuous-integration
+- /radar/techniques/continuous-integration
 ---
 
-[Continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) means every change merged to the mainline is **built and verified automatically** before it becomes everyone else's baseline. We **adopt** CI for all products: small batches, fast feedback on **[[Pull Request]]**s, and a green `main` that feeds **[[Continuous Delivery]]** (and optionally **[[Continuous Deployment]]**).
-
-## Blurb
-
-> Continuous integration is the practice of merging all developers' working copies to a shared mainline several times a day.
+[Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) means every change merged to the mainline is **built and verified automatically** before it becomes everyone else's baseline. We **adopt** CI for all products: small batches, fast feedback on **[[Pull Request]]**s, and a green `main` that feeds **[[Continuous Delivery]]** (and optionally **[[Continuous Deployment]]**).
 
 ## Summary
 

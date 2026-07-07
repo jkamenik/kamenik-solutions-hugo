@@ -1,31 +1,27 @@
 ---
-title: "Codacy"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: Codacy
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Codacy
-
+- Codacy
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/codacy
+- /radar/tools/codacy
 ---
 
-[Codacy](https://www.codacy.com) is a **[[Software as a Service]]** code-quality and security platform that runs on **[[Pull Request]]**s, aggregates many linters and SAST rules, and surfaces grades and trends. We rate it **assess**: strong when you want a unified quality dashboard and policy gates across repos; for "fail the build on lint violations" in **[[GitHub Actions]]**, **[[Super-Linter]]** (container in CI) is simpler and free.
+[Codacy](https://www.codacy.com). Is a **[[Software as a Service]]** code-quality and security platform that runs on **[[Pull Request]]**s, aggregates many linters and SAST rules, and surfaces grades and trends.
 
 ## Blurb
 
-> Security and Code Quality for AI-Accelerated Coding
->
-> Codacy enforces security and quality standards across the entire CI/CD. Build secure, compliant and maintainable software, from IDE to Runtime.
+> Govern code quality, security and AI coding policies from a single place. Enabling dev teams to ship safely without slowing down.
 
 ## Summary
 

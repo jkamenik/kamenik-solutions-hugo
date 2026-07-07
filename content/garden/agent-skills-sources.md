@@ -1,32 +1,30 @@
 ---
-title: "Agent Skills - Sources"
-date: 2026-05-06
-lastmod: 2026-06-12
+title: Agent Skills - Sources
+date: '2026-05-06'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Agent Skills - Sources
-
+- Agent Skills - Sources
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ai-techniques
-      - claude-code
+    - ai-techniques
+    - claude-code
 ---
 
-A living research document tracking good sources of [[Agent Skills Framework|agent skills]] to draw from. Covers [[Claude Code]], [[Gemini CLI]], and cross-ecosystem skill/prompt repositories.
+A living research document tracking good sources of [[Agent Skills Framework|agent skills]] to draw from. We **adopt** it under **[[Technique]]** in the garden.
 
-> **Maintenance:** Review quarterly. Update "last checked" dates when vetting a source. Remove dead or low-quality links.
+## Summary
 
-## Blurb
+**Key points:** > **Maintenance:** Review quarterly. Update "last checked" dates when vetting a source. Remove dead or low-quality links.
 
-> The SKILL.md format is an open standard for teaching thinking AI models specific, repeatable skills. A growing ecosystem of community repositories, marketplaces, and cross-agent collections makes skills portable across Claude Code, Gemini CLI, Cursor, Codex, and others.
+## Details
 
-## Official Sources
+### Official Sources
 
 | Source | URL | Notes |
 |--------|-----|-------|
@@ -34,7 +32,7 @@ A living research document tracking good sources of [[Agent Skills Framework|age
 | anthropics/skills (GitHub) | https://github.com/anthropics/skills | Anthropic's own first-party skills; reference implementations |
 | Claude Code issue tracker | https://github.com/anthropics/claude-code/issues | Community bug reports often reveal undocumented skill patterns |
 
-## Curated "Awesome" Lists
+### Curated "Awesome" Lists
 
 Aggregator repos and sites , good for broad discovery.
 
@@ -45,7 +43,7 @@ Aggregator repos and sites , good for broad discovery.
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 1000+ production-ready skills across Claude.ai, Claude Code, and coding agents | 2026-05-06 |
 | [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) | 135 agents, 35 skills, 42 commands, 176+ plugins, 20 hooks, 15 rules | 2026-05-06 |
 
-## Individual Collections
+### Individual Collections
 
 Maintained by practitioners , often higher signal-to-noise than aggregators.
 
@@ -57,7 +55,7 @@ Maintained by practitioners , often higher signal-to-noise than aggregators.
 | garrytan/gstack              | https://github.com/garrytan/gstack              | [[gbrain]] author's exact Claude Code setup; 23 opinionated tools spanning CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA roles | 2026-05-06   |
 | mattpocock/skills            | https://github.com/mattpocock/skills            | Matt Pocock collection; **`grill-me`** stress-tests plans via one-question interviews.                                                             | 2026-06-04   |
 
-## Marketplaces & Directories
+### Marketplaces & Directories
 
 | Source | URL | Notes |
 |--------|-----|-------|
@@ -66,7 +64,7 @@ Maintained by practitioners , often higher signal-to-noise than aggregators.
 | Firecrawl blog | https://www.firecrawl.dev/blog/best-claude-code-skills | Editorial picks; refresh periodically |
 | ScriptByAI resource list | https://www.scriptbyai.com/claude-code-resource-list/ | Broad 2026 resource compilation |
 
-## MCP Servers (Complements Skills)
+### MCP Servers (Complements Skills)
 
 MCP servers extend *what tools Claude can call*; skills extend *how Claude reasons*. Both compound.
 
@@ -77,7 +75,7 @@ MCP servers extend *what tools Claude can call*; skills extend *how Claude reaso
 | mcp-awesome.com | https://mcp-awesome.com/ | 1200+ quality-verified servers, searchable directory | 2026-05-06 |
 | abordage/awesome-mcp | https://github.com/abordage/awesome-mcp | Auto-updated daily; good for freshness | 2026-05-06 |
 
-## Cross-Ecosystem Inspiration
+### Cross-Ecosystem Inspiration
 
 Not SKILL.md format, but good sources for *ideas* , patterns that adapt directly.
 
@@ -88,14 +86,14 @@ Not SKILL.md format, but good sources for *ideas* , patterns that adapt directly
 | ChatGPT custom instructions / GPT Actions | Prompt patterns for persona, workflow, and tool-use |
 | OpenAI Codex CLI plugins | SKILL.md format is cross-compatible; Codex skills often translate directly |
 
-## Blogs & Articles
+### Blogs & Articles
 
 | Source | URL | Notes |
 |--------|-----|-------|
 | DEV Community - Claude Code Skills Practical Guide | https://dev.to/muhammad_moeed/claude-code-skills-a-practical-guide-for-2026-3f6p | Hands-on walkthrough |
 | Medium - 10 Must-Have Skills | https://medium.com/@unicodeveloper/10-must-have-skills-for-claude-and-any-coding-agent-in-2026-b5451b013051 | Quick survey of high-value skills |
 
-## Evaluation Criteria
+### Evaluation Criteria
 
 When vetting a new source:
 
@@ -105,7 +103,7 @@ When vetting a new source:
 4. **Domain fit** (DevSecOps, PKM, automation) relevant to consulting work or personal use?
 5. **Quality bar**; Are skills self-contained with a clear trigger description in frontmatter?
 
-## See Also
+### See Also
 
 - [[Agent Skills Framework]], framework overview
 - [[gbrain]], two-layer page convention used by this document

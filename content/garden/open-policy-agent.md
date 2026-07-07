@@ -1,30 +1,24 @@
 ---
-title: "Open Policy Agent"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Open Policy Agent
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Open Policy Agent
-  - OPA
-  - Open Policy Agent (OPA)
-
+- Open Policy Agent
+- OPA
+- Open Policy Agent (OPA)
 params:
   aliases:
-    - OPA
-    - Open Policy Agent (OPA)
+  - OPA
+  - Open Policy Agent (OPA)
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is a CNCF policy engine that evaluates Rego policies against JSON inputs. It powers **[[Conftest]]** on PRs, **[[Gatekeeper]]** in **[[Kubernetes]]** admission, and many CI gates. We **adopt** OPA as the default engine for **[[Policy as Code]]** when rules need shared language across repos and clusters.
-
-## Blurb
-
-> Open Policy Agent (OPA) is an open source, general-purpose policy engine.
+[Open Policy Agent](https://www.openpolicyagent.org/). We **adopt** it under **[[Tool]]** in the garden.
 
 ## Summary
 
@@ -35,7 +29,6 @@ params:
 **When to skip:** Trivial one-off checks better served by **[[CEL]]** native validation or linters without Rego ops.
 
 **Key features:** `opa test`, bundle signing, decision logs, WASM compilation for embedded checks.
-
 
 ## Details
 

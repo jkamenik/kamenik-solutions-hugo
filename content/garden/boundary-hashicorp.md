@@ -1,27 +1,25 @@
 ---
-title: "Boundary (Hashicorp)"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: Boundary (Hashicorp)
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Boundary (Hashicorp)
-
+- Boundary (Hashicorp)
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/boundary-hashicorp
+- /radar/tools/boundary-hashicorp
 ---
 
-[HashiCorp Boundary](https://developer.hashicorp.com/boundary) is an identity-aware proxy for **just-in-time** access to hosts and services (SSH, RDP, databases, Kubernetes) without handing users long-lived credentials or flat network VPNs. We rate it **assess**: strong fit for **[[ZTNA]]** / **[[Access on Demand]]** patterns when you already run the HashiCorp stack; prove ops appetite before committing (controllers, workers, Vault integration, session recording).
+[Boundary (Hashicorp)](https://developer.hashicorp.com/boundary). Is an identity-aware proxy for **just-in-time** access to hosts and services (SSH, RDP, databases, Kubernetes) without handing users long-lived credentials or flat network VPNs.
 
 ## Blurb
 
-> Boundary provides identity-based access to dynamic infrastructure with fine-grained authorizations and session visibility.
+> Explore Boundary product documentation, tutorials, and examples.
 
 ## Summary
 

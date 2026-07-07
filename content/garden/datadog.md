@@ -1,27 +1,25 @@
 ---
-title: "Datadog"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Datadog
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Datadog
-
+- Datadog
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Datadog](https://www.datadoghq.com/) is a SaaS observability platform for metrics, logs, traces, RUM, and security signals in one vendor UI. We **assess** it for teams that want a managed pane without operating **[[Grafana]]** and multiple backends; default greenfield remains OTel plus **[[Grafana]]** to limit lock-in.
+[Datadog](https://www.datadoghq.com/). Is a SaaS observability platform for metrics, logs, traces, RUM, and security signals in one vendor UI.
 
 ## Blurb
 
-> Datadog is the essential monitoring and security platform for cloud applications.
+> See metrics from all of your apps, tools & services in one place with Datadog’s cloud monitoring as a service solution. Try it for free.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Strict data-sovereignty or multi-cloud neutrality goals. Prefer **[[OpenTelemetry]]** export to self-hosted **[[Grafana]]**.
 
 **Key features:** Unified host and container maps, APM service maps, log patterns, monitors, SLO tracking, marketplace integrations.
-
 
 ## Details
 

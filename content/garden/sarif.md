@@ -1,29 +1,23 @@
 ---
-title: "SARIF"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: SARIF
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - SARIF
-
+- SARIF
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "New"
+    movement: No Change
     subcategories:
-      - specification
+    - specification
 aliases:
-  - /radar/techniques/sarif
+- /radar/techniques/sarif
 ---
 
-[SARIF](https://sarifweb.azurewebsites.net/) (Static Analysis Results Interchange Format) is an OASIS JSON schema for exchanging output from **[[Code Scanner]]** tools in CI and IDEs. We **adopt** it as the default interchange format when wiring SAST, IaC scanners, and **[[GitHub Actions]]** annotations on [[Pull Request]]s.
-
-## Blurb
-
-> SARIF defines a JSON-based format for the output of static analysis tools.
+[SARIF](https://sarifweb.azurewebsites.net/). (Static Analysis Results Interchange Format) is an OASIS JSON schema for exchanging output from **[[Code Scanner]]** tools in CI and IDEs.
 
 ## Summary
 

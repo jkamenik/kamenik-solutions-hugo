@@ -1,7 +1,7 @@
 ---
 title: Dependency Inversion Principle
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Dependency Inversion Principle
@@ -20,14 +20,7 @@ params:
     - software-architecture
 ---
 
-[Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
-
-The [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) (DIP) is the **D** in **[[SOLID Principles]]**. High-level policy should not depend on low-level details; both should depend on abstractions. We **adopt** it wherever modules need to swap implementations, mock collaborators in tests, or keep domain logic free of framework imports. DIP is a design rule, not the same thing as dependency injection (a wiring technique).
-
-## Blurb
-
-> 1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
-> 2. Abstractions should not depend on details. Details should depend on abstractions.
+[Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 

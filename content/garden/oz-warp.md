@@ -1,7 +1,7 @@
 ---
 title: Oz
 date: '2026-06-30'
-lastmod: '2026-06-30'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Oz
@@ -15,20 +15,18 @@ params:
     kind: item
     usefulness: assess
     category: platform
-    movement: New
+    movement: No Change
 ---
 
-[Oz](https://www.warp.dev/oz) is Warp's cloud agent orchestration platform. It runs, governs, and scales coding agents across models and harnesses with triggers, schedules, parallelism, and audit trails. We **assess** it as enterprise agent infrastructure. Our default bounded agents remain [[cursor-agent]] and [[Cursor]] unless a team needs multi-harness fleet orchestration.
-
-## Blurb
-
-> The most flexible way to manage cloud agents at scale.
+[Oz](https://www.warp.dev/oz). Is Warp's cloud agent orchestration platform.
 
 ## Summary
 
-Oz is the control plane behind Warp's local and cloud agents. You can launch [[Warp Agent]], [[Claude Code]], or [[Codex]] in Docker or Kubernetes sandboxes, self-hosted or Warp-managed. Features include Slack, Linear, and GitHub triggers; recurring schedules; parallel agent fleets; and shared Warp Drive context across surfaces.
+**Garden stance:** We **assess** Oz for our estate.
 
-Evaluate Oz when engineering leaders want harness choice without betting on one vendor CLI. Agent Memory (research preview) adds cross-harness persistent memory. Oz is proprietary even though [[Warp Terminal]]'s desktop client is open source.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

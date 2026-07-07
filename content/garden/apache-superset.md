@@ -1,29 +1,23 @@
 ---
-title: "Apache Superset"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Apache Superset
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Apache Superset
-
+- Apache Superset
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 aliases:
-  - /radar/tools/apache-superset
+- /radar/tools/apache-superset
 ---
 
-[Apache Superset](https://superset.apache.org/) is a modern, enterprise-ready business intelligence web application from the [[Apache Software Foundation]]. It offers no-code chart building, a [[SQL]] [[IDE]], and a lightweight semantic layer over nearly any SQL engine. We **assess** it when teams need OSS BI at scale with strong role-based security and a large visualization catalog.
-
-## Blurb
-
-> Superset is a modern data exploration and data visualization platform. Superset can replace or augment proprietary business intelligence tools for many teams. Superset integrates well with a variety of data sources.
+[Apache Superset](https://superset.apache.org/). Is a modern, enterprise-ready business intelligence web application from the [[Apache Software Foundation]].
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** Small teams that want the fastest path to shareable SQL dashboards (**[[Redash]]** or **[[Metabase]]**). Primary workload is time-series monitoring and alerting (**[[Grafana]]**). Ops overhead of Redis, metadata DB, and workers is not justified for a handful of charts.
 
 **Key features:** Explore and SQL Lab, semantic layer for dimensions and metrics, async queries, caching layer, OAuth and RBAC, cloud-native [[Helm]] charts.
-
 
 ## Details
 

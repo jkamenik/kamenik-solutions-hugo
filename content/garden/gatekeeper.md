@@ -1,32 +1,26 @@
 ---
-title: "Gatekeeper"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Gatekeeper
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Gatekeeper
-  - OPA Gatekeeper
-
+- Gatekeeper
+- OPA Gatekeeper
 params:
   aliases:
-    - OPA Gatekeeper
+  - OPA Gatekeeper
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/gatekeeper
+- /radar/tools/gatekeeper
 ---
 
-[Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) is the Kubernetes admission controller for **Open Policy Agent (OPA)**: validating and mutating webhooks plus audit scans, driven by Rego **ConstraintTemplates** and **Constraints** (CRDs). We rate it **assess**: use for **in-cluster** enforcement when **[[Policy as Code]]** rules need Rego at admission time; prefer **[[Conftest]]** (**trial**) on PRs first and **[[CEL]]** for simple native `ValidatingAdmissionPolicy` rules before operating a full OPA stack.
-
-## Blurb
-
-> Gatekeeper is a validating and mutating webhook that enforces CRD-based policies executed by Open Policy Agent, a policy engine for Cloud Native environments hosted by CNCF as a graduated project.
+[Gatekeeper](https://open-policy-agent.github.io/gatekeeper/). Is the Kubernetes admission controller for **Open Policy Agent (OPA)**: validating and mutating webhooks plus audit scans, driven by Rego **ConstraintTemplates** and **Constraints** (CRDs).
 
 ## Summary
 

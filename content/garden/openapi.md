@@ -1,20 +1,26 @@
 ---
-title: "OpenAPI"
-date: 2025-05-14
-lastmod: 2026-05-18
+title: OpenAPI
+date: '2025-05-14'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - OpenAPI
-
+- OpenAPI
 params:
   garden:
     kind: item
     usefulness: trial
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 ---
 
-[OpenAPI](https://www.openapis.org/) is a specification and tool set to make designing and documenting APIs easier. If you are designing a [[REST]] API then this is the way to go. However, there are other popular API alternatives like [[gRPC]], and [[GraphQL]].
+[OpenAPI](https://www.openapis.org/). Is a specification and tool set to make designing and documenting APIs easier.
+
+## Summary
+
+**Garden stance:** We **trial** OpenAPI for our estate.
+
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

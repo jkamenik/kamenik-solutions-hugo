@@ -1,33 +1,23 @@
 ---
-title: "goodcheck"
-date: 2026-05-27
-lastmod: 2026-06-22
+title: goodcheck
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - goodcheck
-
+- goodcheck
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/goodcheck
+- /radar/tools/goodcheck
 ---
 
-[goodcheck](https://sider.github.io/goodcheck/) is a pattern-based code checker from Sider (formerly SideCI). You write rules in YAML to flag risky or discouraged code patterns in [[Pull Request]]s and local runs. The GitHub repo is gone and the vendor is defunct. We rate it **hold**: useful ideas, but not a living project to adopt for new work.
-
-## Status
-
-**Abandoned, not renamed.** Sider ended its code-review service in September 2022. The company (株式会社 Sider) completed liquidation on 2025-03-04. `github.com/sider/goodcheck` and the earlier `sideci/goodcheck` both return 404. There is no official successor repo or maintained fork with comparable traction.
-
-## Blurb
-
-> goodcheck is a customizable checker for source code. You can write your own rules in YAML.
+[goodcheck](https://sider.github.io/goodcheck/) is a tool we use to limit standing privilege and grant audited, time-bound access instead. We **hold** it under **[[Tool]]** in the garden.
 
 ## Summary
 
@@ -38,7 +28,6 @@ aliases:
 **Still available (frozen):** Ruby gem `goodcheck` 3.1.0 on RubyGems (last release 2021-07-15). Docs at [sider.github.io/goodcheck](https://sider.github.io/goodcheck/). Docker image `sider/goodcheck` appears removed from Docker Hub.
 
 **Alternatives:** Semgrep, custom grep/regex CI steps, **[[Conftest]]** / OPA for policy on IaC (not a drop-in for app-source YAML rules).
-
 
 ## Details
 
@@ -54,3 +43,7 @@ aliases:
 ### Rule shape (for comparison)
 
 Rules are YAML lists with `id`, `pattern` (regex), `message`, optional `glob`, `pass`/`fail` examples. Same niche as lightweight custom Semgrep rules, but with a smaller ecosystem.
+
+### Status
+
+**Abandoned, not renamed.** Sider ended its code-review service in September 2022. The company (株式会社 Sider) completed liquidation on 2025-03-04. `github.com/sider/goodcheck` and the earlier `sideci/goodcheck` both return 404. There is no official successor repo or maintained fork with comparable traction.

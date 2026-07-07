@@ -1,27 +1,21 @@
 ---
-title: "Docker Swarm"
-date: 2024-04-09
-lastmod: 2026-06-12
+title: Docker Swarm
+date: '2024-04-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Docker Swarm
-
+- Docker Swarm
 params:
   garden:
     kind: item
     usefulness: hold
     category: platform
-    movement: "Moved Out"
+    movement: Moved Out
 aliases:
-  - /radar/platforms/docker-swarm
+- /radar/platforms/docker-swarm
 ---
 
-[Docker Swarm](https://docs.docker.com/engine/swarm/) is Docker Engine's built-in **cluster orchestrator** (swarm mode): managers, workers, overlay networks, and rolling service updates. We rate it **hold** with **Moved Out**: do not start new multi-host estates on Swarm. Use **[[Kubernetes]]** (**adopt**) for orchestration. Existing Swarm clusters backed by **Mirantis** commercial support may run until a planned migration.
-
-## Blurb
-
-> Swarm mode lets you create and manage a cluster of Docker nodes, and deploy application services to the cluster.
+[Docker Swarm](https://docs.docker.com/engine/swarm/). Is Docker Engine's built-in **cluster orchestrator** (swarm mode): managers, workers, overlay networks, and rolling service updates.
 
 ## Summary
 

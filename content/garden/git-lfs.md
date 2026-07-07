@@ -1,23 +1,21 @@
 ---
-title: "git lfs"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: git lfs
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - git lfs
-
+- git lfs
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/git-lfs
+- /radar/tools/git-lfs
 ---
 
-[Git LFS](https://git-lfs.com/) is an open-source **[[git]]** extension that stores large blobs (binaries, media, datasets) outside the object database and keeps lightweight pointer files in history. We **adopt** it whenever checked-in assets would bloat clones or make `git log` unusable, typical on **[[GitHub]]** or **[[GitLab]]** repos with images, models, or build artifacts that must stay versioned.
+[git lfs](https://git-lfs.com/). Is an open-source **[[git]]** extension that stores large blobs (binaries, media, datasets) outside the object database and keeps lightweight pointer files in history.
 
 ## Blurb
 
@@ -38,11 +36,9 @@ aliases:
 ## Details
 
 **Setup (once per machine):**
-
 ```bash
 git lfs install
 ```
-
 **Per repository:**
 
 1. Track patterns: `git lfs track "*.psd"` (writes/updates `.gitattributes`)
@@ -63,7 +59,7 @@ git lfs install
 
 **Operational notes:** clones need the LFS CLI installed or fetches omit real file content; CI runners must install `git-lfs` and run `git lfs pull` where needed; monitor LFS bandwidth/storage quotas on SaaS hosts.
 
-**Security:** keep the client updated (e.g. [3.7.1+](https://github.com/git-lfs/git-lfs/security) for known advisories).
+**Security:** keep the client updated (e.g. [3.7.1+](https://github.com/git-lfs/git-lfs/security). For known advisories).
 
 **Not the same as:** submodule-only binary repos without LFS; artifact registries (npm, OCI) for release binaries; **[[git]]** itself.
 

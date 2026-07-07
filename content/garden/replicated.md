@@ -1,28 +1,26 @@
 ---
-title: "Replicated"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: Replicated
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Replicated
-
+- Replicated
 params:
   garden:
     kind: item
-    usefulness: assess
-    category: tool
-    movement: "No Change"
+    usefulness: hold
+    category: platform
+    movement: No Change
 ---
 
-Quadrant:: [[Platform|Platform]]
+[Replicated](https://www.replicated.com/). Quadrant:: [[Platform|Platform]]
 Ring:: #hold
 URL:: https://www.replicated.com/
-Related:: [[Kubernetes]]
+Related:: [[Kubernetes]] We **hold** it under **[[Platform]]** in the garden.
 
 ## Blurb
 
-Distribute Apps to Customers as K8s.
+> Replicated is the platform leading software companies use to ship and manage self-hosted software at scale.
 
 ## Summary
 

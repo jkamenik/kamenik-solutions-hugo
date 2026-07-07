@@ -1,29 +1,23 @@
 ---
-title: "go-version"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: go-version
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - go-version
-
+- go-version
 params:
   garden:
     kind: item
     usefulness: assess
     category: code
-    movement: "New"
+    movement: No Change
     subcategories:
-      - library
+    - library
 aliases:
-  - /radar/languages/go-version
+- /radar/languages/go-version
 ---
 
-[go-version](https://github.com/hashicorp/go-version) is a **[[GoLang]]** library from **[[HashiCorp]]** for parsing, comparing, and constraining [SemVer](https://semver.org/) strings. We **assess** it when a tool or operator needs version ranges (`>= 1.2, < 2.0`), prerelease ordering, or constraint checks in Go code.
-
-## Blurb
-
-> go-version is a library for parsing versions and version constraints, and verifying versions against a set of constraints.
+[go-version](https://github.com/hashicorp/go-version). Is a **[[GoLang]]** library from **[[HashiCorp]]** for parsing, comparing, and constraining [SemVer](https://semver.org/) strings.
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** pure string equality is enough; you already depend on a larger framework that ships its own semver helper; non-SemVer version schemes (date-based, custom).
 
 **Typical call sites:** Terraform providers, Helm-related tooling, internal release automation written in Go.
-
 
 ## Details
 

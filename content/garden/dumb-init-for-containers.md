@@ -1,29 +1,23 @@
 ---
-title: "Dumb-init for containers"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Dumb-init for containers
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Dumb-init for containers
-
+- Dumb-init for containers
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - containerization
+    - containerization
 aliases:
-  - /radar/tools/dumb-init-for-containers
+- /radar/tools/dumb-init-for-containers
 ---
 
-[dumb-init](https://github.com/Yelp/dumb-init) is a minimal PID 1 wrapper for Linux containers. It forwards signals to the child process and reaps zombie processes. We **adopt** it when the main process is not designed to run as init (most app images).
-
-## Blurb
-
-> dumb-init runs as PID 1, acting like a simple init system. It launches a single process and then proxies all received signals to a session rooted at that child process.
+[Dumb-init for containers](https://github.com/Yelp/dumb-init). Is a minimal PID 1 wrapper for Linux containers.
 
 ## Summary
 

@@ -1,7 +1,7 @@
 ---
 title: Acyclic Dependencies Principle
 date: '2026-06-25'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Acyclic Dependencies Principle
@@ -18,29 +18,13 @@ params:
     - software-architecture
 ---
 
-[Acyclic Dependencies Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle)
-
-The [Acyclic Dependencies Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle) (ADP) forbids cycles in the component dependency graph. Package A may depend on B, but no chain of dependencies may loop back to A. We **adopt** it in monorepos, modular monoliths, and multi-service estates where circular imports block builds or force big-bang releases. Break cycles with **[[Dependency Inversion Principle]]** seams or event boundaries before layering rules fail in production.
-
-## Blurb
-
-> Allow no cycles in the component dependency graph.
+[Acyclic Dependencies Principle](https://en.wikipedia.org/wiki/Acyclic_dependencies_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A coupling rule for components (packages, modules, libraries, deploy units). The dependency graph must be a directed acyclic graph (DAG). Cycles force mutual rebuilds and hide a clear build or release order.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** Circular dependencies make incremental change expensive. A tweak in one module ripples through the cycle. Tests and deploys cannot isolate a single component. Teams co-own tangled code because ownership follows the cycle.
-
-**Source:** Martin states the rule in *Clean Architecture* as "allow no cycles in dependencies."
-
-**Breaking cycles:** **[[Dependency Inversion Principle]]** is the primary tool: extract an abstraction, move it to a third package, and invert the dependency so both sides depend on the interface.
-
-**When to use:** Package dependency reviews, monorepo lint rules, and architecture checks before extract-to-library refactors. Apply when build tools or import graphs already show back-edges between modules.
-
-**When to pull back:** Tiny single-package apps with no module boundaries. Do not invent package splits solely to satisfy a linter when there is no real component graph.
-
-**Relation to siblings:** **[[Stable Dependencies Principle]]** and **[[Stable Abstractions Principle]]** govern how acyclic edges should point (toward stability and abstraction). ADP is the prerequisite: fix cycles first, then aim dependency direction.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

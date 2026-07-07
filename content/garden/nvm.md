@@ -1,30 +1,28 @@
 ---
-title: "nvm"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: nvm
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - nvm
-  - nvm-sh
-
+- nvm
+- nvm-sh
 params:
   aliases:
-    - nvm-sh
+  - nvm-sh
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) installs and switches **[[Node.js]]** versions per shell session from `.nvmrc`. We **assess** it for Node-only estates; polyglot repos should prefer **[[mise]]** or **[[asdf]]**.
+[nvm](https://github.com/nvm-sh/nvm). (Node Version Manager) installs and switches **[[Node.js]]** versions per shell session from `.nvmrc`.
 
 ## Blurb
 
-> nvm allows you to quickly install and use different versions of node via the command line.
+> Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions - nvm-sh/nvm
 
 ## Summary
 
@@ -35,7 +33,6 @@ params:
 **When to skip:** Need fast switching or Windows-first ergonomics (**[[fnm]]**). Multiple runtimes beyond Node.
 
 **Key features:** `.nvmrc`, LTS aliases, npm global packages per Node version.
-
 
 ## Details
 

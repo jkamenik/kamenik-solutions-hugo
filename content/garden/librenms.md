@@ -1,27 +1,21 @@
 ---
-title: "LibreNMS"
-date: 2024-10-01
-lastmod: 2026-06-22
+title: LibreNMS
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - LibreNMS
-
+- LibreNMS
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[LibreNMS](https://www.librenms.org/) is an open source network monitoring system focused on SNMP discovery, device health, and alerting for switches, routers, and firewalls. It ships auto-discovery, billing hooks, and a web dashboard out of the box. We **hold** new deployments: it fits SNMP-heavy network closets, but **[[Grafana]]** with modern exporters is the default for broader observability.
-
-## Blurb
-
-> LibreNMS is an autodiscovering PHP/MySQL/SNMP based network monitoring which includes support for a wide range of network hardware and operating systems.
+[LibreNMS](https://www.librenms.org/). Is an open source network monitoring system focused on SNMP discovery, device health, and alerting for switches, routers, and firewalls.
 
 ## Summary
 
@@ -32,7 +26,6 @@ params:
 **When to skip:** Greenfield monitoring where apps and infra share one observability plane. Prefer Prometheus node/snmp exporters plus **[[Grafana]]**, or cloud-native network telemetry when available.
 
 **Key features:** Auto-discovery, alerting rules, API, billing reports, and distributed pollers for large networks.
-
 
 ## Details
 

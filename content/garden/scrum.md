@@ -1,44 +1,29 @@
 ---
-title: "Scrum"
-date: 2025-04-10
-lastmod: 2026-05-18
+title: Scrum
+date: '2025-04-10'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Scrum
-
+- Scrum
 params:
   garden:
     kind: item
     usefulness: trial
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[Scrum](https://www.scrum.org/resources/what-scrum-module) is one of the more popular [[Agile Software Development]] techniques. Interestingly enough it is just [[Waterfall]] rebranded. It is one of the few that you can purchase training and certification for, which should be your clue that Scrum really isn't agile in the strictest sense. However, in comparison to other techniques like [[Six Sigma]] it is much lighter weight. There are some good points which you should try in whatever development process you use.
+[Scrum](https://www.scrum.org/resources/what-scrum-module) is a technique we **trial** in the garden.
 
-The good:
+## Summary
 
-- Sprint Planning
+**Overview:** The good:
+
+**Detail 1:** - Sprint Planning
 - Scrum Team
 - Definition of Done / Acceptance Criteria
 - Retrospective
 
-The bad:
+**Detail 2:** The bad:## Personal Experience
 
-- Daily Scrum / Standup
-- Backlog Grooming
-- Points
-- Burn-down Charts
-
-The ugly:
-
-- Infinite Backlog
-- Sprints
-- Moving Goal Posts / Crunch Culture
-- "Full stack"
-- Ceremonies
-
-Most of the good parts of Scrum align the team's focus with delivering value. Most of the bad and ugly parts are ceremonies, which folks oft confuse as value. This can lead to a death spiral of more formal process being used as a "fix" for a delivery problem.
-
-Care must be taken as following Scrum does not guarantee results. Instead Scrum should be treated like a collection of light weight techniques that can be applied or ignored as needed.
+<!-- User-owned: vault-only; never published or exported. Agents read for /tech-garden update synthesis; proofread spelling/grammar only. -->

@@ -1,27 +1,25 @@
 ---
-title: "OpenGrep"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: OpenGrep
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - OpenGrep
-
+- OpenGrep
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 ---
 
-[OpenGrep](https://github.com/opengrep/opengrep) is a community fork of Semgrep CE, created in January 2025 after Semgrep moved several engine capabilities behind a commercial license. It targets backward compatibility with Semgrep YAML rules and JSON or **[[SARIF]]** output. We **assess** it under **[[Code Scanner]]** when a vendor-neutral OSS engine matters more than Semgrep Inc.'s platform roadmap.
+[OpenGrep](https://github.com/opengrep/opengrep). Is a community fork of Semgrep CE, created in January 2025 after Semgrep moved several engine capabilities behind a commercial license.
 
 ## Blurb
 
-> Opengrep is the most advanced open source SAST engine. Analyze large code bases at the speed of thought with intuitive pattern matching and customizable rules.
+> 🔎 Static code analysis engine to find security issues in code. - opengrep/opengrep
 
 ## Summary
 
@@ -38,7 +36,6 @@ params:
 **Fork context:** branched from Semgrep v1.100.0 (December 2024). Backers include Aikido, Endor Labs, Jit, Orca Security, and others. Goal is a foundation-governed engine with pro-only CE gaps reopened (cross-function analysis, extended languages, fingerprint metadata).
 
 **Pairs with:** existing Semgrep CI configs (often drop-in); **[[GitHub Actions]]**; **[[Shift Left]]** gates on **[[Pull Request]]**s.
-
 
 ## Details
 

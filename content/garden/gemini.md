@@ -1,32 +1,26 @@
 ---
-title: "Gemini"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: Gemini
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Gemini
-  - Gemini CLI
-  - Google Gemini CLI
-
+- Gemini
+- Gemini CLI
+- Google Gemini CLI
 params:
   aliases:
-    - Gemini CLI
-    - Google Gemini CLI
+  - Gemini CLI
+  - Google Gemini CLI
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 ---
 
-[Gemini CLI](https://developers.google.com/gemini-code-assist/docs/gemini-cli) is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models. We rate it **trial** under [[AI Agent]]: a solid choice on Google accounts or Gemini API when you want Google's stack and [[Agent Skills Framework]] portability. We usually default to [[Cursor]] + [[cursor-agent]] for daily editor work and [[Claude Code]] / [[Codex]] for other vendor stacks.
-
-## Blurb
-
-> Gemini CLI is an open-source AI agent that brings Gemini directly into your terminal. It helps you build, debug, and automate development workflows with built-in tools and MCP support.
+[Gemini](https://developers.google.com/gemini-code-assist/docs/gemini-cli). Is Google's open-source agentic coding agent for the terminal, ReAct loop, built-in tools (files, shell, search), MCP servers, and large-context Gemini models.
 
 ## Summary
 

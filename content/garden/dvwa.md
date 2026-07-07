@@ -1,28 +1,26 @@
 ---
-title: "DVWA"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: DVWA
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - DVWA
-  - Damn Vulnerable Web Application
-
+- DVWA
+- Damn Vulnerable Web Application
 params:
   aliases:
-    - Damn Vulnerable Web Application
+  - Damn Vulnerable Web Application
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[DVWA](https://github.com/digininja/DVWA) (Damn Vulnerable Web Application) is a PHP/MariaDB web app with deliberate OWASP-class flaws. We **trial** it as a legal target for manual exploitation, DAST tooling, and secure-coding lessons. Run it only in isolated lab VMs or containers, never on internet-facing hosts.
+[DVWA](https://github.com/digininja/DVWA). (Damn Vulnerable Web Application) is a PHP/MariaDB web app with deliberate OWASP-class flaws.
 
 ## Blurb
 
-> Damn Vulnerable Web Application (DVWA) is a PHP/MariaDB web application that is damn vulnerable. Its main goal is to aid security professionals, web developers, students, and teachers in a controlled classroom environment.
+> Damn Vulnerable Web Application (DVWA). Contribute to digininja/DVWA development by creating an account on GitHub.
 
 ## Summary
 
@@ -33,7 +31,6 @@ DVWA exposes common web vulnerabilities at four difficulty levels (low, medium, 
 **When to skip:** you need a modern stack or API-heavy scenarios (use [[Juice Shop]] instead); you cannot isolate the host from your network; you want automated pass/fail grading without manual verification.
 
 **Stack:** PHP, Apache, MariaDB (MySQL works with extra config). Official install paths include XAMPP on a VM, Docker, or Debian-based scripts from the repo README.
-
 
 ## Details
 
@@ -58,11 +55,9 @@ Typical modules include brute force, command injection, CSRF, SQL injection, XSS
 - Pair manual labs with DAST runs from [[Zed Attack Proxy (Zap)]] to compare human findings with scanner output.
 
 ### Install Sketch
-
 ```bash
 git clone https://github.com/digininja/DVWA.git
 cd DVWA
 # Follow README: copy config, create DB user, run setup.php, set security level
 ```
-
 Docker and pre-built images are documented upstream; pick the maintained GitHub source over stale third-party bundles.

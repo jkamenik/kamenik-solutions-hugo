@@ -1,12 +1,10 @@
 ---
-title: "Monitoring"
-date: 2026-06-12
-lastmod: 2026-06-12
+title: Monitoring
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Monitoring
-
+- Monitoring
 params:
   garden:
     kind: subcategory

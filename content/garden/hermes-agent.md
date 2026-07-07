@@ -1,37 +1,34 @@
 ---
-title: "Hermes"
-date: 2026-04-20
-lastmod: 2026-06-22
+title: Hermes
+date: '2026-04-20'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Hermes
-  - hermes-agent
-
+- Hermes
+- hermes-agent
 params:
   aliases:
-    - hermes-agent
+  - hermes-agent
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "Moved Out"
+    movement: Moved Out
     subcategories:
-      - ai-agent
+    - ai-agent
 ---
 
-[Hermes](https://github.com/NousResearch/hermes-agent) is a self-improving [[AI Agent]] platform from Nous Research. It targets personal-assistant use with learning loops, messaging integrations, and [[Agent Skills Framework]] support. We rate it **hold** with **Moved Out**. Always-on agents that message external systems are hard to secure. The hardening effort often negates the convenience versus a bounded agent in an [[IDE]] or scheduled automation you control.
+[Hermes](https://github.com/NousResearch/hermes-agent). We **hold** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> The self-improving AI agent built by [Nous Research](https://nousresearch.com/). The only agent with a built-in learning loop , it creates skills from experience, improves them during use, nudges itself to persist knowledge, and builds a deepening model of who you are across sessions.
+> The agent that grows with you. Contribute to NousResearch/hermes-agent development by creating an account on GitHub.
 
 ## Summary
 
 Hermes targets the same problem space as [[OpenClaw]]: an always-available assistant across chat surfaces (Telegram, Slack, CLI, etc.) with memory, cron-style scheduling, and skill extensibility. It integrates [[Agent Client Protocol]] so editors like Obsidian can use the agent via plugins (e.g. [obsidian-agent-client](https://github.com/RAIT-09/obsidian-agent-client)). On Apple Silicon, local runs via [[Ollama]] with models such as `deepseek` and `qwen` are practical.
 
 Originally a credible competitor in the personal-agent wave; our position is that broad tool-and-shell access without tight policy boundaries is unsafe for most setups. Prefer IDE-bound agents ([[Claude Code]], Cursor-class tools) or pipelines that emit reviewable scripts on a schedule.
-
 
 ## Details
 

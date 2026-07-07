@@ -1,27 +1,25 @@
 ---
-title: "Preset"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Preset
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Preset
-
+- Preset
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 ---
 
-[Preset](https://preset.io/) is a managed **[[Apache Superset]]** platform from Superset's original creators. It hosts Superset, handles upgrades, and adds workspace collaboration on top of the OSS BI engine. We **assess** it when Superset fits but self-hosting ops do not.
+[Preset](https://preset.io/). Is a managed **[[Apache Superset]]** platform from Superset's original creators.
 
 ## Blurb
 
-> Preset is Apache Superset as a service. Build and share data dashboards with your team.
+> AI-native business intelligence built on Apache Superset™. Dashboards, embedded analytics, self-service exploration, and conversational AI - all open source, enterprise-grade, and built for the AI era.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Strict data residency that forbids third-party BI SaaS. Self-host **[[Apache Superset]]** or assess **[[Lightdash]]** with **[[dbt-core]]** instead.
 
 **Key features:** Managed Superset, API access, role-based workspaces, changelog parity with upstream Apache releases.
-
 
 ## Details
 

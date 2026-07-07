@@ -1,7 +1,7 @@
 ---
 title: SOLID Principles
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - SOLID Principles
@@ -15,34 +15,16 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: New
+    movement: No Change
     subcategories:
     - software-architecture
 ---
 
-[SOLID](https://en.wikipedia.org/wiki/SOLID) is a mnemonic for five object-oriented design principles from Robert C. Martin. Together they reduce coupling, clarify change boundaries, and keep modules testable. We **adopt** the set as baseline discipline in application code, not as a checklist to apply in one refactor. Start with **[[Single Responsibility Principle]]** and **[[Dependency Inversion Principle]]** where coupling hurts tests or vendor swaps.
-
-## Blurb
-
-> SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
+[SOLID Principles](https://en.wikipedia.org/wiki/SOLID). We **adopt** it under **[[Technique]]** in the garden.
 
 ## Summary
 
-**What it is:** Five named principles (below) that guide how classes, modules, and services depend on each other. They complement **[[Object-Oriented Programming]]** but apply at any granularity where you define boundaries and interfaces.
-
-**Garden stance:** **Adopt** as a review vocabulary and refactoring target. **Hold** SOLID-by-the-book layers that add abstraction without a measured pain point (no second implementation, no test seam, no churn).
-
-| Letter | Principle             | Garden item                                         |
-| ------ | --------------------- | --------------------------------------------------- |
-| **S**  | Single Responsibility | **[[Single Responsibility Principle]]** (**adopt**) |
-| **O**  | Open/Closed           | **[[Open-Closed Principle]]** (**adopt**)           |
-| **L**  | Liskov Substitution   | **[[Liskov Substitution Principle]]** (**adopt**)   |
-| **I**  | Interface Segregation | **[[Interface Segregation Principle]]** (**adopt**) |
-| **D**  | Dependency Inversion  | **[[Dependency Inversion Principle]]** (**adopt**)            |
-
-**When to use:** Design review, legacy refactors, and new services where frameworks or databases would otherwise leak into domain logic. Pair with **[[First Principles]]** when inherited structure no longer fits constraints.
-
-**When to pull back:** Scripts, glue code, and prototypes with one concrete dependency and no reuse plan.
+**Key points:** is a mnemonic for five object-oriented design principles from Robert C. Martin. Together they reduce coupling, clarify change boundaries, and keep modules testable. We **adopt** the set as baseline discipline in application code, not as a checklist to apply in one refactor. Start with **[[Single Responsibility Principle]]** and **[[Dependency Inversion Principle]]** where coupling hurts tests or vendor swaps.
 
 ## Details
 

@@ -1,27 +1,21 @@
 ---
-title: "fnm"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: fnm
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - fnm
-
+- fnm
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[fnm](https://github.com/Schniz/fnm) (Fast Node Manager) is a Rust-based **[[Node.js]]** version manager with `.node-version` / `.nvmrc` support and cross-platform shells. We **trial** it over **[[nvm]]** when developers want faster Node switching on macOS and Linux.
-
-## Blurb
-
-> fnm is a fast and simple Node.js version manager, built in Rust.
+[fnm](https://github.com/Schniz/fnm). (Fast Node Manager) is a Rust-based **[[Node.js]]** version manager with `.node-version` / `.nvmrc` support and cross-platform shells.
 
 ## Summary
 
@@ -32,7 +26,6 @@ params:
 **When to skip:** Already standardized on **[[mise]]** / **[[asdf]]** for all runtimes.
 
 **Key features:** Multi-platform, `.node-version`, fish/zsh/bash support, `--use-on-cd` hook.
-
 
 ## Details
 

@@ -1,7 +1,7 @@
 ---
 title: Common Reuse Principle
 date: '2026-06-24'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Common Reuse Principle
@@ -18,27 +18,13 @@ params:
     - software-architecture
 ---
 
-[Common Reuse Principle](https://en.wikipedia.org/wiki/Common_reuse_principle)
-
-The [Common Reuse Principle](https://en.wikipedia.org/wiki/Common_reuse_principle) (CRP) groups classes into the same component when they are used together. Consumers should not depend on classes they never touch. We **adopt** it when shared libraries force unrelated transitive dependencies or version churn. CRP pushes modules toward smaller artifacts that match real use. It is the component-level counterpart to **[[Interface Segregation Principle]]**.
-
-## Blurb
-
-> Classes that are not used together should not be grouped together.
+[Common Reuse Principle](https://en.wikipedia.org/wiki/Common_reuse_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A reuse cohesion rule for packages, modules, and libraries. If a consumer needs one class from a component, it should plausibly need the rest. Split components when clients import a jar or module but use only a slice of its surface. CRP is **[[Interface Segregation Principle]]** applied to deployable units.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** Fat shared modules drag unused code, licenses, and security surface into every consumer. A change to an unrelated class in the same artifact still forces retest and redeploy downstream.
-
-**Source:** Martin states two related rules in *Clean Architecture*: do not force users of a component to depend on things they do not need, and do not depend on things you do not need.
-
-**When to use:** Shared internal libraries, platform SDKs, and monorepo packages where teams complain about "pulling in all of X for one helper." Apply when usage graphs show clients depending on disjoint subsets of the same module.
-
-**When to pull back:** Small teams with one app and one deployable do not need package surgery early. Do not split until reuse patterns are visible in imports or dependency graphs.
-
-**Relation to siblings:** **[[Interface Segregation Principle]]** keeps interfaces small at the type level. CRP keeps components small at the deploy/import level and drives modules toward smaller artifacts. **[[Common Closure Principle]]** groups by shared change; CRP groups by shared use. Teams often trade CCP against CRP.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

@@ -1,18 +1,16 @@
 ---
-title: "Framework"
-date: 2026-01-07
-lastmod: 2026-06-12
+title: Framework
+date: '2026-01-07'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Framework
-  - application framework
-  - web framework
-
+- Framework
+- application framework
+- web framework
 params:
   aliases:
-    - application framework
-    - web framework
+  - application framework
+  - web framework
   garden:
     kind: subcategory
     parent_category: code

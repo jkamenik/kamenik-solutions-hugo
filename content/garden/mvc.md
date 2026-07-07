@@ -1,7 +1,7 @@
 ---
 title: Model-View-Controller (MVC)
 date: '2025-12-12'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Model-View-Controller (MVC)
@@ -19,11 +19,7 @@ params:
     - design-pattern
 ---
 
-[Model-view-controller (MVC)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) splits UI applications into model (data and rules), view (presentation), and controller (input and flow). We **assess** it per stack because frameworks often label layers "MVC" while shipping different boundaries. It remains a common web pattern, not a universal architecture default.
-
-## Blurb
-
-> Model-view-controller is a software design pattern commonly used for developing user interfaces that divides the related program logic into three interconnected elements.
+[Model-View-Controller (MVC)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). Splits UI applications into model (data and rules), view (presentation), and controller (input and flow).
 
 ## Summary
 

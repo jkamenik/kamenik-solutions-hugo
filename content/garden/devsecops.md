@@ -1,29 +1,37 @@
 ---
-title: "DevSecOps"
-date: 2024-04-09
-lastmod: 2026-05-18
+title: DevSecOps
+date: '2024-04-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - DevSecOps
-
+- DevSecOps
 params:
   garden:
     kind: item
     usefulness: trial
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[DevSecOps](https://www.devsecops.org/) can be thought of as [[DevOps]] with a security focus at every step. However, a better way to think about it is to treat security as a blameless iterative process.
+[DevSecOps](https://www.devsecops.org/). Can be thought of as [[DevOps]] with a security focus at every step.
 
-Accept that security is an arms race against bad actors that have more time and more resources than you. Instead of throwing in the towel, or making it someone else's problem, DevSecOps is about realizing it is a risk. A risk that can be measured and acted upon in the existing [[Agile Software Development|Agile]] or [[DevOps]] process you are already following.
+## Blurb
 
-If you already practice DevOps and need a process to handle security concerns then DevSecOps is something to try.
+> devsecops.org is an informational site for security and business practitioners looking for innovative ways to incorporate security at scale.
 
-Map security work to the same delivery stages you already use: plan (threat modeling, requirements), build (SAST, dependency scan), test (DAST, fuzzing), release (signing, policy gates), deploy (hardening, secrets), operate (monitoring, IR), and improve (postmortems, control updates).
+## Summary
 
-## Manifesto
+**Garden stance:** We **trial** DevSecOps for our estate.
+
+**Overview:** Accept that security is an arms race against bad actors that have more time and more resources than you. Instead of throwing in the towel, or making it someone else's problem, DevSecOps is about realizing it is a risk. A risk that can be measured and acted upon in the existing [[Agile Software Development|Agile]] or [[DevOps]] process you are already following.
+
+**Detail 1:** If you already practice DevOps and need a process to handle security concerns then DevSecOps is something to try.
+
+**Detail 2:** Map security work to the same delivery stages you already use: plan (threat modeling, requirements), build (SAST, dependency scan), test (DAST, fuzzing), release (signing, policy gates), deploy (hardening, secrets), operate (monitoring, IR), and improve (postmortems, control updates).
+
+## Details
+
+### Manifesto
 
 Taking a page out of the [[Agile Software Development|Agile Manifesto]], DevSecOps has the following manifesto:
 

@@ -1,27 +1,25 @@
 ---
-title: "Jaeger"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Jaeger
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Jaeger
-
+- Jaeger
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Jaeger](https://www.jaegertracing.io/) is an open source distributed tracing backend and UI, originally from Uber and now a CNCF graduated project. It accepts **[[OpenTelemetry]]** trace exports for request-flow debugging. We **assess** it for OSS trace storage; many teams also view traces in **[[Grafana]]** Tempo instead.
+[Jaeger](https://www.jaegertracing.io/). Is an open source distributed tracing backend and UI, originally from Uber and now a CNCF graduated project.
 
 ## Blurb
 
-> Jaeger is an open-source end-to-end distributed tracing platform.
+> Monitor and troubleshoot workflows in complex distributed systems
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Grafana-all-in-one stack already standardized on Tempo. SaaS trace analytics (**[[Honeycomb]]**, **[[Datadog]]**).
 
 **Key features:** Service dependency graphs, adaptive sampling, OTLP ingest, operator deployment on **[[Kubernetes]]**.
-
 
 ## Details
 

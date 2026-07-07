@@ -1,20 +1,28 @@
 ---
-title: "Agent Client Protocol"
-date: 2026-04-20
-lastmod: 2026-06-12
+title: Agent Client Protocol
+date: '2026-04-20'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Agent Client Protocol
-
+- Agent Client Protocol
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - protocol
+    - protocol
 ---
 
-The agent client protocol allows separate systems to use an agent as a service in its own right. This allows any client (like an [[IDE]]) to use the agent in place of an LLM. This has the added benefit of allowing the agent to have [[Agent Skills Framework]] and persistent storage.
+The agent client protocol allows separate systems to use an agent as a service in its own right. We **assess** it under **[[Platform]]** in the garden.
+
+## Summary
+
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.
+
+## Details
+
+### History

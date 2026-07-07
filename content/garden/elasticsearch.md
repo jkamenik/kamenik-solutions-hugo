@@ -1,27 +1,25 @@
 ---
-title: "Elasticsearch"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Elasticsearch
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Elasticsearch
-
+- Elasticsearch
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Elasticsearch](https://www.elastic.co/elasticsearch) is a distributed search and analytics engine used for logs, metrics, and full-text search. In observability it often backs **[[Kibana]]** dashboards or Grafana Elasticsearch datasources. We **assess** it when Elastic is already standard; otherwise prefer **[[Loki]]** plus **[[Prometheus]]** with **[[Grafana]]**.
+[Elasticsearch](https://www.elastic.co/elasticsearch) is a tool we **assess** in the garden.
 
 ## Blurb
 
-> Elasticsearch is a distributed, free and open search and analytics engine for all types of data.
+> Elasticsearch is the leading distributed, RESTful, open source search and analytics engine designed for speed, horizontal scalability, reliability, and easy management. Get started for free....
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Greenfield LGTM stack without Elastic licensing. Small teams avoiding JVM cluster ops.
 
 **Key features:** Index lifecycle management, ingest pipelines, cross-cluster search, Elastic Cloud managed option.
-
 
 ## Details
 

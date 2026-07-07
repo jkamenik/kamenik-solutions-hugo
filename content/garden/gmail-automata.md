@@ -1,7 +1,7 @@
 ---
 title: Gmail Automata
 date: '2026-06-17'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Gmail Automata
@@ -13,22 +13,22 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
 ---
 
-[Gmail Automata](https://github.com/ranmocy/gmail-automata) is a Google Apps Script project that replaces native Gmail filters with spreadsheet-defined rules. Conditions use Lisp-like S-expressions; actions are independent and composable. We **assess** it because the model is powerful but couples you to Gmail labels, timed Apps Script runs, and a forked Google Sheet. It fits **[[Tool]]** when you want versioned, copy-pasteable email routing across personal and work accounts.
+[Gmail Automata](https://github.com/ranmocy/gmail-automata). Is a Google Apps Script project that replaces native Gmail filters with spreadsheet-defined rules.
 
 ## Blurb
 
-> Gmail Automata is to do a better job replacing existing Gmail filters.
+> Automate your Gmail. Contribute to ranmocy/gmail-automata development by creating an account on GitHub.
 
 ## Summary
 
-Incoming mail is archived by default and tagged `0unprocessed`. A background Apps Script job (default every five minutes) loads unprocessed threads, evaluates rules from the `rules` sheet in stage order, applies matching actions, then moves threads to `0processed`. Unmatched threads surface as errors unless you add a catch-all rule at the end.
+**Garden stance:** We **assess** Gmail Automata for our estate.
 
-Rules and config live in a Google Spreadsheet you fork from the upstream template. That makes backup, reorder, grouping, and sharing rules easier than Gmail's filter UI. The TypeScript source in GitHub deploys to Apps Script via CLASP (`yarn deploy`).
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-Worth trying when native Gmail filters are hard to maintain or you want one ruleset across accounts. Compare [[gog]] for terminal and agent Gmail access; Automata is filter-and-routing logic inside Gmail, not a general API client.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

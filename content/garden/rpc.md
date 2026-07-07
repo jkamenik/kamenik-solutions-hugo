@@ -1,7 +1,7 @@
 ---
 title: Remote Procedure Call (RPC)
 date: '2025-12-21'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Remote Procedure Call (RPC)
@@ -18,11 +18,7 @@ params:
     - api
 ---
 
-[Remote procedure call (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call) exposes local function calls across process or network boundaries. We **hold** it as the default integration style for distributed systems. RPC began as **[[IPC]]** over the network stack, which is reasonable on one host. Once peers live on different machines, the call metaphor fights versioning, failure modes, and team boundaries.
-
-## Blurb
-
-> In distributed computing, a remote procedure call is when a computer program causes a procedure to execute in a different address space as if it were a local procedure call, without the programmer explicitly writing details for the remote interaction.
+[Remote Procedure Call (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call). Exposes local function calls across process or network boundaries.
 
 ## Summary
 

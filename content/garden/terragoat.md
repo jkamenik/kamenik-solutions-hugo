@@ -1,25 +1,23 @@
 ---
-title: "TerraGoat"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: TerraGoat
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - TerraGoat
-
+- TerraGoat
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[TerraGoat](https://github.com/bridgecrewio/terragoat) is Bridgecrew's "Vulnerable by Design" **[[Terraform]]** repository. It deploys intentionally misconfigured AWS, Azure, and GCP resources for IaC security training. We **trial** it as a legal target for **[[Checkov]]** drills, pre-commit hooks, and **[[Shift Left]]** pipeline exercises. Never apply it in production accounts or beside sensitive workloads.
+[TerraGoat](https://github.com/bridgecrewio/terragoat). We **trial** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> TerraGoat is Bridgecrew's "Vulnerable by Design" Terraform repository. TerraGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
+> TerraGoat is Bridgecrew&#39;s &quot;Vulnerable by Design&quot; Terraform repository. TerraGoat is a learning and training project that demonstrates how common configuration errors can find their wa...
 
 ## Summary
 
@@ -30,7 +28,6 @@ TerraGoat follows the Goat tradition (**[[DVWA]]**, **[[Juice Shop]]**) for clou
 **When to skip:** you cannot isolate a disposable cloud account; you need app-layer vuln labs only (use **[[DVWA]]** or **[[Juice Shop]]**); you lack budget to tear down AWS/Azure/GCP resources after the lab.
 
 **Cloud modules:** separate Terraform roots under `terraform/aws/`, `terraform/azure/`, and `terraform/gcp/`. Use remote state (S3 backend documented upstream) and `terraform destroy` when finished.
-
 
 ## Details
 
@@ -52,7 +49,6 @@ TerraGoat follows the Goat tradition (**[[DVWA]]**, **[[Juice Shop]]**) for clou
 - Scan the repo locally with **[[Checkov]]** before any apply to practice catch-before-deploy.
 
 ### Scan-First Lab Sketch
-
 ```bash
 git clone https://github.com/bridgecrewio/terragoat.git
 cd terragoat

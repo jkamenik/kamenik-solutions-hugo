@@ -1,7 +1,7 @@
 ---
 title: Functional Programming
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Functional Programming
@@ -13,16 +13,12 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: New
+    movement: No Change
     subcategories:
     - software-architecture
 ---
 
-[Functional programming](https://en.wikipedia.org/wiki/Functional_programming) (FP) treats computation as the evaluation of pure functions over immutable values. We **adopt** it for data transforms, stream processing, and concurrent code where shared mutable state is the main risk. Use **[[Object-Oriented Programming]]** at domain boundaries when entities and lifecycles map naturally to objects. Reach for **[[First Principles]]** when a team picks FP or OOP by habit instead of constraints.
-
-## Blurb
-
-> In computer science, functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+[Functional Programming](https://en.wikipedia.org/wiki/Functional_programming) is a technique we **adopt** in the garden.
 
 ## Summary
 

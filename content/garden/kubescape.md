@@ -1,29 +1,27 @@
 ---
-title: "Kubescape"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Kubescape
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Kubescape
-
+- Kubescape
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/kubescape
+- /radar/tools/kubescape
 ---
 
-[Kubescape](https://github.com/kubescape/kubescape) is an open source Kubernetes security scanner. It checks clusters and manifests against NSA/CISA guidance, MITRE ATT&CK, and signed controls frameworks. We **assess** it next to kube-bench-style tools before standardizing a cluster compliance gate.
+[Kubescape](https://github.com/kubescape/kubescape) is a tool we **assess** in the garden.
 
 ## Blurb
 
-> Kubescape is an open-source Kubernetes security platform.
+> Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernet...
 
 ## Summary
 

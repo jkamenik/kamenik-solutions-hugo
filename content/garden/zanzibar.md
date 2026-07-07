@@ -1,27 +1,29 @@
 ---
-title: "Zanzibar"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: Zanzibar
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Zanzibar
-
+- Zanzibar
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/zanzibar
+- /radar/techniques/zanzibar
 ---
 
-[Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/)
+[Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) is a technique we **assess** in the garden.
 
-Google [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) is a white paper on how Google handles fine-grained permissions authorization at scale. The first 2 sections of the document (Introduction & Model, Language, and API), and 1/2 of the third (Architecture and Implementation) are broadly applicable to anyone concerned about permissions. The rest of the document is really about Google's scale, which is less universal. If you need to implement a permissions model then this is a good one.
+## Summary
 
-## The Permissions Schema
+**Key points:** Google [Zanzibar](https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/) is a white paper on how Google handles fine-grained permissions authorization at scale. The first 2 sections of the document (Introduction & Model, Language, and API), and 1/2 of the third (Architecture and Implementation) are broadly applicable to anyone concerned about permissions. The rest of the document is really about Google's scale, which is less universal. If you need to implement a permissions model then this is a good one.
+
+## Details
+
+### The Permissions Schema
 
 Basically, the data schema is a simple tuple of `<object>#<relation>@<user>` that represents a relationship graph. The permissions are derived by asking if a certain relationship is explicit or implied by the graph. If yes, permission granted, if not then denied.
 
@@ -41,7 +43,7 @@ Some ways relationships are mapped:
 4. `doc:readme` is in a `folder:A` - `doc:readme#parent@folder:A#…`
  1. `#…` is self-referential relationship. Basically it is a means to draw a graph between two objects instead between an object and a user.
 
-## Eval
+### Eval
 
 First, we - as the implementors - would define a finite set of relations. Then we would add `check(user, object, <relation>)` to our code. The `<relation>` would be the hard or soft-coded part in the code. The user would come from the user session, and the object would be from the request.
 
@@ -52,12 +54,11 @@ Checking of rules is then a matter of graph traversal, if you are able to map be
 3. Does `group:eng#member@11` exist? Yes.
 4. `doc:readme#viewer@11` is true and can be cached.
 
-## Defining a Namespace Schema
+### Defining a Namespace Schema
 
 A namespace is basically a rule set that dynamically implies relationships. Basically how to map relations.
 
 Let's say you want to add a relationship "editor". You previously had "owner" and "viewer". Owner had edit but also had other abilities. To correct the overly broad use of owner first you update the code and fix any use of `check(..., "owner")` to `check(..., "editor")` for any case where you care if they can edit. Then you update the namespace schema to rewrite / remap relations:
-
 ```plain
 relation {
  name: "editor",
@@ -71,7 +72,6 @@ relation {
  }
 }
 ```
-
 The above uses the `_this` which is the collection of all explicit tuples. Then it adds `computed_userset` which is a search pattern on the relationship `owner`. Effectively this means when someone checks for `editor` anyone that has the `owner` relation will return true as well. By doing this "editor" can be added having the same meaning as "owner" and then it can diverge as needed.
 
 ### Defining permissions
@@ -82,7 +82,7 @@ Once the fine-grained permissions are defined it is time to update the code to u
 
 Then we the namespace schema we can remap behaviors. Above for example makes owners also editors.
 
-## Roles vs permissions
+### Roles vs permissions
 
 Zanzibar is concerned about permissions, and evaluating those permissions. That is it. However, Roles and other higher level constructs are need by humans. They can be performed via relations, since it is a graph.
 
@@ -92,7 +92,7 @@ Use a tuple to bind a group to a relation on an object (e.g., `doc:readme#viewer
 
 Then use another tuple to bind a user to a group (e.g., `group:eng#member@11`)
 
-## Google Scale
+### Google Scale
 
 Internally Google uses a system that is implied by the whitepaper. But at their scale it would be impossible to check permissions using a vector check like explained in the paper. Instead they reduce all permissions to their simplest form. Checks - for access - are executed against the flattened dataset. This reduces the complexity of the check and also increases the speed and accuracy.
 
@@ -131,6 +131,6 @@ With Zookies:
  3. Full path is recalculated
 5. Lex is denied access
 
-## Reference
+### Reference
 
 [https://authzed.com/blog/what-is-zanzibar/](https://authzed.com/blog/what-is-zanzibar/)

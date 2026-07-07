@@ -1,18 +1,16 @@
 ---
-title: "CI-CD Tools"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: CI-CD Tools
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - CI-CD Tools
-  - CI/CD
-  - CI-CD
-
+- CI-CD Tools
+- CI/CD
+- CI-CD
 params:
   aliases:
-    - CI/CD
-    - CI-CD
+  - CI/CD
+  - CI-CD
   garden:
     kind: subcategory
     parent_category: tool
@@ -43,3 +41,5 @@ Tag a **product** here when the note is about a runner, controller, or deploy se
 - **hold** **[[Jenkins]]** (security and pet-server risk; migrate off where possible) and **[[Capistrano]]** (SSH push deploy; superseded by GitOps or image-based CD for new work).
 
 **Cross-cutting:** wire **[[DevSecOps]]**, **[[Policy as Code]]**, and secret stores (**[[HashiCorp Vault]]**, cloud secret managers) on the PR path, not inside a pipeline server's internal credential UI.
+
+---

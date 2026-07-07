@@ -1,27 +1,25 @@
 ---
-title: "Testcontainers"
-date: 2024-01-10
-lastmod: 2026-05-18
+title: TestContainer
+date: '2024-01-10'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Testcontainers
-
+- TestContainer
 params:
   garden:
     kind: item
     usefulness: assess
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - test-framework
+    - test-framework
 ---
 
-[Testcontainers](https://testcontainers.com/) is a family of libraries that start real service dependencies (databases, brokers, etc.) in [[Docker]] containers during automated tests, then tear them down. [Docker](https://www.docker.com/) acquired AtomicJar (the company behind Testcontainers) in 2023; the project remains open source with modules for Java, Go, Python, .NET, and others. We rate it **assess**: powerful for integration tests that need fidelity beyond mocks, but it adds Docker-in-CI requirements and runtime cost compared to [[Unit Testing]] alone.
+[TestContainer](https://testcontainers.com/). Is a family of libraries that start real service dependencies (databases, brokers, etc.) in [[Docker]] containers during automated tests, then tear them down.
 
 ## Blurb
 
-> Unit tests with real dependencies.
+> Testcontainers is an opensource library for providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.
 
 ## Summary
 

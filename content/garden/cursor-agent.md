@@ -1,40 +1,38 @@
 ---
-title: "cursor-agent"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: cursor-agent
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - cursor-agent
-  - Cursor CLI
-  - Cursor Agent CLI
-
+- cursor-agent
+- Cursor CLI
+- Cursor Agent CLI
 params:
   aliases:
-    - Cursor CLI
-    - Cursor Agent CLI
+  - Cursor CLI
+  - Cursor Agent CLI
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 ---
 
-[cursor-agent](https://cursor.com/cli) is Cursor's terminal agent, TUI/CLI for running the same Cursor Agent in your shell, scripts, GitHub Actions, and headless automations, with frontier models and MCP. We **adopt** it under [[AI Agent]] as our default bounded coding agent alongside the [[Cursor]] editor: one vendor for interactive IDE work and terminal/CI agents. Skills and rules wire through `.cursor/` and this vault's research conventions (`agent: cursor-agent` in frontmatter).
+[cursor-agent](https://cursor.com/cli). Is Cursor's terminal agent, TUI/CLI for running the same Cursor Agent in your shell, scripts, GitHub Actions, and headless automations, with frontier models and MCP.
 
 ## Blurb
 
-> Ship code with agents. Right from your terminal.
+> Built to help you ship, right from your terminal. Same commands, any environment.
 
 ## Summary
 
-The `cursor-agent` binary (install via Cursor's install script) drives an agent loop in a repo: model selection (`/model`), shell mode, resume via `cursor-agent --resume <chatId>`, and `cursor-agent create-chat` / `ls` for session management. `CURSOR_AGENT=1` in the environment marks agent invocations for logging and gbrain session metadata.
+**Garden stance:** We **adopt** cursor-agent for our estate.
 
-Use for day-to-day coding in the terminal, headless pipelines, and GitHub Actions when you already use Cursor billing. It is a **repo-bounded** [[AI Agent]]; not an omnichannel personal bot ([[OpenClaw]], [[hermes-agent|Hermes]] are **hold**). Pair with [[Cursor]] under [[IDE]] when you want GUI + CLI in one stack.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-Compare [[Claude Code]], [[Codex]], [[Gemini]], and [[OpenCode]] when a different vendor or open-source hub is required.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

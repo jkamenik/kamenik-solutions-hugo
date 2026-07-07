@@ -1,7 +1,7 @@
 ---
 title: Warp Terminal
 date: '2026-06-30'
-lastmod: '2026-06-30'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Warp Terminal
@@ -13,16 +13,12 @@ params:
     kind: item
     usefulness: trial
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - ide
 ---
 
-[Warp Terminal](https://www.warp.dev/terminal) is a Rust-based agentic development environment (ADE) born from the terminal. It combines block-based shell UX, a built-in editor, multi-agent tabs, and native code review in one desktop app. We rate it **trial** under [[IDE]] as a terminal-native alternative to [[Cursor]]. Daily work still defaults to Cursor plus [[cursor-agent]] unless you want a harness-agnostic ADE surface.
-
-## Blurb
-
-> Ship faster in a modern terminal designed to help you go from prompt to production.
+[Warp Terminal](https://www.warp.dev/terminal). Is a Rust-based agentic development environment (ADE) born from the terminal.
 
 ## Summary
 

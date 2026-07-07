@@ -1,27 +1,21 @@
 ---
-title: "jq"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: jq
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - jq
-
+- jq
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/jq
+- /radar/tools/jq
 ---
 
-[jq](https://jqlang.org/) is a lightweight command-line JSON processor: the default tool for slicing, filtering, mapping, and transforming JSON in shell pipelines, CI, and ad hoc debugging. We **adopt** it under [[Tool]] wherever JSON appears at the CLI; pair with [[yq]] when the source format is YAML (or use `yq` to emit JSON and pipe into `jq`).
-
-## Blurb
-
-> jq is like `sed` for JSON data: you can use it to slice and filter and map and transform structured data with the same ease that `sed`, `awk`, `grep` and friends let you play with text.
+[jq](https://jqlang.org/). Is a lightweight command-line JSON processor: the default tool for slicing, filtering, mapping, and transforming JSON in shell pipelines, CI, and ad hoc debugging.
 
 ## Summary
 

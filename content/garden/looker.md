@@ -1,27 +1,25 @@
 ---
-title: "Looker"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Looker
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Looker
-
+- Looker
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 ---
 
-[Looker](https://cloud.google.com/looker) is Google Cloud's enterprise BI platform built around LookML semantic models, governed metrics, and embedded analytics. We **assess** it for GCP-centric enterprises that want a vendor-managed semantic layer; OSS paths remain **[[Apache Superset]]** or **[[Lightdash]]** with **[[dbt-core]]**.
+[Looker](https://cloud.google.com/looker). Is Google Cloud's enterprise BI platform built around LookML semantic models, governed metrics, and embedded analytics.
 
 ## Blurb
 
-> Looker is an enterprise platform for business intelligence, data applications, and embedded analytics.
+> Looker is an enterprise platform for BI, data applications, and embedded analytics that helps you explore and share insights in real time.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Multi-cloud OSS BI mandate or small teams without LookML maintainers.
 
 **Key features:** LookML git workflow, row-level access in models, scheduled deliveries, embed and API surfaces.
-
 
 ## Details
 

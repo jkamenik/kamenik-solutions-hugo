@@ -1,7 +1,7 @@
 ---
 title: Stable Abstractions Principle
 date: '2026-06-25'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Stable Abstractions Principle
@@ -18,27 +18,13 @@ params:
     - software-architecture
 ---
 
-[Stable Abstractions Principle](https://en.wikipedia.org/wiki/Stable_abstractions_principle)
-
-The [Stable Abstractions Principle](https://en.wikipedia.org/wiki/Stable_abstractions_principle) (SAP) says a component should be as abstract as it is stable. Stable packages expose interfaces and abstract types; volatile packages hold concrete implementations. We **adopt** it when widely depended-on modules are concrete classes that resist extension without edits. SAP bridges **[[Stable Dependencies Principle]]** and **[[Dependency Inversion Principle]]** at component granularity.
-
-## Blurb
-
-> A component should be as abstract as it is stable.
+[Stable Abstractions Principle](https://en.wikipedia.org/wiki/Stable_abstractions_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A coupling rule for components. Stability (many dependents, few dependencies) should correlate with abstraction (interfaces, abstract classes, ports). Instability should correlate with concrete code that can change freely. Abstraction can be measured as the ratio of interfaces to total types.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** A stable but concrete package is hard to extend without modifying source. Every new behavior risks breaking all dependents. Martin calls that profile the "zone of pain."
-
-**Source:** Martin states the rule in *Clean Architecture* as "a component should be as abstract as it is stable."
-
-**When to use:** Platform API design, shared kernel reviews, and refactors where a popular library is mostly concrete classes. Apply when stable modules resist **[[Open-Closed Principle]]** extension.
-
-**When to pull back:** Small apps with no shared kernel. Do not abstract stable modules before a second implementation or test seam appears.
-
-**Relation to siblings:** **[[Stable Dependencies Principle]]** sets dependency direction. SAP shapes what stable modules contain. **[[Acyclic Dependencies Principle]]** keeps the graph acyclic while you refactor toward abstraction at the stable core.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

@@ -1,18 +1,16 @@
 ---
-title: "Artificial Intelligence & Machine Learning"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Artificial Intelligence & Machine Learning
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Artificial Intelligence & Machine Learning
-  - AI & ML
-  - AI/ML
-
+- Artificial Intelligence & Machine Learning
+- AI & ML
+- AI/ML
 params:
   aliases:
-    - AI & ML
-    - AI/ML
+  - AI & ML
+  - AI/ML
   garden:
     kind: subcategory
     parent_category: technique

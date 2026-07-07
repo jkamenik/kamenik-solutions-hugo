@@ -1,27 +1,21 @@
 ---
-title: "tree-sitter"
-date: 2026-04-15
-lastmod: 2026-05-18
+title: tree-sitter
+date: '2026-04-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - tree-sitter
-
+- tree-sitter
 params:
   garden:
     kind: item
     usefulness: assess
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - library
+    - library
 ---
 
-[Tree-sitter](https://tree-sitter.github.io/tree-sitter/) is an incremental parser generator and runtime that produces concrete syntax trees and updates them efficiently as source changes. We rate it **assess**: the default foundation when you are building editor features, multi-language tooling, or analyzers, but most product teams should consume it indirectly (via an editor or analyzer) rather than embed parsers themselves.
-
-## Blurb
-
-> Tree-sitter is a parser generator tool and an incremental parsing library. It can build a concrete syntax tree for a source file and efficiently update the syntax tree as the source file is edited.
+[tree-sitter](https://tree-sitter.github.io/tree-sitter/). We **assess** it under **[[Code]]** in the garden.
 
 ## Summary
 

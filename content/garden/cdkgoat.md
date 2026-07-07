@@ -1,25 +1,23 @@
 ---
-title: "CdkGoat"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: CdkGoat
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - CdkGoat
-
+- CdkGoat
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[CdkGoat](https://github.com/bridgecrewio/cdkgoat) is Bridgecrew's "Vulnerable by Design" AWS CDK application. It synthesizes intentionally misconfigured CloudFormation for IaC security training. We **trial** it as a legal target for **[[Checkov]]** scans on `cdk synth` output and **[[Shift Left]]** pipeline drills. Never deploy it in production AWS accounts or beside sensitive workloads.
+[CdkGoat](https://github.com/bridgecrewio/cdkgoat). We **trial** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> CdkGoat is Bridgecrew's "Vulnerable by Design" AWS CDK repository. CdkGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
+> CdkGoat is Bridgecrew&#39;s &quot;Vulnerable by Design&quot; AWS CDK repository. CdkGoat is a learning and training project that demonstrates how common configuration errors can find their way into...
 
 ## Summary
 
@@ -30,7 +28,6 @@ CdkGoat sits in Bridgecrew's IaC Goat family alongside **[[TerraGoat]]** and **[
 **When to skip:** you cannot isolate a disposable AWS account; you need Terraform labs (use **[[TerraGoat]]**); your org avoids CDK for new work (**[[CDKs]]** is **hold** here, but the goat still helps scanner tuning).
 
 **Workflow:** `cdk synth` produces `cdk.out/cdkgoat.template.json`; scan that artifact with **[[Checkov]]** before optional sandbox deploy.
-
 
 ## Details
 
@@ -52,7 +49,6 @@ CdkGoat sits in Bridgecrew's IaC Goat family alongside **[[TerraGoat]]** and **[
 - Scan after `cdk synth` even when you skip deploy.
 
 ### Scan-First Lab Sketch
-
 ```bash
 git clone https://github.com/bridgecrewio/cdkgoat.git
 cd cdkgoat

@@ -1,53 +1,35 @@
 ---
-title: "AWS Config"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: AWS Config
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - AWS Config
-
+- AWS Config
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/aws-config
+- /radar/tools/aws-config
 ---
 
-[AWS Config](https://aws.amazon.com/config/) is AWS's managed service for resource inventory, configuration history, and continuous compliance evaluation.
-
-We **assess** it under **[[Tool]]** for estates that already run **[[AWS]]**.
-
-It fits native rules, conformance packs, and multi-account aggregators without **[[Cloud Custodian]]**.
-
-Prefer **[[Cloud Custodian]]** or **[[Policy as Code]]** when you need one policy language across clouds.
+[AWS Config](https://aws.amazon.com/config/). Is AWS's managed service for resource inventory, configuration history, and continuous compliance evaluation.
 
 ## Blurb
 
-> AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources.
+> AWS Config is a config tool that helps you assess, audit, and evaluate the configurations and relationships of your resources.
 
 ## Summary
 
-**What it is:** Continuous recording of resource configuration changes. AWS Config rules (managed and custom). Conformance packs, multi-account aggregators, and optional remediation (SSM Automation or Lambda).
+**Garden stance:** We **assess** AWS Config for our estate.
 
-**When to use:**
+**Overview:** We **assess** it under **[[Tool]]** for estates that already run **[[AWS]]**.
 
-- AWS-only or AWS-primary estates
-- Regulatory audit trails
-- Org-wide guardrails via AWS Organizations
-- Teams that want native compliance dashboards without c7n or OPA on the control plane
+**Detail 1:** It fits native rules, conformance packs, and multi-account aggregators without **[[Cloud Custodian]]**.
 
-**When to skip:**
-
-- Multi-cloud policy in one language (see **[[Cloud Custodian]]** or **[[Conftest]]** on IaC)
-- High churn where rule evaluations and configuration items drive cost
-- Greenfield where **[[AWS]]** is **hold** and another cloud is viable
-
-**Pairs with:** **[[Policy as Code]]** on PRs. Config for post-deploy drift and inventory. **[[DevSecOps]]** to gate merges while Config watches live accounts.
-
+**Detail 2:** Prefer **[[Cloud Custodian]]** or **[[Policy as Code]]** when you need one policy language across clouds.
 
 ## Details
 

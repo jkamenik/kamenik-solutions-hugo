@@ -1,28 +1,26 @@
 ---
-title: "Kubernetes Goat"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: Kubernetes Goat
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Kubernetes Goat
-  - K8s Goat
-
+- Kubernetes Goat
+- K8s Goat
 params:
   aliases:
-    - K8s Goat
+  - K8s Goat
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[Kubernetes Goat](https://github.com/madhuakula/kubernetes-goat) is an intentionally vulnerable **[[Kubernetes]]** cluster lab by Madhu Akula. It deploys misconfigured workloads for hands-on attack and defense scenarios. We **trial** it for cluster security training, runtime exploitation practice, and calibrating **[[Kubescape]]** or **[[kube-bench]]** CIS drills. Never run it on production clusters or shared infrastructure.
+[Kubernetes Goat](https://github.com/madhuakula/kubernetes-goat) is a tool we **trial** in the garden.
 
 ## Blurb
 
-> The Kubernetes Goat is designed to be an intentionally vulnerable cluster environment to learn and practice Kubernetes security.
+> Kubernetes Goat is a "Vulnerable by Design" cluster environment to learn and practice Kubernetes security using an interactive hands-on playground 🚀 - madhuakula/kubernetes-goat
 
 ## Summary
 
@@ -33,7 +31,6 @@ Kubernetes Goat extends the Goat tradition (**[[DVWA]]**, **[[Juice Shop]]**, **
 **When to skip:** you cannot provision an isolated lab cluster (KIND, K3s, minikube, or disposable cloud); you only need static manifest scanning (use **[[Checkov]]** on repos); you need web-app vuln labs only (use **[[DVWA]]** or **[[Juice Shop]]**).
 
 **Setup:** clone repo, run `setup-kubernetes-goat.sh`, then `access-kubernetes-goat.sh` for local UI at `http://127.0.0.1:1234`. Full guide at [madhuakula.com/kubernetes-goat](https://madhuakula.com/kubernetes-goat).
-
 
 ## Details
 
@@ -59,7 +56,6 @@ Upstream documents 20+ modules, including sensitive keys in repos, docker-in-doc
 - Prefer KIND, K3s, or a sandbox EKS/GKE/AKS account per upstream docs.
 
 ### Install Sketch
-
 ```bash
 git clone https://github.com/madhuakula/kubernetes-goat.git
 cd kubernetes-goat

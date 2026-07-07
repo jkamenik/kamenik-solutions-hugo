@@ -1,32 +1,24 @@
 ---
-title: "Single Sign-on"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: Single Sign-on
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Single Sign-on
-  - SSO
-
+- Single Sign-on
+- SSO
 params:
   aliases:
-    - SSO
+  - SSO
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/techniques/single-sign-on
+- /radar/techniques/single-sign-on
 ---
 
-[Single Sign-on](https://en.wikipedia.org/wiki/Single_sign-on)
-
-**Single sign-on (SSO)** lets a user authenticate once with an **identity provider (IdP)** and access multiple applications without separate passwords per app. We **adopt** SSO for B2B **[[Software as a Service]]** and internal tools: it is **[[Enterprise Ready]]** table stakes, pairs with **[[RBAC]]**, and reduces password sprawl when implemented with standard protocols.
-
-## Blurb
-
-> Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID to any of several related, yet independent, software systems.
+[Single Sign-on](https://en.wikipedia.org/wiki/Single_sign-on) **Single sign-on (SSO)** lets a user authenticate once with an **identity provider (IdP)** and access multiple applications without separate passwords per app. We **adopt** SSO for B2B **[[Software as a Service]]** and internal tools: it is **[[Enterprise Ready]]** table stakes, pairs with **[[RBAC]]**, and reduces password sprawl when implemented with standard protocols.
 
 ## Summary
 

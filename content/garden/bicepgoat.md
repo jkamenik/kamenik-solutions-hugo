@@ -1,7 +1,7 @@
 ---
 title: BicepGoat
 date: '2026-06-15'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - BicepGoat
@@ -10,14 +10,14 @@ params:
     kind: item
     usefulness: trial
     category: tool
-    movement: New
+    movement: No Change
 ---
 
-[BicepGoat](https://github.com/bridgecrewio/bicepgoat) is Bridgecrew's "Vulnerable by Design" Bicep and ARM template repository for Azure. It deploys intentionally misconfigured resources for IaC security training. We **trial** it as a legal target for **[[Checkov]]** drills on Azure-native **[[IaC]]**. Never deploy it in production subscriptions or beside sensitive workloads.
+[BicepGoat](https://github.com/bridgecrewio/bicepgoat). We **trial** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> BicepGoat is Bridgecrew's "Vulnerable by Design" Bicep and ARM repository. BicepGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
+> BicepGoat is Bridgecrew&#39;s &quot;Vulnerable by Design&quot; Bicep and ARM repository. BicepGoat is a learning and training project that demonstrates how common configuration errors can find thei...
 
 ## Summary
 
@@ -48,7 +48,6 @@ BicepGoat sits in Bridgecrew's IaC Goat family alongside **[[TerraGoat]]** (Terr
 - Scan the repo locally with **[[Checkov]]** before any deploy to practice catch-before-deploy.
 
 ### Scan-First Lab Sketch
-
 ```bash
 git clone https://github.com/bridgecrewio/bicepgoat.git
 cd bicepgoat

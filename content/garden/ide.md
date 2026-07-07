@@ -1,12 +1,10 @@
 ---
-title: "IDE"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: IDE
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - IDE
-
+- IDE
 params:
   garden:
     kind: subcategory

@@ -1,38 +1,34 @@
 ---
-title: "Power BI"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Power BI
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Power BI
-
+- Power BI
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 ---
 
-[Power BI](https://www.microsoft.com/power-platform/products/power-bi/) is Microsoft's self-service BI suite for reports, dashboards, and semantic models in Microsoft 365 and Azure estates. We **assess** it when Azure AD, Excel culture, or enterprise agreements already anchor analytics on Microsoft; otherwise prefer warehouse-native OSS BI.
-
-## Blurb
-
-> Power BI is a unified, scalable platform for self-service and enterprise business intelligence.
+[Power BI](https://www.microsoft.com/power-platform/products/power-bi/). Is Microsoft's self-service BI suite for reports, dashboards, and semantic models in Microsoft 365 and Azure estates.
 
 ## Summary
 
-**What it is:** Power BI Desktop, Service, and Embedded for DAX models, reports, and sharing in Microsoft tenants.
+**Garden stance:** We **assess** Power BI for our estate.
 
-**When to use:** Organization standardized on Microsoft data stack; finance and ops live in Excel/Power Query patterns.
+**Key points:** | Topic | Notes |
+|-------|--------|
+| **Governance** | Premium capacity for large models and paginated reports |
+| **Contrast** | **[[Tableau]]** and **[[Looker]]** in competitive enterprise evals |
 
-**When to skip:** Multi-cloud OSS mandate. Engineer-centric SQL BI (**[[Redash]]**, **[[Apache Superset]]**).
+**References**
 
-**Key features:** DAX semantic models, incremental refresh, row-level security, Microsoft Graph and Teams integration.
-
+- [Power BI documentation](https://learn.microsoft.com/power-bi/)
 
 ## Details
 

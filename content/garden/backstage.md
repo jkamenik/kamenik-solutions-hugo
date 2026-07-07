@@ -1,27 +1,21 @@
 ---
-title: "Backstage"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Backstage
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Backstage
-
+- Backstage
 params:
   garden:
     kind: item
     usefulness: trial
     category: platform
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/platforms/backstage
+- /radar/platforms/backstage
 ---
 
-[Backstage](https://backstage.io/) is an open source developer portal framework from the [[CNCF]]. A centralized software catalog (`catalog-info.yaml`), scaffolder templates, and plugin ecosystem give teams one place to discover services, docs, and APIs. We **trial** it when building an **[[Internal Developer Platform]]** and want a self-hosted catalog plus golden-path templates.
-
-## Blurb
-
-> Backstage is an open source framework for building developer portals. Powered by a centralized software catalog, Backstage restores order to your microservices and infrastructure.
+[Backstage](https://backstage.io/). Is an open source developer portal framework from the [[CNCF]].
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** single [[monorepo]] with no discovery problem; no staff to operate and upgrade the portal; SaaS [[IDP]] (Port, Cortex) fits procurement better.
 
 **catalog-info.yaml:** each service repo carries metadata (owner, lifecycle, links to docs and CI) at repo root or path configured in the catalog importer.
-
 
 ## Details
 

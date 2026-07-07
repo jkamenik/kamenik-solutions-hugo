@@ -1,34 +1,26 @@
 ---
-title: "Containerization"
-date: 2025-04-23
-lastmod: 2026-06-12
+title: Containerization
+date: '2025-04-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Containerization
-  - containers
-  - OCI containers
-
+- Containerization
+- containers
+- OCI containers
 params:
   aliases:
-    - containers
-    - OCI containers
+  - containers
+  - OCI containers
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/containerization
+- /radar/techniques/containerization
 ---
 
-[Containerization](https://opencontainers.org/)
-
-Containerization packages an application and its dependencies into an immutable **OCI image** that runs the same way on a laptop, in CI, and in production. We **adopt** it for services we build and operate: it enables **[[Cattle Not Pets]]**, pairs with **[[Kubernetes]]** orchestration, and satisfies portability goals from the **[[12 Factor App]]** (processes, config via env, disposability).
-
-## Blurb
-
-> The Open Container Initiative is an open governance structure for the express purpose of creating open industry standards around container formats and runtimes.
+[Containerization](https://opencontainers.org/) packages an application and its dependencies into an immutable **OCI image** that runs the same way on a laptop, in CI, and in production. We **adopt** it under **[[Technique]]** in the garden.
 
 ## Summary
 
@@ -41,7 +33,7 @@ Containerization packages an application and its dependencies into an immutable 
 | Concern | Direction |
 |---------|-----------|
 | **Format / runtime** | **adopt** OCI via **[[Open Container Initiative]]** |
-| **Local dev runtime** | Prefer **[[Rancher Desktop]]** (**assess**) or Podman over commercial **[[Docker]]** Desktop (**hold**) |
+| **Local dev runtime** | Prefer **[[Rancher Desktop]]** (**trial**) or Podman over commercial **[[Docker]]** Desktop (**hold**) |
 | **Orchestration** | **adopt** **[[Kubernetes]]** at scale; single-node compose only for local/dev |
 | **Image tests** | **adopt** **[[Container Structure Test]]** after build |
 | **Dev environments** | **adopt** **[[Dev Container]]** for shared toolchain |

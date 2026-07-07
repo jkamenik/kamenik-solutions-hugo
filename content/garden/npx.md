@@ -1,38 +1,33 @@
 ---
-title: "npx"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: npx
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - npx
-
+- npx
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/npx
+- /radar/tools/npx
 ---
 
-[npx](https://docs.npmjs.com/cli/v11/commands/npx) runs executables from **[[npm]]** packages without a global install. It ships with **[[Node.js]]** (via npm 5.2+). We **adopt** it as a **[[Tool]]** only when the team is already on **[[JavaScript]]** or **[[TypeScript]]**. Ad-hoc `npx` against the public registry is a supply-chain risk; pin versions and prefer lockfile-local binaries in CI.
+[npx](https://docs.npmjs.com/cli/v11/commands/npx). Runs executables from **[[npm]]** packages without a global install.
 
 ## Blurb
 
-> Run a command from a local or remote npm package.
+> Run a command from a local or remote npm package
 
 ## Summary
 
-**What it is:** a runner for package binaries. It resolves commands from `./node_modules/.bin`, or downloads a package temporarily when the binary is missing. Modern npm implements `npx` as a wrapper around `npm exec`. Common for one-off scaffolds (`npx create-*`) and running local dev tools without typing full paths.
+**Garden stance:** We **trial** npx for our estate.
 
-**When to use (adopt within the stack):** Run project-local CLIs (`npx vitest`, `npx eslint`) in docs and scripts. Try a generator once with an explicit `@version` pin. CI that executes only lockfile-installed binaries (after `npm ci`).
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to skip:** Running unpinned remote packages in production or privileged environments. Teams not yet committed to the JS/TS stack. Flows where **[[Bun]]** `bunx` or committed `package.json` scripts are enough.
-
-**Security:** `npx some-tool` can pull and execute code from the registry on demand. Treat that like running untrusted software. Prefer `npm exec --package=foo@1.2.3 -- foo` with a pinned version, or depend on the package in `package.json` and use `npm run`.
-
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

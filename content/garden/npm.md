@@ -1,43 +1,29 @@
 ---
-title: "npm"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: npm
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - npm
-
+- npm
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/npm
+- /radar/tools/npm
 ---
 
-[npm](https://www.npmjs.com/) is the default package manager and public registry for the **[[JavaScript]]** ecosystem. We **adopt** it as a **[[Tool]]** only when the team is already committed to **[[JavaScript]]** or **[[TypeScript]]**. It ships with **[[Node.js]]**. Do not pick the JS stack mainly for npm. The registry is not a reason to accept supply-chain and dependency-tree risk by itself.
-
-## Blurb
-
-> npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.
+[npm](https://www.npmjs.com/). Is the default package manager and public registry for the **[[JavaScript]]** ecosystem.
 
 ## Summary
 
-**What it is:** the `npm` CLI plus the npm Registry (maintained by GitHub). `package.json` declares dependencies, scripts, and metadata. `package-lock.json` pins transitive versions for reproducible installs. Scoped packages (`@org/name`) support private and public monorepo layouts.
+**Garden stance:** We **trial** npm for our estate.
 
-**When to use (adopt within the stack):** Existing **[[TypeScript]]** or **[[JavaScript]]** repos on **[[Node.js]]**. Publishing reusable modules after dependency review. CI that runs `npm ci` from a committed lockfile with **[[Shift Left]]** audits.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to skip:**
-
-- Greenfield projects that have not yet justified the JS/TS ecosystem
-- Latency or footprint-sensitive services where even a slim lockfile is too much
-- Teams on pnpm, Yarn, or **[[Bun]]** install that dropped the npm CLI
-- Air-gapped flows that require a private registry only
-
-**Security:** treat the public registry as a supply-chain surface. Run `npm audit`, pin transitive deps, and gate new packages in **[[DevSecOps]]** review. npm solves dependency resolution; it does not remove registry attack risk.
-
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

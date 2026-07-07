@@ -1,39 +1,33 @@
 ---
-title: "GitLab"
-date: 2025-12-02
-lastmod: 2026-06-12
+title: GitLab
+date: '2025-12-02'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GitLab
-
+- GitLab
 params:
   garden:
     kind: item
     usefulness: trial
     category: platform
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/platforms/gitlab
+- /radar/platforms/gitlab
 ---
 
-[GitLab](https://gitlab.com/) is an all-in-one DevSecOps **[[Platform]]** for **[[git]]** hosting, merge requests, built-in CI/CD, registry, and security scanning. We rate it **trial** at org level because **[[GitHub]]** is the default.  Use GitLab when a customer, regulator, or air-gapped deployment requires it, then apply the same discipline (**[[Pull Request]]** / MR review, protected default branch, pipeline gates, **[[GitOps]]** from `main`).
+[GitLab](https://gitlab.com/). Is an all-in-one DevSecOps **[[Platform]]** for **[[git]]** hosting, merge requests, built-in CI/CD, registry, and security scanning.
 
 ## Blurb
 
-> Your intelligent orchestration platform for DevSecOps: from planning to source code management to CI/CD, everything you need to build and ship software faster in one platform.
+> Your intelligent orchestration platform for DevSecOps
 
 ## Summary
 
-**What it is:** SaaS **GitLab.com** or self-managed **GitLab** / Dedicated with a single application for repos, issues, wiki, CI (`.gitlab-ci.yml`), container/package registry, and integrated SAST/SCA/secret/DAST in merge requests.
+**Garden stance:** We **trial** GitLab for our estate.
 
-**Why trial (not default):** **[[GitHub]]** has the broader marketplace, our existing **[[GitHub Actions]]** investment, and typical vendor integrations; GitLab wins on consolidated DevSecOps UI, self-hosted/air-gap, and customer mandates.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to use:** customer hosts on GitLab; compliance needs self-managed or isolated instance; team standardizes on GitLab CI and built-in security scanners instead of Actions plus third-party apps.
-
-**When to stay on GitHub:** greenfield org repos, OSS publishing, and stacks that assume GitHub OIDC, Actions, or Dependabot.
-
-**Not the same as:** **[[git]]** (VCS); **[[GitHub]]** (default platform); **[[GitHub Actions]]** (GitHub-only CI); **[[GitOps]]** (delivery pattern).
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

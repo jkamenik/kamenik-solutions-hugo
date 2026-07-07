@@ -1,30 +1,24 @@
 ---
-title: "Postgres"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Postgres
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Postgres
-  - PostgreSQL
-
+- Postgres
+- PostgreSQL
 params:
   aliases:
-    - PostgreSQL
+  - PostgreSQL
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/postgres
+- /radar/tools/postgres
 ---
 
-[PostgreSQL](https://www.postgresql.org/) (Postgres) is the world's most advanced open source relational database. It is ACID-compliant, extensible, and runs everywhere from laptops to managed cloud instances. We **adopt** it as the default OLTP and analytics-adjacent store when a relational model fits.
-
-## Blurb
-
-> PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+[Postgres](https://www.postgresql.org/). (Postgres) is the world's most advanced open source relational database.
 
 ## Summary
 
@@ -35,7 +29,6 @@ aliases:
 **When to skip:** Petabyte-scale warehouse analytics where a columnar EDW (**[[BigQuery]]**) is already standard. Document-only workloads with no relational joins (**[[NoSQL]]** patterns). Legacy **[[MySQL]]** apps you are not migrating yet.
 
 **Key features:** MVCC, robust indexing, foreign data wrappers, row-level security, mature backup and HA patterns.
-
 
 ## Details
 

@@ -1,12 +1,10 @@
 ---
-title: "Cloud"
-date: 2026-01-10
-lastmod: 2026-05-18
+title: Cloud
+date: '2026-01-10'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Cloud
-
+- Cloud
 params:
   garden:
     kind: subcategory
@@ -34,3 +32,5 @@ Tag a **hyperscaler or cloud-native platform service** here when the note is abo
 - **adopt** **[[Hybrid Cloud]]** as a **technique** when each workload lands on the best cloud for the job, not when teams mirror every service three times.
 
 **Cross-cutting expectations:** **[[Cattle Not Pets]]** for compute; **[[Terraform]]** (or equivalent **[[Declarative IaC]]**) for everything that can be code; secrets outside vendor CI credential stores; treat egress and proprietary APIs as the real lock-in. Bridge accounts with **[[Tailscale]]**, SD-WAN, or zero-trust patterns, not flat VPN spaghetti.
+
+---

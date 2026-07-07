@@ -1,12 +1,10 @@
 ---
-title: "AI Techniques"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: AI Techniques
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - AI Techniques
-
+- AI Techniques
 params:
   garden:
     kind: subcategory

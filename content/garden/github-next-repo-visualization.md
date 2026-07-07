@@ -1,29 +1,27 @@
 ---
-title: "GitHub Next Repo Visualization"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: GitHub Next Repo Visualization
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GitHub Next Repo Visualization
-
+- GitHub Next Repo Visualization
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - diagramming
+    - diagramming
 aliases:
-  - /radar/tools/github-next-repo-visualization
+- /radar/tools/github-next-repo-visualization
 ---
 
-[GitHub Next repo visualization](https://next.github.com/projects/repo-visualization) is an experimental GitHub project that graphs codebase structure and dependencies for exploration in the browser. We **assess** it for onboarding and architecture reviews; production docs still flow through **[[Diagramming]]** and the vault graph.
+[GitHub Next Repo Visualization](https://next.github.com/projects/repo-visualization). Is an experimental GitHub project that graphs codebase structure and dependencies for exploration in the browser.
 
 ## Blurb
 
-> Explore your repository as an interactive map of files and relationships.
+> How can we “fingerprint” a codebase to see its structure at a glance? Let’s explore ways to automatically visualize a GitHub repo, and how that could be useful.
 
 ## Summary
 

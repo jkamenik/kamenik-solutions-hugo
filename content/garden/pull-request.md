@@ -1,30 +1,24 @@
 ---
-title: "Pull Request"
-date: 2026-05-05
-lastmod: 2026-06-22
+title: Pull Request
+date: '2026-05-05'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Pull Request
-  - Merge Request
-  - PR
-
+- Pull Request
+- Merge Request
+- PR
 params:
   aliases:
-    - Merge Request
-    - PR
+  - Merge Request
+  - PR
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-
-A [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (PR) proposes merging a branch into a shared mainline. **[[GitHub]]** calls it a pull request; **[[GitLab]]** calls it a merge request (MR). We **adopt** PRs as the front door to **[[Continuous Integration]]**: humans do **[[Code Review]]** while machines report lint, test, and scan status on the same change.
-
-Even solo developers should open a PR against `main`. Automated gates catch issues that local habit misses.
+[Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). A [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (PR) proposes merging a branch into a shared mainline.
 
 ## Blurb
 
@@ -48,7 +42,6 @@ Even solo developers should open a PR against `main`. Automated gates catch issu
 **Pairs with:** protected default branch; required status checks; **[[Shift Left]]** (find defects before production); **[[DevSecOps]]** (security findings are PR backlog, not a separate audit).
 
 **Not the same as:** **[[Code Review]]** (the human practice); **[[Continuous Integration]]** (the verify-on-merge discipline). The PR is where both meet.
-
 
 ## Details
 

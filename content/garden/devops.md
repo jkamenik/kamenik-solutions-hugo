@@ -1,30 +1,24 @@
 ---
-title: "DevOps"
-date: 2024-04-09
-lastmod: 2026-06-12
+title: DevOps
+date: '2024-04-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - DevOps
-  - Dev Ops
-
+- DevOps
+- Dev Ops
 params:
   aliases:
-    - Dev Ops
+  - Dev Ops
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/devops
+- /radar/techniques/devops
 ---
 
-[DevOps](https://en.wikipedia.org/wiki/DevOps) is a **culture and practice** that breaks the wall between development and operations: ship small changes often, automate the path to production, and measure outcomes. We **adopt** it as the default delivery philosophy; implement it with **[[Agile Software Development]]**, **[[Shift Left]]**, and the CI/CD techniques in this garden.
-
-## Blurb
-
-> DevOps is a set of practices that combines software development and IT operations to shorten the systems development life cycle and provide continuous delivery with high software quality.
+[DevOps](https://en.wikipedia.org/wiki/DevOps). Is a **culture and practice** that breaks the wall between development and operations: ship small changes often, automate the path to production, and measure outcomes.
 
 ## Summary
 

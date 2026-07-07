@@ -1,27 +1,25 @@
 ---
-title: "pyenv"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: pyenv
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - pyenv
-
+- pyenv
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[pyenv](https://github.com/pyenv/pyenv) installs and selects **[[Python]]** versions per project via `.python-version`. We **assess** it for Python-only host workflows; polyglot pins belong in **[[mise]]** or **[[asdf]]**.
+[pyenv](https://github.com/pyenv/pyenv). Installs and selects **[[Python]]** versions per project via `.python-version`.
 
 ## Blurb
 
-> pyenv lets you easily switch between multiple versions of Python.
+> Simple Python version management. Contribute to pyenv/pyenv development by creating an account on GitHub.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** **[[Dev Container]]** defines Python for the team. Use **[[mise]]** when Node and Terraform share the same repo pins.
 
 **Key features:** `pyenv install`, global/local version files, plugin ecosystem.
-
 
 ## Details
 

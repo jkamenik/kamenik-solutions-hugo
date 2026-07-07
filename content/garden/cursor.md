@@ -1,30 +1,28 @@
 ---
-title: "Cursor"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: Cursor
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Cursor
-  - Cursor IDE
-
+- Cursor
+- Cursor IDE
 params:
   aliases:
-    - Cursor IDE
+  - Cursor IDE
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ide
+    - ide
 ---
 
-[Cursor](https://cursor.com) is a VS Code-based IDE with built-in AI: Tab completion, inline edit (Cmd+K), agent panel, and cloud agents. A paid Cursor subscription includes access to many frontier models (Composer, Claude, GPT, Gemini, Grok, and more). Built by [[Anysphere]]. We **adopt** it under [[IDE]] as our default editor stack. It is one ecosystem for multi-model coding when paired with [[cursor-agent]] for terminal and CI workflows.
+[Cursor](https://cursor.com). Is a VS Code-based IDE with built-in AI: Tab completion, inline edit (Cmd+K), agent panel, and cloud agents.
 
 ## Blurb
 
-> Built to make you extraordinarily productive, Cursor is the best way to code with AI.
+> Built to make you extraordinarily productive, Cursor is the best AI coding agent.
 
 ## Summary
 
@@ -39,6 +37,6 @@ Choose Cursor when you want a single vendor for GUI + CLI agents. You get bring-
 - **Models:** switch per task in the agent UI; Composer family plus major third-party models.
 - **Features:** Tab model, inline edit, cloud agents, PR review (Bugbot), Slack/GitHub integrations per product docs.
 - **Skills:** `.cursor/rules` and `.cursor/skills/`; portable SKILL.md repos in [[Agent Skills - Sources]].
-- **Company:** [[Anysphere]] (Anysphere, Inc.)
+- **Company:** [[Anysphere, Inc.|Anysphere]]
 - **Fit:** [[Tool]] / [[IDE]], primary editor distribution (not the headless agent binary).
 - **Contrast:** [[Claude Code]], [[Codex]], [[OpenCode]] when you want a non-Cursor agent hub; [[cursor-agent]] for the same stack in terminal/automation.

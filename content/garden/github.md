@@ -1,39 +1,33 @@
 ---
-title: "GitHub"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: GitHub
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GitHub
-
+- GitHub
 params:
   garden:
     kind: item
     usefulness: adopt
     category: platform
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/platforms/github
+- /radar/platforms/github
 ---
 
-[GitHub](https://github.com/) is the default **[[Platform]]** for hosting **[[git]]** repos, collaboration, and the surrounding delivery toolchain. We **adopt** it as org-standard forge unless a customer or compliance boundary requires **[[GitLab]]**, then mirror the same practices (**[[Pull Request]]**, protected `main`, **[[GitHub Actions]]** or equivalent CI, **[[GitOps]]** from the default branch).
+[GitHub](https://github.com/). Is the default **[[Platform]]** for hosting **[[git]]** repos, collaboration, and the surrounding delivery toolchain.
 
 ## Blurb
 
-> The complete developer platform to build, scale, and deliver secure software.
+> Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.
 
 ## Summary
 
-**What it is:** SaaS (or **GitHub Enterprise**) for Git remotes, issues, discussions, releases, and integrations, plus first-party products (Actions, Packages, Codespaces, Advanced Security) on top of the same repo graph.
+**Garden stance:** We **adopt** GitHub for our estate.
 
-**Why adopt:** largest ecosystem (marketplace actions, OIDC to cloud, Dependabot, branch protection APIs); default for OSS and most vendors; **[[GitHub Actions]]** and **[[Policy as Code]]** / scanner apps assume GitHub as the control plane.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to use:** new org or product repos; public or private code; PR-based **[[Code Review]]**; CI/CD via **[[GitHub Actions]]**; **[[git lfs]]** for large assets; GitHub Pages or release assets when appropriate.
-
-**When to use GitLab instead:** customer mandate, air-gapped self-managed GitLab, or all-in-one DevOps on GitLab CI without Actions.
-
-**Not the same as:** **[[git]]** (the VCS protocol and CLI); **[[GitHub Actions]]** (CI/CD only); **[[GitOps]]** (deploy pattern); **[[GitLab]]** (competing platform).
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

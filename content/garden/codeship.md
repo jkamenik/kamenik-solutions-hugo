@@ -1,29 +1,27 @@
 ---
-title: "CodeShip"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: CodeShip
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - CodeShip
-
+- CodeShip
 params:
   garden:
     kind: item
     usefulness: hold
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/codeship
+- /radar/platforms/codeship
 ---
 
-[CodeShip](https://www.cloudbees.com/products/codeship) is a hosted CI service (CloudBees) for building and testing from Git repos. We **hold** it for net-new work: the product line is legacy relative to **[[GitHub Actions]]** and CloudBees' Jenkins-focused road map. Keep only where a pipeline still runs on CodeShip and migration is scheduled.
+[CodeShip](https://www.cloudbees.com/products/codeship). Is a hosted CI service (CloudBees) for building and testing from Git repos.
 
 ## Blurb
 
-> CodeShip helps teams release software faster by automating build and test workflows in the cloud.
+> Learn how parallel testing helps DevOps teams boost their testing efficiency and discover the best parallel testing strategies and tools for your organization.
 
 ## Summary
 

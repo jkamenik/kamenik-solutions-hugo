@@ -1,32 +1,26 @@
 ---
-title: "Zero Trust Network Architecture"
-date: 2024-10-01
-lastmod: 2026-06-22
+title: Zero Trust Network Architecture
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Zero Trust Network Architecture
-  - BeyondCorp
-  - zero trust
-
+- Zero Trust Network Architecture
+- BeyondCorp
+- zero trust
 params:
   aliases:
-    - BeyondCorp
-    - zero trust
+  - BeyondCorp
+  - zero trust
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - specification
+    - specification
 ---
 
-[Zero Trust Network Architecture](https://en.wikipedia.org/wiki/Zero_trust_security_model) (zero trust) assumes **no implicit trust** based on network location. Every access request is authenticated, authorized, and encrypted using identity, device posture, and policy. We **adopt** these principles as the default security posture. Implement access with **[[ZTNA]]**, **[[Access on Demand]]**, and strong **[[Single Sign-on]]**, not perimeter VPNs alone.
-
-## Blurb
-
-> Zero trust security is an information-security model which maintains strict access controls and does not trust anything by default, inside or outside an organization's perimeter.
+[Zero Trust Network Architecture](https://en.wikipedia.org/wiki/Zero_trust_security_model). (zero trust) assumes **no implicit trust** based on network location.
 
 ## Summary
 
@@ -43,7 +37,6 @@ params:
 **How we apply it:** treat **[[ZTNA]]** as the default remote-access pattern. Pair **[[Access on Demand]]** for production and break-glass paths. Use **[[Tailscale]]** or similar L3 VPN only when an app truly needs network adjacency, not as the org-wide front door.
 
 **Not the same as:** **[[ZTNA]]** (product and broker pattern) or a single vendor SKU. This note is the **reference architecture** under **[[Specification]]**.
-
 
 ## Details
 

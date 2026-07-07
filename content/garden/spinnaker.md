@@ -1,29 +1,23 @@
 ---
-title: "Spinnaker"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Spinnaker
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Spinnaker
-
+- Spinnaker
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/spinnaker
+- /radar/platforms/spinnaker
 ---
 
-[Spinnaker](https://spinnaker.io/) is an open source multi-cloud continuous delivery platform. It models pipelines, stages, and deployments (including canaries) across AWS, GCP, Kubernetes, and more. We **assess** it for brownfield Netflix-style CD; greenfield **[[GitOps]]** with **[[ArgoCD]]** is usually simpler to operate.
-
-## Blurb
-
-> Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.
+[Spinnaker](https://spinnaker.io/). Is an open source multi-cloud continuous delivery platform.
 
 ## Summary
 

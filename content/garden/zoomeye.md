@@ -1,27 +1,21 @@
 ---
-title: "ZoomEye"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: ZoomEye
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - ZoomEye
-
+- ZoomEye
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/zoomeye
+- /radar/tools/zoomeye
 ---
 
-[ZoomEye](https://www.zoomeye.org/) is a cyberspace search engine from Knownsec's 404 Team. It indexes IPv4/IPv6 hosts, web assets, banners, and fingerprints. Coverage is strong in China and broader Asian networks. We **assess** it as a regional complement to **[[Shodan]]** and **[[Censys]]** for authorized **[[DevSecOps]]** recon. It is not our sole primary index.
-
-## Blurb
-
-> ZoomEye is a cyberspace search engine that allows users to search for network devices through a browser.
+[ZoomEye](https://www.zoomeye.org/). Is a cyberspace search engine from Knownsec's 404 Team.
 
 ## Summary
 
@@ -37,7 +31,6 @@ aliases:
 **When to skip:** Teams that have already standardized on one Western index. Investigations where query logging under Chinese jurisdiction is unacceptable OPSEC. Needs already covered entirely by **[[Shodan]]** without APAC-specific gaps. Orgs that forbid third-party recon data.
 
 **API:** freemium web tier with tight daily search limits on free accounts. Paid plans and API keys unlock programmatic search, larger page sizes, and automation.
-
 
 ## Details
 

@@ -1,27 +1,23 @@
 ---
-title: "Ollama"
-date: 2026-05-17
-lastmod: 2026-05-18
+title: Ollama
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Ollama
-
+- Ollama
 params:
   garden:
     kind: item
     usefulness: trial
     category: platform
-    movement: "New"
+    movement: No Change
 ---
 
-[Ollama](https://ollama.com/) is a local runtime for pulling, serving, and chatting with open-weight LLMs on your machine (macOS, Linux, Windows). We rate it **trial**: the default way to run models locally for development, [[AI Agent]] backends, and privacy-sensitive experiments, pair it with agents like [[hermes-agent|Hermes]] or any OpenAI-compatible client, but expect throughput limits vs cloud APIs for heavy automation.
-
-AI models (even when optimized) are very GPU intensive so do not expect to be able to do other things when the agent loop is running. This limits the usefullness to only when privacy is the only concern.
+[Ollama](https://ollama.com/). Is a local runtime for pulling, serving, and chatting with open-weight LLMs on your machine (macOS, Linux, Windows).
 
 ## Blurb
 
-> Get up and running with large language models locally.
+> Ollama is the easiest way to automate your work using open models, while keeping your data safe.
 
 ## Summary
 

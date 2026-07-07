@@ -1,29 +1,23 @@
 ---
-title: "Concourse CI"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Concourse CI
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Concourse CI
-
+- Concourse CI
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/concourse-ci
+- /radar/platforms/concourse-ci
 ---
 
-[Concourse CI](https://concourse-ci.org/) is an open source CI system built around pipelines as code, immutable container builds, and the "resources / jobs / tasks" model. We **assess** it for teams that want self-hosted, pipeline-as-data workflows; most new work stays on **[[GitHub Actions]]** or **[[Tekton]]** on **[[Kubernetes]]**.
-
-## Blurb
-
-> Concourse is an open-source continuous integration and delivery tool with a pipeline-based architecture.
+[Concourse CI](https://concourse-ci.org/). Is an open source CI system built around pipelines as code, immutable container builds, and the "resources / jobs / tasks" model.
 
 ## Summary
 

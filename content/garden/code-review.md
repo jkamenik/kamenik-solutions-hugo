@@ -1,27 +1,21 @@
 ---
-title: "Code Review"
-date: 2025-04-09
-lastmod: 2026-05-18
+title: Code Review
+date: '2025-04-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Code Review
-
+- Code Review
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/code-review
+- /radar/techniques/code-review
 ---
 
-[Code review](https://en.wikipedia.org/wiki/Code_review) is structured peer (or self) inspection of a change before it lands on the mainline. We **adopt** it for every team: combine **human** judgment on design and risk with **machine** gates (**[[Code Linting]]**, tests, **[[Policy as Code]]**, security scanners) on the same **[[Pull Request]]**.
-
-## Blurb
-
-> Code review is a software quality assurance activity in which a person or team checks source code, mainly by viewing and reading parts of it.
+[Code Review](https://en.wikipedia.org/wiki/Code_review). Is structured peer (or self) inspection of a change before it lands on the mainline.
 
 ## Summary
 

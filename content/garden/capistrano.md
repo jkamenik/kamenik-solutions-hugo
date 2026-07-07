@@ -1,29 +1,23 @@
 ---
-title: "Capistrano"
-date: 2023-04-05
-lastmod: 2026-05-18
+title: Capistrano
+date: '2023-04-05'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Capistrano
-
+- Capistrano
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/tools/capistrano
+- /radar/tools/capistrano
 ---
 
-[Capistrano](https://capistranorb.com/) is a **[[Ruby]]** remote-deployment DSL: SSH into servers, run recipes (`cap deploy`), symlink releases; classic 2000s **[[Ruby on Rails]]** ops. We rate it **hold**: it predates **[[Declarative IaC]]** and **[[GitOps]]**; imperative deploy scripts drift, hide blast radius, and fight container-native workflows.
-
-## Blurb
-
-> Capistrano is a framework for building automated deployment scripts.
+[Capistrano](https://capistranorb.com/). Is a **[[Ruby]]** remote-deployment DSL: SSH into servers, run recipes (`cap deploy`), symlink releases; classic 2000s **[[Ruby on Rails]]** ops.
 
 ## Summary
 

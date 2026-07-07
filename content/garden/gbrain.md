@@ -1,27 +1,25 @@
 ---
-title: "gbrain"
-date: 2026-05-06
-lastmod: 2026-06-22
+title: gbrain
+date: '2026-05-06'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - gbrain
-  - Garry Tan Brain
-
+- gbrain
+- Garry Tan Brain
 params:
   aliases:
-    - Garry Tan Brain
+  - Garry Tan Brain
   garden:
     kind: item
     usefulness: trial
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ai-techniques
-      - pkm
+    - ai-techniques
+    - pkm
 ---
 
-[gbrain](https://github.com/garrytan/gbrain) is Garry Tan's opinionated pattern for an LLM-maintained personal knowledge base. We rate it **trial**: the *ideas* are worth stealing (especially **two-layer pages** and **MECE directory resolvers**) but the full package is prescriptive (agent-maintains-everything, enrichment on every signal). Cherry-pick patterns and adapt them to your vault and workflows; do not treat gbrain as a religion.
+[gbrain](https://github.com/garrytan/gbrain). Is Garry Tan's opinionated pattern for an LLM-maintained personal knowledge base. We rate it **trial**: the *ideas* are worth stealing (especially **two-layer pages** and **MECE directory resolvers**) but the full package is prescriptive (agent-maintains-everything, enrichment on every signal). Cherry-pick patterns and adapt them to your vault and workflows; do not treat gbrain as a religion.
 
 ## Blurb
 
@@ -64,19 +62,3 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 
 ## See Also
 - [[Linked page]]
----
-
-## Timeline
-
-- **2026-06-22** | Kai — Re-synced to Hugo (Garden Notes vault-only)
-- **2026-06-12** | Kai — Re-synced to Hugo (Garden Notes vault-only)
-- **2026-06-12** | Kai — Re-synced to Hugo (Garden Notes vault-only)
-- **2026-06-12** | Kai — Proofread fixes: dash normalization (SOUL)
-- **YYYY-MM-DD** | Author , What changed in this document.
-```
-
-## See Also
-
-- [[Agent Skills Framework]], skills that pair with agent-maintained vaults
-- [[PKM]], broader personal knowledge management context
-- [[PARA]], zone-based filing we already use

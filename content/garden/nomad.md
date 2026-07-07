@@ -1,20 +1,30 @@
 ---
-title: "Nomad"
-date: 2025-04-09
-lastmod: 2026-05-18
+title: Nomad
+date: '2025-04-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Nomad
-
+- Nomad
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - orchestrator
+    - orchestrator
 ---
 
-[HashiCorp Nomad](https://www.nomadproject.io/) is a [[Platform]] [[Orchestrator]] that bills itself as an orchestration system that is easier than [[Kubernetes]]. While that is true, there is less of a community, so your only option is HashiCorp commercial support. It is a good platform to know, but your mileage may vary for production workloads.
+[Nomad](https://www.nomadproject.io/). Is a [[Platform]] [[Orchestrator]] that bills itself as an orchestration system that is easier than [[Kubernetes]].
+
+## Blurb
+
+> Explore Nomad product documentation, tutorials, and examples.
+
+## Summary
+
+**Garden stance:** We **assess** Nomad for our estate.
+
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

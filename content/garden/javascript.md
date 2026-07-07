@@ -1,29 +1,23 @@
 ---
-title: "JavaScript"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: JavaScript
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - JavaScript
-
+- JavaScript
 params:
   garden:
     kind: item
     usefulness: hold
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 aliases:
-  - /radar/languages/javascript
+- /radar/languages/javascript
 ---
 
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is the core web programming language standardized as ECMAScript. We rate it **hold** under **[[Code]]** / **[[Language]]** for new work. **[[TypeScript]]** is usually the better choice when you are entering the JS stack.
-
-## Blurb
-
-> JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). We **hold** it under **[[Code]]** in the garden.
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** New application code where **[[TypeScript]]** is viable. Large teams without static types. Backend services where **[[GoLang]]** or another language fits better than the JS toolchain.
 
 **Not the same as:** **[[Node.js]]** or **[[Bun]]** (runtimes), **[[npm]]** (package manager), or **[[JSON]]** (data format).
-
 
 ## Details
 

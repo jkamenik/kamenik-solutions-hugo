@@ -1,27 +1,21 @@
 ---
-title: "Code Linting"
-date: 2024-10-01
-lastmod: 2026-05-18
+title: Code Linting
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Code Linting
-
+- Code Linting
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/code-linting
+- /radar/techniques/code-linting
 ---
 
-[Linting](https://en.wikipedia.org/wiki/Lint_(software)) is automated static checking of source for style, correctness, and common bug classes before merge. We **adopt** it as a **[[Technique]]**: pick team standards once, encode them in config, and make failures block **[[Pull Request]]**s so review debates opinions instead of repeating the same nits.
-
-## Blurb
-
-> In computer programming, lint or linter is any tool that flags suspicious constructs, likely programming errors, bugs, stylistic errors, and suspicious constructs.
+[Code Linting](https://en.wikipedia.org/wiki/Lint_(software)). ) is automated static checking of source for style, correctness, and common bug classes before merge.
 
 ## Summary
 

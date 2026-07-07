@@ -1,38 +1,38 @@
 ---
-title: "rbenv"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: rbenv
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - rbenv
-
+- rbenv
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[rbenv](https://github.com/rbenv/rbenv) manages **[[Ruby]]** versions per project with `.ruby-version` and lightweight shims. We **assess** it for Ruby maintenance work on **[[Ruby on Rails]]** estates; greenfield polyglot laptops prefer **[[mise]]**.
+[rbenv](https://github.com/rbenv/rbenv). Manages **[[Ruby]]** versions per project with `.ruby-version` and lightweight shims.
 
 ## Blurb
 
-> rbenv is a version manager for Ruby.
+> Manage your app's Ruby environment. Contribute to rbenv/rbenv development by creating an account on GitHub.
 
 ## Summary
 
-**What it is:** Installs Rubies via ruby-build plugin; selects version per directory.
+**Garden stance:** We **assess** rbenv for our estate.
 
-**When to use:** Rails repos with committed `.ruby-version`; developers prefer rbenv over system Ruby.
+**Key points:** | Topic | Notes |
+|-------|--------|
+| **Fit** | Common in legacy **[[Ruby on Rails]]** shops |
+| **Contrast** | **[[mise]]** when Ruby is one of many pinned runtimes |
 
-**When to skip:** Team uses **[[Dev Container]]** or **[[mise]]** for all language pins.
+**References**
 
-**Key features:** Shim dispatch, `rbenv local/global`, plugin ecosystem.
-
+- [rbenv documentation](https://github.com/rbenv/rbenv#readme)
 
 ## Details
 

@@ -1,32 +1,30 @@
 ---
-title: "Docker"
-date: 2023-03-03
-lastmod: 2026-06-12
+title: Docker
+date: '2023-03-03'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Docker
-  - docker CLI
-  - Moby
-
+- Docker
+- docker CLI
+- Moby
 params:
   aliases:
-    - docker CLI
-    - Moby
+  - docker CLI
+  - Moby
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/docker
+- /radar/tools/docker
 ---
 
-[Docker](https://docs.docker.com/) popularized containers and still owns the de facto **`docker` CLI** and **Dockerfile** workflow. We rate the **Docker Inc product stack** (**hold**), especially **[[Docker Desktop]]** licensing and hub-centric defaults: prefer **[[Open Container Initiative]]**-compatible engines (**[[Rancher Desktop]]**, **[[Podman]]**) for new local dev. **[[Containerization]]** as a technique remains **adopt**.
+[Docker](https://docs.docker.com/). Popularized containers and still owns the de facto **`docker` CLI** and **Dockerfile** workflow.
 
 ## Blurb
 
-> Docker helps developers bring their ideas to life by conquering the complexity of app development.
+> Docker Documentation is the official Docker library of resources, manuals, and guides to help you containerize applications.
 
 ## Summary
 
@@ -44,7 +42,7 @@ aliases:
 
 **When the CLI still makes sense:** tutorials, **[[Dev Container]]** docs, **[[Dive]]**, and CI snippets that call `docker`. Prefer rootless/daemonless options where security policy requires it.
 
-**Alternatives for local dev:** **[[Rancher Desktop]]** (**assess**), **[[Podman]]** (**trial** in garden), or Linux VM with containerd only.
+**Alternatives for local dev:** **[[Rancher Desktop]]** (**trial**), **[[Podman]]** (**trial** in garden), or Linux VM with containerd only.
 
 ## Details
 

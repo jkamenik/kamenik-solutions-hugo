@@ -1,18 +1,28 @@
 ---
-title: "Tailscale"
-date: 2025-04-23
-lastmod: 2026-05-18
+title: Tailscale
+date: '2025-04-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Tailscale
-
+- Tailscale
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "No Change"
+    movement: No Change
 ---
 
-[Tailscale](https://tailscale.com/) is a software defined VPN platform which uses [[Wireguard]] under the hood. If you have a need for a traditional VPN then Tailscale might be a easier solution. However, in this day and age you are likely better served with a [[ZTNA]] solution, so we remain cautious.
+[Tailscale](https://tailscale.com/). Is a software defined VPN platform which uses [[Wireguard]] under the hood.
+
+## Blurb
+
+> The connectivity platform for devs, IT, and security teams. Zero Trust identity-based access that deploys in minutes and scales to every resource. Start free.
+
+## Summary
+
+**Garden stance:** We **assess** Tailscale for our estate.
+
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

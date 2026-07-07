@@ -1,29 +1,27 @@
 ---
-title: "Auth0"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Auth0
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Auth0
-
+- Auth0
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - identity-provider
+    - identity-provider
 aliases:
-  - /radar/platforms/auth0
+- /radar/platforms/auth0
 ---
 
-[Auth0](https://auth0.com/) is a managed **identity platform** (now part of **Okta**) for embedding sign-up, login, and API access in applications, especially B2B **[[SaaS]]** products. It speaks **OIDC** / OAuth 2.0 and offloads passwords, social login, MFA, and hosted Universal Login. We rate it **assess**: strong for fast product auth, but weigh cost, tenant-model fit, and exit strategy before you bake it in.
+[Auth0](https://auth0.com/). Is a managed **identity platform** (now part of **Okta**) for embedding sign-up, login, and API access in applications, especially B2B **[[SaaS]]** products.
 
 ## Blurb
 
-> Auth0 is an easy to implement, adaptable authentication and authorization platform.
+> Secure users, AI agents, and more with Auth0, an easy-to-implement, scalable, and adaptable authentication and authorization platform.
 
 ## Summary
 

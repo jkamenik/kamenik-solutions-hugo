@@ -1,27 +1,25 @@
 ---
-title: "mise"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: mise
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - mise
-
+- mise
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[mise](https://mise.jdx.dev/) (formerly rtx) is a polyglot runtime manager: one CLI installs and pins Node, Python, Terraform, Go, and many other tools from `.mise.toml` or `.tool-versions`. We **assess** it as the successor-style alternative to **[[asdf]]** for host-native dev laptops.
+[mise](https://mise.jdx.dev/). (formerly rtx) is a polyglot runtime manager: one CLI installs and pins Node, Python, Terraform, Go, and many other tools from `.mise.toml` or `.tool-versions`.
 
 ## Blurb
 
-> mise is a dev tool for managing your development environment.
+> mise-en-place documentation
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Team already standardized on **[[Dev Container]]** only.
 
 **Key features:** `mise install`, global and local config, CI-friendly, compatible with asdf plugin ecosystem patterns.
-
 
 ## Details
 

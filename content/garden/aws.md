@@ -1,29 +1,27 @@
 ---
-title: "AWS"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: AWS
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - AWS
-
+- AWS
 params:
   garden:
     kind: item
     usefulness: hold
     category: platform
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - cloud
+    - cloud
 aliases:
-  - /radar/platforms/aws
+- /radar/platforms/aws
 ---
 
-[Amazon Web Services](https://aws.amazon.com/) was the first hyperscale **[[Cloud]]** and still has the broadest catalog. We rate it **hold** for new work: insecure-by-default patterns, opaque “managed” shared-responsibility gaps, and a sprawl of services that encourage operational debt. Prefer **[[Google Cloud Platform]]** (adopt as multi-cloud spearhead) or **[[Azure]]** (assess, with eyes open) when a comparable capability exists. Use **[[Hybrid Cloud]]** to place each workload on the best cloud, not lift-and-shift clones.
+[AWS](https://aws.amazon.com/). Was the first hyperscale **[[Cloud]]** and still has the broadest catalog.
 
 ## Blurb
 
-> AWS is the world’s most comprehensive and broadly adopted cloud.
+> Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Free to join, pay only for what you use.
 
 ## Summary
 

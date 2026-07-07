@@ -1,27 +1,21 @@
 ---
-title: "usql"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: usql
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - usql
-
+- usql
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/usql
+- /radar/tools/usql
 ---
 
-[usql](https://github.com/xo/usql) is a single binary that speaks the `psql`-style command line to many SQL and NoSQL databases. We **trial** it for operators and developers who want one familiar REPL across Postgres, MySQL, SQL Server, SQLite, Oracle, and others without juggling vendor CLIs.
-
-## Blurb
-
-> usql is a universal command-line interface for PostgreSQL, MySQL, Oracle Database, SQLite3, Microsoft SQL Server, and many other databases including NoSQL and non-relational databases!
+[usql](https://github.com/xo/usql). Is a single binary that speaks the `psql`-style command line to many SQL and NoSQL databases.
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** deep admin features tied to one vendor (e.g. `\copy` parity gaps); GUI-first analysts; teams standardized on a single cloud console.
 
 **Covers:** relational engines (Postgres, MySQL, SQL Server, SQLite, Oracle) plus Cassandra, ClickHouse, MongoDB, Redis, and more (see upstream database support table).
-
 
 ## Details
 

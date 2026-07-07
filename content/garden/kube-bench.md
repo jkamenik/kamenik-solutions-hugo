@@ -1,29 +1,27 @@
 ---
-title: "kube-bench"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: kube-bench
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - kube-bench
-
+- kube-bench
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 aliases:
-  - /radar/tools/kube-bench
+- /radar/tools/kube-bench
 ---
 
-[kube-bench](https://github.com/aquasecurity/kube-bench) runs CIS Kubernetes Benchmark checks against the control plane and nodes. It reports pass/fail per hardening recommendation. We **assess** it alongside **[[Kubescape]]** before picking a standard cluster compliance scanner.
+[kube-bench](https://github.com/aquasecurity/kube-bench). Runs CIS Kubernetes Benchmark checks against the control plane and nodes.
 
 ## Blurb
 
-> kube-bench is a Go application that checks whether Kubernetes is deployed securely by running the checks documented in the CIS Kubernetes Benchmark.
+> Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark - aquasecurity/kube-bench
 
 ## Summary
 

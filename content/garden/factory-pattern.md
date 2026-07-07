@@ -1,7 +1,7 @@
 ---
 title: Factory Pattern
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Factory Pattern
@@ -15,30 +15,20 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: New
+    movement: No Change
     subcategories:
     - design-pattern
 ---
 
-[Factory Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern)
-
-The [Factory pattern](https://en.wikipedia.org/wiki/Factory_method_pattern) family centralizes object creation behind an interface or function so callers depend on abstractions, not concrete constructors. We **adopt** it when construction logic branches on config, environment, or plugin type and **[[Dependency Inversion Principle]]** needs a stable seam. It supports **[[Open-Closed Principle]]** by adding new product types without editing every call site. Do not introduce a factory hierarchy before a second implementation exists.
-
-## Blurb
-
-> Define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory Method lets a class defer instantiation to subclasses.
+[Factory Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern). The [Factory pattern](https://en.wikipedia.org/wiki/Factory_method_pattern) family centralizes object creation behind an interface or function so callers depend on abstractions, not concrete constructors.
 
 ## Summary
 
-**What it is:** A creational **[[Design Pattern]]** group. A factory hides `new` (or equivalent) behind a method or object that picks the concrete type. Variants include simple factory functions, Factory Method (subclass chooses), and Abstract Factory (families of related products).
+**Garden stance:** We **adopt** Factory Pattern for our estate.
 
-**Why it matters:** Scattered construction couples callers to concrete classes and config parsing. A factory keeps creation in one place. Tests swap factories or pass fakes without rewriting domain code.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to use:** Plugin registries, storage backends, transport clients, and parsers selected by runtime config. Natural follow-on once **[[Dependency Inversion Principle]]** defines a port that needs multiple implementations.
-
-**When to pull back:** One type, one constructor, no forecast of variation. A plain function that returns the only implementation is enough. Skip Abstract Factory until you truly build families of related objects together.
-
-**Relation to DIP:** Callers depend on the product interface. The factory (or composition root) is where concrete types are chosen. That is the wiring **[[Dependency Inversion Principle]]** expects at the edge.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

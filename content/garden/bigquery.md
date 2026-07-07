@@ -1,27 +1,25 @@
 ---
-title: "BigQuery"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: BigQuery
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - BigQuery
-
+- BigQuery
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/bigquery
+- /radar/tools/bigquery
 ---
 
-[BigQuery](https://cloud.google.com/bigquery) is Google Cloud's fully managed, serverless data platform for [[SQL]] analytics, ML, and BI at petabyte scale. Storage and compute scale independently with no cluster sizing. We **assess** it when [[Google Cloud Platform|GCP]] is in play or a columnar EDW beats stretching **[[Postgres]]** for analytics volume.
+[BigQuery](https://cloud.google.com/bigquery). Is Google Cloud's fully managed, serverless data platform for [[SQL]] analytics, ML, and BI at petabyte scale.
 
 ## Blurb
 
-> BigQuery is a fully managed, AI-ready data platform that helps you manage and analyze your data with built-in features like machine learning, search, geospatial analysis, and business intelligence.
+> BigQuery is the autonomous data and AI platform, automating the entire data life cycle so you can go from data to AI to action faster.
 
 ## Summary
 
@@ -32,7 +30,6 @@ aliases:
 **When to skip:** Primary OLTP (use **[[Postgres]]**). Multi-cloud strategy that forbids GCP-only warehouses. Small datasets where Postgres replicas plus **[[Grafana]]** or **[[Metabase]]** suffice.
 
 **Key features:** Serverless scaling, nested and repeated fields, sharing and authorized views, scheduled queries, cost controls via quotas and reservations.
-
 
 ## Details
 

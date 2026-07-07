@@ -1,52 +1,37 @@
 ---
-title: "EditorConfig"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: EditorConfig
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - EditorConfig
-
+- EditorConfig
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/editorconfig
+- /radar/tools/editorconfig
 ---
 
-[EditorConfig](https://editorconfig.org/) is a repo-root **`.editorconfig`** file plus editor plugins that apply shared whitespace, encoding, and newline rules before language formatters or linters run. We **adopt** it as the bottom layer of **[[Code Linting]]**: cheap consistency across VS Code, Cursor, JetBrains, and vim without debating tabs in every PR.
+[EditorConfig](https://editorconfig.org/). Is a repo-root **`.editorconfig`** file plus editor plugins that apply shared whitespace, encoding, and newline rules before language formatters or linters run.
 
 ## Blurb
 
-> EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
+> EditorConfig is a file format and collection of text editor plugins for maintaining consistent coding styles between different editors and IDEs.
 
 ## Summary
 
-**What it fixes:** UTF-8 vs Latin-1 surprises, CRLF vs LF churn, trailing whitespace noise, and "my editor used 2 spaces, yours used 4" diffs. It does **not** replace ESLint, Prettier, golangci-lint, or **[[Super-Linter]]**; it sets the **baseline** those tools assume.
+**Garden stance:** We **adopt** EditorConfig for our estate.
 
-**Why adopt:**
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-| Benefit | Detail |
-|---------|--------|
-| **VCS-friendly** | Small text file; merges are rare |
-| **Editor-agnostic** | Plugins for most IDEs; native support in some |
-| **Shift left** | Applies on save locally, same rules in **[[Dev Container]]** if the plugin is installed |
-| **Pairs with CI** | Linters still enforce logic; EditorConfig reduces formatting-only failures |
-
-**Rules of thumb:**
-
-- Commit `.editorconfig` at repo root with `root = true`.
-- Use globs per language (`[*.{js,ts}]`, `[*.go]`, `[*.md]`).
-- Do not duplicate every Prettier option; let formatters own language semantics.
-- Document team choices in **[[Code Linting]]** standards, not in wiki-only tables.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 
 **Example baseline** (team defaults; adjust per repo):
-
 ```ini
 root = true
 
@@ -62,7 +47,6 @@ indent_size = 4
 trim_trailing_whitespace = true
 insert_final_newline = true
 ```
-
 | Property | Typical use |
 |----------|-------------|
 | `indent_style` / `indent_size` | Spaces vs tabs per language |

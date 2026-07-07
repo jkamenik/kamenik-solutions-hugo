@@ -1,27 +1,21 @@
 ---
-title: "ChatOps"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: ChatOps
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - ChatOps
-
+- ChatOps
 params:
   garden:
     kind: item
     usefulness: hold
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/chatops
+- /radar/techniques/chatops
 ---
 
-[ChatOps](https://en.wikipedia.org/wiki/ChatOps) is the practice of running operations through a chat interface: posting alerts into channels and/or invoking bots that execute commands. Platforms like **[[Slack]]** encourage it heavily (thousands of integrations). We rate the **technique** **hold**: fine for memes and low-stakes coordination; a bad default for production **[[DevSecOps]]**.
-
-## Blurb
-
-> ChatOps is a collaboration model that connects people, tools, process, and automation into a transparent workflow.
+[ChatOps](https://en.wikipedia.org/wiki/ChatOps). Is the practice of running operations through a chat interface: posting alerts into channels and/or invoking bots that execute commands.
 
 ## Summary
 

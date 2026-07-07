@@ -1,32 +1,30 @@
 ---
-title: "Genesis"
-date: 2026-04-15
-lastmod: 2026-06-12
+title: Genesis
+date: '2026-04-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Genesis
-  - Gensis
-
+- Genesis
+- Gensis
 params:
   aliases:
-    - Gensis
+  - Gensis
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 aliases:
-  - /radar/tools/genesis
+- /radar/tools/genesis
 ---
 
-[Genesis](https://github.com/xeeva/Genesis) is a **[[Claude Code]]** meta-project: you run Genesis inside Claude, describe a new app (stack + name), and it scaffolds a sibling repo. The scaffold includes `CLAUDE.md`, `.claude/agents/`, `.claude/skills/`, hooks, `.mcp.json`, memory seeds, and starter code. We rate it **assess**: worth a pilot when bootstrapping greenfield Claude-native repos; this vault already hand-rolls the same **[[Agent Skills Framework]]** patterns.
+[Genesis](https://github.com/xeeva/Genesis). Is a **[[Claude Code]]** meta-project: you run Genesis inside Claude, describe a new app (stack + name), and it scaffolds a sibling repo.
 
 ## Blurb
 
-> The Claude that builds Claudes. Bootstrap fully-equipped Claude Code projects in under two minutes.
+> Bootstrap fully-equipped Claude Code projects in under two minutes. Agents, skills, hooks, memory, MCP configs - all scaffolded from a single conversation. - xeeva/Genesis
 
 ## Summary
 

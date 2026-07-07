@@ -1,7 +1,7 @@
 ---
 title: Software Architecture
 date: '2026-04-16'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Software Architecture

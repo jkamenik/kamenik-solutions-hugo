@@ -1,27 +1,21 @@
 ---
-title: "Claude Code"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: Claude Code
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Claude Code
-
+- Claude Code
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 ---
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's agentic coding assistant (terminal CLI, VS Code extension, and desktop surfaces) that reads your repo, edits files, runs commands, and follows project rules. We rate it **trial** under [[AI Agent]]: a strong bounded coding agent and the best fit when you live in the Anthropic stack and [[Agent Skills Framework]]. For day-to-day interactive work we usually reach for [[Cursor]] and the [[cursor-agent]] CLI instead (editor + agent in one place).
-
-## Blurb
-
-> Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster through natural language commands.
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code). Is Anthropic's agentic coding assistant (terminal CLI, VS Code extension, and desktop surfaces) that reads your repo, edits files, runs commands, and follows project rules.
 
 ## Summary
 

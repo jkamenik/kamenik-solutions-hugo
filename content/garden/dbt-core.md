@@ -1,56 +1,34 @@
 ---
-title: "dbt-core"
-date: 2026-01-14
-lastmod: 2026-06-12
+title: dbt-core
+date: '2026-01-14'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - dbt-core
-  - dbt
-  - dbt Core
-
+- dbt-core
+- dbt
+- dbt Core
 params:
   aliases:
-    - dbt
-    - dbt Core
+  - dbt
+  - dbt Core
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/dbt-core
+- /radar/tools/dbt-core
 ---
 
-[dbt Core](https://docs.getdbt.com/) is the open-source CLI that transforms data in the warehouse: versioned SQL models, tests, docs, and a DAG executed with `dbt build`. We rate it **trial** for analytics engineering in the warehouse; pair orchestration with **[[Apache Airflow]]** or **[[Argo Workflows]]** when schedules and cross-system DAGs sit outside dbt.
-
-## Blurb
-
-> dbt is a SQL-first data transformation workflow for teams who already know SQL.
+[dbt-core](https://docs.getdbt.com/). Is the open-source CLI that transforms data in the warehouse: versioned SQL models, tests, docs, and a DAG executed with `dbt build`.
 
 ## Summary
 
-**Role:** transform data **inside** the warehouse (models, tests, docs). Not a general **[[CI-CD Tools]]** runner; not **[[Apache Airflow]]** (though Airflow often triggers `dbt run`).
+**Garden stance:** We **trial** dbt-core for our estate.
 
-**When to trial:**
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-- Warehouse-native analytics engineering (Snowflake, BigQuery, Redshift, Postgres, etc.)
-- Git-reviewed SQL models, `dbt test`, and generated lineage docs
-- Team comfortable with Jinja-templated SQL and `dbt_project.yml` layout
-
-**When to skip:**
-
-- No warehouse or transforms belong in an app service, not SQL models
-- Need only light ETL scripts; a smaller tool may suffice
-- Org will not adopt project structure (`models/`, `macros/`, `seeds/`, etc.)
-
-**Typical flows:**
-
-| Goal | Commands |
-|------|----------|
-| Fresh deps + run | `dbt deps` then `dbt build` (or `dbt run` + `dbt test`) |
-| Docs locally | `dbt docs generate` then `dbt docs serve` |
-| Clean artifacts | `dbt clean` before deps when debugging compile state |
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 
@@ -91,13 +69,11 @@ When a table is owned elsewhere but dbt should merge new rows:
 3. `unique_key` set for merge/upsert
 4. `incremental_strategy` (`append` or `merge` per adapter)
 5. Use `is_incremental()` and `{{ this }}` for watermark logic
-
 ```sql
 {% if is_incremental() %}
   AND created_at > (SELECT COALESCE(MAX(scan_timestamp), '1970-01-01'::timestamp) FROM {{ this }})
 {% endif %}
 ```
-
 See [Incremental models](https://docs.getdbt.com/docs/build/incremental-models).
 
 **References**

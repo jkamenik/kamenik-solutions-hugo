@@ -1,16 +1,14 @@
 ---
-title: "Specification"
-date: 2025-12-30
-lastmod: 2026-06-12
+title: Specification
+date: '2025-12-30'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Specification
-  - spec
-
+- Specification
+- spec
 params:
   aliases:
-    - spec
+  - spec
   garden:
     kind: subcategory
     parent_category: technique

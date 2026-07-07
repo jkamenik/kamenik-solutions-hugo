@@ -1,20 +1,22 @@
 ---
-title: "Work Queues"
-date: 2025-05-20
-lastmod: 2026-05-18
+title: Work Queues
+date: '2025-05-20'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Work Queues
-
+- Work Queues
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/work-queue
+- /radar/techniques/work-queue
 ---
 
-[Work queues](https://en.wikipedia.org/wiki/Message_queue) decouple producers and consumers so tasks can be processed asynchronously, retried, and scaled independently. They pair well with the [[Inbox Pattern]] when you need at-least-once delivery without building a full workflow engine. Adopt a mature broker (or managed queue) before inventing your own persistence layer.
+[Work Queues](https://en.wikipedia.org/wiki/Message_queue) is a technique we **assess** in the garden.
+
+## Summary
+
+**Key points:** decouple producers and consumers so tasks can be processed asynchronously, retried, and scaled independently. They pair well with the [[Inbox Pattern]] when you need at-least-once delivery without building a full workflow engine. Adopt a mature broker (or managed queue) before inventing your own persistence layer.

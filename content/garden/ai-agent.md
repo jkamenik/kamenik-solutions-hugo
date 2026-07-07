@@ -1,12 +1,10 @@
 ---
-title: "AI Agent"
-date: 2026-04-20
-lastmod: 2026-06-12
+title: AI Agent
+date: '2026-04-20'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - AI Agent
-
+- AI Agent
 params:
   garden:
     kind: subcategory

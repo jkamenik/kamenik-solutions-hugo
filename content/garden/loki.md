@@ -1,27 +1,21 @@
 ---
-title: "Loki"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Loki
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Loki
-
+- Loki
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Loki](https://grafana.com/oss/loki/) is Grafana Labs' horizontally scalable log aggregation system inspired by **[[Prometheus]]** labels. It indexes metadata, not full log text, and pairs with **[[Grafana]]** for log exploration. We **trial** it for Kubernetes and service logs alongside Prometheus metrics.
-
-## Blurb
-
-> Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus.
+[Loki](https://grafana.com/oss/loki/). Is Grafana Labs' horizontally scalable log aggregation system inspired by **[[Prometheus]]** labels.
 
 ## Summary
 
@@ -32,7 +26,6 @@ params:
 **When to skip:** Full-text SIEM requirements (**[[Splunk]]**, **[[Elasticsearch]]**). Teams without label discipline on logs.
 
 **Key features:** LogQL, multi-tenancy, boltdb/TSDB schema evolution, Grafana correlations with metrics and traces.
-
 
 ## Details
 

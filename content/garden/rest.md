@@ -1,27 +1,27 @@
 ---
-title: "Representational State Transfer (REST)"
-date: 2025-12-11
-lastmod: 2026-06-12
+title: REST
+date: '2025-12-11'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Representational State Transfer (REST)
-  - RESTful
-
+- REST
+- RESTful
 params:
   aliases:
-    - RESTful
+  - RESTful
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - api
+    - api
 ---
 
-[Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)
+[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) is a technique we **adopt** in the garden.
 
-## Blurb
+## Summary
 
-REST defines a set of constraints for how the architecture of a distributed, [Internet](https://en.wikipedia.org/wiki/Internet "Internet")-scale [hypermedia](https://en.wikipedia.org/wiki/Hypermedia "Hypermedia") system, such as the Web, should behave
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

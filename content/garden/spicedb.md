@@ -1,7 +1,7 @@
 ---
 title: SpiceDB
 date: '2023-07-23'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - SpiceDB
@@ -10,14 +10,14 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
 ---
 
-[SpiceDB](https://authzed.com/spicedb/) is an open-source, Google [[Zanzibar]]-inspired database for fine-grained authorization. It stores relationship tuples, evaluates permission checks over a graph, and stays separate from authentication. We **assess** it as the leading open ReBAC engine when apps need global-scale authorization beyond **[[RBAC]]** or **[[Open Policy Agent]]** policy checks.
+[SpiceDB](https://authzed.com/spicedb/). We **assess** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> SpiceDB is an open-source, Google Zanzibar-inspired database system for real-time, security-critical application permissions.
+> SpiceDB is an open source, Google Zanzibar-inspired database for creating and managing security-critical application permissions.
 
 ## Summary
 

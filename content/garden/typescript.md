@@ -1,29 +1,27 @@
 ---
-title: "TypeScript"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: TypeScript
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - TypeScript
-
+- TypeScript
 params:
   garden:
     kind: item
     usefulness: assess
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 aliases:
-  - /radar/languages/typescript
+- /radar/languages/typescript
 ---
 
-[TypeScript](https://www.typescriptlang.org/) is a typed superset of **[[JavaScript]]** that compiles to plain JS. We rate it **assess**. It is overused where scripts, tight latency, or minimal dependencies fit better. Before choosing it, confirm that complex **[[npm]]** trees, supply-chain exposure, and slower JS execution are acceptable tradeoffs.
+[TypeScript](https://www.typescriptlang.org/). Is a typed superset of **[[JavaScript]]** that compiles to plain JS.
 
 ## Blurb
 
-> TypeScript adds additional syntax to JavaScript to support a tighter integration with your editor. Catch errors early in your editor.
+> TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.
 
 ## Summary
 
@@ -36,7 +34,6 @@ aliases:
 **Before you commit:** map transitive **[[npm]]** dependencies, lockfile policy, and audit cadence. TypeScript does not remove supply-chain risk; it often expands it via tooling packages. Benchmark hot paths on **[[Node.js]]** or **[[Bun]]**, not just compile-time ergonomics.
 
 **Output:** always JavaScript. Pick a target (`ES2022`, etc.) and module format (ESM vs CommonJS) to match your **[[Node.js]]** or bundler pipeline.
-
 
 ## Details
 

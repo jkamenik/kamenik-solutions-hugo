@@ -1,27 +1,21 @@
 ---
-title: "OpenTelemetry"
-date: 2025-12-08
-lastmod: 2026-05-18
+title: OpenTelemetry
+date: '2025-12-08'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - OpenTelemetry
-
+- OpenTelemetry
 params:
   garden:
     kind: item
     usefulness: adopt
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - library
+    - library
 ---
 
-[OpenTelemetry](https://opentelemetry.io/) (OTel) is the CNCF-standard way to collect **traces**, **metrics**, and **logs** with vendor-neutral APIs and SDKs. Instrument once, export to your backend of choice (Prometheus, Jaeger, vendor SaaS, etc.) instead of locking into a proprietary agent. For new services and platforms we treat OTel as the default observability foundation, it is what makes [[Incident Management]] detection and [[Up-time Monitoring]] actually work in modern, ephemeral infrastructure.
-
-## Blurb
-
-> High-quality, ubiquitous, and portable telemetry to enable effective observability.
+[OpenTelemetry](https://opentelemetry.io/). (OTel) is the CNCF-standard way to collect **traces**, **metrics**, and **logs** with vendor-neutral APIs and SDKs.
 
 ## Summary
 

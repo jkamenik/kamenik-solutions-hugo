@@ -1,25 +1,19 @@
 ---
-title: "Snowflake"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Snowflake
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Snowflake
-
+- Snowflake
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[Snowflake](https://www.snowflake.com/) is a cloud-native analytics data platform with separated storage and compute, standard SQL, and multi-cloud deployment. We **assess** it for enterprise EDW workloads when buyers want Snowflake's sharing and marketplace model; **[[BigQuery]]** competes on **[[Google Cloud Platform]]**.
-
-## Blurb
-
-> Snowflake is a single, global platform that powers the Data Cloud.
+[Snowflake](https://www.snowflake.com/). Is a cloud-native analytics data platform with separated storage and compute, standard SQL, and multi-cloud deployment.
 
 ## Summary
 
@@ -30,7 +24,6 @@ params:
 **When to skip:** GCP-only strategy (**[[BigQuery]]**). Small datasets on **[[Postgres]]** replicas.
 
 **Key features:** Time travel, clones, streams/tasks, marketplace listings, native **[[Apache Superset]]** / **[[Metabase]]** connectors.
-
 
 ## Details
 

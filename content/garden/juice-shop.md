@@ -1,24 +1,22 @@
 ---
-title: "Juice Shop"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: Juice Shop
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Juice Shop
-  - OWASP Juice Shop
-
+- Juice Shop
+- OWASP Juice Shop
 params:
   aliases:
-    - OWASP Juice Shop
+  - OWASP Juice Shop
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[Juice Shop](https://owasp.org/www-project-juice-shop/) (OWASP Juice Shop) is a modern Node.js/Angular e-commerce app packed with deliberate security flaws. We **trial** it for CTF-style training, DAST calibration, and [[DevSecOps]] pipeline drills. Run it only in isolated lab VMs or containers, never on internet-facing hosts.
+[Juice Shop](https://owasp.org/www-project-juice-shop/). (OWASP Juice Shop) is a modern Node.js/Angular e-commerce app packed with deliberate security flaws.
 
 ## Blurb
 
@@ -26,19 +24,11 @@ params:
 
 ## Summary
 
-Juice Shop wraps OWASP Top 10 and related flaws in a realistic SPA with REST APIs, scoring, and hint tiers. It targets modern stacks where [[DVWA]]'s PHP forms feel dated.
+**Garden stance:** We **trial** Juice Shop for our estate.
 
-**When to use:**
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-- Teaching SPA and API abuse (JWT, NoSQL, GraphQL-style flows, supply chain)
-- Running CTFs or awareness demos
-- Benchmarking [[Zed Attack Proxy (Zap)]] or CI DAST jobs against a known-vulnerable app
-- Practicing fix-it workflows on [[TypeScript]] and [[Node.js]] code
-
-**When to skip:** you need the simplest LAMP-style modules for beginners (prefer [[DVWA]]); you cannot isolate the host from your network; you want only classic server-rendered PHP labs without client-side complexity.
-
-**Stack:** Node.js, Express, Angular (TypeScript). Upstream docs and images live at [owasp-juice.shop](https://owasp-juice.shop) and [github.com/juice-shop/juice-shop](https://github.com/juice-shop/juice-shop).
-
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 
@@ -63,7 +53,6 @@ Hundreds of categorized challenges span injection, broken auth, sensitive data e
 - Pair manual solves with DAST runs from [[Zed Attack Proxy (Zap)]] to compare human and scanner coverage.
 
 ### Install Sketch
-
 ```bash
 docker run --rm -p 3000:3000 bkimminich/juice-shop
 # Or clone https://github.com/juice-shop/juice-shop and follow README

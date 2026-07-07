@@ -1,25 +1,23 @@
 ---
-title: "PyGoat"
-date: 2026-06-17
-lastmod: 2026-06-22
+title: PyGoat
+date: '2026-06-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - PyGoat
-
+- PyGoat
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[PyGoat](https://github.com/adeyosemanputra/pygoat) is a deliberately vulnerable Django web app for OWASP Top 10 style training. We **trial** it for Python and Django secure-coding labs, manual exploitation practice, and DAST calibration. Run it only in isolated lab VMs or containers, never on internet-facing hosts.
+[PyGoat](https://github.com/adeyosemanputra/pygoat). Is a deliberately vulnerable Django web app for OWASP Top 10 style training.
 
 ## Blurb
 
-> Intentionally vulnerable web application security in Django. Vulnerabilities map to the OWASP Top Ten.
+> intentionally vuln web Application Security in django - adeyosemanputra/pygoat
 
 ## Summary
 
@@ -30,7 +28,6 @@ PyGoat packages common web flaws in a Django project with challenge metadata in 
 **When to skip:** you need a polished CTF scoreboard and hint tiers (prefer [[Juice Shop]]); you want the simplest LAMP module menu (prefer [[DVWA]]); you cannot isolate the host from your network.
 
 **Stack:** Django, [[Python]] 3.10 or 3.11 (per upstream). Official paths include source install (`installer.sh` or `requirements.txt`), `docker pull pygoat/pygoat`, and docker-compose.
-
 
 ## Details
 
@@ -55,7 +52,6 @@ Challenges map to OWASP Top 10 themes. Definitions live in `challenge/challenge.
 - Treat upstream install docs as Linux/macOS first; on Windows use Docker Desktop or WSL2.
 
 ### Install Sketch
-
 ```bash
 # Fastest path: official image
 docker run --rm -p 8000:8000 pygoat/pygoat:latest
@@ -68,5 +64,4 @@ bash installer.sh
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-
 After first boot with compose, populate challenges if the UI lists none (see README `populate_challenges` step).

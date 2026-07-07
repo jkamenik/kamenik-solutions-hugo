@@ -1,27 +1,25 @@
 ---
-title: "Checkov"
-date: 2026-06-15
-lastmod: 2026-06-22
+title: Checkov
+date: '2026-06-15'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Checkov
-
+- Checkov
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - code-scanner
+    - code-scanner
 ---
 
-[Checkov](https://github.com/bridgecrewio/checkov) is a static analysis tool for infrastructure as code, CI workflows, and container images. It ships 1,000+ built-in policies for AWS, Azure, and Google Cloud misconfigurations. We **adopt** it as the default **[[Code Scanner]]** gate on **[[Pull Request]]**s for **[[Terraform]]**, **[[Kubernetes]]**, and pipeline YAML. Use **[[Conftest]]** when custom OPA rules must also enforce in-cluster admission.
+[Checkov](https://github.com/bridgecrewio/checkov). We **adopt** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> Checkov is a static code analysis tool for infrastructure as code (IaC) and also a software composition analysis (SCA) tool for images and open source packages.
+> Prevent cloud misconfigurations and find vulnerabilities during build-time in infrastructure as code, container images and open source packages with Checkov by Bridgecrew. - bridgecrewio/checkov
 
 ## Summary
 
@@ -38,7 +36,6 @@ params:
 **When to skip:** policy logic must live in OPA and run at admission time (**[[Policy as Code]]** + **[[Conftest]]**); only application source linting matters; **[[Regula]]** already covers the full IaC stack with less policy maintenance.
 
 **Pairs with:** `terraform plan` JSON scanning, pre-commit hooks, **[[GitHub Actions]]** or Jenkins gates, Prisma Cloud for centralized policy management.
-
 
 ## Details
 

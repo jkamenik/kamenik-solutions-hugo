@@ -1,27 +1,21 @@
 ---
-title: "Declarative IaC"
-date: 2025-01-05
-lastmod: 2026-06-12
+title: Declarative IaC
+date: '2025-01-05'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Declarative IaC
-
+- Declarative IaC
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/declarative-iac
+- /radar/techniques/declarative-iac
 ---
 
-[Declarative infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code) describes **desired end state** in versioned files; a planner/reconciler (Terraform, the Kubernetes API, GitOps controllers) computes and applies the diff. We **adopt** declarative IaC for cloud and cluster shape; **hold** **[[Imperative IaC]]**, **[[CDKs]]**, and **[[Pulumi]]** for new work when a declarative path exists.
-
-## Blurb
-
-> Infrastructure as code is the process of managing and provisioning computer data center resources through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.
+[Declarative IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code). Describes **desired end state** in versioned files; a planner/reconciler (Terraform, the Kubernetes API, GitOps controllers) computes and applies the diff.
 
 ## Summary
 

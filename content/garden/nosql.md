@@ -1,29 +1,21 @@
 ---
-title: "NoSQL"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: NoSQL
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - NoSQL
-
+- NoSQL
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/techniques/nosql
+- /radar/techniques/nosql
 ---
 
-[NoSQL](https://en.wikipedia.org/wiki/NoSQL)
-
-NoSQL ("Not Only SQL") names data stores that model and scale outside classic relational tables. Document, key-value, wide-column, and graph systems each trade different consistency and query patterns. We **assess** the family when requirements clearly need that shape; default to **[[Postgres]]** (adopt) until relational limits show up in production.
-
-## Blurb
-
-> NoSQL databases are designed to handle large volumes of unstructured, semi-structured, or structured data, and they often prioritize scalability, flexibility, and performance over strict consistency.
+[NoSQL](https://en.wikipedia.org/wiki/NoSQL) ("Not Only SQL") names data stores that model and scale outside classic relational tables. We **assess** it under **[[Technique]]** in the garden.
 
 ## Summary
 
@@ -34,7 +26,6 @@ NoSQL ("Not Only SQL") names data stores that model and scale outside classic re
 **When to skip:** Most business apps with joins, transactions, and reporting on a stable schema (**[[Postgres]]**). Analytics warehouses (**[[BigQuery]]**) when SQL over huge columnar data is the real need, not document flexibility.
 
 **Key tradeoffs:** Eventual consistency models, operator skill split, and operational sprawl when every service picks a different engine.
-
 
 ## Details
 

@@ -1,29 +1,27 @@
 ---
-title: "Harness.io"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Harness.io
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Harness.io
-
+- Harness.io
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/harness-io
+- /radar/platforms/harness-io
 ---
 
-[Harness](https://www.harness.io/) is a commercial CI/CD and software delivery platform. It covers pipelines, GitOps, feature flags, cloud cost, and security testing in one control plane. We **assess** it when an enterprise wants a packaged CD story; default build/deploy paths remain **[[GitHub Actions]]** or **[[GitLab]]** unless sales or compliance drives Harness.
+[Harness.io](https://www.harness.io/). We **assess** it under **[[Platform]]** in the garden.
 
 ## Blurb
 
-> Harness is a modern software delivery platform that automates CI/CD, enables GitOps, and embeds security and cost controls across the SDLC.
+> Harness is a unified, end-to-end AI software delivery platform to manage the SDLC using purpose-built AI agents.
 
 ## Summary
 

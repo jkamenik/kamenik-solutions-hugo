@@ -1,7 +1,7 @@
 ---
 title: Interface Segregation Principle
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Interface Segregation Principle
@@ -15,30 +15,18 @@ params:
     kind: item
     usefulness: adopt
     category: technique
-    movement: New
+    movement: No Change
     subcategories:
     - software-architecture
 ---
 
-[Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)
-
-The [Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) (ISP) says clients should not depend on methods they do not use. Split fat interfaces into smaller, role-specific contracts. We **adopt** it at API, service, and module boundaries where implementers are forced to no-op or throw on unused operations. It is the **I** in **[[SOLID Principles]]**.
-
-## Blurb
-
-> No client should be forced to depend on methods it does not use.
+[Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A contract-sizing rule. Prefer several focused interfaces over one "god interface" that every implementer must satisfy in full. Callers depend only on the surface they actually need.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** Fat interfaces couple unrelated clients to each other. Changing one method signature forces every implementer to redeploy, even those that never called it. Empty stub methods and `NotImplemented` throws are smell.
-
-**When to use:** Plugin APIs, repository layers, RPC services, and public SDKs where multiple consumers share a type but use different subsets. Review any interface with more than one logical role.
-
-**When to pull back:** A single cohesive abstraction with one implementer and one caller does not need splitting yet. Do not fragment interfaces until you see unused method pressure or stub implementations.
-
-**Relation to siblings:** **[[Single Responsibility Principle]]** narrows classes. ISP narrows interfaces. **[[Dependency Inversion Principle]]** works best when ports are small enough that adapters implement only what they need.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

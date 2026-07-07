@@ -1,29 +1,27 @@
 ---
-title: "GitHub Actions"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: GitHub Actions
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GitHub Actions
-
+- GitHub Actions
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/tools/github-actions
+- /radar/tools/github-actions
 ---
 
-[GitHub Actions](https://docs.github.com/en/actions) is GitHub's built-in CI/CD engine: event-driven workflows defined in `.github/workflows/*.yml`, executed on GitHub-hosted or self-hosted runners. We **adopt** it as the default **[[CI-CD Tools]]** plane for any repository on **[[GitHub]]**; pair cluster delivery with **[[ArgoCD]]** (build and push in Actions, sync in Argo) rather than imperative deploy scripts.
+[GitHub Actions](https://docs.github.com/en/actions). Is GitHub's built-in CI/CD engine: event-driven workflows defined in `.github/workflows/*.yml`, executed on GitHub-hosted or self-hosted runners.
 
 ## Blurb
 
-> Automate, customize, and execute your software development workflows right in your repository.
+> Automate, customize, and execute your software development workflows right in your repository with GitHub Actions. You can discover, create, and share actions to perform any job you'd like, including CI/CD, and combine actions in a completely customized workflow.
 
 ## Summary
 

@@ -1,18 +1,16 @@
 ---
-title: "Environment Managers"
-date: 2026-01-13
-lastmod: 2026-06-12
+title: Environment Managers
+date: '2026-01-13'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Environment Managers
-  - Environment Manager
-  - Enviornment Managers
-
+- Environment Managers
+- Environment Manager
+- Enviornment Managers
 params:
   aliases:
-    - Environment Manager
-    - Enviornment Managers
+  - Environment Manager
+  - Enviornment Managers
   garden:
     kind: subcategory
     parent_category: tool

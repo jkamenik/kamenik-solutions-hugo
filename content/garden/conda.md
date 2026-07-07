@@ -1,27 +1,21 @@
 ---
-title: "conda"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: conda
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - conda
-
+- conda
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[conda](https://docs.conda.io/) (Anaconda/Miniconda) manages Python and non-Python binary dependencies in isolated environments. We **assess** it for data science stacks with heavy native libs; application services usually prefer **[[Dev Container]]** or **[[pyenv]]** plus normal package managers.
-
-## Blurb
-
-> conda is an open-source package and environment management system.
+[conda](https://docs.conda.io/). (Anaconda/Miniconda) manages Python and non-Python binary dependencies in isolated environments.
 
 ## Summary
 
@@ -32,7 +26,6 @@ params:
 **When to skip:** Standard web services on **[[Python]]** with wheels available on PyPI.
 
 **Key features:** `conda create`, exportable env files, mamba faster solver (community).
-
 
 ## Details
 

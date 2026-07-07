@@ -1,29 +1,27 @@
 ---
-title: "Redash"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Redash
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Redash
-
+- Redash
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 aliases:
-  - /radar/tools/redash
+- /radar/tools/redash
 ---
 
-[Redash](https://redash.io/) is an open source data exploration and visualization platform. [[SQL]] and [[NoSQL]] users write queries in a browser editor, build charts, and share dashboards with shareable URLs. We **assess** it for team analytics when a lightweight BI layer is needed without a full enterprise warehouse suite.
+[Redash](https://redash.io/). Is an open source data exploration and visualization platform.
 
 ## Blurb
 
-> Redash is designed to enable anyone, regardless of the level of technical sophistication, to harness the power of data big and small.
+> Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven.
 
 ## Summary
 
@@ -34,7 +32,6 @@ aliases:
 **When to skip:** metrics already live in Grafana with datasources wired; need governed semantic layers or ML features; SaaS-only BI mandate.
 
 **Key features:** schema browser, query snippets, visualization types, alerts on query results, API access.
-
 
 ## Details
 

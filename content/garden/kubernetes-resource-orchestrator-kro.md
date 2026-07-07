@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Resource Orchestrator (KRO)
 date: '2026-06-22'
-lastmod: '2026-06-22'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Kubernetes Resource Orchestrator (KRO)
@@ -15,16 +15,16 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - orchestrator
 ---
 
-[KRO](https://kro.run/) (Kube Resource Orchestrator) is a Kubernetes-native controller under kubernetes-sigs. It turns a ResourceGraphDefinition into a custom API and a reconciled bundle of cluster objects. You declare a graph of resources and how they relate. kro generates the CRD and controllers that keep the bundle in sync. We **assess** it for platform teams that want reusable abstractions without hand-rolling a Go operator for every bundle. It fits alongside [[Helm]] and [[Kustomize]] when the goal is a new API surface, not manifest templating alone.
+[Kubernetes Resource Orchestrator (KRO)](https://kro.run/). We **assess** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> Kube Resource Orchestrator (kro) is a Kubernetes-native controller that simplifies the creation and management of complex custom resources for Kubernetes.
+> Build declarative, secure, and verifiable Kubernetes abstractions
 
 ## Summary
 

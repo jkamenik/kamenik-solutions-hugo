@@ -1,27 +1,25 @@
 ---
-title: "Nagios"
-date: 2023-07-23
-lastmod: 2026-06-22
+title: Nagios
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Nagios
-
+- Nagios
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Nagios](https://www.nagios.org/) is a long-running open source monitoring system built around host and service checks with plugin scripts. It alerts when checks fail and exposes status in a web UI. We **hold** it: quick starts hide the operational cliff, and **[[OpenTelemetry]]** with **[[Grafana]]** is the better default for modern service monitoring.
+[Nagios](https://www.nagios.org/). Is a long-running open source monitoring system built around host and service checks with plugin scripts.
 
 ## Blurb
 
-> Nagios monitors your entire IT infrastructure to ensure systems, applications, services, and business processes are functioning properly.
+> Prevent IT downtime before it impacts your systems with Nagios Core - the free, open source monitoring solution trusted by 1M+ users worldwide. Monitor severs, networks & applications with powerful community-driven tools.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Any greenfield monitoring project. Plugin sprawl, config drift, and host-centric alerting do not scale cleanly for ephemeral cloud workloads.
 
 **Key features:** Flexible plugins, escalation chains, downtime scheduling, and a large community check library.
-
 
 ## Details
 

@@ -1,38 +1,29 @@
 ---
-title: "Censys"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Censys
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Censys
-
+- Censys
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/censys
+- /radar/tools/censys
 ---
 
-[Censys](https://censys.com/) is an Internet intelligence platform built on continuous global scanning, certificate observation, and structured host data. We **assess** it for authorized attack surface mapping and **[[DevSecOps]]** exposure checks. It complements passive recon indexes like **[[Shodan]]** when you need certificate pivots, enterprise ASM, or threat-infrastructure context.
-
-## Blurb
-
-> The Authority for Internet Intelligence and Insights
+[Censys](https://censys.com/). Is an Internet intelligence platform built on continuous global scanning, certificate observation, and structured host data.
 
 ## Summary
 
-**What it is:** Censys maintains the Internet Map, a continuously updated view of hosts, services, certificates, and software fingerprints. Censys Search supports ad hoc lookups. Censys Platform adds Attack Surface Management, adversary investigation, and API access for SOC workflows.
+**Garden stance:** We **assess** Censys for our estate.
 
-**When to use:** Compare external visibility to CMDB or cloud inventory. Pivot on X.509 certificates and related hosts. Monitor org-owned netblocks for new exposures. Hunt threat actor infrastructure with structured threat data (enterprise tiers).
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to skip:** Purely internal apps with no Internet footprint. Orgs that forbid third-party recon data. Teams that have already standardized on one index and want to avoid duplicate alerts. Needs that require active authenticated testing instead of passive lookup.
-
-**API:** platform and search APIs support automation, collections, and integrations. Pricing is enterprise-oriented compared with hobby-tier **[[Shodan]]** memberships.
-
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

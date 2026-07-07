@@ -1,30 +1,24 @@
 ---
-title: "DeathByClaude"
-date: 2026-06-17
-lastmod: 2026-06-22
+title: DeathByClaude
+date: '2026-06-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - DeathByClaude
-  - Death by Clawd
-
+- DeathByClaude
+- Death by Clawd
 params:
   aliases:
-    - Death by Clawd
+  - Death by Clawd
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ai-techniques
+    - ai-techniques
 ---
 
-[DeathByClaude](https://deathbyclawd.com/) (branded **Death by Clawd**) is a satirical SaaS replaceability scanner. It scores whether a product's core value could be replicated by a Claude Skill (a `.md` instructions file). We **trial** it as a quick AI-disruption vibe check during company research. Treat scores as provocative heuristics, not diligence evidence.
-
-## Blurb
-
-> Find out if your SaaS can be replaced by a Claude Skill. The SaaSpocalypse Survival Scanner.
+[DeathByClaude](https://deathbyclawd.com/) is a tool we **trial** in the garden.
 
 ## Summary
 
@@ -36,7 +30,6 @@ params:
 
 **Not the same as:** rigorous competitive intelligence; **[[Agent Skills Framework]]** itself (the portable skill format); **[[Netlify]]** (only the host). The scanner is commentary with an API, not a neutral data vendor.
 
-
 ## Details
 
 | Topic | Notes |
@@ -47,13 +40,11 @@ params:
 | **Outputs** | `deathScore`, `deathRating`, `oneLiner`, `causeOfDeath`, optional `skillMdFile`, `metrics`, `eulogy` |
 
 **API (programmatic scan):**
-
 ```bash
 curl -sL -X POST "https://deathbyclawd.com/.netlify/functions/analyze" \
   -H "Content-Type: application/json" \
   -d '{"url":"<domain>"}'
 ```
-
 Pass the bare domain (e.g. `sola.security`), not a full URL. The company-research skill uses this endpoint when building `resources/companies/` profiles.
 
 **How to read results:** Low scores often reflect physical goods, deep enterprise lock-in, or infra Claude cannot trivially replicate. High scores target form builders, dashboards, and thin AI wrappers. The humor is the point, but the underlying question (is the moat more than UI?) is worth asking in every SaaS eval.

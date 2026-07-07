@@ -1,7 +1,7 @@
 ---
 title: Infracost
 date: '2026-06-24'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Infracost
@@ -10,13 +10,15 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - shift-left
 ---
 
-[Infracost](https://www.infracost.io/) estimates cloud spend from **[[Terraform]]**, Terragrunt, CloudFormation, and AWS CDK before deploy. It runs in the CLI, IDE, CI pull requests, and HCP Terraform run tasks with FinOps policy checks. We **assess** it to shift cost visibility left alongside **[[Checkov]]** security gates on **[[IaC]]** repos.
+[Infracost](https://www.infracost.io/) is a tool we **assess** in the garden.
 
-## Blurb
+## Summary
 
-> Infracost shows cloud cost estimates and FinOps best practices for Terraform, Terragrunt, CloudFormation, and AWS CDK before changes are deployed.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

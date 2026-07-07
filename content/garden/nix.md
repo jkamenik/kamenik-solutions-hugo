@@ -1,30 +1,28 @@
 ---
-title: "Nix"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Nix
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Nix
-  - NixOS
-
+- Nix
+- NixOS
 params:
   aliases:
-    - NixOS
+  - NixOS
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 ---
 
-[Nix](https://nixos.org/) is a reproducible package and environment system using the Nix language, flakes, and dev shells. We **assess** it for hermetic dev environments on the host; teams wanting less Nix learning curve adopt **[[Dev Container]]** instead.
+[Nix](https://nixos.org/). Is a reproducible package and environment system using the Nix language, flakes, and dev shells.
 
 ## Blurb
 
-> Nix is a tool that takes a unique approach to package management and system configuration.
+> Nix is a tool that takes a unique approach to package management and system configuration. Learn how to make reproducible, declarative and reliable systems.
 
 ## Summary
 
@@ -35,7 +33,6 @@ params:
 **When to skip:** Short onboarding windows. Prefer **[[Dev Container]]** or **[[mise]]** for simpler pins.
 
 **Key features:** Binary cache, dev shell hooks, `use flake` in **[[direnv]]**, cross-platform Nix installer.
-
 
 ## Details
 

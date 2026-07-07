@@ -1,29 +1,23 @@
 ---
-title: "Python"
-date: 2025-12-08
-lastmod: 2026-05-18
+title: Python
+date: '2025-12-08'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Python
-
+- Python
 params:
   garden:
     kind: item
     usefulness: trial
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - language
+    - language
 aliases:
-  - /radar/languages/python
+- /radar/languages/python
 ---
 
-[Python](https://www.python.org/) is a general-purpose language with dominant libraries in automation, data, and ML. We rate it **trial**: expect to read and maintain Python when your stack already depends on it ([[Ansible]], notebooks, data pipelines), but prefer faster or stricter languages for latency-sensitive services unless the team standardizes on Python end-to-end.
-
-## Blurb
-
-> Python is a programming language that lets you work quickly and integrate systems more effectively.
+[Python](https://www.python.org/). Is a general-purpose language with dominant libraries in automation, data, and ML.
 
 ## Summary
 

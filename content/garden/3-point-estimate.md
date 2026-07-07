@@ -1,47 +1,64 @@
 ---
-title: "3 Point Estimate"
-date: 2023-12-01
-lastmod: 2026-05-18
+title: 3 Point Estimate
+date: '2023-12-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - 3 Point Estimate
-
+- 3 Point Estimate
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "Moved In"
+    movement: No Change
 ---
 
-[3 Point Estimate](https://en.wikipedia.org/wiki/Three-point_estimation)
+[3 Point Estimate](https://en.wikipedia.org/wiki/Three-point_estimation) is a technique we **assess** in the garden.
 
-The [three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation) technique is used in management and information systems applications for the construction of an approximate probability distribution representing the outcome of future events, based on very limited information. It is very useful in estimating the scope of engineering projects as well.
+## Summary
 
-If your team is struggling with estimating, this might be a viable alternative to simple effort points, which are common in [[Scrum]]. By taking a range of estimates, you can avoid unnecessary debates and over-analysis that often arise during estimation. Many teams will find it easier to estimate dozens of tasks in the same time it would have taken to estimate just a few with [[Planning Poker]].
+**When to use:**
 
-## Estimates
+- Teams stuck in [[Scrum]] story-point debates or long [[Planning Poker]] sessions without better forecasts.
+- Stakeholders who need a range (68%, 90%, 95%) rather than one total.
+- Engineering projects where limited information still requires a defensible rollup.
 
-Before we get to the math, the 3 points in 3-point estimation are the following estimates. For each task, these are the values you need to track. As developers, we recommend estimating in whole number days. However, some teams choose 1/2 days or hours, but we strongly recommend against that.
+**When to skip:**
 
-- `a` - The best-case. This is probably what an expert would say it is. Or someone outside of eng would think it should take.
-- `m` - The likely case. This is what you'd arrive at with [[Planning Poker]] or some other consensus estimating technique.
-- `b` - The worst-case. This is the "it could possibly take more than..." number.
+- The team will not maintain three numbers per task.
+- Precision would be theater without tracking actuals against forecast.
+
+| Approach | Tradeoff |
+|----------|----------|
+| [[Planning Poker]] | Fast consensus on one `m` value; weak on uncertainty |
+| Story points | Common in [[Scrum]]; often debated without probabilistic rollup |
+| Three-point | More fields per task; project-level confidence from task SD rollup |
+
+If your team struggles with estimating, three-point ranges can reduce over-analysis compared to arguing a single effort number. Many teams can estimate dozens of tasks in the time it took to estimate a few with [[Planning Poker]].
+
+## Details
+
+### Three Points Per Task
+
+For each task, track three values:
+
+- `a` - The best case. This is probably what an expert would say. Or someone outside of engineering would think it should take.
+- `m` - The likely case. This is what you would arrive at with [[Planning Poker]] or another consensus technique.
+- `b` - The worst case. This is the "it could possibly take more than..." number.
 
 ### The Math
 
-For each task that has been estimated calculate the weighted average and standard deviation:
+For each estimated task, calculate the weighted average and standard deviation:
 
 - $E = \frac{a + 4m + b}6$
 - $SD = \frac{b-a}6$
 
-Then calculate the confidence of the project by combining the estimates for each task:
+Roll up to the project:
 
 - $E(project) = \sum E(task)$
 - $SD(project) = \sqrt{\sum SD(task)^2}$
 
-You can then convert this into a confidence interval for the project:
+Confidence intervals:
 
 - 68% = $E(project) \pm SD(project)$
 - 90% = $E(project) \pm 1.645 \times SD(project)$
@@ -50,4 +67,4 @@ You can then convert this into a confidence interval for the project:
 
 95% is usually the target.
 
-With a spreadsheet, this is pretty easy to do.
+With a spreadsheet, rollup and intervals are straightforward.

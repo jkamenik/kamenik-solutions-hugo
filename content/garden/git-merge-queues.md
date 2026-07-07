@@ -1,7 +1,7 @@
 ---
 title: Git Merge Queues
 date: '2026-06-26'
-lastmod: '2026-06-30'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Git Merge Queues
@@ -15,42 +15,22 @@ params:
     kind: item
     usefulness: trial
     category: technique
-    movement: New
+    movement: No Change
 ---
 
-[Git Merge Queues](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
-
-A [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) serializes merges into a busy default branch. It tests each **[[Pull Request]]** against the latest base plus queued changes before landing. We **trial** merge queues on high-velocity repos where "require branch up to date" slows teams without catching integration failures. **[[GitHub]]** ships merge queue natively; **[[GitLab]]** offers merge trains with similar goals.
+[Git Merge Queues](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue). A [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) serializes merges into a busy default branch.
 
 ## Blurb
 
-> A merge queue helps increase velocity by automating pull request merges into a busy branch and ensuring the branch is never broken by incompatible changes.
+> You can increase development velocity with a merge queue for pull requests in your repository.
 
 ## Summary
 
-**What it is:** a FIFO queue on the Git host that batches pending PRs, builds a temporary integration branch, runs required **[[Continuous Integration]]** checks, and merges only when the combined result is green. It replaces the manual rebase-and-wait loop that branch protection often forces.
+**Garden stance:** We **trial** Git Merge Queues for our estate.
 
-**Problem it solves:** two PRs can pass CI in isolation yet break `main` when both land. Merge queues test the exact post-merge graph before any commit reaches the default branch.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**When to use:**
-
-| Signal | Fit |
-|--------|-----|
-| Many contributors merge to one branch daily | Strong |
-| Required status checks on protected `main` | Required baseline |
-| Flaky or slow CI | Tune concurrency first; queue adds wait time |
-| Low merge volume or solo maintainer | Usually skip |
-
-**When to skip:** repos with rare merges, no branch protection, or CI that cannot run on synthetic merge branches.
-
-**Host support:**
-
-| Host | Feature | CI hook |
-|------|---------|---------|
-| **[[GitHub]]** | Merge queue | `merge_group` event in **[[GitHub Actions]]** (or push to `gh-readonly-queue/<base>`) |
-| **[[GitLab]]** | Merge trains | Pipeline rules for merge-train refs |
-
-**Pairs with:** required status checks, **[[Pull Request]]** review, small diffs, and fast reliable tests. Not a substitute for **[[Code Review]]** or pre-merge lint gates on the PR itself.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 
@@ -61,7 +41,6 @@ A [merge queue](https://docs.github.com/en/repositories/configuring-branches-and
 3. Update CI workflows to listen for `merge_group` (GitHub Actions) or pushes to `gh-readonly-queue/<base_branch>`.
 
 **GitHub Actions trigger (minimal):**
-
 ```yaml
 on:
   pull_request:
@@ -69,7 +48,6 @@ on:
   merge_group:
     branches: [main]
 ```
-
 **Operator flow:** author opens a PR, checks pass, clicks **Merge when ready**. The host enqueues the change, runs integration CI, merges on green, or removes the PR and notifies the author on failure.
 
 **Queue settings worth tuning:**

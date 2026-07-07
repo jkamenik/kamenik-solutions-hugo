@@ -1,16 +1,14 @@
 ---
-title: "Design Pattern"
-date: 2026-04-16
-lastmod: 2026-06-12
+title: Design Pattern
+date: '2026-04-16'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Design Pattern
-  - Design Patterns
-
+- Design Pattern
+- Design Patterns
 params:
   aliases:
-    - Design Patterns
+  - Design Patterns
   garden:
     kind: subcategory
     parent_category: technique

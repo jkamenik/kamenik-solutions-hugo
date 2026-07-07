@@ -1,29 +1,27 @@
 ---
-title: "Kuberhealthy"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Kuberhealthy
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Kuberhealthy
-
+- Kuberhealthy
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 aliases:
-  - /radar/tools/kuberhealthy
+- /radar/tools/kuberhealthy
 ---
 
-[Kuberhealthy](https://github.com/kuberhealthy/kuberhealthy) is a **[[Kubernetes]]** operator for synthetic monitoring and continuous process verification. It runs checker pods on a schedule, exposes JSON status, and emits Prometheus metrics. We **assess** it for cluster and app health signals beyond static compliance scans like **[[kube-bench]]** or **[[Kubescape]]**.
+[Kuberhealthy](https://github.com/kuberhealthy/kuberhealthy) is a tool we **assess** in the garden.
 
 ## Blurb
 
-> Kuberhealthy is a Kubernetes operator for synthetic monitoring and continuous process verification.
+> A Kubernetes operator for running synthetic checks as pods. Works great with Prometheus! - kuberhealthy/kuberhealthy
 
 ## Summary
 
@@ -34,7 +32,6 @@ aliases:
 **When to skip:** external SaaS synthetics already cover user journeys; tiny clusters where CronJob scripts are enough; rewrite churn on `main` is a concern (upstream notes active rewrite).
 
 **Built-in checks:** daemonset deployment, DNS, storage, and other registry entries documented upstream; write checks in any language as container images.
-
 
 ## Details
 

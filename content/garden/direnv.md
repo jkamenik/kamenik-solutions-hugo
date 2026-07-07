@@ -1,29 +1,27 @@
 ---
-title: "direnv"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: direnv
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - direnv
-
+- direnv
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - environment-managers
+    - environment-managers
 aliases:
-  - /radar/tools/direnv
+- /radar/tools/direnv
 ---
 
-[direnv](https://direnv.net/) loads and unloads **per-directory environment variables** when you `cd` into a project (via a hook in bash/zsh/fish). We rate it **assess**: strong for host-shell and multi-repo local work; less critical when **[[Dev Container]]** or a VM already defines the toolchain.
+[direnv](https://direnv.net/). Loads and unloads **per-directory environment variables** when you `cd` into a project (via a hook in bash/zsh/fish).
 
 ## Blurb
 
-> direnv is an extension for your shell. It augments existing shells with a new feature that can load and unload environment variables depending on the current directory.
+> unclutter your .profile
 
 ## Summary
 

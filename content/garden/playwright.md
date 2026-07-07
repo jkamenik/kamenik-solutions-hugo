@@ -1,29 +1,23 @@
 ---
-title: "Playwright"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Playwright
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Playwright
-
+- Playwright
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - test-framework
+    - test-framework
 aliases:
-  - /radar/tools/playwright
+- /radar/tools/playwright
 ---
 
-[Playwright](https://playwright.dev/) is Microsoft's end-to-end test framework for modern web apps. It drives Chromium, Firefox, and WebKit with one API, bundled runner, auto-waiting, tracing, and CI-friendly parallelism. We **adopt** it as the default **[[Test Framework]]** for browser E2E and automation on new web work. Auto-wait, first-class tracing, and cross-engine coverage beat maintaining Selenium driver stacks.
-
-## Blurb
-
-> Playwright Test is an end-to-end test framework for modern web apps. It bundles test runner, assertions, isolation, parallelization and rich tooling.
+[Playwright](https://playwright.dev/). Is Microsoft's end-to-end test framework for modern web apps.
 
 ## Summary
 
@@ -34,7 +28,6 @@ aliases:
 **When to skip:** mobile-native apps (use dedicated mobile frameworks); simple smoke tests where a lightweight HTTP check suffices; legacy Cypress suites with no cross-browser requirement and no plan to consolidate.
 
 **Key capabilities:** locators, network mocking, auth state reuse, visual comparisons, component testing (experimental), Docker images for CI.
-
 
 ## Details
 

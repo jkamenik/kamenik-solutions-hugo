@@ -1,51 +1,29 @@
 ---
-title: "Git"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: git
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Git
-
+- git
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/git
+- /radar/tools/git
 ---
 
-[Git](https://git-scm.com/) is the default distributed version control system for every repo we touch: local branches, cheap merges, and a full history on each clone. We **adopt** it as the baseline under **[[Pull Request]]** / **[[GitOps]]** workflows on **[[GitHub]]** or **[[GitLab]]**; use **[[git lfs]]** when binaries or large assets would bloat history.
-
-## Blurb
-
-> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+[git](https://git-scm.com/). Is the default distributed version control system for every repo we touch: local branches, cheap merges, and a full history on each clone.
 
 ## Summary
 
-**Core model:** commits point at snapshots of the tree; branches are movable refs; remotes sync packs of objects. Each developer has a full copy of history locally, so most work (branch, commit, diff) needs no network.
+**Garden stance:** We **adopt** git for our estate.
 
-**Day-to-day loop:**
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-| Step | Command / concept |
-|------|-------------------|
-| Clone / fetch | `git clone`, `git fetch`, `git pull` |
-| Branch | cheap local branches vs linear central VCS |
-| Worktree | checked-out files you edit |
-| Stage | index / staging area (`git add`, `git restore`) |
-| Commit | immutable snapshot in the object store |
-| Share | `git push` to **[[GitHub]]**, **[[GitLab]]**, or other remote |
-
-**Why adopt over SVN / Perforce / ClearCase:**
-
-- Branching and merging are normal, not exceptional
-- Staging lets you craft commits before recording history
-- Distributed workflow: review offline, push when ready
-- Ecosystem: **[[GitHub Actions]]**, **[[GitOps]]**, **[[Policy as Code]]**, and every **[[Internal Developer Platform]]** assume Git
-
-**Pair with:** `.gitattributes` (EOL normalization; complements **[[EditorConfig]]**), signed commits where policy requires, and **[[git lfs]]** for large blobs.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

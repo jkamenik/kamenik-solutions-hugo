@@ -1,27 +1,25 @@
 ---
-title: "Splunk"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Splunk
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Splunk
-
+- Splunk
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Splunk](https://www.splunk.com/) is an enterprise log analytics and SIEM platform for search, dashboards, and security operations at large event volume. We **assess** it for regulated estates already invested in Splunk; greenfield log stacks favor **[[Loki]]** or **[[Elasticsearch]]** with **[[Grafana]]** or **[[Kibana]]**.
+[Splunk](https://www.splunk.com/). Is an enterprise log analytics and SIEM platform for search, dashboards, and security operations at large event volume.
 
 ## Blurb
 
-> Splunk helps organizations use data to do more.
+> Splunk is the key to enterprise resilience. Our platform enables organizations around the world to prevent major issues, absorb shocks and accelerate digital transformation.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Startup-scale cost and ops overhead. Prefer OTel collectors feeding **[[OpenTelemetry]]**-friendly backends.
 
 **Key features:** SPL, apps marketplace, HEC ingest, role-based knowledge objects, ITSI and ES modules (commercial).
-
 
 ## Details
 

@@ -1,27 +1,25 @@
 ---
-title: "OpenClaw"
-date: 2026-05-17
-lastmod: 2026-06-05
+title: OpenClaw
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - OpenClaw
-
+- OpenClaw
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 ---
 
-[OpenClaw](https://openclaw.ai/) is an open-source, self-hosted personal [[AI Agent]] that runs continuously on your hardware and connects to messaging apps (WhatsApp, Telegram, Slack, Discord, and others) with skills, shell access, and persistent memory. We rate it **hold**: powerful on paper, but our experience matches [[hermes-agent|Hermes]], too complex and fragile for multi-machine, sandboxed setups; prefer bounded [[IDE]] agents or per-machine scheduled pipelines.
+[OpenClaw](https://openclaw.ai/). Is an open-source, self-hosted personal [[AI Agent]] that runs continuously on your hardware and connects to messaging apps (WhatsApp, Telegram, Slack, Discord, and others) with skills, shell access, and persistent memory.
 
 ## Blurb
 
-> OpenClaw is your personal AI assistant that runs on your own hardware.
+> OpenClaw - The AI that actually does things. Your personal assistant on any platform.
 
 ## Summary
 

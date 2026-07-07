@@ -1,27 +1,25 @@
 ---
-title: "Kibana"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Kibana
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Kibana
-
+- Kibana
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - dashboarding
+    - dashboarding
 ---
 
-[Kibana](https://www.elastic.co/kibana) is the visualization and exploration UI for the Elastic Stack. It builds dashboards, discovers log patterns, and runs queries against **[[Elasticsearch]]** indices. We **assess** it when an Elastic estate already exists; greenfield observability defaults to **[[Grafana]]** with **[[OpenTelemetry]]** backends.
+[Kibana](https://www.elastic.co/kibana). We **assess** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> Kibana is your window into the Elastic Stack. Explore, visualize, and build dashboards on the data in Elasticsearch.
+> Explore and visualize data stored in Elasticsearch with Kibana. Build dashboards, run queries, set alerts, and manage your deployment - all in one UI....
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** New stacks without Elastic lock-in. Prefer **[[Grafana]]** plus Prometheus, Loki, or vendor-neutral stores.
 
 **Key features:** Lens visualizations, saved objects, role-based spaces, alerting tied to Elastic indices.
-
 
 ## Details
 

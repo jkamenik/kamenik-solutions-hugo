@@ -1,12 +1,10 @@
 ---
-title: "API"
-date: 2025-12-29
-lastmod: 2026-06-12
+title: API
+date: '2025-12-29'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - API
-
+- API
 params:
   garden:
     kind: subcategory

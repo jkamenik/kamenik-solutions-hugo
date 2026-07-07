@@ -1,29 +1,27 @@
 ---
-title: "Tailwind CSS"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: Tailwind CSS
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Tailwind CSS
-
+- Tailwind CSS
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - code
+    - code
 aliases:
-  - /radar/tools/tailwind-css
+- /radar/tools/tailwind-css
 ---
 
-[Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework. You compose layouts from small classes in markup instead of hand-writing large stylesheets. We **assess** it for internal web UIs and marketing sites; backend-heavy work does not require it.
+[Tailwind CSS](https://tailwindcss.com/). We **assess** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.
+> Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
 
 ## Summary
 

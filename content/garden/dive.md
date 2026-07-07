@@ -1,27 +1,25 @@
 ---
-title: "Dive"
-date: 2023-07-23
-lastmod: 2026-06-12
+title: Dive
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Dive
-
+- Dive
 params:
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/dive
+- /radar/tools/dive
 ---
 
-[Dive](https://github.com/wagoodman/dive) is a terminal UI for exploring **OCI/Docker image layers**: file tree per layer, layer size, and an **efficiency score** to spot bloat. We rate it **trial** for interactive image slimming during development; pair automated gates with **[[Container Structure Test]]** and registry scanners in CI, not Dive alone.
+[Dive](https://github.com/wagoodman/dive). Is a terminal UI for exploring **OCI/Docker image layers**: file tree per layer, layer size, and an **efficiency score** to spot bloat.
 
 ## Blurb
 
-> A tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+> A tool for exploring each layer in a docker image. Contribute to wagoodman/dive development by creating an account on GitHub.
 
 ## Summary
 
@@ -39,12 +37,10 @@ aliases:
 - Teams on **[[Dev Container]]** only who never inspect host-built images
 
 **Workflow:**
-
 ```bash
 dive myimage:tag          # interactive TUI
 dive ci --ci-config .dive-ci myimage:tag   # optional CI gate
 ```
-
 Works with the `docker` CLI; often used with **[[Docker]]** / **[[Rancher Desktop]]** local engines. Image must be available locally (`docker load` if from CI artifact).
 
 ## Details

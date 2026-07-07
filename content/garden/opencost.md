@@ -1,7 +1,7 @@
 ---
 title: OpenCost
 date: '2026-06-24'
-lastmod: '2026-06-24'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - OpenCost
@@ -10,13 +10,13 @@ params:
     kind: item
     usefulness: assess
     category: tool
-    movement: New
+    movement: No Change
     subcategories:
     - monitoring
 ---
 
-[OpenCost](https://opencost.io/) is a CNCF incubating project for Kubernetes and multi-cloud cost monitoring. It allocates spend by namespace, workload, and container using billing API integrations and optional Prometheus exports. We **assess** it as the default OSS path when teams need showback or chargeback without a commercial FinOps suite.
+[OpenCost](https://opencost.io/) is a tool we **assess** in the garden.
 
-## Blurb
+## Summary
 
-> OpenCost provides visibility into current and historical Kubernetes spend and resource allocation.
+[OpenCost](https://opencost.io/) is a CNCF incubating project for Kubernetes and multi-cloud cost monitoring. It allocates spend by namespace, workload, and container using billing API integrations and optional Prometheus exports.

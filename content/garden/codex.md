@@ -1,34 +1,28 @@
 ---
-title: "Codex"
-date: 2026-05-17
-lastmod: 2026-06-12
+title: Codex
+date: '2026-05-17'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Codex
-  - OpenAI Codex
-  - Codex CLI
-
+- Codex
+- OpenAI Codex
+- Codex CLI
 params:
   aliases:
-    - OpenAI Codex
-    - Codex CLI
+  - OpenAI Codex
+  - Codex CLI
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ai-agent
+    - ai-agent
 aliases:
-  - /garden/openai
+- /garden/openai
 ---
 
-[Codex](https://developers.openai.com/codex/cli) is OpenAI's agentic coding agent (terminal CLI (Rust), IDE integrations, and cloud tasks) built to read repos, edit files, run commands, and use MCP tools under approval policies. We rate it **trial**: credible alternative to [[Claude Code]] when you are on ChatGPT Plus/Pro/Business plans and want OpenAI models; [[Claude Code]] is also **trial** here (we usually default to [[Cursor]] + [[cursor-agent]] for daily IDE work).
-
-## Blurb
-
-> Codex is OpenAI's coding agent. It helps you build, debug, and ship faster across terminals, IDEs, web, and mobile.
+[Codex](https://developers.openai.com/codex/cli). Is OpenAI's agentic coding agent (terminal CLI (Rust), IDE integrations, and cloud tasks) built to read repos, edit files, run commands, and use MCP tools under approval policies.
 
 ## Summary
 

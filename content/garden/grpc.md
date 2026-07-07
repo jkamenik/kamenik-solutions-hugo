@@ -1,28 +1,40 @@
 ---
-title: "gRPC"
-date: 2025-12-21
-lastmod: 2026-05-18
+title: gRPC
+date: '2025-12-21'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - gRPC
-
+- gRPC
 params:
   garden:
     kind: item
     usefulness: assess
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - api
+    - api
 ---
 
-[gRPC](https://grpc.io/)
-
-## Blurb
-
-A high performance, open source universal RPC framework
+[gRPC](https://grpc.io/). A high-performance, open source universal RPC framework We **assess** it under **[[Technique]]** in the garden.
 
 ## Summary
 
-gRPC suffers the same issue as general RPC. That is it is a fundamentally flawed approach to cross computer service communication. However, there are some [[IPC]] use cases where it makes sense; like [[Terraform|terraform's]] provider.
+**Key points:** | Topic | Notes |
+|-------|--------|
+| **Transport** | HTTP/2; binary **[[Protobuf]]** payloads |
+| **Strengths** | Streaming, strong contracts, efficient internal calls |
+| **Risks** | **[[RPC]]** impedance across teams; debugging and versioning tax |
+| **Local / IPC** | **[[Docker]]**, **[[Terraform]]**, and similar tools use gRPC-shaped local APIs |
+| **Alternatives** | **[[REST]]** (default), **[[GraphQL]]** (**hold** for new greenfield) |## Personal Experience
+
+<!-- User-owned: vault-only; never published or exported. Agents read for /tech-garden update synthesis; proofread spelling/grammar only. -->
+
+## Details
+
+| Topic | Notes |
+|-------|--------|
+| **Transport** | HTTP/2; binary **[[Protobuf]]** payloads |
+| **Strengths** | Streaming, strong contracts, efficient internal calls |
+| **Risks** | **[[RPC]]** impedance across teams; debugging and versioning tax |
+| **Local / IPC** | **[[Docker]]**, **[[Terraform]]**, and similar tools use gRPC-shaped local APIs |
+| **Alternatives** | **[[REST]]** (default), **[[GraphQL]]** (**hold** for new greenfield) |

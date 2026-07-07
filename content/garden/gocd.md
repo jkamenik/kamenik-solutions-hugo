@@ -1,29 +1,27 @@
 ---
-title: "GoCD"
-date: 2026-05-27
-lastmod: 2026-05-27
+title: GoCD
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GoCD
-
+- GoCD
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/platforms/gocd
+- /radar/platforms/gocd
 ---
 
-[GoCD](https://www.gocd.org/) is an open source continuous delivery server from ThoughtWorks. It models pipelines, stages, and artifacts with explicit promotion between environments. We **assess** it alongside **[[Jenkins]]** for legacy CD installs; new pipelines should not start here unless migration cost dominates.
+[GoCD](https://www.gocd.org/). Is an open source continuous delivery server from ThoughtWorks.
 
 ## Blurb
 
-> GoCD is an open-source tool which is used in software development to help teams and organizations automate the continuous delivery of software.
+> GoCD is an open source build and release tool originally conceived and built by Thoughtworks. GoCD supports modern infrastructure and helps enterprise businesses get software delivered faster, safer, and more reliably.
 
 ## Summary
 

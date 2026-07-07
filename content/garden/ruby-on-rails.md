@@ -1,27 +1,25 @@
 ---
-title: "Ruby on Rails"
-date: 2023-07-23
-lastmod: 2026-05-18
+title: Ruby on Rails
+date: '2023-07-23'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Ruby on Rails
-
+- Ruby on Rails
 params:
   garden:
     kind: item
     usefulness: hold
     category: code
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - framework
+    - framework
 ---
 
-[Ruby on Rails](https://rubyonrails.org/) is a full-stack web framework built on [[Ruby]] that popularized convention-over-configuration, ActiveRecord as an [[ORM]], and [[MVC]] for server-rendered apps. It made CRUD and early SaaS prototypes fast in the 2000s, but we rate it **hold** for new work: scaling and team velocity usually require peeling off the framework's opinions long before the product is mature.
+[Ruby on Rails](https://rubyonrails.org/). Is a full-stack web framework built on [[Ruby]] that popularized convention-over-configuration, ActiveRecord as an [[ORM]], and [[MVC]] for server-rendered apps.
 
 ## Blurb
 
-> Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.
+> A full-stack web application framework written in Ruby, following the Model View Controller pattern, that includes everything you need to build modern database-backed web apps.
 
 ## Summary
 

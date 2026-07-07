@@ -1,12 +1,10 @@
 ---
-title: "Dashboarding"
-date: 2026-06-12
-lastmod: 2026-06-12
+title: Dashboarding
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Dashboarding
-
+- Dashboarding
 params:
   garden:
     kind: subcategory

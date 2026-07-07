@@ -1,7 +1,7 @@
 ---
 title: Stable Dependencies Principle
 date: '2026-06-25'
-lastmod: '2026-06-26'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Stable Dependencies Principle
@@ -18,27 +18,13 @@ params:
     - software-architecture
 ---
 
-[Stable Dependencies Principle](https://en.wikipedia.org/wiki/Stable_dependencies_principle)
-
-The [Stable Dependencies Principle](https://en.wikipedia.org/wiki/Stable_dependencies_principle) (SDP) says dependencies should point toward stability. A volatile module may depend on a stable one, not the reverse. We **adopt** it when frequent feature work destabilizes core libraries because low-level packages import high-churn UI or experiment code. It extends **[[Dependency Inversion Principle]]** from classes to components and pairs with **[[Acyclic Dependencies Principle]]** on the same dependency graph.
-
-## Blurb
-
-> Depend in the direction of stability.
+[Stable Dependencies Principle](https://en.wikipedia.org/wiki/Stable_dependencies_principle) is a technique we **adopt** in the garden.
 
 ## Summary
 
-**What it is:** A coupling rule for components. Stability means hard to change: many dependents (high fan-in), few outgoing dependencies (low fan-out). Instability is the opposite. SDP forbids stable packages from depending on unstable ones. Stability and instability can be measured from dependency counts.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
 
-**Why it matters:** When stable core modules depend on volatile leaf code, every experiment ripples through the foundation. Teams fear changing shared libraries because unknown consumers break.
-
-**Source:** Martin states the rule in *Clean Architecture* as "depend in the direction of stability."
-
-**When to use:** Library layering reviews, platform versus product boundary debates, and refactors where `core` imports from `app`. Apply when dependency metrics or import graphs show inverted stability.
-
-**When to pull back:** Early single-team codebases with one deployable. Do not freeze layers before you know which modules are truly shared and long-lived.
-
-**Relation to siblings:** **[[Stable Abstractions Principle]]** (SAP) adds that stable modules should stay abstract. **[[Acyclic Dependencies Principle]]** ensures the graph has no cycles before stability direction matters.
+**When to skip:** When a simpler alternative already covers the need.
 
 ## Details
 

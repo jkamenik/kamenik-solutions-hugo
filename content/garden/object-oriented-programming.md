@@ -1,7 +1,7 @@
 ---
 title: Object-Oriented Programming
 date: '2026-06-24'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Object-Oriented Programming
@@ -19,11 +19,7 @@ params:
     - design-pattern
 ---
 
-[Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP) organizes code around objects that bundle data with the behavior that operates on it. We **adopt** it as the default mental model for domain modeling in object-capable languages (Java, C#, Python, TypeScript, and similar). Use **[[Design Pattern]]** names after the shape is clear, not as a starting checklist. Keep modules narrow with **[[Single Responsibility Principle]]** and favor composition over deep inheritance trees.
-
-## Blurb
-
-> Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).
+[Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming). (OOP) organizes code around objects that bundle data with the behavior that operates on it.
 
 ## Summary
 

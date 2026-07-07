@@ -1,27 +1,25 @@
 ---
-title: "Honeycomb"
-date: 2026-06-12
-lastmod: 2026-06-22
+title: Honeycomb
+date: '2026-06-12'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Honeycomb
-
+- Honeycomb
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
     subcategories:
-      - monitoring
+    - monitoring
 ---
 
-[Honeycomb](https://www.honeycomb.io/) is an observability platform optimized for high-cardinality event data and fast iterative debugging. It ingests OpenTelemetry and structured events for BubbleUp and query-driven investigation. We **assess** it for complex distributed systems debugging; baseline metrics stacks remain **[[Prometheus]]** plus **[[Grafana]]**.
+[Honeycomb](https://www.honeycomb.io/). Is an observability platform optimized for high-cardinality event data and fast iterative debugging.
 
 ## Blurb
 
-> Honeycomb helps engineers debug production systems with high-cardinality observability data.
+> Honeycomb is the observability platform built for AI-era software. Fast queries, unified telemetry, and LLM observability. Used by Slack, Intercom, and Dropbox.
 
 ## Summary
 
@@ -32,7 +30,6 @@ params:
 **When to skip:** Small teams with simple RED metrics needs. Cost-sensitive estates without event-volume discipline.
 
 **Key features:** BubbleUp diffs, Service Level Objectives, OpenTelemetry ingest, boards (dashboard-like views).
-
 
 ## Details
 

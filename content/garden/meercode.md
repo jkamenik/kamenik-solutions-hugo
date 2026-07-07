@@ -1,29 +1,23 @@
 ---
-title: "Meercode"
-date: 2026-05-27
-lastmod: 2026-06-22
+title: Meercode
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Meercode
-
+- Meercode
 params:
   garden:
     kind: item
     usefulness: hold
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - ci-cd-tools
+    - ci-cd-tools
 aliases:
-  - /radar/tools/meercode
+- /radar/tools/meercode
 ---
 
-[Meercode](https://meercode.io/) is a build monitor for CI systems. It surfaces status from **[[GitHub Actions]]**, GitLab CI, Travis CI, Bitrise, Buddy, and similar providers in one dashboard (including desktop or wall-display views). We **hold** it: the product is no longer maintained. The meercode.io domain is parked, and the GitHub org has had no meaningful updates since early 2021.
-
-## Blurb
-
-> Meercode shows the status of your builds from multiple CI services in one place.
+[Meercode](https://meercode.io/). Is a build monitor for CI systems.
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** any net-new adoption. Use vendor dashboards (**[[GitHub Actions]]** workflow views, **[[GitLab]]** pipeline boards) or a small internal status board instead.
 
 **Status:** Service appears defunct. meercode.io shows a domain parking page. The [meercodeio](https://github.com/meercodeio) GitHub org last updated public repos in early 2021.
-
 
 ## Details
 

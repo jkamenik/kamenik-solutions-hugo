@@ -1,27 +1,21 @@
 ---
-title: "Clutch"
-date: 2026-05-27
-lastmod: 2026-06-22
+title: Clutch
+date: '2026-05-27'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Clutch
-
+- Clutch
 params:
   garden:
     kind: item
     usefulness: hold
     category: platform
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/platforms/clutch
+- /radar/platforms/clutch
 ---
 
-[Clutch](https://clutch.sh/) is Lyft's extensible platform for infrastructure operations. It exposes workflows (resizing databases, rerouting traffic, running jobs) through a UI and API with pluggable components. We **hold** it: Lyft [archived the repo](https://github.com/lyft/clutch) on **2026-02-13** and no longer accepts issues, pull requests, or new features. Treat it as a reference for **[[Internal Developer Platform]]** patterns, not as a platform to adopt or extend.
-
-## Blurb
-
-> Clutch is an extensible platform for infrastructure tooling.
+[Clutch](https://clutch.sh/). Is Lyft's extensible platform for infrastructure operations.
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** net-new deployments; teams expecting upstream fixes, security patches, or community support. Fork only if you can own long-term maintenance.
 
 **Upstream:** [github.com/lyft/clutch](https://github.com/lyft/clutch) (archived, read-only).
-
 
 ## Details
 

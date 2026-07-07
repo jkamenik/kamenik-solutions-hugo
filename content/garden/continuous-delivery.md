@@ -1,27 +1,21 @@
 ---
-title: "Continuous Delivery"
-date: 2026-01-13
-lastmod: 2026-06-12
+title: Continuous Delivery
+date: '2026-01-13'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Continuous Delivery
-
+- Continuous Delivery
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/continuous-delivery
+- /radar/techniques/continuous-delivery
 ---
 
-[Continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CD) means every change that passes **[[Continuous Integration]]** produces a **releasable artifact**; production deploy is a deliberate, low-risk promotion (button, approval, or automated stage), not an emergency rebuild. We **adopt** CD for all products; choose **[[Continuous Deployment]]** (**assess**) only when **[[Software as a Service]]** economics and observability justify shipping every green mainline commit.
-
-## Blurb
-
-> Continuous delivery is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released at any time.
+[Continuous Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CD) means every change that passes **[[Continuous Integration]]** produces a **releasable artifact**; production deploy is a deliberate, low-risk promotion (button, approval, or automated stage), not an emergency rebuild. We **adopt** CD for all products; choose **[[Continuous Deployment]]** (**assess**) only when **[[Software as a Service]]** economics and observability justify shipping every green mainline commit.
 
 ## Summary
 

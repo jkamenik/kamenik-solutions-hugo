@@ -1,27 +1,27 @@
 ---
-title: "Kubernetes"
-date: 2025-12-08
-lastmod: 2026-06-12
+title: Kubernetes
+date: '2025-12-08'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Kubernetes
-  - k8s
-
+- Kubernetes
+- k8s
 params:
   aliases:
-    - k8s
+  - k8s
   garden:
     kind: item
     usefulness: adopt
     category: platform
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - orchestrator
+    - orchestrator
 ---
 
-[Kubernetes](https://kubernetes.io/)
+[Kubernetes](https://kubernetes.io/) is a platform we **adopt** in the garden.
 
-## Blurb
+## Summary
 
-Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.

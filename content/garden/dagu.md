@@ -1,29 +1,25 @@
 ---
-title: "Dagu"
-date: 2026-05-09
-lastmod: 2026-05-18
+title: Dagu
+date: '2026-05-09'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Dagu
-
+- Dagu
 params:
   garden:
     kind: item
     usefulness: assess
     category: platform
-    movement: "New"
+    movement: No Change
     subcategories:
-      - orchestrator
+    - orchestrator
 ---
 
-[Dagu](https://github.com/dagucloud/dagu)
-
-`A lightweight workflow orchestrator that runs shell-based DAGs via a single binary and YAML definitions , worth assessing as a lower-ops alternative to Airflow or Argo for teams that don't need a full Kubernetes-native pipeline engine.`
+[Dagu](https://github.com/dagucloud/dagu). `A lightweight workflow orchestrator that runs shell-based DAGs via a single binary and YAML definitions , worth assessing as a lower-ops alternative to Airflow or Argo for teams t We **assess** it under **[[Platform]]** in the garden.
 
 ## Blurb
 
-> Dagu is a workflow orchestrator that lets you define workflows as Directed Acyclic Graphs (DAGs) using YAML, execute them with a single binary, and monitor them through a built-in web UI , all without a database or heavy infrastructure.
+> Local-first workflow engine with a Web UI for small teams. Define DAGs in a declarative YAML format. Self-contained and no DBMS required. Use any AI agent to manage your DAGs. - dagucloud/dagu
 
 ## Summary
 
@@ -36,3 +32,7 @@ Dagu positions itself as a simpler, self-contained alternative to heavier orches
 - **Low ops overhead**; runs on a single VM or container without Kubernetes
 
 Best suited for teams running DevSecOps pipelines, data engineering tasks, or automation workflows at modest scale who want Airflow-style DAG semantics without the infrastructure burden.
+
+## Details
+
+### History

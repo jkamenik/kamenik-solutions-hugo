@@ -1,25 +1,33 @@
 ---
-title: "GitOps"
-date: 2023-03-30
-lastmod: 2026-05-18
+title: GitOps
+date: '2023-03-30'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - GitOps
-
+- GitOps
 params:
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
 ---
 
-[GitOps](https://www.gitops.tech/)
+[GitOps](https://www.gitops.tech/) uses pull-request workflows to drive deployment pipelines for infrastructure, policy, and security as code. We **adopt** it under **[[Technique]]** in the garden.
 
-GitOps is a key part of [[ShiftLeft]]. The idea is that the [[Pull Request]] (aka Merge Request) process that is common for developers is an ideal way to handle *-as-code items like IaC (Infrastructure as Code), PaC (Policy as Code), or SaC (Security as Code) items. Just as a developer PR would kick off a build pipeline, a GitOps PR would kick off an [[Continuous Deployment|deployment]] pipeline. For this reason it is a strong adopt.
+## Blurb
 
-## Benefits of GitOps
+> GitOps is Continuous Deployment for cloud native applications
+
+## Summary
+
+**Overview:** GitOps is a key part of [[ShiftLeft]]. The [[Pull Request]] process common for developers is an ideal way to handle *-as-code items like IaC, PaC, and SaC. A GitOps PR kicks off a [[Continuous Deployment|deployment]] pipeline the same way an application PR kicks off a build pipeline.
+
+**When to use:** Teams already standardized on Git, PR review, and CI/CD who need traceable, attributable changes to config and environments.
+
+## Details
+
+### Benefits of GitOps
 
 GitOps:
 
@@ -29,7 +37,7 @@ GitOps:
 4. Is able to design complex branching and merging behaviors easily
 5. Has readily available tooling
 
-## Challenges with GitOps
+### Challenges with GitOps
 
 Even the best tool makes certain assumptions that have to be solved before the tool can be used to its full potential.
 

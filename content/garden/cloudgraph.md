@@ -1,27 +1,25 @@
 ---
-title: "CloudGraph"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: CloudGraph
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - CloudGraph
-
+- CloudGraph
 params:
   garden:
     kind: item
     usefulness: assess
     category: tool
-    movement: "New"
+    movement: No Change
 aliases:
-  - /radar/tools/cloudgraph
+- /radar/tools/cloudgraph
 ---
 
-[CloudGraph](https://www.cloudgraph.dev/) is an open source GraphQL API and cloud security posture tool for AWS, Azure, GCP, and Kubernetes. It builds typed asset inventories, maps resource relationships, and ships built-in compliance checks (CIS, PCI, NIST). We **assess** it for multi-cloud visibility before picking a long-term CSPM stack.
+[CloudGraph](https://www.cloudgraph.dev/). We **assess** it under **[[Tool]]** in the garden.
 
 ## Blurb
 
-> CloudGraph is the free open-source universal GraphQL API and Cloud Security Posture Management (CSPM) tool for AWS, Azure, GCP, and K8s.
+> One API for all messaging channels. Send SMS, WhatsApp, and RCS messages with automated routing, compliance, and formatting. Start building today.
 
 ## Summary
 
@@ -32,7 +30,6 @@ aliases:
 **When to skip:** need continuous agentless SaaS CNAPP with ticketing workflows; org standardized on **[[Kubescape]]** or a vendor CSPM; GraphQL ops overhead is unwanted.
 
 **Key features:** CIS benchmark packs, historical snapshots, validated queries, enhanced AWS billing and CloudWatch fields (per upstream docs).
-
 
 ## Details
 

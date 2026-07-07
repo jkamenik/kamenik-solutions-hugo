@@ -1,27 +1,21 @@
 ---
-title: "Shodan"
-date: 2026-05-28
-lastmod: 2026-06-22
+title: Shodan
+date: '2026-05-28'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Shodan
-
+- Shodan
 params:
   garden:
     kind: item
     usefulness: adopt
     category: tool
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/tools/shodan
+- /radar/tools/shodan
 ---
 
-[Shodan](https://www.shodan.io/) is a search engine for Internet-connected devices and services. It indexes banners, open ports, software versions, and misconfigurations across the public IPv4/IPv6 space. We **adopt** it for authorized attack surface mapping and **[[DevSecOps]]** exposure checks. A paid Membership pays for itself on one or two investigations per month and beats juggling free-tier credits across ad hoc lookups.
-
-## Blurb
-
-> Search Engine for the Internet of Things
+[Shodan](https://www.shodan.io/). Is a search engine for Internet-connected devices and services.
 
 ## Summary
 
@@ -32,7 +26,6 @@ aliases:
 **When to skip:** Purely internal apps with no Internet footprint. Orgs that forbid third-party recon data. Needs that require active authenticated testing instead of passive index lookup.
 
 **API:** paid plans unlock automated queries, alerts when new hosts match a filter, and integrations into SIEM or SOAR playbooks.
-
 
 ## Details
 

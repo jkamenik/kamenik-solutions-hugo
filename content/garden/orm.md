@@ -1,7 +1,7 @@
 ---
 title: Object-Relational Mapping (ORM)
 date: '2025-12-12'
-lastmod: '2026-07-01'
+lastmod: '2026-07-02'
 draft: false
 keywords:
 - Object-Relational Mapping (ORM)
@@ -18,11 +18,7 @@ params:
     - software-architecture
 ---
 
-[Object-relational mapping (ORM)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) bridges **[[Object-Oriented Programming]]** domain objects and relational database tables. We **assess** ORMs per service because they speed CRUD-heavy apps but hide SQL cost, schema migration, and query shape. Default to explicit data access when performance or reporting dominates.
-
-## Blurb
-
-> Object-relational mapping is a programming technique for converting data between incompatible type systems using object-oriented programming languages.
+[Object-Relational Mapping (ORM)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping). Bridges **[[Object-Oriented Programming]]** domain objects and relational database tables.
 
 ## Summary
 

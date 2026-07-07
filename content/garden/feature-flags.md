@@ -1,32 +1,26 @@
 ---
-title: "Feature Flags"
-date: 2026-05-05
-lastmod: 2026-06-12
+title: Feature Flags
+date: '2026-05-05'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Feature Flags
-  - feature toggles
-  - feature switches
-
+- Feature Flags
+- feature toggles
+- feature switches
 params:
   aliases:
-    - feature toggles
-    - feature switches
+  - feature toggles
+  - feature switches
   garden:
     kind: item
     usefulness: trial
     category: technique
-    movement: "No Change"
+    movement: No Change
 aliases:
-  - /radar/techniques/feature-flags
+- /radar/techniques/feature-flags
 ---
 
-[Feature flags](https://martinfowler.com/articles/feature-toggles.html) (feature toggles) decouple **deploying code** from **exposing behavior**: ship to production dark, then enable per user, tenant, or percentage. We promote to **trial** for **[[Software as a Service]]** products pursuing **[[Continuous Deployment]]**; stay **assess** for simple or on-prem services where homegrown toggles may not pay back.
-
-## Blurb
-
-> Feature Toggles (often also referred to as Feature Flags) are a powerful technique, allowing teams to modify system behavior without changing code.
+[Feature Flags](https://martinfowler.com/articles/feature-toggles.html). (feature toggles) decouple **deploying code** from **exposing behavior**: ship to production dark, then enable per user, tenant, or percentage.
 
 ## Summary
 

@@ -1,32 +1,26 @@
 ---
-title: "Reasoning by analogy"
-date: 2026-06-22
-lastmod: 2026-06-22
+title: Reasoning by analogy
+date: '2026-06-22'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Reasoning by analogy
-  - Analogical Reasoning
-  - Reasoning from Analogy
-
+- Reasoning by analogy
+- Analogical Reasoning
+- Reasoning from Analogy
 params:
   aliases:
-    - Analogical Reasoning
-    - Reasoning from Analogy
+  - Analogical Reasoning
+  - Reasoning from Analogy
   garden:
     kind: item
     usefulness: adopt
     category: technique
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - software-architecture
+    - software-architecture
 ---
 
-[Reasoning by analogy](https://en.wikipedia.org/wiki/Analogical_reasoning) applies a known pattern from one context to a new problem by mapping similarities between them. We **adopt** it as the default for most engineering work, including implicit cross-domain jumps when one side of the analogy is already familiar. Reach for **[[First Principles]]** when the mapping breaks or inherited defaults no longer match constraints. It belongs under **[[Technique]]** as the fast path; first principles is the deconstruction path.
-
-## Blurb
-
-> Analogical reasoning is the use of schema analogues, or knowledge from previous experiences, to facilitate learning in a new situation.
+[Reasoning by analogy](https://en.wikipedia.org/wiki/Analogical_reasoning). Applies a known pattern from one context to a new problem by mapping similarities between them.
 
 ## Summary
 
@@ -41,7 +35,6 @@ Most learning in software is analogical. You hold the source pattern in memory a
 **Worked mental model:** **[[Continuous Integration]]** pipelines are step graphs with explicit or implicit dependencies. That maps to DAGs, then to graphs and trees used across low-level programming. One familiar domain bootstraps several others.
 
 **Sibling technique:** **[[First Principles]]** deconstructs when analogy copies the wrong shape (microservices-by-default, cargo-cult **[[Design Pattern]]**).
-
 
 ## Details
 
@@ -77,9 +70,7 @@ You do not need full mastery of each target on day one. You need the analog plus
 When the mismatch list grows faster than the match list, switch to **[[First Principles]]** and an **Assumptions** section in the design doc.
 
 ### Generalization Path
-
 ```
 Single analog  →  several analogs  →  named pattern  →  garden item or design rule
 ```
-
 Capture recurring generalizations as **[[Design Pattern]]** items or team standards when the same mapping appears three or more times.

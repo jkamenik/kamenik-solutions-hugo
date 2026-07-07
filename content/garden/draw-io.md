@@ -1,34 +1,32 @@
 ---
-title: "Draw.io"
-date: 2024-10-01
-lastmod: 2026-06-12
+title: Draw.io
+date: '2024-10-01'
+lastmod: '2026-07-02'
 draft: false
-
 keywords:
-  - Draw.io
-  - diagrams.net
-  - drawio
-
+- Draw.io
+- diagrams.net
+- drawio
 params:
   aliases:
-    - diagrams.net
-    - drawio
+  - diagrams.net
+  - drawio
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "No Change"
+    movement: No Change
     subcategories:
-      - diagramming
+    - diagramming
 aliases:
-  - /radar/tools/draw-io
+- /radar/tools/draw-io
 ---
 
-[Draw.io](https://www.diagrams.net/) (diagrams.net) is a browser and desktop diagram editor for architecture sketches, flowcharts, network layouts, and C4-style views. We rate it **trial** under **[[Diagramming]]**: use when **[[Mermaid]]** (**adopt**) is not enough for polish, icons, or manual layout; commit `.drawio` source and exported SVG/PNG in the repo when the diagram must last.
+[Draw.io](https://www.diagrams.net/). (diagrams.net) is a browser and desktop diagram editor for architecture sketches, flowcharts, network layouts, and C4-style views.
 
 ## Blurb
 
-> diagrams.net is a free online diagram software for making flowcharts, process diagrams, org charts, UML, ER and network diagrams.
+> Free, open source diagramming application with 100M+ users. Store your data wherever you want-we can't access it.
 
 ## Summary
 
@@ -41,7 +39,7 @@ aliases:
 | **Stakeholder decks** | Polished boxes-and-arrows for reviews |
 | **Complex layout** | Fine-grained positioning Mermaid fights |
 | **Icon-heavy architecture** | Cloud vendor stencils out of the box |
-| **VS Code / Cursor** | [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) edits files in-repo |
+| **VS Code / Cursor** | [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio). Edits files in-repo |
 
 **When to prefer Mermaid instead:**
 
