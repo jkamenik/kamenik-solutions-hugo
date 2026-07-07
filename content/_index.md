@@ -1,5 +1,6 @@
 ---
 title: Kamenik Solutions
+description: "Principal cloud DevSecOps consulting: CI/CD, Infrastructure as Code, secure cloud infrastructure, and SSDLC maturity. Remote and hybrid US engagements."
 layout: hextra-home
 ---
 
