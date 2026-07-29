@@ -1,7 +1,7 @@
 ---
 title: Cloud Lift and Shift
 date: '2025-07-10'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Cloud Lift and Shift
@@ -26,7 +26,9 @@ aliases:
 
 **Garden stance:** We **hold** Cloud Lift and Shift for our estate.
 
-**Key points:** | Anti-pattern | Why it fails | Better direction |
+**Key points:**
+
+| Anti-pattern | Why it fails | Better direction |
 |--------------|--------------|------------------|
 | 1:1 service cloning across clouds | Highest cost, weakest differentiation | Pick best-of-breed per workload; document why it lives there |
 | Migrating databases by dump/restore monthly | Downtime, drift, data egress bills | Managed replication, eventing, or stay put and strangle |

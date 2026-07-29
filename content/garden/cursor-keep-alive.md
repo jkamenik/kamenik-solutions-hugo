@@ -1,7 +1,7 @@
 ---
 title: Cursor Keep Alive
 date: '2025-05-13'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Cursor Keep Alive
@@ -26,7 +26,9 @@ aliases:
 
 ## Summary
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Storage** | Hot state in Redis; durable audit log optional |
 | **Idempotency** | Same cursor + offset returns same chunk |

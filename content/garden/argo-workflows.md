@@ -1,7 +1,7 @@
 ---
 title: Argo Workflows
 date: '2026-05-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Argo Workflows
@@ -23,7 +23,9 @@ aliases:
 
 **Garden stance:** We **trial** Argo Workflows for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Model** | `Workflow` CRDs; steps as containers; templates for reuse |
 | **Artifacts** | S3/GCS/Artifactory-style artifact repository recommended at scale |

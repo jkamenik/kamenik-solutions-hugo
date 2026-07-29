@@ -1,7 +1,7 @@
 ---
 title: Semgrep
 date: '2026-06-12'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Semgrep
@@ -25,7 +25,9 @@ params:
 
 **Garden stance:** We **trial** Semgrep for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Rule format** | YAML rules with metavariables; patterns mirror target language syntax |
 | **Run modes** | IDE, pre-commit, `semgrep scan`, `semgrep ci` with managed rules |

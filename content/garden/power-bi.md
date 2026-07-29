@@ -1,7 +1,7 @@
 ---
 title: Power BI
 date: '2026-06-12'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Power BI
@@ -21,7 +21,9 @@ params:
 
 **Garden stance:** We **assess** Power BI for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Governance** | Premium capacity for large models and paginated reports |
 | **Contrast** | **[[Tableau]]** and **[[Looker]]** in competitive enterprise evals |

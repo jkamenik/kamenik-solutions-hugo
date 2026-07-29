@@ -1,7 +1,7 @@
 ---
 title: rbenv
 date: '2026-06-12'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - rbenv
@@ -25,7 +25,9 @@ params:
 
 **Garden stance:** We **assess** rbenv for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Fit** | Common in legacy **[[Ruby on Rails]]** shops |
 | **Contrast** | **[[mise]]** when Ruby is one of many pinned runtimes |

@@ -1,11 +1,14 @@
 ---
 title: Node.js
 date: '2026-05-28'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Node.js
+- Node
 params:
+  aliases:
+  - Node
   garden:
     kind: item
     usefulness: adopt
@@ -25,7 +28,9 @@ aliases:
 
 **Garden stance:** We **adopt** Node.js for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **LTS releases** | Even-numbered majors get long-term support; pin versions in production |
 | **Modules** | ESM (`import`) is default in new projects; CommonJS (`require`) still common in older code |

@@ -1,7 +1,7 @@
 ---
 title: Inter-process Communication (IPC)
 date: '2025-12-21'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Inter-process Communication (IPC)
@@ -24,7 +24,9 @@ params:
 
 **Garden stance:** We **assess** Inter-process Communication (IPC) for our estate.
 
-**Key points:** | Mechanism | Typical use | Garden note |
+**Key points:**
+
+| Mechanism | Typical use | Garden note |
 |-----------|-------------|-------------|
 | **Pipes / FIFOs** | Simple parent-child or shell pipelines | Lowest ceremony; narrow contracts |
 | **Shared memory** | High-throughput same-host data sharing | Needs strict synchronization discipline |

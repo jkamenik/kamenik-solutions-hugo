@@ -1,7 +1,7 @@
 ---
 title: Docker Compose
 date: '2024-04-25'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Docker Compose
@@ -30,7 +30,9 @@ aliases:
 
 **Garden stance:** We **hold** Docker Compose for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Files** | `compose.yaml` at repo root or `deploy/compose/`; pin image digests for anything non-throwaway |
 | **Secrets** | Use env files gitignored; not for prod secret stores |

@@ -1,7 +1,7 @@
 ---
 title: Open Container Initiative
 date: '2023-12-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Open Container Initiative
@@ -22,7 +22,9 @@ params:
 
 ## Summary
 
-**Key points:** | Spec / piece | Role |
+**Key points:**
+
+| Spec / piece | Role |
 |--------------|------|
 | **OCI Image Spec** | Layered filesystem bundles, manifests, config JSON |
 | **OCI Runtime Spec** | `config.json` + rootfs bundle executed by a runtime |

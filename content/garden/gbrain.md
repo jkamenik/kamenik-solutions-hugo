@@ -1,7 +1,7 @@
 ---
 title: gbrain
 date: '2026-05-06'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - gbrain
@@ -33,26 +33,26 @@ params:
 
 **This vault:** we **adopt** the two-layer pattern for research and garden notes ([[Agent Skills Framework]], tech-garden items); we **assess** a root `RESOLVER.md` and always-on enrichment pipelines before copying them wholesale.
 
-## Portable patterns (not dogma)
+## Portable Patterns (Not Dogma)
 
-### Two-layer pages (compiled truth + timeline)
+### Two-Layer Pages (Compiled Truth + Timeline)
 
 Above `---`: current synthesis (rewrite when facts change. Below `---`: append-only edit log (`**YYYY-MM-DD** | Author) …`). Subject-matter history belongs above the line; the timeline records *document* changes only.
 
-### MECE directories (light touch)
+### MECE Directories (Light Touch)
 
 Resolvers in zone `README.md` files help agents and humans file consistently. MECE applies to *directories*, not reality. Use cross-links when entities span domains.
 
-### Enrichment on every signal (optional)
+### Enrichment on Every Signal (Optional)
 
 Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([[Dagu]], morning briefing) over implicit always-on writes.
 
-## Page template (adapt as needed)
+## Page Template (Adapt as Needed)
 
 ```markdown
 # Entity Name
 
-> Executive summary , current state in one paragraph.
+> Executive summary: current state in one paragraph.
 
 ## State
 - **Key field:** value
@@ -62,3 +62,18 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 
 ## See Also
 - [[Linked page]]
+
+---
+
+## Timeline
+
+- **YYYY-MM-DD** | Author - What changed in this document.
+```
+
+## See Also
+
+- [[LLM Wiki]], Karpathy's abstract pattern (ingest / query / lint) that gbrain implements in an opinionated way
+- [[Open Knowledge Format (OKF)]], interchange format for markdown knowledge bundles
+- [[Agent Skills Framework]], skills that pair with agent-maintained vaults
+- [[PKM]], broader personal knowledge management context
+- [[PARA]], zone-based filing we already use

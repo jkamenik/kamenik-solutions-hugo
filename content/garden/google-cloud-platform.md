@@ -1,7 +1,7 @@
 ---
 title: Google Cloud Platform
 date: '2026-05-05'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Google Cloud Platform
@@ -28,7 +28,9 @@ params:
 
 **Garden stance:** We **adopt** Google Cloud Platform for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Position** | Third-largest hyperscaler by market share; strongest fit for K8s-native and data/AI greenfield |
 | **Compute** | Decoupled vCPU, RAM, and GPU pricing vs fixed instance families on **[[AWS]]** |

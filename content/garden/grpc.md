@@ -1,7 +1,7 @@
 ---
 title: gRPC
 date: '2025-12-21'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - gRPC
@@ -19,7 +19,9 @@ params:
 
 ## Summary
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Transport** | HTTP/2; binary **[[Protobuf]]** payloads |
 | **Strengths** | Streaming, strong contracts, efficient internal calls |

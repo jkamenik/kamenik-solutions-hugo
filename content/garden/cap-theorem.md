@@ -1,15 +1,15 @@
 ---
-title: 'CAP Theorem'
+title: CAP Theorem
 date: '2026-07-15'
-lastmod: '2026-07-17'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - CAP Theorem
-- Brewer's Theorem
+- "Brewer's Theorem"
 - Brewer Theorem
 params:
   aliases:
-  - Brewer's Theorem
+  - "Brewer's Theorem"
   - Brewer Theorem
   garden:
     kind: item

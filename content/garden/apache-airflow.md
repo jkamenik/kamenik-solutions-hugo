@@ -1,7 +1,7 @@
 ---
 title: Apache Airflow
 date: '2026-05-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Apache Airflow
@@ -30,7 +30,9 @@ aliases:
 
 **Garden stance:** We **assess** Apache Airflow for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Model** | DAGs in Python (`@dag`, operators); UI for run history |
 | **Executors** | Local, Celery, Kubernetes; pick based on isolation and scale |

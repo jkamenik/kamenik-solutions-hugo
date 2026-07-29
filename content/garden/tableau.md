@@ -1,7 +1,7 @@
 ---
 title: Tableau
 date: '2026-06-12'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Tableau
@@ -21,7 +21,9 @@ params:
 
 **Garden stance:** We **assess** Tableau for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Deploy** | Tableau Cloud, Server, or Desktop plus Server for sharing |
 | **Cost** | Per-user licensing; factor embed and refresh capacity |

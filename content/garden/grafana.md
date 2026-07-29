@@ -1,7 +1,7 @@
 ---
 title: Grafana
 date: '2026-05-28'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Grafana
@@ -23,7 +23,9 @@ aliases:
 
 **Garden stance:** We **trial** Grafana for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Deploy** | Single binary, Docker, Helm, or Grafana Cloud; separate scale paths for query frontends vs alert workers |
 | **Data model** | Metrics-first; SQL and logs via datasource plugins, not a built-in warehouse |

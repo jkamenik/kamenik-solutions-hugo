@@ -1,7 +1,7 @@
 ---
 title: Tilt
 date: '2026-05-28'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Tilt
@@ -21,7 +21,9 @@ aliases:
 
 **Garden stance:** We **trial** Tilt for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Config** | `Tiltfile` at repo root; `docker_build`, `k8s_yaml`, `local_resource` |
 | **Run** | `tilt up` starts UI at localhost; `tilt down` cleans up |

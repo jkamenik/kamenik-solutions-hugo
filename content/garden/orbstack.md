@@ -1,7 +1,7 @@
 ---
 title: OrbStack
 date: '2026-06-30'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - OrbStack
@@ -23,7 +23,9 @@ params:
 
 **Garden stance:** We **assess** OrbStack for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Install** | https://orbstack.dev/download or `brew install --cask orbstack` |
 | **Migration** | One-click import from **[[Docker Desktop]]** per OrbStack docs |

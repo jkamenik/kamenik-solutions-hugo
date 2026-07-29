@@ -1,7 +1,7 @@
 ---
 title: Upptime
 date: '2023-07-23'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Upptime
@@ -21,7 +21,9 @@ params:
 
 **Garden stance:** We **assess** Upptime for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Deploy** | Fork template repo, enable Actions and Pages, configure targets in config YAML |
 | **Data model** | Commit history and issues as the incident record; graphs generated in-repo |

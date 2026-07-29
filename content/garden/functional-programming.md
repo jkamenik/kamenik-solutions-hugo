@@ -1,7 +1,7 @@
 ---
 title: Functional Programming
 date: '2026-06-24'
-lastmod: '2026-07-02'
+lastmod: '2026-07-24'
 draft: false
 keywords:
 - Functional Programming
@@ -53,7 +53,7 @@ params:
 ### Language Notes
 
 - **Haskell / PureScript:** Strong static guarantees; steeper hiring and tooling curve.
-- **Clojure / Elixir:** Practical FP on the JVM/BEAM with mature concurrency stories.
+- **[[Clojure]] / Elixir:** Practical FP on the JVM/BEAM with mature concurrency stories. See also **[[cljgo]]** for an experimental Go host.
 - **TypeScript / JavaScript:** FP patterns (immutable updates, `map`/`filter`) without a enforced type system; discipline required.
 - **Rust:** Ownership plus iterators give many FP benefits without a purely functional style.
 - **Go:** First-class functions and small packages; idiomatic Go stays imperative at the edges.

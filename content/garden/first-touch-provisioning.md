@@ -1,7 +1,7 @@
 ---
 title: First Touch Provisioning
 date: '2026-01-10'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - First Touch Provisioning
@@ -24,7 +24,9 @@ aliases:
 
 **Garden stance:** We **adopt** First Touch Provisioning for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Tools** | **[[Terraform]]** (**adopt**); avoid new **[[Imperative IaC]]** / **[[Pulumi]]** generators for greenfield |
 | **State** | Remote backend per env; locking; no local-only state for shared infra |

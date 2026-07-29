@@ -1,7 +1,7 @@
 ---
 title: Sqitch
 date: '2026-07-01'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Sqitch
@@ -19,7 +19,9 @@ params:
 
 **Garden stance:** We **assess** Sqitch for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Engines** | Postgres, SQLite, MySQL, Oracle, Firebird, Vertica, Exasol, Snowflake, ODBC (feature flags at build time) |
 | **Layout** | `sqitch.plan`, `deploy/`, `revert/`, `verify/` directories per project |

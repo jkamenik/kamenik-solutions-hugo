@@ -1,7 +1,7 @@
 ---
 title: DORA Metrics
 date: '2026-06-22'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - DORA Metrics
@@ -28,7 +28,9 @@ params:
 
 **Garden stance:** We **adopt** DORA Metrics for our estate.
 
-**Key points:** | Topic             | Notes                                                                                                                            |
+**Key points:**
+
+| Topic             | Notes                                                                                                                            |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | **Scope**         | System-level outcomes, not individual developer output                                                                           |
 | **Data sources**  | CI/CD events, deploy logs, incident records, VCS timestamps                                                                      |

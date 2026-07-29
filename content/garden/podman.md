@@ -1,7 +1,7 @@
 ---
 title: Podman
 date: '2023-12-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Podman
@@ -19,7 +19,9 @@ params:
 
 **Garden stance:** We **trial** Podman for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Install** | https://podman.io/getting-started/installation (Linux primary; Podman Desktop for macOS/Windows) |
 | **Rootless** | Needs `/etc/subuid` and `/etc/subgid`; pasta or slirp4netns for networking |

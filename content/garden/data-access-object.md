@@ -1,7 +1,7 @@
 ---
 title: Data Access Object
 date: '2026-07-01'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Data Access Object
@@ -24,7 +24,9 @@ params:
 
 **Garden stance:** We **assess** Data Access Object for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Typical API** | `findById`, `save`, `delete`, list/query methods scoped to one aggregate or table group |
 | **Implementation** | Raw SQL + driver, query builder, or ORM session hidden inside the DAO class |

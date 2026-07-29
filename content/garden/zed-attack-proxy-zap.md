@@ -14,3 +14,13 @@ params:
 ---
 
 [Zed Attack Proxy (Zap)](https://www.zaproxy.org/) is a tool we **trial** in the garden.
+
+## Summary
+
+**When to use:** Evaluate on a project when the capability clearly fits the requirement.
+
+**When to skip:** When a simpler alternative already covers the need.
+
+## Details
+
+https://www.stackhawk.com/ is a hosted solution

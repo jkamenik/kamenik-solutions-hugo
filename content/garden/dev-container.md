@@ -1,7 +1,7 @@
 ---
 title: Dev Container
 date: '2025-04-23'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Dev Container
@@ -28,7 +28,9 @@ params:
 
 **Garden stance:** We **adopt** Dev Container for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Secrets** | Use env files or secret mounts; never bake credentials into the image |
 | **Performance** | Mount workspace with delegated volumes on macOS; cache package dirs |

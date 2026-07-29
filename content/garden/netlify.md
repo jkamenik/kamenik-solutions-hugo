@@ -1,7 +1,7 @@
 ---
 title: Netlify
 date: '2026-06-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Netlify
@@ -19,7 +19,9 @@ params:
 
 ## Summary
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Deploy paths** | Git push, Netlify CLI, drag-and-drop, or dashboard prompts |
 | **Config** | `netlify.toml` for build command, publish dir, redirects, headers, and plugins |

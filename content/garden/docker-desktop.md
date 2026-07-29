@@ -1,7 +1,7 @@
 ---
 title: Docker Desktop
 date: '2025-04-23'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Docker Desktop
@@ -30,7 +30,9 @@ aliases:
 
 **Garden stance:** We **hold** Docker Desktop for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Dev Containers** | Often documented with Desktop; other engines work if the socket is compatible |
 | **WSL2 / macOS VM** | Desktop wraps a Linux VM; know where disk and CPU go |

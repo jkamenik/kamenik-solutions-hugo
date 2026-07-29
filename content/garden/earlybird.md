@@ -1,7 +1,7 @@
 ---
 title: Earlybird
 date: '2024-10-01'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Earlybird
@@ -30,7 +30,9 @@ aliases:
 
 **Garden stance:** We **assess** Earlybird for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Install** | `build.sh` + `install.sh` (Linux/macOS) or Windows `build.bat`; config under `~/.go-earlybird` |
 | **Scan** | `go-earlybird --path=...` or `--git=https://...` |

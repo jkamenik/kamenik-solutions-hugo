@@ -1,7 +1,7 @@
 ---
 title: Container Structure Test
 date: '2023-03-03'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Container Structure Test
@@ -25,7 +25,9 @@ params:
 
 **Garden stance:** We **adopt** Container Structure Test for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Config** | One or more YAML test files; version schema in project docs |
 | **CI** | Fail the job on any test failure; pin the CST binary version |

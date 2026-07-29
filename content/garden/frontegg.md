@@ -1,7 +1,7 @@
 ---
 title: FrontEgg
 date: '2026-05-17'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - FrontEgg
@@ -27,7 +27,9 @@ aliases:
 
 **Garden stance:** We **assess** FrontEgg for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Protocols** | OIDC, OAuth 2.0, SAML (enterprise SSO connections) |
 | **Product** | Embeddable admin portal, tenant isolation, invitations |

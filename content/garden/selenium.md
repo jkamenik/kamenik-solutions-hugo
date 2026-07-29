@@ -1,7 +1,7 @@
 ---
 title: Selenium
 date: '2026-05-28'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Selenium
@@ -23,7 +23,9 @@ aliases:
 
 **Garden stance:** We **hold** Selenium for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **WebDriver** | Language binding talks to a browser-specific driver (ChromeDriver, geckodriver, etc.) |
 | **Grid** | Hub/node layout for parallel browsers; ops overhead versus Playwright sharding |

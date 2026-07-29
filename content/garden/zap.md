@@ -1,7 +1,7 @@
 ---
 title: Zap
 date: '2025-12-08'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Zap
@@ -18,22 +18,40 @@ params:
     - library
 ---
 
-[Zap](https://github.com/uber-go/zap). (Uber) is a structured, leveled logging library for [[GoLang]]; not to be confused with the [[Zed Attack Proxy (Zap)]] security scanner.
+[Zap](https://github.com/uber-go/zap) is Uber's structured, leveled logging library for **[[GoLang]]**. We **trial** it when a service needs low-allocation JSON logs; not to be confused with OWASP [[Zed Attack Proxy (Zap)]].
 
 ## Blurb
 
-> Blazing fast, structured, leveled logging in Go. Contribute to uber-go/zap development by creating an account on GitHub.
+> Blazing fast, structured, leveled logging in Go.
 
 ## Summary
 
-Zap optimizes for low allocation and clear leveled output (`Debug`, `Info`, `Warn`, `Error`) with strongly typed fields (`zap.String`, `zap.Int`, …) instead of printf-style formatting. Production configs favor JSON encoders; development configs often use console encoding with color. The API splits a terse `zap.NewProduction()` path from a configurable `zap.Config` for teams that need tuning.
+**What it is:** Strongly typed fields (`zap.String`, `zap.Int`, …) instead of printf-style formatting. Production configs favor JSON; development often uses console encoding.
 
-If you are greenfield on modern Go, prototype with `log/slog` first, stdlib support, handler ecosystem, and attr-style fields cover many of the same goals. Reach for Zap when benchmarks, existing Uber-style instrumentation, or team standards already assume it.
+**When to use:**
+
+| Situation | Notes |
+|-----------|--------|
+| Existing Zap estate | Stay consistent with Uber-style instrumentation |
+| Benchmark-sensitive services | Low allocation vs heavier facades |
+| Team standard already Zap | Config via `zap.Config` or `zap.NewProduction()` |
+
+**When to skip:**
+
+- Greenfield modern Go: prototype with stdlib `log/slog` first
+- Mixing multiple logging facades in one binary
+- Need only trivial stderr prints
+
+**Trade-offs:** Mature and fast. Another dependency and API to learn versus `slog`. Prefer one facade per service.
 
 ## Details
 
-- **Category:** [[Code]] / [[Library]], imported into your binary, not a standalone agent.
-- **Strengths:** speed, structured fields, sane defaults for production JSON logging, mature usage across the Go ecosystem.
-- **Trade-offs:** another dependency to version; learning curve vs `slog`; avoid mixing multiple logging facades in one service.
-- **Operations:** pair with centralized log aggregation (JSON lines → Loki/ELK/CloudWatch); define level and sampling policy per environment.
-- **Disambiguation:** OWASP [[Zed Attack Proxy (Zap)]] is unrelated tooling for DAST.
+| Topic | Notes |
+|-------|--------|
+| Category | **[[Code]]** / **[[Library]]** (imported, not a standalone agent) |
+| Ops | JSON lines into Loki, ELK, or CloudWatch; set level and sampling per env |
+| Disambiguation | OWASP **[[Zed Attack Proxy (Zap)]]** is unrelated DAST tooling |
+
+**References**
+
+- [uber-go/zap](https://github.com/uber-go/zap)

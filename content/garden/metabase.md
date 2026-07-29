@@ -1,7 +1,7 @@
 ---
 title: Metabase
 date: '2026-05-28'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - Metabase
@@ -27,7 +27,9 @@ aliases:
 
 **Garden stance:** We **hold** Metabase for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Deploy** | **Hold path:** Docker/JAR self-hosted (prefer **[[Grafana]]** OSS instead for new work). **SaaS path:** Metabase Cloud when federated data or ops cost dominates |
 | **Data model** | Live queries against connected databases; extracts optional via caching settings |

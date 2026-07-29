@@ -1,44 +1,46 @@
 ---
-title: "WebGoat"
-date: 2026-06-17
-lastmod: 2026-06-22
+title: WebGoat
+date: '2026-06-17'
+lastmod: '2026-07-07'
 draft: false
-
 keywords:
-  - WebGoat
-  - OWASP WebGoat
-
+- WebGoat
+- OWASP WebGoat
 params:
   aliases:
-    - OWASP WebGoat
+  - OWASP WebGoat
   garden:
     kind: item
     usefulness: trial
     category: tool
-    movement: "New"
+    movement: No Change
 ---
 
-[WebGoat](https://owasp.org/www-project-webgoat/) is an OWASP-maintained deliberately insecure Spring Boot web app for guided security lessons. We **trial** it for structured AppSec training, manual exploitation labs, and proxy tooling practice with WebWolf. Run it only in isolated lab VMs or containers, never on internet-facing hosts.
+[WebGoat](https://owasp.org/www-project-webgoat/) ships guided OWASP lessons with hints, fix-it workflows, and a companion mail/file server (**WebWolf**). We **trial** it for secure-coding labs and classroom-style drills.
 
 ## Blurb
 
-> WebGoat is a deliberately insecure web application maintained by OWASP, designed to teach web application security lessons. This program is a demonstration of common server-side application flaws.
+> WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons.
 
 ## Summary
 
-WebGoat ships lesson modules with explanations, hints, and fix-it workflows. It pairs the main app (port 8080) with **WebWolf** (port 9090) for email and file scenarios that need a companion service. Source and releases live at [github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat).
+**What it is:** A Java/Spring Boot training app (port 8080) plus **WebWolf** (port 9090) for email and file scenarios. Source and releases: [github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat).
 
 **When to use:**
 
 - Teaching OWASP-class flaws with step-by-step lesson text
 - Java and Spring Boot secure-coding drills
-- Pairing Burp or [[Zed Attack Proxy (Zap)]] with a localhost-bound lab
-- Complementing CTF-style apps like [[Juice Shop]] with a classroom-style curriculum
+- Pairing Burp or **[[Zed Attack Proxy (Zap)]]** with a localhost-bound lab
+- Complementing CTF-style apps like **[[Juice Shop]]** with a classroom curriculum
 
-**When to skip:** you need a modern SPA e-commerce narrative (prefer [[Juice Shop]]); you want the lightest PHP stack (prefer [[DVWA]]); you need a Django/Python lab (prefer [[PyGoat]]); you cannot disconnect or isolate the host while the lab runs.
+**When to skip:**
+
+- You need a modern SPA e-commerce narrative (prefer **[[Juice Shop]]**)
+- You want the lightest PHP stack (prefer **[[DVWA]]**)
+- You need a Django/Python lab (prefer **[[PyGoat]]**)
+- You cannot disconnect or isolate the host while the lab runs
 
 **Stack:** Java/Spring Boot (JDK 25 for current source builds per upstream README). Official paths include Docker (`webgoat/webgoat`), a browser-desktop image (`webgoat/webgoat-desktop`), and standalone JAR releases.
-
 
 ## Details
 
@@ -57,8 +59,8 @@ Some lessons require both services and matching timezone (`TZ` env var). For pro
 
 ### Compared to Sibling Labs
 
-| Lens | WebGoat | [[Juice Shop]] | [[DVWA]] | [[PyGoat]] |
-|------|---------|----------------|----------|------------|
+| Lens | WebGoat | **[[Juice Shop]]** | **[[DVWA]]** | **[[PyGoat]]** |
+|------|---------|-------------------|--------------|----------------|
 | Maintainer | OWASP | OWASP | Community | Community |
 | UX | Guided lesson UI | CTF scoreboard SPA | Minimal module menu | Django challenge modules |
 | Stack | Java, Spring Boot | Node.js, Angular | PHP, Apache | Django, Python |

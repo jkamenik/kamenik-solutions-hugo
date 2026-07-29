@@ -1,7 +1,7 @@
 ---
 title: ArgoCD
 date: '2023-07-23'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - ArgoCD
@@ -23,7 +23,9 @@ aliases:
 
 **Garden stance:** We **adopt** ArgoCD for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **Sync** | Manual, automatic, or selective; prune and self-heal options |
 | **Health** | Built-in resource health; custom health via Lua |

@@ -1,14 +1,14 @@
 ---
 title: DRY
 date: '2025-01-05'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - DRY
-- Don't Repeat Yourself
+- "Don't Repeat Yourself"
 params:
   aliases:
-  - Don't Repeat Yourself
+  - "Don't Repeat Yourself"
   garden:
     kind: item
     usefulness: hold
@@ -22,7 +22,9 @@ aliases:
 
 ## Summary
 
-**Key points:** | Context | Guidance |
+**Key points:**
+
+| Context | Guidance |
 |---------|----------|
 | **Application code** | Extract when behavior and change rate align; keep tests on both call sites during migration |
 | **Terraform / OpenTofu** | Prefer small modules with clear inputs/outputs over one module that owns an entire account |

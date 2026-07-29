@@ -1,7 +1,7 @@
 ---
 title: Ruby on Rails
 date: '2023-07-23'
-lastmod: '2026-07-02'
+lastmod: '2026-07-28'
 draft: false
 keywords:
 - Ruby on Rails
@@ -29,5 +29,5 @@ Rails proved that productive frameworks could ship real products quickly, scaffo
 
 - **Strengths (historical):** rapid prototyping, strong conventions, batteries-included auth/jobs/mailers, large gem ecosystem.
 - **Weaknesses (today):** global state and "magic" complicate reasoning; ActiveRecord encourages fat models; multi-process scaling and background work add operational cost compared to lighter stacks.
-- **Operations:** legacy deployments often paired Rails with [[Capistrano]]; local dev tools like [[Pow]] addressed Rack host naming before modern DNS helpers.
+- **Operations:** legacy deployments often paired Rails with [[Capistrano]]
 - **When hold is OK:** maintaining an existing Rails monolith with a committed team; greenfield work should default to stacks that match your expected scale and hiring pool (often not [[Ruby]]).

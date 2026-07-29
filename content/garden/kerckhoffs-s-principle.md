@@ -1,10 +1,10 @@
 ---
-title: Kerckhoffs's principle
+title: "Kerckhoffs's principle"
 date: '2024-10-01'
-lastmod: '2026-07-07'
+lastmod: '2026-07-28'
 draft: false
 keywords:
-- Kerckhoffs's principle
+- "Kerckhoffs's principle"
 - Kerckhoffs Principle
 - Kerkhoffs Principle
 params:

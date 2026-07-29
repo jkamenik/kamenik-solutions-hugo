@@ -1,7 +1,7 @@
 ---
 title: CloudBees
 date: '2024-04-06'
-lastmod: '2026-07-02'
+lastmod: '2026-07-29'
 draft: false
 keywords:
 - CloudBees
@@ -27,7 +27,9 @@ aliases:
 
 **Garden stance:** We **hold** CloudBees for our estate.
 
-**Key points:** | Topic | Notes |
+**Key points:**
+
+| Topic | Notes |
 |-------|--------|
 | **CloudBees CI** | Managed or self-hosted Jenkins; same pipeline model as OSS |
 | **CloudBees CD** | Release orchestration product; separate from Jenkins but same "hold unless sunk" rule |
