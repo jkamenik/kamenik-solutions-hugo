@@ -183,5 +183,5 @@ Separately you will need a repo for the helm chart with a CI pipeline that pushe
 >     key: some-secret-value
 > ```
 
-> [!ERROR] Don't use `chartHome`
+> [!CAUTION] Don't use `chartHome`
 > Kustomize does support a `chartHome` option which will use a local file path to find the helm chart.  Don't use it, as it is worst of all worlds.  You have to manage it in A/B style or you have to add the stage logic to the chart directly which means you cannot truly test it before roll out.  It will bite you.

@@ -18,7 +18,7 @@ The following are useful git tips and tricks.
 
 Often times a git repo needs to be brought up-to-date with the remote quickly.  Using a feature branch style also means that branches need to be cleaned up as well.  The following does all that.
 
-> [!INFO]
+> [!NOTE]
 > If you copy the below into `git-cleanup` and put it in your path, then Git will automatically consider it a subcommand.  So within a git repo just run `git cleanup main` (note the space) will move your to the `main` branch, sync it with the remote, and delete any synced branches.
 
 ```bash
