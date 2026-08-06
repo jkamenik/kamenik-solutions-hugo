@@ -62,18 +62,3 @@ Powerful for high-touch CRM-style brains; optional here. Prefer explicit jobs ([
 
 ## See Also
 - [[Linked page]]
-
----
-
-## Timeline
-
-- **YYYY-MM-DD** | Author - What changed in this document.
-```
-
-## See Also
-
-- [[LLM Wiki]], Karpathy's abstract pattern (ingest / query / lint) that gbrain implements in an opinionated way
-- [[Open Knowledge Format (OKF)]], interchange format for markdown knowledge bundles
-- [[Agent Skills Framework]], skills that pair with agent-maintained vaults
-- [[PKM]], broader personal knowledge management context
-- [[PARA]], zone-based filing we already use
